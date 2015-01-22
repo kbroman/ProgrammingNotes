@@ -1,0 +1,14 @@
+brew update
+brew outdated
+brew upgrade
+
+R -e 'update.packages(ask=FALSE)'
+
+rvm get stable
+gem update
+
+conda update conda
+conda update anaconda
+
+npm update npm -g
+npm update -g

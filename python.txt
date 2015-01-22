@@ -1,0 +1,35 @@
+Notes on Python
+
+Install anaconda from  http://continuum.io/downloads
+  I installed it in ~/.anaconda
+
+Install python 3
+  conda create -n py3 python=3 anaconda
+
+---
+
+Switching to python 3 (and back)
+
+source activate py3
+source deactivate
+
+------------------------------
+
+better colors for ipython:
+
+create ~/.ipython/profile_default/ipython_config.py
+with:
+c = get_config()
+c.TerminalInteractiveShell.colors = 'Linux'
+
+------------------------------
+
+dir("blah") gives list of relevant methods
+  (e.g., blah = str)
+
+# duplicating arrays
+a = [1,2,3]
+b = a       # completely linked
+c = a*1     # duplicate
+a is b
+a is not c

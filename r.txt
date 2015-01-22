@@ -1,0 +1,51 @@
+Notes on R
+
+mapply
+assign
+save(list=blah, file=blah.RData) # blah is a character string with an object name
+
+# attach full namespace for testing purposes
+attach(getNamespace("qtl"))
+
+# another idea
+assignInNamespace("stepwiseqtl", stepwiseqtlQuoc, ns="qtl")
+
+# utf-16 codes
+# rightarrow: 2192
+"\u2192"
+# (doesn't seem to work in jpg files, but does in png)
+
+Building R packages in Windows
+R CMD INSTALL --build --compile-both qtl_1.32-3.tar.gz
+
+Avoid read.csv (due to the default fill=TRUE)
+Use read.table(..., header=TRUE, sep=",")
+fill=TRUE behaves terribly if later rows have extra columns
+
+----
+
+reinstalling all R packages:
+update.packages(checkBuilt=TRUE, ask=FALSE)
+
+---
+
+installing gfortran:
+(http://r.research.att.com/libs/gfortran-4.8.2-darwin13.tar.bz2)
+sudo tar fxz ~/Desktop/gfortran-4.8.2-darwin13.tar.bz2 -C /
+
+----
+
+in ~/.R/config:
+
+CC=clang
+CXX=clang++
+F77=gfortran-4.8
+FC=$F77
+OBJC=clang
+
+Also, in ~/.R/Makevars-x86_64-apple-darwin13.1.0 (or whatever the latest version)
+
+CFLAGS=-g -O2 -Wall -pedantic
+CXXFLAGS=-g -O2 -Wall -pedantic
+
+----

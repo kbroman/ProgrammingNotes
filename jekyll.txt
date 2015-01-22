@@ -1,0 +1,26 @@
+Notes on jekyll
+
+gem install jekyll
+jekyll build
+jekyll serve
+
+---
+
+To make a new website, copy over
+
+  Rakefile
+  _includes
+  _layouts
+  _plugins
+  _posts
+  assets/themes
+
+Then edit:
+
+  index.md
+  _config.yml
+  _includes/themes/twitter/default.html
+
+---
+
+Put .md files in pages/ and anything else in assets/

@@ -1,0 +1,73 @@
+html5 canvas
+
+See http://www.w3.org/TR/2dcontext/
+
+
+# current state
+context.fillStyle   = "slateblue" # color of filled region
+context.strokeStyle = "#000"      # color of lines
+context.lineWidth   = 3           # line width
+context.globalAlpha = 0.5         # transparency
+context.font        = "20px Sans-Serif"
+context.textBaseline = "middle"   # vertical centering of text
+context.textAlign    = "center"   # horizontal centering of text
+context.lineCap =   "butt"
+        context.lineJoin = "bevel"
+context.save()                    # save current state
+context.restore()                 # restore last saved state
+
+# make a rectangle
+context.fillRect(x, y, width, height)   # filled rectangle
+context.strokeRect(x, y, width, height) # outline of rectangle
+context.clearRect(x, y, width, height)  # clear rectangular region
+
+# lines (stroke goes outward in each direction from the x,y coordinates
+context.beginPath()
+context.moveTo(w/8, h/8)
+context.lineTo(w*7/8, h/8)
+context.lineTo(w*7/8, h*7/8)
+context.stroke()
+context.closePath()
+
+# circle
+context.strokeStyle = "black"
+context.beginPath()
+context.arc(w/8, h/2, w/16, 0, 2*Math.PI, false)
+context.stroke() # or .fill()
+context.closePath()
+
+# arc
+context.beginPath()
+context.strokeStyle = "violetred"
+context.lineWidth = 5
+context.arc(w/8, h/2, w/16, Math.PI/2, Math.PI, false)
+context.stroke()
+context.closePath()
+
+
+#### create a canvas region in D3
+canvasApp = () ->
+
+    return unless Modernizr.canvas
+
+    w = 800
+    h = 500
+
+    d3.select("div.canvas")
+      .append("canvas")
+      .attr("id", "canvasOne")
+      .attr("width",  w)
+      .attr("height", h)
+
+    theCanvas = d3.select("canvas#canvasOne")[0][0]
+    context = theCanvas.getContext("2d")
+
+    console.log("Drawing canvas")
+
+    drawScreen = () ->
+        context.strokeStyle = "#000"
+        context.strokeRect(0, 0, w, h)
+
+    drawScreen()
+
+window.onload = canvasApp

@@ -1,0 +1,62 @@
+Windows laptop stuff
+
+Downloads
+
+ - Chrome
+ - Firefox
+ - VPN (wiscvpn.doit.wisc.edu; seems best to install it from IE)
+ - eduroam (https://kb.wisc.edu/page.php?id=22076; just need to run installer)
+
+ - R
+ - Rtools (includes make)
+ - RStudio
+ - Acrobat Reader
+ - Dropbox
+ - 1Password
+
+ - notepad++
+
+ - gitbash
+ - anaconda
+ - curl (http://curl.haxx.se/download.html)
+ - 7zip (http://sourceforge.net/projects/sevenzip/?source=typ_redirect)
+ - swcarpentry installer
+
+ To modify PATH
+
+  win-W -> search "environment"
+  -> "Edit the system environment variables"
+
+  [add curl, 7zip, notepad++ to PATH]
+
+To restore to factory settings
+
+  win-W -> search -> "Remove everything"
+
+
+Get rid of that "touch keyboard"
+
+  - win-W -> search -> "services"
+  - Scroll down to "Touch screen keyboard and handwriting panel"
+  - double-click and change it from "Automatic" startup to "Manual"
+
+
+Have swipe go the other way
+
+  - control panel -> hardward -> ASUS Smart Gesture
+  - Scroll -> Content moves with your finger's direction
+  - (Also the three-fingers stuff)
+
+
+R stuff
+
+  When I installed devtools, it seemed like I had to separately
+  install the bitops package
+
+
+Equivalent of "open" on Mac is "start", for example:
+
+  start notepad++
+  start notepad++ <filename>
+
+Install MikTeX; need to add it to your path

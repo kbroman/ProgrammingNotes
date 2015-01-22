@@ -1,0 +1,42 @@
+Notes on Ruby
+
+In ruby files (to make them executable), include:
+  #!/usr/bin/env ruby -v
+
+To install rvm and ruby:
+
+  \curl -L https://get.rvm.io | bash -s stable --ruby
+
+
+To install another version of ruby:
+
+  rvm install 2.0.0-p247
+  rvm use 2.0.0-p247
+  rvm --default 2.0.0-p247
+
+To generate documentation
+  rvm docs generate
+
+To update rvm
+  rvm get stable
+
+Make sure rvm uses homebrew:
+  rvm autolibs homebrew
+
+gem install roo     # for parsing excel files
+gem install wirble  # syntax highlighting in irb
+gem install gsl     # gnu scientific library
+gem install sciruby # sciruby [didn't completely work]
+gem install bio     # bioruby
+
+Remove unnecessary old versions of gems:
+gem cleanup
+
+-----------
+
+# copying arrays
+a = [1,2,3]
+b = a
+c = a.dup
+a.equal? b
+!(a.equal? c)

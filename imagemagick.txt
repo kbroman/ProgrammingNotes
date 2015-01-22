@@ -1,0 +1,21 @@
+ImageMagick notes
+
+1. replace RGB color 0,0,132 with RGB color 0,0,80
+
+   convert meiosis_orig.png -fill 'rgb(0,0,80)' -opaque 'rgb(0,0,132)' temp.png
+
+2. If the color is not exactly on, use "fuzz", as follows
+
+   convert meiosis_orig.png -fill 'rgb(0,0,80)' -fuzz 10% -opaque 'rgb(0,0,132)' temp.png
+
+3. Add white border of 5 pixels
+
+   convert -border 5 -bordercolor white original.jpg new.jpg
+
+4. Replace transparency with white background
+
+   convert -flatten original.png new.png
+
+5. convert to grayscale; make lighter
+
+   convert input.png -colorspace Gray -gamma 2.2 output.png
