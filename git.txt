@@ -1,0 +1,107 @@
+Notes on git
+
+Initial stuff
+
+  git config --global user.name "Your Actual Name"
+  git config --global user.email "youremail@somewhere.com"
+
+  git config --global color.diff auto
+  git config --global color.status auto
+  git config --global color.branch auto
+
+  git config --global core.editor emacs
+
+  git config --global core.excludesfile ~/.gitignore_global
+
+Clone repository
+
+  git clone git@github.com:kbroman/qtl
+  git clone git://github.com/kbroman/qtl
+  git clone https://github.com/kbroman/qtl
+
+The basics
+
+  git pull
+  git commit -a
+  git push
+
+Also
+
+  git status
+  git diff
+  git diff 1.16-6 R/est.map.R
+  git diff 1.16-6 R/est.map.R | gitx
+  git diff --name-status master..[some branch]
+
+Tagging
+
+  git tag -a -m "tagging version 1.11-7" 1.11-7
+  git push --tags
+  git tag -d 1.11-7                     [deleting a tag]
+  git push origin :refs/tags/1.11-7     [remove tag from origin that I'd removed locally]
+
+
+Branching and merging
+
+  git branch                            [to see what branches there are]
+  git branch blah                       [to create the 'blah' branch]
+  git checkout blah                     [to switch to the 'blah' branch
+  git checkout master; git merge blah   [merge blah into master]
+
+
+Going back
+
+  git reset --hard                      [throw all changes away]
+  git checkout myfile.txt               [throw away changes to myfile.txt]
+  git commit --amend                    [revise the last commit message]
+
+
+github stuff
+
+ git checkout MQM
+ git pull git@github.com:myfriend/rqtl-mqm.git
+ git pull git@github.com:myfriend/rqtl-mqm.git/master
+
+
+ git pull myfriend master
+ git pull myfriend myfriend
+
+ git push --set-upstream origin <branch>
+ git push origin <branch>
+ git push origin --delete <branch>
+
+
+github remotes; see http://help.github.com/remotes/
+
+ git remote add myfriend git://github.com/myfriend/qtlHD.git
+
+ In .git/config:
+    [remote "myfriend"]
+    url = git://github.com/myfriendp/qtlHD.git
+    fetch = +refs/heads/*:refs/remotes/myfriend/*
+
+After pulling from origin, use the following to get access to a branch
+only on origin:
+
+  git checkout -b mybranch origin/mybranch
+
+
+======================================================================
+
+bitbucket:  Had trouble with ssh; here's what seemed to work
+
+  Have the ssh agent running:
+
+    ssh-agent
+
+  To check if you have any ssh identities:
+
+    ssh-add -l
+
+  To add the default identities:
+
+    ssh-add
+
+  To remove all current identities:
+
+    ssh-add -D
