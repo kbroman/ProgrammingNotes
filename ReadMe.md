@@ -8,4 +8,4 @@ that I'm mostly working on a Mac).
 
 ---
 
-[[!CC0 badge](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![CC0 badge](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
