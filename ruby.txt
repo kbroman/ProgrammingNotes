@@ -40,3 +40,22 @@ b = a
 c = a.dup
 a.equal? b
 !(a.equal? c)
+
+# does a directory exist?
+Dir.exists?("directory_name_here") # must be a _directory_
+File.exists?("some_file_name")
+
+# files in a directory
+Dir.entries(".")
+
+# select parts of an array
+a = [2, 7, 5, 4]
+b = a.select { |el| el > 4 }
+
+# one line if-else
+x = 5
+y = x > 3 ? x : 3
+
+# item in array
+x = ["a", "b", "c", "d"]
+x.include?("e")
