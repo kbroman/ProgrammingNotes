@@ -43,7 +43,7 @@ F77=gfortran-4.8
 FC=$F77
 OBJC=clang
 
-Also, in ~/.R/Makevars-x86_64-apple-darwin13.1.0 (or whatever the latest version)
+Also, in ~/.R/Makevars
 
 CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
