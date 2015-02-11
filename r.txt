@@ -2,7 +2,7 @@ Notes on R
 
 mapply
 assign
-save(list=blah, file=blah.RData) # blah is a character string with an object name
+save(list=blah, file="blah.RData") # blah is a character string with an object name
 
 # attach full namespace for testing purposes
 attach(getNamespace("qtl"))
