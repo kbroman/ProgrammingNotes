@@ -59,3 +59,7 @@ y = x > 3 ? x : 3
 # item in array
 x = ["a", "b", "c", "d"]
 x.include?("e")
+
+# sort strings as numbers
+a = ['1', '12', '21', '3', '4']
+a.sort_by(&:to_f)
