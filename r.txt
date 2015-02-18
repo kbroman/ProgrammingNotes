@@ -2,7 +2,7 @@ Notes on R
 
 mapply
 assign
-save(list=blah, file=blah.RData) # blah is a character string with an object name
+save(list=blah, file="blah.RData") # blah is a character string with an object name
 
 # attach full namespace for testing purposes
 attach(getNamespace("qtl"))
@@ -43,7 +43,7 @@ F77=gfortran-4.8
 FC=$F77
 OBJC=clang
 
-Also, in ~/.R/Makevars-x86_64-apple-darwin13.1.0 (or whatever the latest version)
+Also, in ~/.R/Makevars
 
 CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
