@@ -24,3 +24,19 @@ Then edit:
 ---
 
 Put .md files in pages/ and anything else in assets/
+
+---
+
+Re bundler with github pages:
+https://help.github.com/articles/using-jekyll-with-pages/
+
+gem install bundler
+
+Gemfile containing:
+gem 'github-pages'
+
+Instead of "jekyll serve" use:
+bundle exec jekyll serve
+
+To update bundler:
+bundle update
