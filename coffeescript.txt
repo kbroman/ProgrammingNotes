@@ -53,3 +53,13 @@ not (a is c)
 # sort strings as numbers
 a = ['1', '12', '21', '3', '4']
 a.sort((a,b) -> a-b)
+
+# reduce, for summing an array
+a = ['1', '12', '21', '3', '4']
+a.reduce (t,s) -> Number(t) + Number(s)
+a.map((d) -> Number(d)).reduce((t,s) -> t+s)
+
+# create regular expression from a variable
+ext = 'txt'
+re = new RegExp("\.#{ext}$")
+"blah.txt".match(re)
