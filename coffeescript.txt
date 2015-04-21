@@ -63,3 +63,16 @@ a.map((d) -> Number(d)).reduce((t,s) -> t+s)
 ext = 'txt'
 re = new RegExp("\.#{ext}$")
 "blah.txt".match(re)
+
+# list comprehensions for object
+x = {a:1, b:2}
+"#{k}: #{v}" for k,v of x
+k for k of x
+v for k,v of x
+
+# create from prototype
+y = Object.create x
+y.d = 3
+x.c = 4
+k for k of y
+k for own k of y # note use of "own"
