@@ -33,3 +33,10 @@ b = a       # completely linked
 c = a*1     # duplicate
 a is b
 a is not c
+
+------------------------------
+
+See see:
+
+https://github.com/kbroman/PyBroman/blob/master/features.py
+https://github.com/kbroman/PyBroman/blob/master/ParseGenotypeData/convert3.py
