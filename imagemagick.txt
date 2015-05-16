@@ -19,3 +19,11 @@ ImageMagick notes
 5. convert to grayscale; make lighter
 
    convert input.png -colorspace Gray -gamma 2.2 output.png
+
+6. Create thumbnail, padding to make it square
+   (see http://imagemagick.org/Usage/thumbnails/#pad)
+
+   wget http://www.r-project.org/Rlogo.png
+   convert -flatten Rlogo.png Rlogo_new.png
+   convert -define png:size=200x200 Rlogo_new.png -thumbnail \
+           '64x64>' -background white -gravity center -extent 64x64 R-icon64.png
