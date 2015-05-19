@@ -49,3 +49,17 @@ CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
 
 ----
+
+rgl package:
+
+ - had a problem that X11 wasn't found, used:
+
+   sudo ln -s /opt/X11 /usr/X11
+
+ - still having a problem, with libpng.
+   StackOverflow (http://bit.ly/1R01mV7) says:
+
+      R CMD INSTALL --with-libpng-prefix=/usr/X11/lib/ rgl
+
+   Got the same error (can't load libpng); gave up and went with the
+   (older) binary version of the package.
