@@ -48,6 +48,14 @@ Also, in ~/.R/Makevars
 CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
 
+---
+
+Installing from github _with_ vignettes:
+
+install_github("ropensci/rentrez", build_vignettes=TRUE)
+
+[install_github passes extra args, including build_vignettes, to install()]
+
 ----
 
 rgl package:
