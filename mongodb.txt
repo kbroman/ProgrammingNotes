@@ -1,0 +1,21 @@
+MongoDB
+
+mongo shell commands
+    show dbs # show databases
+    use demo
+    show collections # show collections within database
+    db.things.find()
+    db.things.insert({"a":1, "b":2, "c":3})
+    db.things.find({"a": 1})
+    for(var i=0; i<10; i++) { db.things.insert({"x": i}) } # can do full JS
+    db.things.save({a:1, b:2, fruit:["apple", "banana", "orange"]})
+    # save == insert, but can also use it to update an item
+    # don't need quotes on keys in the mongo shell
+
+    db.things.find().pretty()
+
+  update an item:
+    db.things.update({name:"Karl"}, {$set: {name:"Joe"}})
+    kb = db.things.findOne({name:"Karl"})
+    kb.name = "Jose"
+    db.things.save(kb)
