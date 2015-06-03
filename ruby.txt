@@ -91,3 +91,7 @@ y = {name: "karl", age: "really_old", shoe_size: 8} # no space between key and :
 y[:name] # keys turned into symbols
 y.keys
 y.values
+
+# combining array into string
+x = ["a", "b", "c"]
+x.join(',')

@@ -53,6 +53,14 @@ x.values()
 
 ------------------------------
 
+Joining list elements into a string
+    a bit odd to me: separator.join(list)
+
+x = ["a", "b", "c"]
+",".join(x)
+
+------------------------------
+
 See also:
 
 https://github.com/kbroman/PyBroman/blob/master/features.py
