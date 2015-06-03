@@ -73,3 +73,9 @@ ofile = ifile.gsub(/(\.\w+)$/, '_slides\1')
 
 # aborting
 abort("file #{ofile} already exists") if File.exists?(ofile)
+
+# adding to an array
+x = [1, 2, 3]
+x + [4, 5] # -> [1,2,3,4,5] (but x doesn't change)
+x += [4,5] # -> x now is [1,2,3,4,5]
+x.insert(1, -1) # -> [1,-1,2,3,4,5] (x is changed)
