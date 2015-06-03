@@ -79,3 +79,15 @@ x = [1, 2, 3]
 x + [4, 5] # -> [1,2,3,4,5] (but x doesn't change)
 x += [4,5] # -> x now is [1,2,3,4,5]
 x.insert(1, -1) # -> [1,-1,2,3,4,5] (x is changed)
+
+# hashes
+x = {"name" => "karl", "age" => "really_old", "shoe_size"=> 8}
+x["name"]
+x.keys
+x.values
+
+# hash with symbols as the keys
+y = {name: "karl", age: "really_old", shoe_size: 8} # no space between key and :
+y[:name] # keys turned into symbols
+y.keys
+y.values
