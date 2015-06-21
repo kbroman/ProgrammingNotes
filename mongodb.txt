@@ -19,3 +19,37 @@ mongo shell commands
     kb = db.things.findOne({name:"Karl"})
     kb.name = "Jose"
     db.things.save(kb)
+
+mongo [dbname] # opens mongo with the [dbname] database selected
+
+---
+
+ruby driver:
+
+gem install mongo
+
+require 'mongo'
+
+# stop the horrid log messages every second:
+Mongo::Logger.logger.level = Logger::WARN
+
+client = Mongo::Client.new(['127.0.0.1:27017'], :database='test'])
+
+---
+
+python driver:
+
+pip install pymongo
+
+import pymongo
+client = pymongo.MongoClient()
+db = client.test     # test is the name of the database
+coll = client.coll   # coll is the name of the collection
+coll.find_one({"name":"Aimee"})
+coll.find_one()
+coll.find_one({"age":{"$gte":45}})
+coll.insert_one({"name":"Fisher","age":15})
+coll.insert_many([{"name":"Caleb","age":10},{"name":"Alaina","age":6}])
+coll.count()
+for doc in coll.find():
+    print(doc["name"] + " " + str(doc["age"]))
