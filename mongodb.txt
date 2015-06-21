@@ -1,26 +1,204 @@
 MongoDB
 
 mongo shell commands
-    show dbs # show databases
-    use demo
-    show collections # show collections within database
-    db.things.find()
-    db.things.insert({"a":1, "b":2, "c":3})
-    db.things.find({"a": 1})
-    for(var i=0; i<10; i++) { db.things.insert({"x": i}) } # can do full JS
-    db.things.save({a:1, b:2, fruit:["apple", "banana", "orange"]})
-    # save == insert, but can also use it to update an item
-    # don't need quotes on keys in the mongo shell
 
+  general stuff
+    show dbs // show databases
+    use demo // select demo database
+    show collections // show collections within database
+
+
+  find stuff
+    db.things.find()
+    db.things.find({"a": 1})
     db.things.find().pretty()
+    db.things.findOne() // to retrieve a single document
+    db.things.findOne({name:"Karl"}, {_id:false, name:true}) // select fields to return
+    db.things.count({type:"exam"}) // count like find but just returning the number
+
+
+  query operators
+    $lt, $lte, $gt, $gte
+      db.people.find({age:{$lt:50}})
+    $exists
+      db.people.find({age:{$exists:true}})
+    $type (2 is string, 1 is float)
+    $regex
+      db.people.find({name: {$regex: "^A"}})
+    $or
+      db.people.find({$or: [{name:{$type:1}}, {age:{$exists:true}}]})
+    $and (not really necessary as implicit
+
+  array fields:
+    db.people.find({favorites: "pretzels"}) // favorites contains this
+    $in, $all, $nin (for "not in")
+        db.people.find({favorites: {$all: ["pretzels", "beer"]}})
+    for nested fields, look for a particular field
+        db.people.insert({name:"karl", email:{work:"blah@gmail.com", home:"none"}})
+        db.people.find({"email.work": "blah@gmail.com"})
+
+  insert items
+    db.things.insert({"a":1, "b":2, "c":3})
+    for(var i=0; i<10; i++) { db.things.insert({"x": i}) } // can do full JS
+
+    db.things.save({a:1, b:2, fruit:["apple", "banana", "orange"]})
+    // save == insert, but can also use it to update an item
+    // don't need quotes on keys in the mongo shell
+
 
   update an item:
+    db.people.update({name :"Smith"}, {name: "Thompson", shoe_size:8}) // wholesale replacement
     db.things.update({name:"Karl"}, {$set: {name:"Joe"}})
     kb = db.things.findOne({name:"Karl"})
     kb.name = "Jose"
     db.things.save(kb)
 
-mongo [dbname] # opens mongo with the [dbname] database selected
+    $set to set a specific field
+    $push to create or add to an array
+    $unset to remove a specific field
+    $inc to increment a numeric field by some value
+        db.collection.update({name:"Karl"}, {$inc: {age:"Karl"}})
+    $pop, $pushAll, $pullAll, $addToSet
+      db.arrays.insert( {_id: 0, a:[1,2,3,4]} )
+      // "a.2" to index 2 (3rd element as indexes start at 0; double-quotes required)
+      db.arrays.update( {_id: 0}, {$set: {"a.2": 5}} )
+      // append element to end
+      db.arrays.update( {_id: 0}, {$push: {a: 3}} )
+      // omit last element
+      db.arrays.update( {_id: 0}, {$pop: {a: true}} )
+      // negative arg to remove first element
+      db.arrays.update( {_id: 0}, {$pop: {a: -1}} )
+      // add multiple elements to the end
+      db.arrays.update( {_id: 0}, {$pushAll: {a: [11,12,13]}} )
+      // remove a particular value from array (no matter its position)
+      //     (removes all instances)
+      db.arrays.update( {_id: 0}, {$pull: {a: 5}} )
+      // remove a list of values
+      db.arrays.update( {_id: 0}, {$pullAll: {a: [13,12,3]}} )
+      // $addToSet treats array like a set:
+      //         ignores element if present, otherwise acts like push
+
+  upsert: update exists document or insert if its not present
+          use update, but with additional argument {upsert:true}
+
+      db.people.update({name: "George"}, {$set: {age:45}}, {upsert:true})
+
+      // if information provided doesn't define unique value for a field,
+      // that field is not inserted
+      db.people.update({age: {$gt: 50}}, {name: "Karl"}, {upsert:true})
+      // seems to update just the first one it finds
+
+  Multi-update: If you want to update more than one doc, {multi:true}
+
+      // note query is empty so will match everythin
+      db.people.update( {}, {$set: {title: "Dr"}}, {multi:true} )
+
+      // some "drivers" (for a programming languages) have this split into two methods
+
+      // multiupdate not simultaneous; may "yield" to other operations
+
+  cursors: hold onto the results of a find() call
+
+    cur = db.people.find();null; // null prevents immediate access of all records
+    cur.hasNext()
+    cur.next()
+
+    cur.limit(5) // don't return more than 5 documents (cur can't have been executed)
+
+    cur.sort( {name: -1} ) // reverse sort by name
+    cur.skip(2) // skip first two docs
+
+    [can chain limit, sort, skip]
+    // Note: these modifiers are passed as instructions to the database
+    //      rather than being applied afterwards
+
+
+  Remove:
+
+      db.people.remove({name: "Alice"}) // removes alice
+      db.people.remove() // gives error
+      db.people.remove({}) // removes all documents in collection, but doesn't discard indexes
+      db.people.drop()     // removes the collection
+
+      // remove just one of the matches
+      db.stuff.remove({thing: apple}, {justOne: true});
+
+
+mongo [dbname] // opens mongo with the [dbname] database selected
+
+
+---
+
+Importing file into mongo
+
+  from json file:
+
+      mongoimport -d course -c grades grades.json // -d database; -c collection
+
+---
+
+node driver:
+
+    MongoClient.connect('mongodb://localhost:27017/course', function(err, db) {
+        if(err) throw err;
+
+        // set up query
+        var query = { 'grade': 100};
+        var cursor = db.collection('grades').find(query); // no search performed yet
+        // cursor is just an object that describes the query
+
+        cursor.toArray(function(err, docs) { }); // callback after _all_ docs retrieved
+
+        cursor.each(function(err, doc) { });     // retrieve one doc at a time
+        // doc == null indicates that you're at the end; be sure to do db.close();
+
+    });
+
+
+    Field projection: which fields we want and which ones we don't want
+    (avoid sending things that you don't care about)
+
+        var query = {grade: 100};
+        var projection = {student:true, id=false};
+
+        db.collection('grades').find(query, projection).toArray(function(err, docs) {
+            if(err) throw(err);
+
+            docs.forEach(function(doc) { // standard JS to loop over documents
+                console.dir(doc);
+                console.dir(doc.student + " got a good grade.");
+            });
+
+            db.close();
+        });
+
+    can use sort, limit, and skip on a cursor; always performed in that order
+
+      cursor.sort({grade: 1}) // sort by grade
+      cursor.sort([{grade: 1}, {student: -1}]) // sort by grade then reverse by student
+      cursor.skip(1)          // skip 1 record
+      cursor.limit(4)         // return no more than 4 records
+
+    Insert one doc:
+
+        db.collections('mycollection').insert newdoc (err, inserted) ->
+              ...
+              db.close()
+
+    Insert multiple documents by making newdoc an array of documents
+
+    Update one document:
+
+        db.collection('mycollection').update query, docupdate, (err, updated) ->
+            ...
+            db.close()
+
+    findAndModify: change + find at once, before any other process changes document
+
+        4 args: query
+                sort (the docs matching query)
+                operator (or updated doc)
+                options = {new: true} # indicates to return the modified document
 
 ---
 
@@ -53,3 +231,74 @@ coll.insert_many([{"name":"Caleb","age":10},{"name":"Alaina","age":6}])
 coll.count()
 for doc in coll.find():
     print(doc["name"] + " " + str(doc["age"]))
+
+---
+
+Indexes
+
+    db.students.createIndex({'teachers':1})
+    db.students.find({'teachers':{$all:[0,1]}})
+    db.students.explain().find({'teachers':{$all:[0,1]}}) // shows what happened
+
+    db.students.getIndexes() // lists indexes
+    db.students.dropIndex({student_id:1}) // delete an index
+
+    db.students.createIndex({student_id:1, class_id:-1}) // 1/-1 for ascending/descending
+    db.students.createIndex({scores.score: 1})   # can take **really** long time
+
+    // unique indexes
+    db.stuff.createIndex({thing:1}, {unique:true})
+
+    // create index in background (slower, but doesn't block readers or writers)
+    db.students.createIndex({'scores.score':1}, {background:true})
+
+  Explain()
+
+    - db.foo.explain().find()
+      db.foo.explain().update()
+      db.foo.explain().remove()
+      db.foo.explain().aggregate()
+      [returns "explainable object"]
+
+    - Modes with increasing levels of verbosity:
+          queryPlanner
+          executionStats - statistics about the execution
+          allPlansExecution - runs multiple options in parallel to
+                              study what's fastest
+                            - stops running an option if it sees that
+                              it's clearly not the best
+
+      db.example.explain("executionStats").find({a:17, b:55})
+      db.example.explain("allPlansExecution").find({a:17, b:55})
+
+   - find size of indexes:
+
+     db.students.stats()
+     db.students.totalIndexSize()
+
+  Geospatial indexes
+       - find things based on coordinates (2d or 3d)
+       - document includes coordinates, e.g. 'location':[x,y]
+         then use createIndex({"location":'2d',store_type:1})
+         query operators: $near
+         find({location:{$near:[x,y]}}).limit(20)
+       - spherical coordinates
+         longitude: north/south; latitude: east/west
+         '2dsphere'
+         google maps: @40.758895,-73.985131 (latitude, longitude)
+             mongodb wants them in the reverse order (longitude, latitude)
+         geoJSON : location:{type:"Point", "coordinates": [-122.1691291, 37.4434854]}
+         db.places.createIndex({'location':'2dsphere'})
+         db.places.find({location:{$near:{$geometry:{
+                                            type:"Point",
+                                            coordinates:[-122.16,37.43]
+                                            },  $maxDistance:2000}}}) # distance in meters
+
+  full text search
+
+      db.sentences.createIndex({'words':'text'})
+      db.sentences.find({$text:{$search:'dog tree'}}) # uses a logical OR on the words
+
+      # sort by how well they match
+      db.sentences.find({$text:{$search:'dog tree obsidian'}},
+                        {score:{$meta: 'textScore'}}).sort({score:$meta:'textScore'})
