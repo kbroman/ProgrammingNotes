@@ -20,6 +20,8 @@ mongo shell commands
   query operators
     $lt, $lte, $gt, $gte
       db.people.find({age:{$lt:50}})
+    $ne
+       db.users.find({"username" : {"$ne" : "joe"}})
     $exists
       db.people.find({age:{$exists:true}})
     $type (2 is string, 1 is float)
