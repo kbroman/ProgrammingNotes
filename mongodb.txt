@@ -30,6 +30,9 @@ mongo shell commands
     $or
       db.people.find({$or: [{name:{$type:1}}, {age:{$exists:true}}]})
     $and (not really necessary as implicit)
+    $not
+      db.users.find({"id_num" : {"$not" : {"$mod" : [5, 1]}}})
+      (the use of $mod gives vals that, mod 5, are equal to 1)
 
   array fields:
     db.people.find({favorites: "pretzels"}) // favorites contains this
