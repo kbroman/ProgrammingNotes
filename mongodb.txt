@@ -245,6 +245,20 @@ for doc in coll.find():
 [doc for doc in coll.find()]
 [doc for doc in broman.find({'name':{'$regex':'^a','$options':'i'}})]
 
+
+For http-based requests to mongodb, use bottle. Something like:
+
+import bottle, pymongo
+
+dbcoll = pymongo.MongoClient().test.broman
+
+@bottle.route('/mongo/<name>')
+def grab_record(name):
+    return dbcoll.find_one({'name':name}, {'_id':False})
+
+bottle.run(host='localhost', port=8080, debug=True)
+
+
 ---
 
 Indexes
