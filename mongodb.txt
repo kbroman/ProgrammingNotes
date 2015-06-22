@@ -233,7 +233,7 @@ pip install pymongo
 import pymongo
 client = pymongo.MongoClient()
 db = client.test     # test is the name of the database
-coll = client.coll   # coll is the name of the collection
+coll = db.coll       # coll is the name of the collection
 coll.find_one({"name":"Aimee"})
 coll.find_one()
 coll.find_one({"age":{"$gte":45}})
@@ -242,6 +242,8 @@ coll.insert_many([{"name":"Caleb","age":10},{"name":"Alaina","age":6}])
 coll.count()
 for doc in coll.find():
     print(doc["name"] + " " + str(doc["age"]))
+[doc for doc in coll.find()]
+[doc for doc in broman.find({'name':{'$regex':'^a','$options':'i'}})]
 
 ---
 
