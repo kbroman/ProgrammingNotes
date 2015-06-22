@@ -29,6 +29,10 @@ mongo shell commands
       db.people.find({name: {$regex: "^A"}})
     can also do regex like in perl:
       db.people.find({name: /^A/})
+    other regex formats:
+      db.broman.find({name:{$regex:'^a', $options:'i'}})
+      db.broman.find({name:{$regex:/^a/, $options:'i'}})
+      db.broman.find({name:/^a/i})
     $or
       db.people.find({$or: [{name:{$type:1}}, {age:{$exists:true}}]})
     $and (not really necessary as implicit)
