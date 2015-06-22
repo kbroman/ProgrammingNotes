@@ -29,7 +29,7 @@ mongo shell commands
       db.people.find({name: {$regex: "^A"}})
     $or
       db.people.find({$or: [{name:{$type:1}}, {age:{$exists:true}}]})
-    $and (not really necessary as implicit
+    $and (not really necessary as implicit)
 
   array fields:
     db.people.find({favorites: "pretzels"}) // favorites contains this
