@@ -27,6 +27,8 @@ mongo shell commands
     $type (2 is string, 1 is float)
     $regex
       db.people.find({name: {$regex: "^A"}})
+    can also do regex like in perl:
+      db.people.find({name: /^A/})
     $or
       db.people.find({$or: [{name:{$type:1}}, {age:{$exists:true}}]})
     $and (not really necessary as implicit)
