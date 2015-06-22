@@ -246,7 +246,7 @@ for doc in coll.find():
 [doc for doc in broman.find({'name':{'$regex':'^a','$options':'i'}})]
 
 
-For http-based requests to mongodb, use bottle. Something like:
+For http-based requests to mongodb, use the module bottle. Something like:
 
 import bottle, pymongo
 
