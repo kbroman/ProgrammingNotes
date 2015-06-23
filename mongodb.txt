@@ -245,6 +245,8 @@ for doc in coll.find():
 [doc for doc in coll.find()]
 [doc for doc in broman.find({'name':{'$regex':'^a','$options':'i'}})]
 
+coll.create_index('name') # create ascending index for field 'name'
+
 
 For http-based requests to mongodb, use the module bottle. Something like:
 
