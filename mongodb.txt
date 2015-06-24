@@ -331,3 +331,37 @@ Indexes
       # sort by how well they match
       db.sentences.find({$text:{$search:'dog tree obsidian'}},
                         {score:{$meta: 'textScore'}}).sort({score:$meta:'textScore'})
+
+---
+
+Aggregation framework
+
+use agg
+db.zips.aggregate([ {$group: {_id:"$state", num_zip:{$sum:1}} } ])
+
+  $project, $match, $group, $sort, $skip, $limit, $unwind
+     $out, $redact, $geonear
+
+db.zips.aggregate([{$group: {_id:'$state', num_zip:{$sum:1}}},
+                   {$sort: {'num_zip':-1}}, {$limit: 10}])
+
+db.zips.aggregate([{$match:{state:"WI"}},
+                   {$group: {_id:'$city', pop:{$sum:'$pop'}}},
+                   {$sort:{pop:-1}}, {$limit:10}])
+
+db.zips.aggregate([{$group: {_id:{city:'$city', state:'$state'},
+                             pop:{$sum:'$pop'}}},
+                   {$sort:{pop:-1}}, {$limit:20}])
+
+Aggregation expressions for $group
+
+  $sum, $avg, $min, $max, $push, $addToSet, $first, $last
+  ($first and $last meaningful only after sorting)
+  ($addtoset: find all unique values)
+
+  db.zips.aggregate([{$group:{_id:'$state', cities: {$addToSet:'$city'}}}])
+
+
+---
+
+_id need not be a scalar; it can be any object, as long as it's unique
