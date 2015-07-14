@@ -52,6 +52,10 @@ Dir.entries(".")
 a = [2, 7, 5, 4]
 b = a.select { |el| el > 4 }
 
+# no list comprehension, but you can use select and map
+x = [2, 7, 5, 4]
+y = x.select{|e| e > 2}.map{|e| 2*e}
+
 # one line if-else
 x = 5
 y = x > 3 ? x : 3
