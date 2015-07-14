@@ -95,3 +95,10 @@ y.values
 # combining array into string
 x = ["a", "b", "c"]
 x.join(',')
+
+# set
+require 'set'
+x = Set.new()
+x.add("a")
+x.add("b")
+x.add("a")
