@@ -85,6 +85,7 @@ x = {"name" => "karl", "age" => "really_old", "shoe_size"=> 8}
 x["name"]
 x.keys
 x.values
+x.has_key?('age') # check for specific key
 
 # hash with symbols as the keys
 y = {name: "karl", age: "really_old", shoe_size: 8} # no space between key and :
@@ -102,3 +103,8 @@ x = Set.new()
 x.add("a")
 x.add("b")
 x.add("a")
+
+# convert array to set
+x = ["A", "B", "C", "B"]
+y = x.to_set()
+y.delete("C") # delete item from set
