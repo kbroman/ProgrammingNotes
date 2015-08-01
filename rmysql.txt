@@ -1,0 +1,19 @@
+## Notes on RMySQL
+
+library(DBI)
+con <- dbConnect(RMySQL::MySQL(), group = "my-db") # uses info in ~/.my.cnf
+
+dbListTables(con)
+dbWriteTable(con, "mtcars", mtcars)
+dbListTables(con)
+
+dbListFields(con, 'mtcars')
+dbColumnInfo(con, 'mtcars')
+
+dbReadTable(con, "mtcars")
+
+res <- dbSendQuery(con, "SELECT * FROM mtcars WHERE cyl = 4")
+dbFetch(res)
+dbClearResult(res) # <- important to do this when done with query
+
+dbDisconnect(con)
