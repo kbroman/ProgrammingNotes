@@ -5,6 +5,7 @@ con <- dbConnect(RMySQL::MySQL(), group = "my-db") # uses info in ~/.my.cnf
 
 dbListTables(con)
 
+# data from Managing and using MySQL, page 41
 books <- data.frame(id=1:5,
                     title=c("The Green Mile", "Guards, Guards!", "Imzadi",
                             "Gold", "Howling Mad"),
