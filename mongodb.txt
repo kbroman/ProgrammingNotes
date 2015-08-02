@@ -130,6 +130,7 @@ mongo shell commands
       db.people.remove() // gives error
       db.people.remove({}) // removes all documents in collection, but doesn't discard indexes
       db.people.drop()     // removes the collection
+      db.dropDatabase()    // removes the whole database
 
       // remove just one of the matches
       db.stuff.remove({thing: apple}, {justOne: true});
