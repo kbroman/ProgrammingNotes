@@ -1,0 +1,53 @@
+## Notes on PostgreSQL
+
+brew install postgresql
+
+To start postgres once:
+  postgres -D /usr/local/var/postgres
+
+Or install lunchy:
+  gem install lunchy (allows easy start/stop of Postgres)
+
+Install launch agent in the right place:
+  cp /usr/local/Cellar/postgresql/9.4.4/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+
+To start and stop postgres:
+  lunchy start postgres
+  lunchy stop postgres
+
+
+---
+
+Connecting
+
+  psql -d template1
+
+create a new database
+
+  CREATE DATABASE tempdb;
+
+Then connect with
+
+  psql -d tempdb
+
+
+---
+
+
+RPostgreSQL package
+
+library(DBI)
+library(RPostgreSQL)
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname="tempdb", host="localhost")
+summary(con)
+
+dbWriteTable(con, "mtcars", mtcars)
+
+dbListTables(con)
+
+rs <- dbSendQuery(con, "select * from mtcars")
+fetch(rs, n=-1)
+
+rs <- dbSendQuery(con, "select * from mtcars where cyl =4")
+x <- fetch(rs, n=-1)
