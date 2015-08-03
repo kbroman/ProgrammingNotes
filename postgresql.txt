@@ -42,10 +42,14 @@ dbWriteTable(con, "mtcars", mtcars)
 dbListTables(con)
 
 rs <- dbSendQuery(con, "select * from mtcars")
-fetch(rs, n=-1)
+fetch(rs) # grab everything (default n=-1)
+
+rs <- dbSendQuery(con, "select * from mtcars")
+fetch(rs, n=5) # grab 5 rows
+fetch(rs) # grab the rest
 
 rs <- dbSendQuery(con, "select * from mtcars where cyl =4")
-x <- fetch(rs, n=-1)
+x <- fetch(rs)
 dbDisconnect(con)
 
 
