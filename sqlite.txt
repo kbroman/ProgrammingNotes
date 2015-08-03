@@ -1,0 +1,58 @@
+## Notes on sqlite
+
+brew install sqlite
+
+sqlite3 command actually in anaconda
+And apparently RSQLite and sqldb packages for R also include it
+
+---
+
+In R:
+    library(sqldf)
+
+Good tutorial at http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html
+
+    con <- dbConnect(SQLite(), dbname="Test.sqlite")
+    dbWriteTable(con, "mtcars", mtcars) # dump data frame into database
+    dbListTables(con)
+    dbListFields(con, "mtcars")
+    x <- dbReadTable(con, "mtcars") # read the whole thing
+    dbRemoveTable(con, "mtcars")
+    dbDisconnect(con)
+
+Software Carpentry example
+
+    download.file("http://files.software-carpentry.org/survey.db", "survey.db")
+
+    con <- dbConnect(SQLite(), dbname="survey.db")
+    dbListTables(con) # Person, Site, Survey, Visited
+    person <- fetch(rs <- dbSendQuery(con, "SELECT * FROM Person")) # read all of Person table
+    person2 <- dbReadTable(con, "Survey") # another way to read the whole thing
+    x <- fetch(rs <- dbSendQuery(con, "SELECT name FROM Site"))
+
+    # just distinct values
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT quant FROM Survey"))
+    # distinct values for pairs of columns
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT taken, quant FROM Survey"))
+
+    # ordered results
+    fetch(rs <- dbSendQuery(con, "SELECT * From Person ORDER BY ident"))
+    fetch(rs <- dbSendQuery(con, "SELECT * From Person ORDER BY ident DESC"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey ORDER BY taken ASC, person DESC"))
+
+    # filtering
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site='DR-1'"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site='DR-1' AND dated<'1930-01-01'"))
+    # Note: SQLite doesn't have a date type but either uses text or numbers
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE person='lake' OR person='roe'"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE person IN ('lake','roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE quant='sal' AND (person='lake' OR person='roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE quant='sal' AND (person='lake' OR person='roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT person, quant FROM Survey WHERE person IN ('lake', 'roe')"))
+    # crude regex
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site LIKE 'DR%'"))
+
+    fetch(dbSendQuery(con, "SELECT DISTINCT quant FROM Survey"))
+    fetch(dbSendQuery(con, "SELECT * FROM Survey where quant='sal' AND (reading < 0 OR reading > 1)"))
+
+    dbDisconnect(con)
