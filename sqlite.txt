@@ -52,7 +52,30 @@ Software Carpentry example
     # crude regex
     fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site LIKE 'DR%'"))
 
-    fetch(dbSendQuery(con, "SELECT DISTINCT quant FROM Survey"))
-    fetch(dbSendQuery(con, "SELECT * FROM Survey where quant='sal' AND (reading < 0 OR reading > 1)"))
+    dbGetQuery(con, "SELECT DISTINCT quant FROM Survey")
+    dbGetQuery(con, "SELECT * FROM Survey where quant='sal' AND (reading < 0 OR reading > 1)")
+
+    # calculating new values
+    ### mutliply rad by 1.05 and round to 2 digits
+    dbGetQuery(con, "SELECT taken, round(1.05 * reading, 2) FROM Survey WHERE quant='rad'")
+    ### string concatenation
+    dbGetQuery(con, "SELECT personal || ' ' || family FROM Person")
+    dbGetQuery(con, "SELECT personal || ' ' || family AS name FROM Person")
+    dbGetQuery(con, "SELECT reading/100 FROM Survey WHERE quant='sal' AND person='roe'")
+
+
+    # union: combine two queries
+    dbGetQuery(con, paste("SELECT taken,person,reading FROM Survey WHERE person!='roe' AND quant='sal'",
+                          "UNION SELECT taken,person,reading/100 FROM Survey WHERE person='roe'"))
+
+    # some string functions
+    dbGetQuery(con, "SELECT DISTINCT substr(site, 0, instr(site, '-')) AS 'Major site' FROM Visited")
+
+    # NULL values
+    dbGetQuery(con, "SELECT * FROM Visited WHERE dated IS NULL")
+    dbGetQuery(con, "SELECT * FROM Visited WHERE dated IS NOT NULL")
+
+    dbGetQuery(con, paste("SELECT taken,person,reading FROM Survey WHERE (person IS NULL OR person!='roe') AND quant='sal'",
+                          "UNION SELECT taken,person,reading/100 FROM Survey WHERE person='roe'"))
 
     dbDisconnect(con)
