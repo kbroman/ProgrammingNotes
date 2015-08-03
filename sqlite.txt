@@ -78,4 +78,45 @@ Software Carpentry example
     dbGetQuery(con, paste("SELECT taken,person,reading FROM Survey WHERE (person IS NULL OR person!='roe') AND quant='sal'",
                           "UNION SELECT taken,person,reading/100 FROM Survey WHERE person='roe'"))
 
+    # aggregation
+    dbGetQuery(con, "SELECT min(dated) FROM Visited")
+    dbGetQuery(con, "SELECT max(dated) FROM Visited")
+    dbGetQuery(con, "SELECT avg(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT count(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT sum(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT person, avg(reading) FROM Survey WHERE quant='sal' GROUP BY person")
+    dbGetQuery(con, "SELECT quant, person, avg(reading) FROM Survey GROUP BY person, quant ORDER BY quant, person")
+    dbGetQuery(con, "SELECT quant, person, avg(reading) FROM Survey WHERE person IS NOT NULL GROUP BY person, quant ORDER BY quant, person")
+
+    # group_concat
+    dbGetQuery(con, "SELECT group_concat(personal || ' ' || family, ', ') AS names FROM Person")
+    dbGetQuery(con, "SELECT * FROM Site JOIN Visited ON Site.name = Visited.site")
+    dbGetQuery(con, "SELECT Site.lat, Site.long, Visited.dated FROM Site JOIN Visited WHERE Site.name = Visited.site")
+
+    # joins
+    dbGetQuery(con, "SELECT * FROM Site JOIN Visited") # full cross-product
+    dbGetQuery(con, "SELECT Site.lat, Site.long, Visited.dated FROM Site JOIN Visited WHERE Site.name = Visited.site")
+    dbGetQuery(con, paste("SELECT Site.lat, Site.long, Visited.dated, Survey.quant, Survey.reading",
+                          "FROM Site",
+                          "JOIN Visited ON Site.name = Visited.site",
+                          "JOIN Survey ON Visited.ident = Survey.taken",
+                          "WHERE Visited.dated IS NOT NULL"))
+    dbGetQuery(con, paste("SELECT * FROM Visited",
+                          "JOIN Survey ON Visited.ident = Survey.taken",
+                          "WHERE site='DR-1' AND quant='rad'"))
+
+    # SQLite automatically numbers records with 'rowid'
+    dbGetQuery(con, "SELECT rowid,* FROM Person")
+
+    # list all fields in each table
+    sapply(dbListTables(con), function(tab) dbListFields(con, tab))
+
+    # last challenge at http://swcarpentry.github.io/sql-novice-survey/07-join.html
+    dbGetQuery(con, paste("SELECT Visited.site, Site.lat, Site.long, Visited.dated, Person.personal, Person.family, Survey.quant, Survey.reading",
+                          "FROM Site JOIN Visited ON Site.name = Visited.site",
+                          "JOIN Survey ON Survey.taken = Visited.ident",
+                          "JOIN Person ON Person.ident = Survey.person",
+                          "WHERE Visited.dated IS NOT NULL",
+                          "ORDER BY Visited.dated"))
+
     dbDisconnect(con)
