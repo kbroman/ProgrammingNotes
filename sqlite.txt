@@ -119,4 +119,17 @@ Software Carpentry example
                           "WHERE Visited.dated IS NOT NULL",
                           "ORDER BY Visited.dated"))
 
+    # create a new table
+    dbGetQuery(con, "CREATE TABLE JustLatLong(lat text, long text)")
+    # fill with values from Site
+    dbGetQuery(con, "INSERT INTO JustLatLong SELECT lat, long FROM Site")
+    # insert some other values
+    dbGetQuery(con, "INSERT INTO JustLatLong values(43.106,-89.425)")
+    # update
+    dbGetQuery(con, "UPDATE Site SET lat=-47.87, long=-122.40 WHERE name='MSK-4'")
+    # delete a record
+    dbGetQuery(con, "DELETE FROM Person WHERE ident='danforth'")
+    # replace NULLs with 'unknown'
+    dbGetQuery(con, "UPDATE Survey SET person='unknown' WHERE person IS NULL")
+
     dbDisconnect(con)
