@@ -1,0 +1,7 @@
+Notes on X11 on Mac
+
+Seems to be located in /opt/X11
+Often expected to be in /usr/X11
+
+So link:
+    sudo ln -s /opt/X11 /usr/X11
