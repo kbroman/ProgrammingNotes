@@ -46,3 +46,16 @@ fetch(rs, n=-1)
 
 rs <- dbSendQuery(con, "select * from mtcars where cyl =4")
 x <- fetch(rs, n=-1)
+dbDisconnect(con)
+
+
+con <- dbConnect(drv, dbname="bpsimple", host="localhost") # db from Apress book
+
+rs <- dbSendQuery(con, paste('SELECT customer.fname, customer.lname,',
+                                     'count(orderinfo.orderinfo_id) AS "no. orders"',
+                             'FROM orderinfo, customer',
+                             'WHERE orderinfo.customer_id = customer.customer_id',
+                             'GROUP BY customer.customer_id'))
+fetch(rs)
+
+dbDisconnect(con)
