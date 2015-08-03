@@ -18,18 +18,13 @@ To start and stop postgres:
 
 ---
 
-Connecting
-
-  psql -d template1
-
 create a new database
 
-  CREATE DATABASE tempdb;
+  createdb tempdb
 
 Then connect with
 
   psql -d tempdb
-
 
 ---
 
