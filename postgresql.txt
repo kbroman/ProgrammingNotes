@@ -80,3 +80,11 @@ Basic use:
     cur = con.cursor()
     cur.execute("SELECT * from customer")
     rows = cur.fetchall()
+
+---
+
+Dates
+
+cast('2004-06-23' as date)
+
+select * from orderinfo where date_placed > cast('2004-06-23' as date);
