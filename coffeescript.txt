@@ -83,3 +83,14 @@ x = """blah blah blah
 this is a multiline string
 blah blah"""
 # becomes 'blah blah blah\nthis is a multiline string\nblah blah'
+# (also need ctrl-v for general code, like loops, that will need multiple lines)
+
+# Again: for continuation lines (multiline code in the REPL)
+# type ctrl-v (and then again ctrl-v to exit)
+
+# delete element from hash
+x = {a:1, b:2, c:3}
+delete(x.b)
+
+# another list comprehension example
+z = ({x:Math.random(), y:Math.random()} for i in [1..20])

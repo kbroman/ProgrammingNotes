@@ -53,3 +53,9 @@ invalid_argument
 overflow_error
 underflow_error
 runtime_error
+
+---
+
+NDEBUG flag for "not debugging"
+With R, it's defined by default
+Use -UNDEBUG In .R/Makevars to turn force it to be undefined

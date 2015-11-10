@@ -52,6 +52,10 @@ Dir.entries(".")
 a = [2, 7, 5, 4]
 b = a.select { |el| el > 4 }
 
+# no list comprehension, but you can use select and map
+x = [2, 7, 5, 4]
+y = x.select{|e| e > 2}.map{|e| 2*e}
+
 # one line if-else
 x = 5
 y = x > 3 ? x : 3
@@ -73,3 +77,38 @@ ofile = ifile.gsub(/(\.\w+)$/, '_slides\1')
 
 # aborting
 abort("file #{ofile} already exists") if File.exists?(ofile)
+
+# adding to an array
+x = [1, 2, 3]
+x + [4, 5] # -> [1,2,3,4,5] (but x doesn't change)
+x += [4,5] # -> x now is [1,2,3,4,5]
+x.insert(1, -1) # -> [1,-1,2,3,4,5] (x is changed)
+
+# hashes
+x = {"name" => "karl", "age" => "really_old", "shoe_size"=> 8}
+x["name"]
+x.keys
+x.values
+x.has_key?('age') # check for specific key
+
+# hash with symbols as the keys
+y = {name: "karl", age: "really_old", shoe_size: 8} # no space between key and :
+y[:name] # keys turned into symbols
+y.keys
+y.values
+
+# combining array into string
+x = ["a", "b", "c"]
+x.join(',')
+
+# set
+require 'set'
+x = Set.new()
+x.add("a")
+x.add("b")
+x.add("a")
+
+# convert array to set
+x = ["A", "B", "C", "B"]
+y = x.to_set()
+y.delete("C") # delete item from set

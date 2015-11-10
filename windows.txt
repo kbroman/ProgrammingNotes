@@ -60,3 +60,8 @@ Equivalent of "open" on Mac is "start", for example:
   start notepad++ <filename>
 
 Install MikTeX; need to add it to your path
+
+Git Bash
+
+  pasting into git bash: right-click -> Edit -> paste
+  (Or, shift-insert)

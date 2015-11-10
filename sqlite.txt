@@ -1,0 +1,135 @@
+## Notes on sqlite
+
+brew install sqlite
+
+sqlite3 command actually in anaconda
+And apparently RSQLite and sqldb packages for R also include it
+
+---
+
+In R:
+    library(sqldf)
+
+Good tutorial at http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html
+
+    con <- dbConnect(SQLite(), dbname="Test.sqlite")
+    dbWriteTable(con, "mtcars", mtcars) # dump data frame into database
+    dbListTables(con)
+    dbListFields(con, "mtcars")
+    x <- dbReadTable(con, "mtcars") # read the whole thing
+    dbRemoveTable(con, "mtcars")
+    dbDisconnect(con)
+
+Software Carpentry example
+
+    download.file("http://files.software-carpentry.org/survey.db", "survey.db")
+
+    con <- dbConnect(SQLite(), dbname="survey.db")
+    dbListTables(con) # Person, Site, Survey, Visited
+    person <- fetch(rs <- dbSendQuery(con, "SELECT * FROM Person")) # read all of Person table
+    person2 <- dbReadTable(con, "Survey") # another way to read the whole thing
+    x <- fetch(rs <- dbSendQuery(con, "SELECT name FROM Site"))
+
+    # just distinct values
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT quant FROM Survey"))
+    # distinct values for pairs of columns
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT taken, quant FROM Survey"))
+
+    # ordered results
+    fetch(rs <- dbSendQuery(con, "SELECT * From Person ORDER BY ident"))
+    fetch(rs <- dbSendQuery(con, "SELECT * From Person ORDER BY ident DESC"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey ORDER BY taken ASC, person DESC"))
+
+    # filtering
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site='DR-1'"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site='DR-1' AND dated<'1930-01-01'"))
+    # Note: SQLite doesn't have a date type but either uses text or numbers
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE person='lake' OR person='roe'"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE person IN ('lake','roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE quant='sal' AND (person='lake' OR person='roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Survey WHERE quant='sal' AND (person='lake' OR person='roe')"))
+    fetch(rs <- dbSendQuery(con, "SELECT DISTINCT person, quant FROM Survey WHERE person IN ('lake', 'roe')"))
+    # crude regex
+    fetch(rs <- dbSendQuery(con, "SELECT * FROM Visited WHERE site LIKE 'DR%'"))
+
+    dbGetQuery(con, "SELECT DISTINCT quant FROM Survey")
+    dbGetQuery(con, "SELECT * FROM Survey where quant='sal' AND (reading < 0 OR reading > 1)")
+
+    # calculating new values
+    ### mutliply rad by 1.05 and round to 2 digits
+    dbGetQuery(con, "SELECT taken, round(1.05 * reading, 2) FROM Survey WHERE quant='rad'")
+    ### string concatenation
+    dbGetQuery(con, "SELECT personal || ' ' || family FROM Person")
+    dbGetQuery(con, "SELECT personal || ' ' || family AS name FROM Person")
+    dbGetQuery(con, "SELECT reading/100 FROM Survey WHERE quant='sal' AND person='roe'")
+
+
+    # union: combine two queries
+    dbGetQuery(con, paste("SELECT taken,person,reading FROM Survey WHERE person!='roe' AND quant='sal'",
+                          "UNION SELECT taken,person,reading/100 FROM Survey WHERE person='roe'"))
+
+    # some string functions
+    dbGetQuery(con, "SELECT DISTINCT substr(site, 0, instr(site, '-')) AS 'Major site' FROM Visited")
+
+    # NULL values
+    dbGetQuery(con, "SELECT * FROM Visited WHERE dated IS NULL")
+    dbGetQuery(con, "SELECT * FROM Visited WHERE dated IS NOT NULL")
+
+    dbGetQuery(con, paste("SELECT taken,person,reading FROM Survey WHERE (person IS NULL OR person!='roe') AND quant='sal'",
+                          "UNION SELECT taken,person,reading/100 FROM Survey WHERE person='roe'"))
+
+    # aggregation
+    dbGetQuery(con, "SELECT min(dated) FROM Visited")
+    dbGetQuery(con, "SELECT max(dated) FROM Visited")
+    dbGetQuery(con, "SELECT avg(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT count(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT sum(reading) FROM Survey where quant='sal'")
+    dbGetQuery(con, "SELECT person, avg(reading) FROM Survey WHERE quant='sal' GROUP BY person")
+    dbGetQuery(con, "SELECT quant, person, avg(reading) FROM Survey GROUP BY person, quant ORDER BY quant, person")
+    dbGetQuery(con, "SELECT quant, person, avg(reading) FROM Survey WHERE person IS NOT NULL GROUP BY person, quant ORDER BY quant, person")
+
+    # group_concat
+    dbGetQuery(con, "SELECT group_concat(personal || ' ' || family, ', ') AS names FROM Person")
+    dbGetQuery(con, "SELECT * FROM Site JOIN Visited ON Site.name = Visited.site")
+    dbGetQuery(con, "SELECT Site.lat, Site.long, Visited.dated FROM Site JOIN Visited WHERE Site.name = Visited.site")
+
+    # joins
+    dbGetQuery(con, "SELECT * FROM Site JOIN Visited") # full cross-product
+    dbGetQuery(con, "SELECT Site.lat, Site.long, Visited.dated FROM Site JOIN Visited WHERE Site.name = Visited.site")
+    dbGetQuery(con, paste("SELECT Site.lat, Site.long, Visited.dated, Survey.quant, Survey.reading",
+                          "FROM Site",
+                          "JOIN Visited ON Site.name = Visited.site",
+                          "JOIN Survey ON Visited.ident = Survey.taken",
+                          "WHERE Visited.dated IS NOT NULL"))
+    dbGetQuery(con, paste("SELECT * FROM Visited",
+                          "JOIN Survey ON Visited.ident = Survey.taken",
+                          "WHERE site='DR-1' AND quant='rad'"))
+
+    # SQLite automatically numbers records with 'rowid'
+    dbGetQuery(con, "SELECT rowid,* FROM Person")
+
+    # list all fields in each table
+    sapply(dbListTables(con), function(tab) dbListFields(con, tab))
+
+    # last challenge at http://swcarpentry.github.io/sql-novice-survey/07-join.html
+    dbGetQuery(con, paste("SELECT Visited.site, Site.lat, Site.long, Visited.dated, Person.personal, Person.family, Survey.quant, Survey.reading",
+                          "FROM Site JOIN Visited ON Site.name = Visited.site",
+                          "JOIN Survey ON Survey.taken = Visited.ident",
+                          "JOIN Person ON Person.ident = Survey.person",
+                          "WHERE Visited.dated IS NOT NULL",
+                          "ORDER BY Visited.dated"))
+
+    # create a new table
+    dbGetQuery(con, "CREATE TABLE JustLatLong(lat text, long text)")
+    # fill with values from Site
+    dbGetQuery(con, "INSERT INTO JustLatLong SELECT lat, long FROM Site")
+    # insert some other values
+    dbGetQuery(con, "INSERT INTO JustLatLong values(43.106,-89.425)")
+    # update
+    dbGetQuery(con, "UPDATE Site SET lat=-47.87, long=-122.40 WHERE name='MSK-4'")
+    # delete a record
+    dbGetQuery(con, "DELETE FROM Person WHERE ident='danforth'")
+    # replace NULLs with 'unknown'
+    dbGetQuery(con, "UPDATE Survey SET person='unknown' WHERE person IS NULL")
+
+    dbDisconnect(con)
