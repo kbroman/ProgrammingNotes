@@ -3,6 +3,7 @@ brew outdated
 brew upgrade
 
 R -e 'update.packages(ask=FALSE)'
+R -e 'update.packages(ask=FALSE, checkBuilt=TRUE)'
 
 rvm get stable
 gem update
@@ -12,3 +13,4 @@ conda update anaconda
 
 npm update npm -g
 npm update -g
+npm install -g npm@latest
