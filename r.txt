@@ -71,3 +71,7 @@ rgl package:
 
    Got the same error (can't load libpng); gave up and went with the
    (older) binary version of the package.
+
+----
+
+complete.cases: identifies the rows of a matrix that have no NAs
