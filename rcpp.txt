@@ -32,6 +32,8 @@ double, int, bool
 NumericVector, IntegerVector, LogicalVector
 NumericMatrix, IntegerMatrix
 x.size()
+x.rows()
+x.cols()
 std::min()
 std::max()
 NumericVector out(n)
@@ -41,6 +43,8 @@ NumericVector::is_na()
 break / continue
 rep_len(x, n)
 R::pnorm etc (see /usr/src/Rcpp/inst/include/Rcpp/Rmath.h)
+R_NilValue
+Rf_isNull()
 ---
 
 Package:
@@ -58,3 +62,5 @@ Package:
 Might instead have
 
       LinkingTo: Rcpp, RcppEigen
+
+---
