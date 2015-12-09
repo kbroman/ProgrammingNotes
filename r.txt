@@ -75,3 +75,11 @@ rgl package:
 ---
 
 complete.cases: identifies the rows of a matrix that have no NAs
+
+---
+
+Environment variables
+
+Sys.setenv("NOT_CRAN"="true")
+Sys.unsetenv("NOT_CRAN")
+Sys.getenv("NOT_CRAN")
