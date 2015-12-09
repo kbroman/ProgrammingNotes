@@ -22,7 +22,7 @@ Avoid read.csv (due to the default fill=TRUE)
 Use read.table(..., header=TRUE, sep=",")
 fill=TRUE behaves terribly if later rows have extra columns
 
-----
+---
 
 reinstalling all R packages:
 update.packages(checkBuilt=TRUE, ask=FALSE)
@@ -33,7 +33,7 @@ installing gfortran:
 (http://r.research.att.com/libs/gfortran-4.8.2-darwin13.tar.bz2)
 sudo tar fxz ~/Desktop/gfortran-4.8.2-darwin13.tar.bz2 -C /
 
-----
+---
 
 in ~/.R/config:
 
@@ -56,7 +56,7 @@ install_github("ropensci/rentrez", build_vignettes=TRUE)
 
 [install_github passes extra args, including build_vignettes, to install()]
 
-----
+---
 
 rgl package:
 
@@ -72,6 +72,6 @@ rgl package:
    Got the same error (can't load libpng); gave up and went with the
    (older) binary version of the package.
 
-----
+---
 
 complete.cases: identifies the rows of a matrix that have no NAs
