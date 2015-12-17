@@ -83,3 +83,8 @@ Environment variables
 Sys.setenv("NOT_CRAN"="true")
 Sys.unsetenv("NOT_CRAN")
 Sys.getenv("NOT_CRAN")
+
+---
+
+# setNames: create and set names for an object at the same time.
+setNames(1:3, c("first", "second", "third"))
