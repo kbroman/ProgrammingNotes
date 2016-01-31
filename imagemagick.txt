@@ -27,3 +27,7 @@ ImageMagick notes
    convert -flatten Rlogo.png Rlogo_new.png
    convert -define png:size=200x200 Rlogo_new.png -thumbnail \
            '64x64>' -background white -gravity center -extent 64x64 R-icon64.png
+
+7. Pad image to a given aspect ratio (here, square to 4x6)
+
+   convert fruitsnacks81.png -gravity center -background white -extent 150x100% fruitsnacks81_4x6.png
