@@ -1,5 +1,11 @@
 Notes on R
 
+Command line R on Mac
+
+sudo ln -s /Library/Frameworks/R.framework/Resources/bin/R /usr/local/bin/R
+
+---
+
 mapply
 assign
 save(list=blah, file="blah.RData") # blah is a character string with an object name
