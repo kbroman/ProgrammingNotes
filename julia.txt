@@ -5,3 +5,10 @@ brew install --HEAD --64bit julia
 
 In .emacs:
 (setq inferior-julia-program-name "/usr/local/bin/julia")
+
+---
+
+Installing packages:
+  Pkg.update()
+  Pkg.add("Distances")
+  Pkg.clone("https://github.com/sens/FaSTLMM.jl.git")
