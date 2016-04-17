@@ -12,3 +12,8 @@ Installing packages:
   Pkg.update()
   Pkg.add("Distances")
   Pkg.clone("https://github.com/sens/FaSTLMM.jl.git")
+
+---
+
+run script from within Julia
+  include("lmmtest.jl")
