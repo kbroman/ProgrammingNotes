@@ -1,7 +1,7 @@
 Notes on Python
 
 Install anaconda from  http://continuum.io/downloads
-  I installed it in ~/.anaconda
+  I installed it in the default location (/anaconda)
 
 Install python 3
   conda create -n py3 python=3 anaconda
