@@ -117,3 +117,10 @@ y.delete("C") # delete item from set
 def f(arg)
     arg*2
 end
+
+# read lines from file
+f = File.open("some_file.txt")
+f.each_line do |line|
+    line.strip()
+    # do something else
+end
