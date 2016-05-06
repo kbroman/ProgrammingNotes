@@ -124,3 +124,9 @@ f.each_line do |line|
     line.strip()
     # do something else
 end
+
+# test whether something is nil
+x = 5
+x.nil?
+y = nil
+y.nil?
