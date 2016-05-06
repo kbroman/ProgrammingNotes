@@ -112,3 +112,8 @@ x.add("a")
 x = ["A", "B", "C", "B"]
 y = x.to_set()
 y.delete("C") # delete item from set
+
+# define function
+def f(arg)
+    arg*2
+end
