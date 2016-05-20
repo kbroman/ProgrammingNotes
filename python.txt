@@ -71,3 +71,12 @@ See also:
 
 https://github.com/kbroman/PyBroman/blob/master/features.py
 https://github.com/kbroman/PyBroman/blob/master/ParseGenotypeData/convert3.py
+
+------------------------------
+
+# null value
+x = None
+
+# loop
+for i in range(10):
+    print(i)
