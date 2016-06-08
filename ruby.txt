@@ -139,3 +139,6 @@ dir.each do |file|
         `mv #{file} #{$1}_orig.txt`
     end
 end
+
+# convert enumerator to array
+x = 5.upto(50).to_a
