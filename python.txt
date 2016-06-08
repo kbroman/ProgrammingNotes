@@ -90,3 +90,13 @@ then click New -> Python 3
 
 within jupyter: type '%whos' to see what variables you've assigned,
 like ls() in R
+
+------------------------
+
+numpy
+
+x = numpy.array([[1,2],[3,4],[5,6],[7,8]])
+numpy.shape(x) # tuple (immutable) with (n_rows, n_cols)
+x[0,0]
+x[:,1]
+x[2,:]
