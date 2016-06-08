@@ -130,3 +130,12 @@ x = 5
 x.nil?
 y = nil
 y.nil?
+
+# do something to a bunch of files in a directory
+#   here, rename files like "myfile.txt" as "myfile_orig.txt"
+dir = Dir.open(".")
+dir.each do |file|
+    if file =~ /^(.*).txt$/
+        `mv #{file} #{$1}_orig.txt`
+    end
+end
