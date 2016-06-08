@@ -87,3 +87,6 @@ Jupyter notebooks
 
 type "jupyter notebook" at shell prompt
 then click New -> Python 3
+
+within jupyter: type '%whos' to see what variables you've assigned,
+like ls() in R
