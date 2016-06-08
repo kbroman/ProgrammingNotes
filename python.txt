@@ -80,3 +80,10 @@ x = None
 # loop
 for i in range(10):
     print(i)
+
+------------------------
+
+Jupyter notebooks
+
+type "jupyter notebook" at shell prompt
+then click New -> Python 3
