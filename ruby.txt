@@ -142,3 +142,8 @@ end
 
 # convert enumerator to array
 x = 5.upto(50).to_a
+
+# .. vs ...
+x = 5.upto(50).to_a
+x[5..10]  # include endpoint
+x[5...10] # don't include endpoint
