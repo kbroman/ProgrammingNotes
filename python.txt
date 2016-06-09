@@ -19,6 +19,11 @@ source deactivate
 Remove environment
   conda env remove -n py33
 
+---
+
+IDE with anaconda is called "Spyder"
+(standard IDE is "idle" or "IDLE" but on my Mac it uses python2)
+
 ------------------------------
 
 better colors for ipython:
