@@ -111,3 +111,11 @@ bitbucket:  Had trouble with ssh; here's what seemed to work
   To remove all current identities:
 
     ssh-add -D
+
+======================
+
+A couple of things from Software Carpentry
+
+- to get out of detached HEAD state, use "git checkout master"
+
+- to see the files you're ignoring, use "git status --ignored"
