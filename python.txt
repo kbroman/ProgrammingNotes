@@ -105,3 +105,17 @@ numpy.shape(x) # tuple (immutable) with (n_rows, n_cols)
 x[0,0]
 x[:,1]
 x[2,:]
+
+------------------------
+
+matplotlib
+
+import matplotlib.pyplot as plt
+plt.figure()
+x = [xv+1 for xv in range(6)]
+y = [xv**2 for xv in x]
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("first matplotlib plot")
+plt.plot(x, y)
+plt.show()
