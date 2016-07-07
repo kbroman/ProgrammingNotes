@@ -13,3 +13,10 @@ var h, w, fill, linecolor;
 // w assigned default value, 600
 // linecolor assigned chartOpts.linecolor
 // fill is undefined
+
+
+// Template strings
+
+var x = 30;
+y = `x + 20 = ${x+20}`;
+// need to use backticks and ${}
