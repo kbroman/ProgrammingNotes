@@ -1,0 +1,15 @@
+// JavaScript ES6 notes
+
+// Destructuring assignment
+//   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+var a,b;
+[a,b] = [1,2];
+
+var chartOpts = {h:300, linecolor:"slateblue"};
+var h, w, fill, linecolor;
+({h=900, w=600, fill, linecolor} = chartOpts);
+// h assigned chartOpts.h
+// w assigned default value, 600
+// linecolor assigned chartOpts.linecolor
+// fill is undefined
