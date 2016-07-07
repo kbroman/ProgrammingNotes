@@ -34,3 +34,34 @@ for(i of x) {}
 for(xv in x) {}
 y = {a:5, b:10, c:11}
 for(key in y) {} // can't use for(key of y) {}
+
+
+// .call, .apply
+
+// .call
+// call a function as if it were a method for the provided object
+function greet() { return `Hello, my name is ${this.name}.`; }
+greet.call({name: "Fisher"});
+
+function update(birthYear, occupation) {
+   this.birthYear = birthYear;
+   this.occupation = occupation;
+}
+
+bruce = { name: "Bruce" }
+update.call(bruce, 1969, "statistician");
+
+// .apply is like .call, but taking extra args as an array
+update.apply(bruce, [1972, "writer"]);
+
+// you can use this to pass an array to Math.min or Math.max
+x = [1, 23, -3, 4, 5]
+Math.min.apply(null, x)
+Math.max.apply(null, x)
+
+// can also use ... (the "spread" operator)
+Math.min(...x)
+Math.max(...x)
+
+// .bind permanently attaches an object (as "this") to a function
+updateBruce = update.bind(bruce)
