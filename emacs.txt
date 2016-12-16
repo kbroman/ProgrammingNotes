@@ -32,3 +32,8 @@ C-u C-x =   Information about face at a particular point
 
 C-x h  Select buffer
 C-M-\  re-indent selected region
+
+----
+
+Insert unicode character:
+    C-x 8 <enter> [hex] <enter>
