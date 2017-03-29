@@ -94,3 +94,10 @@ Sys.getenv("NOT_CRAN")
 
 # setNames: create and set names for an object at the same time.
 setNames(1:3, c("first", "second", "third"))
+
+---
+
+# address of an object; useful to see if it's been copied
+# See http://adv-r.had.co.nz/memory.html#modification
+plyr::address(x) # address of object
+plyr::ref(x)     # number of references to object
