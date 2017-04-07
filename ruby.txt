@@ -33,6 +33,18 @@ gem cleanup
 
 -----------
 
+github pages install:
+
+    gem install github-pages
+    gem install bundler
+    bundle install
+
+then
+
+    bundle exec jekyll serve
+
+-----------
+
 # copying arrays
 a = [1,2,3]
 b = a
