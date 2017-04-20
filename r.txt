@@ -101,3 +101,10 @@ setNames(1:3, c("first", "second", "third"))
 # See http://adv-r.had.co.nz/memory.html#modification
 plyr::address(x) # address of object
 plyr::ref(x)     # number of references to object
+
+---
+
+# installing c++11 packages on UWisc biostat server
+ssh nebula-2
+export PATH="/s/pkg/linux64/gcc/4.8.4/bin:$PATH"
+R -e "install.packages('fst')"
