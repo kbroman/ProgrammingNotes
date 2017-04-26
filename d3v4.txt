@@ -5,6 +5,12 @@ D3 v4 notes
 slides on what's new in version 4:
 <https://iros.github.io/d3-v4-whats-new/#1>
 
+Selections don't use "this"
+  So instead of
+            blah.on("mouseover", (d) => d3.select(this).attr("fill", "orchid"))
+  We need
+            blah.on("mouseover", (d,i,array) => d3.select(array[i]).attr("fill", "orchid"))
+
 Flat namespace
     d3.scale.linear -> d3.scaleLinear
 
@@ -64,3 +70,9 @@ d3.format now has text formatting
 New random number generators for exponential and uniform
 
 d3.timer
+
+random number generators
+    u = d3.randomUniform(5,10) // returns a function
+    u() // returns a random value from [5, 10]
+
+    also randomNormal, randomExponential
