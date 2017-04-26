@@ -1,0 +1,66 @@
+D3 v4 notes
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+slides on what's new in version 4:
+<https://iros.github.io/d3-v4-whats-new/#1>
+
+Flat namespace
+    d3.scale.linear -> d3.scaleLinear
+
+Functions take methods accessors, e.g. d3.min, d3.quantile
+(but it seems that was true before)
+    d3.min(data, (d) => d.x)
+    d3.quantile(data, 0.75, (d) => d.x)
+
+Canvas rendering: d3.line has "context" method
+    var line = d3.line()
+        .x(function(d) { return x(d.x); })
+        .y(function(d) { return y(d.y); });
+    path.datum(data).attr("d", line); // svg
+    line.context(context)(data);      // line
+
+Selections have .nodes method
+selection.raise, selection.lower
+
+d3-selection-multi (not included with standard build)
+<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    var div = d3.selectAll("div")
+        .attrs({ "title": "Hello, world!", "name" : "greeter" })
+        .styles({ "color": "red", "background" : "green" });
+
+d3-transitions
+- transition delays now relative to previous call
+
+scales
+    d3.scale.linear -> d3.scaleLinear
+
+color scales now just arrays to be used with d3.scaleOrdinal
+    d3.scale.category10 -> d3.scaleOrdinal(d3.schemeCategory10)
+    z = d3.scaleSequential(d3.interpolateViridis);
+
+brushing
+    d3.svg.brush -> d3.brush
+    d3.brushX, d3.brushY, d3.brush
+ - define a selection in screen coordinates and you invert it using
+   scale of your choice
+ - restrict brushing area with brush.extent
+
+force layout
+    d3.layout.force -> d3.forceSimulation
+
+delimiter-separated values
+    d3.csv.parse -> d3.csvParse
+    d3.csv.parseRows -> d3.csvParseRows
+    d3.csv, d3.tsv haven't changed
+    d3.dsvFormat("|") to define new formatter and parser
+    d3.geom.polygon, d3.polygon -> d3.polygonHull(points)
+
+No more requirement about utf-8
+
+d3.format now has text formatting
+    d3.format(">10c")("foo")
+
+New random number generators for exponential and uniform
+
+d3.timer
