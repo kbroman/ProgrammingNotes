@@ -1,0 +1,7 @@
+Node
+
+http-server for local server:
+
+    npm install http-server -g
+
+    http-server "localhost:8080"
