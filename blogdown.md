@@ -112,3 +112,12 @@ These are the steps I took to create my
   ```
 
 - Move back one directory and run `make deploy`.
+
+- Added a file `static/css/custom.css` to change the highlighting of
+  hyper links, and added a line to `config.toml` so it would be used.
+  Learned from the error message that `customCSS` in the `config.toml`
+  file needs to be an array:
+
+  ```
+  customCSS = ["css/custom.css"]
+  ```
