@@ -12,7 +12,7 @@
   sed '1,/^$/d' [file]
   ```
 
-- Change http to https throughout (g here is for multiple instances on a line)
+- Change `http` to `https` throughout (`g` here is for multiple instances on a line)
 
   ```
   sed 's/http:\/\//https:\/\//g' [file]
