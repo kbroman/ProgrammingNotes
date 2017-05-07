@@ -23,9 +23,17 @@
 - For `\d+`, use `[0-9][0-9]*`
 
 - Delete everything _except_ between `\begin{tabular` and `\end{tabular`
-  (Note: don't want to escape `{` here; `\{` means something
-  different. Also, `!` at the end negates the range selection.)
+  (Note: you don't want to escape `{` here; `\{` means something
+  different. Also, `!` at the end negates the range selection. Also
+  note that you don't need to escape the backslashes.)
 
   ```
-  sed '/\\begin{tabular/,/\\end{tabular/!d' [file]
+  sed '/\begin{tab/,/\end{tab/!d' [file]
+  ```
+
+- This does the same thing. The `p` prints the selected lines and the
+  `-n` prevents printing _every_ line.
+
+  ```
+  sed -n '\begin{tab/,/\end{tab/p' [file]
   ```
