@@ -3,7 +3,14 @@
 - get devices' IDs
 
   ```
+  library(RPushbullet)
   devices <- pbGetDevices()$devices
+  ```
+
+- Just the active devices
+
+  ```
+  active_devices <- dplyr::filter(pbGetDevices()$devices, active)
   ```
 
 - push a note
