@@ -1,4 +1,4 @@
-## RPushbullet
+## [RPushbullet](https://github.com/eddelbuettel/RPushbullet)
 
 - get devices' IDs
 
