@@ -37,3 +37,9 @@
   ```
   sed -n '\begin{tab/,/\end{tab/p' [file]
   ```
+
+- For search/replace part, can use any character as delimiter:
+
+  ```
+  sed 's|/usr/bin|/usr/local/bin|g' [file]
+  ```
