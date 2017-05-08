@@ -43,3 +43,6 @@
   ```
   sed 's|/usr/bin|/usr/local/bin|g' [file]
   ```
+
+- If you indicate bits in the search part with `\(` and `\)`, you can
+  use them in the replace part with `\1`, `\2`, ...
