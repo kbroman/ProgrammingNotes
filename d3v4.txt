@@ -26,7 +26,8 @@ Canvas rendering: d3.line has "context" method
     path.datum(data).attr("d", line); // svg
     line.context(context)(data);      // line
 
-Selections have .nodes method
+Selections have .nodes methods
+(raise is like my moveToFront; lower is like my moveToBack)
 selection.raise, selection.lower
 
 d3-selection-multi (not included with standard build)
