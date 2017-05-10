@@ -41,6 +41,10 @@ d3-transitions
 
 scales
     d3.scale.linear -> d3.scaleLinear
+    d3.scale.ordinal -> d3.scaleOrdinal
+    d3.scale.ordinal with .rangeBands() -> d3.scaleBand()
+       for example d3.scaleBand().domain(d3.range(10)).range([0, 100])
+
 
 color scales now just arrays to be used with d3.scaleOrdinal
     d3.scale.category10 -> d3.scaleOrdinal(d3.schemeCategory10)
