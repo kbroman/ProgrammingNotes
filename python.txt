@@ -23,6 +23,12 @@ Remove environment
 
 IDE with anaconda is called "Spyder"
 (standard IDE is "idle" or "IDLE" but on my Mac it uses python2)
+(IDLE3 is the python3 version)
+
+---
+
+With ipython, use %paste to paste multiple lines all at once (and
+avoid identation issues)
 
 ------------------------------
 
@@ -61,6 +67,8 @@ x = {"name": "karl", "age": "really_old", "shoe_size": 8}
 x["shoe_size"]
 x.keys()
 x.values()
+list(x.keys())
+list(x.values())
 
 ------------------------------
 
@@ -73,8 +81,6 @@ x = ["a", "b", "c"]
 ------------------------------
 
 See also:
-
-https://github.com/kbroman/PyBroman/blob/master/features.py
 https://github.com/kbroman/PyBroman/blob/master/ParseGenotypeData/convert3.py
 
 ------------------------------
