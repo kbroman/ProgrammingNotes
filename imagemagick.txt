@@ -31,3 +31,7 @@ ImageMagick notes
 7. Pad image to a given aspect ratio (here, square to 4x6)
 
    convert fruitsnacks81.png -gravity center -background white -extent 150x100% fruitsnacks81_4x6.png
+
+8. Pixelate (see http://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662)
+
+   convert -scale 10% -scale 1000% original.jpg pixelated.jpg
