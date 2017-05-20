@@ -270,7 +270,7 @@ print(zz) # a list
 # hashes (hash is called a 'dict')
 x = {"a" : 1, "b" : 2, "c" : 3}
 print(x['a'])
-for (value,key) in enumerate(x):
+for (value,key) in x.items()
   print(key, ' -> ', value)
 print(list(x.keys()))
 x.pop("a")
@@ -286,6 +286,7 @@ print(x)
 # alternatively:
 x = {"a" : 1, "b" : 2, "c" : 3}
 z = [key for key in x.keys() if x[key] == 2]
+z = [key for key in x if x[key] == 2] # equivalently
 for key in z:
   x.pop(key)
 print(x)
