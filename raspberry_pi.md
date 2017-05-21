@@ -6,7 +6,8 @@
   and had `@` and `"` switched)
 
 - Enable ssh: in X windows, click raspberry on menu bar → Preferences
-  → raspberry pi configuration → interfaces
+  → raspberry pi configuration → interfaces (this is also in the raspi-config 
+  menu, within "interfaces".
 
 
 ### Basic things
