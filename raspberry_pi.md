@@ -63,3 +63,22 @@
   max-players=6
   view-distance=8
   ```
+
+### Ruby
+
+- Ruby 2.1.5 installed on the pi, but I want 2.4.1
+
+- Install rvm (see
+  [this post](http://rayhightower.com/blog/2012/12/03/ruby-on-raspberry-pi/))
+
+  ```
+  curl -L https://get.rvm.io | bash -s stable --ruby
+  ```
+
+- He also recommends `scrot` for screenshots (`sudo apt-get install
+  scrot`)
+
+  ```
+  scrot ~/desktop.png
+  sleep 5; scrot ~/desktop.png
+  ```
