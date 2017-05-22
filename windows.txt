@@ -65,3 +65,13 @@ Git Bash
 
   pasting into git bash: right-click -> Edit -> paste
   (Or, shift-insert)
+
+---
+
+ssh stuff
+
+ssh-keygen as in
+<http://kbroman.org/github_tutorial/pages/first_time.html>
+
+eval $(ssh-agent -s)
+ssh-add
