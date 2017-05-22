@@ -36,3 +36,21 @@
   ```
 
   The `host='0.0.0.0'` bit makes it accessible from other computers.
+
+
+- As recommended by
+  [Flask Web Development book](https://www.amazon.com/gp/product/1449372627?ie=UTF8&tag=7210-20),
+  set up `virtualenv`. (Seems sort of like conda; maybe the same thing.)
+
+  ```
+  sudo apt-get install python-virtualenv
+
+  virtualenv venv -p python3
+  source venv/bin/activate
+  ```
+
+  Need to install all necessary modules (e.g. `pip install flask`).
+  (Flask was already installed on my raspberry pi, but was not
+  available within the virtual environment.)
+
+  Back to normal with `deactivate`
