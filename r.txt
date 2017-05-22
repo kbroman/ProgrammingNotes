@@ -108,3 +108,10 @@ plyr::ref(x)     # number of references to object
 ssh nebula-2
 export PATH="/s/pkg/linux64/gcc/4.8.4/bin:$PATH"
 R -e "install.packages('fst')"
+
+---
+
+Windows
+
+R CMD INSTALL --build [package_dir]
+R CMD INSTALL --build --compile-both qtl_1.32-3.tar.gz
