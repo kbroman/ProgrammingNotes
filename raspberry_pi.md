@@ -2,12 +2,20 @@
 
 ### Set up
 
-- Needed to switch keyboard to generic 101 PC _US_ (default was _UK_
-  and had `@` and `"` switched)
+- Use
+  [full Raspbian](https://www.raspberrypi.org/downloads/raspbian/); to
+  get on SD card, use [Etcher](https://etcher.io/).
 
-- Enable ssh: in X windows, click raspberry on menu bar → Preferences
-  → raspberry pi configuration → interfaces (this is also in the raspi-config 
-  menu, within "interfaces".
+- `sudo raspi-config`:
+
+  - change password
+  - change host name
+  - expand file system to use full SD card
+  - boot to shell
+  - configure time zone and locale (US english)
+  - keyboard to Generic 101 PC / US (default is _UK_ and has `@` and
+    `"` switched)
+  - enable ssh (under "interfaces")
 
 
 ### Basic things
@@ -18,6 +26,7 @@
 
 
 ### Minecraft
+
 
 - [Setting up a robust minecraft server](http://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/)
 
@@ -54,4 +63,3 @@
   max-players=6
   view-distance=8
   ```
-  
