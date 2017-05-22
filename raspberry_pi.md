@@ -82,3 +82,19 @@
   scrot ~/desktop.png
   sleep 5; scrot ~/desktop.png
   ```
+
+### Setting up wifi
+
+- I think I can connect to the raspberry pi directly with an ethernet
+  cable, if I need to re-set the wifi
+
+- Looking in `/etc/network/interfaces`, it points to
+  `/etc/wpa_supplicant/wpa_supplicant.conf` which has the key details
+
+  ```
+  network={
+      ssid="[SSID]"
+      psk="[password]"
+      key_mgmt=WPA-PSK
+  }
+  ```
