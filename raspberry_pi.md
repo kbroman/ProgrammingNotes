@@ -98,3 +98,35 @@
       key_mgmt=WPA-PSK
   }
   ```
+
+### MongoDB
+
+See
+<http://yannickloriot.com/2016/04/install-mongodb-and-node-js-on-a-raspberry-pi/>
+
+```
+sudo apt-get install mongodb-server
+sudo pip3 install pymongo
+```
+
+For some reason, `mongod` gives an error about the standard port
+27017, being used. But if we use `--port 27016`, that's okay.
+
+```
+sudo mkdir /data
+sudo mkdir /data/db
+sudo chown -R pi /data
+mongod --port 27016
+```
+
+### Node
+
+See <https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions>
+
+```
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+```
+
+Also to get coffeescript, `sudo npm install -g coffee-script
