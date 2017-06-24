@@ -35,3 +35,11 @@ ImageMagick notes
 8. Pixelate (see http://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662)
 
    convert -scale 10% -scale 1000% original.jpg pixelated.jpg
+
+9. Resize
+
+   convert -resize 50x100 original.png result.png
+
+10. Resize ignoring aspect ratio
+
+   convert -resize 50x100\! original.png result.png
