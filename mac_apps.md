@@ -1,0 +1,41 @@
+# Mac OS X software
+
+- Chrome
+- Firefox
+- Opera
+- 1Password 6
+- Launchbar
+- Bartender bar
+- iterm2
+- Smultron 8
+- simplenote
+- Adobe Acrobat Pro
+- Acrobat Reader DC
+- Moneydance
+- Scansnap manager
+- Tweetbot
+- SuperDuper!
+- Calibre
+- Chronosync
+- Living Earth
+- Pushbullet
+- Logitech camera settings
+- Skype
+- ToDo
+- Sip
+- Dropbox
+- [GitX fork](https://rowanj.github.io/gitx/)
+- Divvy
+- iStat Menus
+- Hazel
+- Jumpcut
+- Mojibar
+- Microsoft Office
+- aText
+- MacTex
+- Ruby
+- Node, NPM, Coffeescript
+- Anaconda/Python
+- Homebrew, emacs
+- R
+- RStudio
