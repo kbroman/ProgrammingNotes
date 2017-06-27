@@ -23,6 +23,12 @@
 - Skype
 - ToDo
 - Sip
+- Frank DeLoupe
+- Color Oracle
+- TunnelBear
+- Caffeine
+- Duet
+- [Magical](http://www.charcoaldesign.co.uk/magical)
 - Dropbox
 - [GitX fork](https://rowanj.github.io/gitx/)
 - Divvy
