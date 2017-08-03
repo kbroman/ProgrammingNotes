@@ -152,3 +152,13 @@ dbGetQuery(db, "drop index chr_pos")
 
 # delete records
 dbGetQuery(db, "DELETE FROM variants WHERE type='indel' OR type='sv'")
+
+---
+
+# create an index
+dbGetQuery(db, "CREATE INDEX chr_pos ON variants(chr, pos)")
+dbGetQuery(db, "CREATE INDEX snp_id ON variants(snp_id)")
+
+note that for large DB these:
+  - make queries *way* faster (like 5 sec -> 1 ms)
+  - hugely inflate the .sqlite file (like +700 MB)
