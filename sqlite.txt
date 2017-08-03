@@ -133,3 +133,22 @@ Software Carpentry example
     dbGetQuery(con, "UPDATE Survey SET person='unknown' WHERE person IS NULL")
 
     dbDisconnect(con)
+
+---
+
+Note that = and == are the same, in a WHERE clause
+
+---
+
+# list indexes
+dbGetQuery(db, "select * from sqlite_master where type='index'")
+
+---
+
+# drop index "chr_pos"
+dbGetQuery(db, "drop index chr_pos")
+
+---
+
+# delete records
+dbGetQuery(db, "DELETE FROM variants WHERE type='indel' OR type='sv'")
