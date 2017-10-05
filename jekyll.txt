@@ -33,7 +33,7 @@ https://help.github.com/articles/using-jekyll-with-pages/
 gem install bundler
 
 Gemfile containing:
-gem 'github-pages'
+gem install github-pages
 
 Instead of "jekyll serve" use:
 bundle exec jekyll serve
