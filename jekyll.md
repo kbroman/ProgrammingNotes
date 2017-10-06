@@ -1,7 +1,8 @@
 ## Notes on jekyll
 
 
-What I'd done originally:
+What I'd done originally (but see bundler business, below; that's what
+I use now):
 
 ```
 gem install jekyll
