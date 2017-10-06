@@ -13,18 +13,22 @@ jekyll serve
 
 To make a new website, copy over
 
-- `Rakefile`
-- `_includes`
-- `_layouts`
-- `_plugins`
-- `_posts`
-- `assets/themes`
+```
+Rakefile
+_includes
+_layouts
+_plugins
+_posts
+assets/themes
+```
 
 Then edit:
 
-- `index.md`
-- `_config.yml`
-- `_includes/themes/twitter/default.html`
+```
+index.md
+_config.yml
+_includes/themes/twitter/default.html
+```
 
 ---
 
