@@ -1,10 +1,10 @@
-OpenCPU
+## OpenCPU
 
 API for R
 
-https://www.opencpu.org/api.html#api-package
+<https://www.opencpu.org/api.html#api-package>
 
-seems like you use POST to run a function
+seems like you use `POST` to run a function
 
 and then read the output using a key that is returned from previous request
 
