@@ -1,6 +1,6 @@
 ## OpenCPU
 
-API for R
+- API for R
 
 <https://www.opencpu.org/api.html#api-package>
 
