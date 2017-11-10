@@ -46,3 +46,43 @@
 
 - If you indicate bits in the search part with `\(` and `\)`, you can
   use them in the replace part with `\1`, `\2`, ...
+
+
+### Examples
+
+- Want to change `\bold{blah}` to `**blah**`:
+
+  ```
+  sed 's/\\bold{\([^}]*\)}/\*\*\1\*\*/g' [file]
+  ```
+
+- Change \code{blah} to ``blah``
+
+  ```
+  sed 's/\\code{\([^}]*\)}/`\1`/g' [file]
+  ```
+
+
+- Change `\code{\link[pkg]{func}}` to `[pkg::func()]`.
+
+  ```
+  sed 's/\\code{\\link\[\([^]]*\)\]{\([^}]*\)}}/[\1::\2()]/g' [file]
+  ```
+
+- Change `\code{\link{func}}` to `[func()]`.
+
+  ```
+  sed 's/\\code{\\link{\([^}]*\)}}/[\1()]/g' [file]
+  ```
+
+- Changing traditional Roxygen2 docs to markdown-based:
+
+  ```
+  sed 's/\\code{\\link\[\([^]]*\)\]{\([^}]*\)}}/[\1::\2()]/g' [file.R] > tmp1
+  sed 's/\\code{\\link{\([^}]*\)}}/[\1()]/g' tmp1 > tmp2
+  sed 's/\\code{\([^}]*\)}/`\1`/g' tmp2 > tmp3
+  sed 's/\\item /\* /' tmp3 > tmp4
+  sed 's/\\href{\([^}]*\)}{\([^}]*\)}/[\2](\1)/g' tmp4 > tmp5
+  \mv tmp5 [file.R]
+  \rm tmp1 tmp2 tmp3 tmp4
+  ```
