@@ -1,6 +1,9 @@
+## rmarkdown slides
+
 For two columns in Rmarkdown-based slides, John Muschelli suggested
 the following:
 
+```
 <div id="wrap">
 <div id="left_col">
 
@@ -28,3 +31,4 @@ BLAHBLAH
    float:right;
    width:35%;
 }
+```
