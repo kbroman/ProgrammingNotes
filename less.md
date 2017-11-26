@@ -15,42 +15,45 @@
 
 ### Navigation
 
-```
-^f    forward one window
-^b    backward one window
-^d    forward half window
-^u    backward half window
-^n    forward one line
-^p    backward one line
-G     end of file
-g     start of file
-```
+| | |
+|-|-|
+| `^f` | forward one window |
+| `^b` | backward one window |
+| `^d` | forward half window |
+| `^u` | backward half window |
+| `^n` | forward one line |
+| `^p` | backward one line |
+| `G`  | end of file |
+| `g`  | start of file |
+
 
 ### Marked naviation
 
-```
-ma    mark current position with letter a
-'a    go to marked position a
-''    go to previous position
-```
+| | |
+|-|-|
+| `ma` | mark current position with letter a |
+| `'a` | go to marked position a |
+| `''` | go to previous position |
+
 
 ### Multiple files
 
-```
-:n    go to next file
-:p    go to previous file
-```
+| | |
+|-|-|
+| `:n` | go to next file |
+| `:p` | go to previous file |
 
 ### General
 
-```
-q     exit
-h     help
-=     display info about current file
-```
+| | |
+|-|-|
+| `q` | exit |
+| `h` | help |
+| `=` | display info about current file |
+
 
 ### Command-line stuff (can also do this within less)
 
-```
--N    display line numbers
-```
+| | |
+|-|-|
+| `-N` | display line numbers |
