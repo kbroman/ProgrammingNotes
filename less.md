@@ -3,6 +3,7 @@
 
 ### Search
 
+|         |                                              |
 | ------- | -------------------------------------------- |
 | `/`     |  forward search for a pattern                |
 | `?`     |  backward search for a pattern               |
