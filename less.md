@@ -3,12 +3,13 @@
 
 ### Search
 
-| `/`     |  forward search for a pattern |
-| `?`     |  backward search for a pattern |
+| ------- | -------------------------------------------- |
+| `/`     |  forward search for a pattern                |
+| `?`     |  backward search for a pattern               |
 | `n`     |  next match (forward or backward, depending) |
-| `N`     |  previous match |
-| `&`     |  display only lines matching pattern |
-| `esc-u` |  toggle highlighting |
+| `N`     |  previous match                              |
+| `&`     |  display only lines matching pattern         |
+| `esc-u` |  toggle highlighting                         |
 
 
 ### Navigation
