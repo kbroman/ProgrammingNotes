@@ -1,33 +1,30 @@
-Rcpp notes
+## Rcpp notes
 
-top of cpp file:
+- top of cpp file:
 
-    #include <Rcpp.h>
-    using namespace Rcpp;
+      #include <Rcpp.h>
+      using namespace Rcpp;
 
-before function definition:
+- before function definition:
 
-    // [[Rcpp::export]]
+      // [[Rcpp::export]]
 
-In R:
+- In R:
 
-    Rcpp::sourceCpp("myfile.cpp")
+      Rcpp::sourceCpp("myfile.cpp")
 
----
+- check for user interrupt, just:
 
-check for user interrupt, just:
+      checkUserInterrupt(); // but for fibonacci example took like 10x longer
 
-    checkUserInterrupt(); // but for fibonacci example took like 10x longer
+- random number generation
 
----
-
-random number generation
-
-    RNGScope scope;
+      RNGScope scope;
 
 
 ---
 
+```
 double, int, bool
 NumericVector, IntegerVector, LogicalVector
 NumericMatrix, IntegerMatrix
@@ -45,22 +42,22 @@ rep_len(x, n)
 R::pnorm etc (see /usr/src/Rcpp/inst/include/Rcpp/Rmath.h)
 R_NilValue
 Rf_isNull()
+```
+
 ---
 
-Package:
+## Package
 
-  DESCRIPTION:
+- `DESCRIPTION`:
 
       Imports: Rcpp (>= 0.11.2)
       LinkingTo: Rcpp
 
-  NAMESPACE:
+- `NAMESPACE`:
 
       useDynLib(my_pkg)
       importFrom(Rcpp, sourceCpp)
 
-Might instead have
+- Might instead have
 
       LinkingTo: Rcpp, RcppEigen
-
----
