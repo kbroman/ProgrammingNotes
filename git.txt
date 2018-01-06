@@ -39,6 +39,7 @@ Tagging
   git push --tags
   git tag -d 1.11-7                     [deleting a tag]
   git push origin :refs/tags/1.11-7     [remove tag from origin that I'd removed locally]
+  git push --delete origin 1.11-7       [another way to remove tag from origin]
   git tag -a tag_label 9fceb02 -m "Message here"  [tag an older commit]
 
 Branching and merging
