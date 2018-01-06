@@ -1,5 +1,6 @@
-Notes on c++
+## Notes on c++
 
+```
 using std::vector; // to avoid repeating the std:: part
 
 size_t  // can hold any object's size
@@ -53,18 +54,21 @@ invalid_argument
 overflow_error
 underflow_error
 runtime_error
+```
 
 ---
 
-NDEBUG flag for "not debugging"
-With R, it's defined by default
-Use -UNDEBUG In .R/Makevars to turn force it to be undefined
+- `NDEBUG` flag for "not debugging"
+
+- With R, it's defined by default
+
+- Use `-UNDEBUG` in `~/.R/Makevars` to turn force it to be undefined
 
 
 ---
 
-For c++ 11 on UWisc biostat server:
+For C++ 11 on UWisc biostat server:
 
  - log in to nebula-2
- - export PATH=/s/pkg/linux64/gcc/4.8.4/bin:$PATH
- - [needed this for install.packages(c("readxl", "feather"))]
+ - `export PATH=/s/pkg/linux64/gcc/4.8.4/bin:$PATH`
+ - (needed this for `install.packages(c("readxl", "feather"))`)
