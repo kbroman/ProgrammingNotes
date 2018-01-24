@@ -93,7 +93,14 @@ apps.
       - But then `ls -l` shows that the owner and group are odd for the offensive files.
       - So followed with `sudo chown kbroman -R [blah]`
       - Also `sudo chgrp kbroman -R [blah]`
+
       
+12. Set up mail in Geary
+
+    - First tried setting up gmail; authentication didn't work
+    - Needed to create an App-specific password; see
+      <https://support.google.com/accounts/answer/185833>
+
 
 9. Get R and RStudio installed
 
