@@ -70,16 +70,16 @@ apps.
 
 10. ssh keys + connect to github
 
-   - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-   - installed xclip with `sudo apt install xclip`
-   - At github, settings -> ssh and gpg keys -> New SSH key
-   - Tested it out by cloning `git clone git@github.com:kbroman/ProgrammingNotes`
-   - Trying to commit change to the repository, was reminded to set up git:
+    - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+    - installed xclip with `sudo apt install xclip`
+    - At github, settings -> ssh and gpg keys -> New SSH key
+    - Tested it out by cloning `git clone git@github.com:kbroman/ProgrammingNotes`
+    - Trying to commit change to the repository, was reminded to set up git:
 
-     ```
-     git config --global user.email "kbroman@gmail.com"
-     git config --global user.name "Karl Broman"
-     ```     
+      ```
+      git config --global user.email "kbroman@gmail.com"
+      git config --global user.name "Karl Broman"
+      ```     
 
 9. Copy over stuff from my desktop
 
