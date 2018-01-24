@@ -101,18 +101,28 @@ apps.
     - First tried setting up gmail; authentication didn't work
     - Needed to create an App-specific password; see
       <https://support.google.com/accounts/answer/185833>
+    - Added the UW-Madison Office365 account too:
+      - "Geary" in menu bar -> Accounts -> plus sign
+      - Service -> Other
+      - Settings as at <https://kb.wisc.edu/page.php?id=28427>
 
 
 13. Install R
 
    - See [instructions at digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2)
 
-   ```
-   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-   sudo add-apt-repository 'deb https://cran.rstudio.com/bin/linux/ubuntu artful/'
-   sudo apt update
-   sudo apt install r-base
-   ```
+     ```
+     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+     sudo add-apt-repository 'deb https://cran.rstudio.com/bin/linux/ubuntu artful/'
+     sudo apt update
+     sudo apt install r-base
+     ```
+  - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
+  - Also copy over `.rpushpullet.json`
+  - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2
+  - Needed `sudo apt install libcurl4-openssl-dev`
+
+
 
 14. Install RStudio
 
