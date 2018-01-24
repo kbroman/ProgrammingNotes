@@ -94,7 +94,7 @@ apps.
       - So followed with `sudo chown kbroman -R [blah]`
       - Also `sudo chgrp kbroman -R [blah]`
       - (seems like I'm doing it wrong, but so be it)
-
+    - Afterwards, I used `sudo umount /media/kbroman/KarlBkStuff`
       
 12. Set up mail in Geary
 
