@@ -79,6 +79,8 @@ apps.
       ```
       git config --global user.email "kbroman@gmail.com"
       git config --global user.name "Karl Broman"
+      git config --global core.editor "emacs"
+      git config --global core.excludesfile "/home/kbroman/.gitignore_global"
       ```     
 
 9. Copy over stuff from my desktop
