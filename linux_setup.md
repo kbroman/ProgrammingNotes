@@ -52,14 +52,21 @@ apps.
 8. Get UW-Madison VPN working
 
    - Followed the instructions at <https://kb.wisc.edu/page.php?id=74947>
-   - Didn't seem to work for me, though.
+   - **FIX ME**: Didn't seem to work for me, though, in that I
+     couldn't connect to BMI servers.
 
 9. Set up Apple magic mouse via bluetooth settings
 
    - It came up with a weird name; I had to go back to Mac and pair it
      and then rename it and then back to pair again with the linux
      laptop
-   -
+   - Scrolling speed was deathly slow. Followed instructions
+     at <https://askubuntu.com/a/262730>. In particular, I used:
+
+     ```
+     options hid_magicmouse scroll-speed=60 scroll-acceleration=2
+     ```
+   - **FIX ME**: want scrolling to go in the opposite direction
 
 10. ssh keys + connect to github
 
