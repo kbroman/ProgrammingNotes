@@ -119,18 +119,19 @@ apps.
      ```
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
   - Also copy over `.rpushpullet.json`
-  - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2
-  - Needed `sudo apt install libcurl4-openssl-dev`
-
-
+  - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
+  - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev`
+  - When installing qtl2, error when installing bit64 package
+    ("Could not find function `bit_init()`")
+  - Finally just did `sudo apt install r-cran-rsqlite`
+  - After that, qtl2 installed fine
+  - **Fix Me**: install a bunch more packages  
 
 14. Install RStudio
 
 10. Install ess
 
-11. python, ruby, coffeescript
-
-12. Connect to mail (maybe drop geary and use thunderbird)
+11. python3, ruby, coffeescript
 
 13. Install skype and dropbox
 
