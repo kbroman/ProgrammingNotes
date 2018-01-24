@@ -93,6 +93,7 @@ apps.
       - But then `ls -l` shows that the owner and group are odd for the offensive files.
       - So followed with `sudo chown kbroman -R [blah]`
       - Also `sudo chgrp kbroman -R [blah]`
+      - (seems like I'm doing it wrong, but so be it)
 
       
 12. Set up mail in Geary
