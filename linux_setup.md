@@ -83,7 +83,17 @@ apps.
       git config --global core.excludesfile "/home/kbroman/.gitignore_global"
       ```     
 
-9. Copy over stuff from my desktop
+11. Copy over stuff from my desktop
+
+    - Attached USB drive that I'd copied stuff to
+    - Showed up in `/media/kbroman/[drive name]
+    - Used `rsync -a` to copy stuff over
+    - Got a bunch of errors like "`send_files failed ... Permission denied (13)`"
+      - No errors if I use `sudo rsync`
+      - But then `ls -l` shows that the owner and group are odd for the offensive files.
+      - So followed with `sudo chown kbroman -R [blah]`
+      - Also `sudo chgrp kbroman -R [blah]`
+      
 
 9. Get R and RStudio installed
 
