@@ -125,7 +125,7 @@ apps.
     ("Could not find function `bit_init()`")
   - Finally just did `sudo apt install r-cran-rsqlite`
   - After that, qtl2 installed fine
-  - **Fix Me**: install a bunch more packages
+  - **FIX ME**: install a bunch more packages
 
 14. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
@@ -152,22 +152,38 @@ apps.
     [html-helper-mode](http://download.savannah.gnu.org/releases/baol-hth/),
     but I've not gotten it working yet.
 
-15. Install RStudio
+15. Install LaTeX (texlive)
 
-11. python3, ruby, coffeescript
+    - I just did plain `sudo apt install texlive-full`
 
-13. Install skype and dropbox
+16. python3, ruby, coffeescript
 
-14. Install LaTeX (texlive)
+17. Install skype and dropbox
 
-15. Install SimpleNote
+18. Install SimpleNote
 
-16. Install VirtualBox and Windows + Office365
+19. Install VirtualBox and Windows + Office365
 
-17. Install Java and Minecraft
+20. Install Java and Minecraft
 
-18. Backups
+21. Backups
 
-19. clipman, caffeine, autokey
+22. clipman, caffeine, autokey
 
-7. Change the wallpaper
+23. Install RStudio
+
+24. Change the wallpaper
+
+25. Try to get Apple Magic Trackpad working
+
+    - Looking at [Touchégg](https://github.com/JoseExposito/touchegg/wiki/How-to-compile-Touch%C3%A9gg-source-code)
+
+      ```
+      git clone git://github.com/JoseExposito/touchegg.git
+      sudo apt-get build-dep touchegg
+      qmake
+      make
+      sudo make install
+      ```
+
+    - **FIX ME**: At present, it's not working
