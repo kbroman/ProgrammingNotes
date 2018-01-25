@@ -202,20 +202,44 @@ apps.
       packages) away from rstudio to something with https to avoid the
       warning at startup
 
+23. Okular pdf reader
+
+    - `sudo apt install okular`
+    - Installs a _ton_ of dependencies
+
 ---
 
-16. python3, ruby, coffeescript
+- get the VPN to work
 
-19. Install VirtualBox and Windows + Office365
+- copy other stuff into ~/.bashrc
 
-20. Install Java and Minecraft
+- python3
 
-21. Backups
+- ruby
 
-22. clipman, caffeine, autokey
+- npm and coffeescript
 
-24. Change the wallpaper
+- VirtualBox and Windows + Office365
 
+- Java
+
+- Minecraft
+
+- Backups (dejadup)
+
+- clipman (or gpaste)
+
+- caffeine
+
+- autokey
+
+- Change the wallpaper
+
+- better terminal
+
+- vlc
+
+- get camera to work in skype
 
 ---
 
