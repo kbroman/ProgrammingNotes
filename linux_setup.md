@@ -67,6 +67,8 @@ apps.
      options hid_magicmouse scroll-speed=60 scroll-acceleration=2
      ```
    - **FIX ME**: want scrolling to go in the opposite direction
+   - **FIX ME**: after restarting and messing with the trackpad (not
+     sure what I did), the mouse stopped working.
 
 10. ssh keys + connect to github
 
@@ -174,6 +176,8 @@ apps.
     - Download `.deb` file from <https://www.skype.com/en/get-skype/>
     - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
     - Install with `sudo dpkg -i skypeforlinux-64.deb`
+    - **FIX ME**: shows up _really_ small when screen is in high-def mode
+    - **FIX ME**: camera is not working yet
 
 
 19. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
@@ -227,3 +231,4 @@ apps.
       ```
 
     - **FIX ME**: At present, it's not working
+    - Removed Touchégg with `sudo make uninstall`
