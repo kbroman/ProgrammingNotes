@@ -222,6 +222,11 @@ apps.
     - Installs a _ton_ of dependencies
 
 
+25. Additional packages
+
+    - `bin-libgnome2` (for `gnome-open` which acts like `open` on a Mac)
+    - `gnome-tweak-tool`
+
 ---
 
 - get the VPN to work
@@ -235,6 +240,22 @@ apps.
 - npm and coffeescript
 
 - VirtualBox and Windows + Office365
+  See
+  <https://www.extremetech.com/computing/198427-how-to-install-windows-10-in-a-virtual-machine>
+
+  - Download Windows 10 from
+    <https://www.microsoft.com/en-us/software-download/windows10ISO>
+  - Download VirtualBox from
+    <https://www.virtualbox.org/wiki/Downloads>
+    - Add to `/etc/apt/sources.list`
+    - Register Oracle public keys
+    - `sudo apt install virtualbox-5.2`
+    - `sudo apt install dkms`
+  - Start `virtualbox`, create new Windows10 machine, adjust memory,
+    disk size, connect to the windows ISO, and adjust display stuff
+  - Then start the virtual machine to install windows10. I said I had
+    no product key, chose Windows 10 Home edition, and said something
+    like fresh install
 
 - Java
 
@@ -262,7 +283,6 @@ apps.
 
 - Additional packages
 
-  - `gnome-tweak-tool`
   - `gpaste`
   - `caffeine` (couldn't get it to work)
   - `autokey`
