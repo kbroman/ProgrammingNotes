@@ -168,14 +168,15 @@ apps.
     - Need dependency: `sudo apt install pango1.0-0`
     - `sudo dpkg -i Simplenote-*.deb`
 
-17. Install Skype
+18. Install Skype
 
     - Download `.deb` file from <https://www.skype.com/en/get-skype/>
     - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
     - Install with `sudo dpkg -i skypeforlinux-64.deb`
 
 
-18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
+19. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
+
 
 16. python3, ruby, coffeescript
 
