@@ -162,6 +162,8 @@ apps.
     - Download `.deb` file from <https://www.skype.com/en/get-skype/>
     - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
     - Install with `sudo dpkg -i skypeforlinux-64.deb`
+    - Skype was starting automatically on restarting the computer; had
+      to de-select an option in the settings
     - **FIX ME**: shows up _really_ small when screen is in high-def mode
     - **FIX ME**: camera is not working yet
 
