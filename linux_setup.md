@@ -133,8 +133,9 @@ apps.
     - [adoc-mode](https://github.com/sensorflo/adoc-mode) (for
       asciidoc)
     - [coffee-mode](https://github.com/defunkt/coffee-mode)
-    - [emacs-pry](https://github.com/jacott/emacs-pry) (for python)
     - [inf-ruby](https://github.com/nonsequitur/inf-ruby)
+    - [emacs-pry](https://github.com/jacott/emacs-pry) (another
+      interactive ruby)
 
     I also wanted
     [html-helper-mode](http://download.savannah.gnu.org/releases/baol-hth/),
@@ -188,6 +189,19 @@ apps.
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
 
+
+22. Install RStudio
+
+    - Download Ubuntu 16.04+ `.deb` file from
+      <https://www.rstudio.com/products/rstudio/download>
+    - `sudo dpkg -i rstudio*.deb`
+    - error re `libjpeg62`
+    - `sudo apt install libjpeg62`
+    - Needed to zoom in to the greatest extent or all of the dialogs were tiny
+    - Needed to change CRAN mirror (in Tools -> global options ->
+      packages) away from rstudio to something with https to avoid the
+      warning at startup
+
 ---
 
 16. python3, ruby, coffeescript
@@ -199,8 +213,6 @@ apps.
 21. Backups
 
 22. clipman, caffeine, autokey
-
-23. Install RStudio
 
 24. Change the wallpaper
 
