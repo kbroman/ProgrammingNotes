@@ -185,6 +185,13 @@ apps.
       in evince and was able to print a couple of pages double-sided
       and in color.
 
+21. Install Google Chrome
+
+    - Download from <https://www.google.com/chrome/browser/desktop/index.html>
+    - Install with `sudo dpkg -i google-chrome-*.deb`
+    - Needed libappindicator1
+    - Used `sudo apt --fix-broken install`
+
 
 16. python3, ruby, coffeescript
 
