@@ -95,6 +95,7 @@ apps.
       - Also `sudo chgrp kbroman -R [blah]`
       - (seems like I'm doing it wrong, but so be it)
     - Afterwards, I used `sudo umount /media/kbroman/KarlBkStuff`
+      (I think I maybe didn't need the "`sudo`".)
 
 12. Set up mail in Geary
 
@@ -191,6 +192,12 @@ apps.
     - Install with `sudo dpkg -i google-chrome-*.deb`
     - Needed libappindicator1
     - Used `sudo apt --fix-broken install`
+
+
+22. Connect a USB stick
+
+    - Plug into USB port and it shows up in `/media/kbroman`
+    - Before removing, use `umount /media/kbroman/[drive name]`
 
 
 16. python3, ruby, coffeescript
