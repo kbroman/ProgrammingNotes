@@ -178,6 +178,14 @@ apps.
 19. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
 
+20. Connect to printer
+
+    - When I got home and connected to my home wifi, it automatically
+      detected and added our printer. And it just worked: opened a PDF
+      in evince and was able to print a couple of pages double-sided
+      and in color.
+
+
 16. python3, ruby, coffeescript
 
 19. Install VirtualBox and Windows + Office365
