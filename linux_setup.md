@@ -59,8 +59,10 @@ apps.
 
    - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
    - installed xclip with `sudo apt install xclip`
+   - pasted to clipboard with `xclip -sel clip < ~/.ssh/id_rsa.pub`
    - At github, settings -> ssh and gpg keys -> New SSH key
    - Tested it out by cloning `git clone git@github.com:kbroman/ProgrammingNotes`
+   - Also add the key to [bitbucket](https://bitbucket.org)
    - Trying to commit change to the repository, was reminded to set up git:
 
      ```
@@ -204,7 +206,17 @@ apps.
       packages) away from rstudio to something with https to avoid the
       warning at startup
 
-23. Okular pdf reader
+
+23. Link to pandoc that shipped with RStudio
+    (see <https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md>)
+
+    ```
+    sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin
+    sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc /usr/local/bin
+    ```
+
+
+24. Okular pdf reader
 
     - `sudo apt install okular`
     - Installs a _ton_ of dependencies
