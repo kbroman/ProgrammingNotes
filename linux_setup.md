@@ -55,37 +55,22 @@ apps.
    - **FIX ME**: Didn't seem to work for me, though, in that I
      couldn't connect to BMI servers.
 
-9. Set up Apple magic mouse via bluetooth settings
+9. ssh keys + connect to github
 
-   - It came up with a weird name; I had to go back to Mac and pair it
-     and then rename it and then back to pair again with the linux
-     laptop
-   - Scrolling speed was deathly slow. Followed instructions
-     at <https://askubuntu.com/a/262730>. In particular, I used:
+   - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+   - installed xclip with `sudo apt install xclip`
+   - At github, settings -> ssh and gpg keys -> New SSH key
+   - Tested it out by cloning `git clone git@github.com:kbroman/ProgrammingNotes`
+   - Trying to commit change to the repository, was reminded to set up git:
 
      ```
-     options hid_magicmouse scroll-speed=60 scroll-acceleration=2
+     git config --global user.email "kbroman@gmail.com"
+     git config --global user.name "Karl Broman"
+     git config --global core.editor "emacs"
+     git config --global core.excludesfile "/home/kbroman/.gitignore_global"
      ```
-   - **FIX ME**: want scrolling to go in the opposite direction
-   - **FIX ME**: after restarting and messing with the trackpad (not
-     sure what I did), the mouse stopped working.
 
-10. ssh keys + connect to github
-
-    - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-    - installed xclip with `sudo apt install xclip`
-    - At github, settings -> ssh and gpg keys -> New SSH key
-    - Tested it out by cloning `git clone git@github.com:kbroman/ProgrammingNotes`
-    - Trying to commit change to the repository, was reminded to set up git:
-
-      ```
-      git config --global user.email "kbroman@gmail.com"
-      git config --global user.name "Karl Broman"
-      git config --global core.editor "emacs"
-      git config --global core.excludesfile "/home/kbroman/.gitignore_global"
-      ```
-
-11. Copy over stuff from my desktop
+10. Copy over stuff from my desktop
 
     - Attached USB drive that I'd copied stuff to
     - Showed up in `/media/kbroman/[drive name]
@@ -99,7 +84,7 @@ apps.
     - Afterwards, I used `sudo umount /media/kbroman/KarlBkStuff`
       (I think I maybe didn't need the "`sudo`".)
 
-12. Set up mail in Geary
+11. Set up mail in Geary
 
     - First tried setting up gmail; authentication didn't work
     - Needed to create an App-specific password; see
@@ -110,7 +95,7 @@ apps.
       - Settings as at <https://kb.wisc.edu/page.php?id=28427>
 
 
-13. Install R
+12. Install R
 
    - See [instructions at digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2)
 
@@ -130,7 +115,7 @@ apps.
   - After that, qtl2 installed fine
   - **FIX ME**: install a bunch more packages
 
-14. Install ess and other emacs modes (mostly cloned from GitHub; all
+13. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
     - [ess](https://ess.r-project.org)
@@ -155,23 +140,23 @@ apps.
     [html-helper-mode](http://download.savannah.gnu.org/releases/baol-hth/),
     but I've not gotten it working yet.
 
-15. Install LaTeX (texlive)
+14. Install LaTeX (texlive)
 
     - I just did plain `sudo apt install texlive-full`
 
-16. Install DropBox
+15. Install DropBox
 
     - Download `.deb` file from <https://www.dropbox.com/install-linux>
     - Use `sudo dpkg -i dropbox_2015.10.28_amd64.deb`
 
-17. Install SimpleNote
+16. Install SimpleNote
 
     - Following instructions at <https://www.dropbox.com/install-linux>
     - Download `.deb` file from <https://simplenote.com>
     - Need dependency: `sudo apt install pango1.0-0`
     - `sudo dpkg -i Simplenote-*.deb`
 
-18. Install Skype
+17. Install Skype
 
     - Download `.deb` file from <https://www.skype.com/en/get-skype/>
     - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
@@ -180,17 +165,17 @@ apps.
     - **FIX ME**: camera is not working yet
 
 
-19. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
+18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
 
-20. Connect to printer
+19. Connect to printer
 
     - When I got home and connected to my home wifi, it automatically
       detected and added our printer. And it just worked: opened a PDF
       in evince and was able to print a couple of pages double-sided
       and in color.
 
-21. Install Google Chrome
+20. Install Google Chrome
 
     - Download from <https://www.google.com/chrome/browser/desktop/index.html>
     - Install with `sudo dpkg -i google-chrome-*.deb`
@@ -198,11 +183,12 @@ apps.
     - Used `sudo apt --fix-broken install`
 
 
-22. Connect a USB stick
+21. Connect a USB stick
 
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
 
+---
 
 16. python3, ruby, coffeescript
 
@@ -218,7 +204,29 @@ apps.
 
 24. Change the wallpaper
 
-25. Try to get Apple Magic Trackpad working
+
+---
+
+### Stuff that didn't work:
+
+
+1. Set up Apple magic mouse via bluetooth settings
+
+   - It came up with a weird name; I had to go back to Mac and pair it
+     and then rename it and then back to pair again with the linux
+     laptop
+   - Scrolling speed was deathly slow. Followed instructions
+     at <https://askubuntu.com/a/262730>. In particular, I used:
+
+     ```
+     options hid_magicmouse scroll-speed=60 scroll-acceleration=2
+     ```
+   - **FIX ME**: want scrolling to go in the opposite direction
+   - **FIX ME**: after restarting and messing with the trackpad (not
+     sure what I did), the mouse stopped working.
+
+
+2. Try to get Apple Magic Trackpad working
 
     - Looking at [Touchégg](https://github.com/JoseExposito/touchegg/wiki/How-to-compile-Touch%C3%A9gg-source-code)
 
