@@ -156,11 +156,26 @@ apps.
 
     - I just did plain `sudo apt install texlive-full`
 
+16. Install DropBox
+
+    - Download `.deb` file from <https://www.dropbox.com/install-linux>
+    - Use `sudo dpkg -i dropbox_2015.10.28_amd64.deb`
+
+17. Install SimpleNote
+
+    - Following instructions at <https://www.dropbox.com/install-linux>
+    - Download `.deb` file from <https://simplenote.com>
+    - Need dependency: `sudo apt install pango1.0-0`
+    - `sudo dpkg -i Simplenote-*.deb`
+
+17. Install Skype
+
+    - Download `.deb` file from <https://www.skype.com/en/get-skype/>
+    - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
+    - Install with `sudo dpkg -i skypeforlinux-64.deb`
+
+
 16. python3, ruby, coffeescript
-
-17. Install skype and dropbox
-
-18. Install SimpleNote
 
 19. Install VirtualBox and Windows + Office365
 
