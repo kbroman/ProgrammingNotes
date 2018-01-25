@@ -81,7 +81,7 @@ apps.
       git config --global user.name "Karl Broman"
       git config --global core.editor "emacs"
       git config --global core.excludesfile "/home/kbroman/.gitignore_global"
-      ```     
+      ```
 
 11. Copy over stuff from my desktop
 
@@ -95,7 +95,7 @@ apps.
       - Also `sudo chgrp kbroman -R [blah]`
       - (seems like I'm doing it wrong, but so be it)
     - Afterwards, I used `sudo umount /media/kbroman/KarlBkStuff`
-      
+
 12. Set up mail in Geary
 
     - First tried setting up gmail; authentication didn't work
@@ -125,11 +125,14 @@ apps.
     ("Could not find function `bit_init()`")
   - Finally just did `sudo apt install r-cran-rsqlite`
   - After that, qtl2 installed fine
-  - **Fix Me**: install a bunch more packages  
+  - **Fix Me**: install a bunch more packages
 
-14. Install RStudio
+14. Install ess and other emacs modes (mostly cloned from GitHub; all
+    placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
-10. Install ess
+    - magit, ess
+
+15. Install RStudio
 
 11. python3, ruby, coffeescript
 
