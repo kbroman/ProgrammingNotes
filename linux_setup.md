@@ -209,6 +209,7 @@ apps.
     - `sudo apt install okular`
     - Installs a _ton_ of dependencies
 
+
 ---
 
 - get the VPN to work
@@ -229,12 +230,6 @@ apps.
 
 - Backups (dejadup)
 
-- clipman (or gpaste)
-
-- caffeine
-
-- autokey
-
 - Change the wallpaper
 
 - better terminal
@@ -242,6 +237,23 @@ apps.
 - vlc
 
 - get camera to work in skype
+
+- Install ccache and use for compiling R
+
+  - `sudo apt install ccache`
+  - In `~/.R`:
+
+- Conky system monitor
+
+  - `sudo apt install conky-all`
+  - Download [sidebar-conky](https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928)
+
+- Additional packages
+
+  - `gnome-tweak-tool`
+  - `gpaste`
+  - `caffeine` (couldn't get it to work)
+  - `autokey`
 
 ---
 
