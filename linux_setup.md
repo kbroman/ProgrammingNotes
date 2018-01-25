@@ -130,7 +130,27 @@ apps.
 14. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
-    - magit, ess
+    - [ess](https://ess.r-project.org)
+    - [magit](https://github.com/magit/magit) (and
+      dependencies [dash](http://github.com/magnars/dash.el),
+      [with-editor](https://github.com/magit/with-editor),
+      [magit-popup](https://github.com/magit/magit-popup),
+      [ghub](https://github.com/magit/ghub),
+      [git-modes](https://github.com/magit/git-modes))
+    - [dracula-theme](https://github.com/dracula/emacs)
+    - [my own fork of polymode](https://github.com/kbroman/polymode)
+    - [arduino-mode](https://github.com/bookest/arduino-mode)
+    - [markdown-mode](https://github.com/jrblevin/markdown-mode)
+    - [d-mode](https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode)
+    - [adoc-mode](https://github.com/sensorflo/adoc-mode) (for
+      asciidoc)
+    - [coffee-mode](https://github.com/defunkt/coffee-mode)
+    - [emacs-pry](https://github.com/jacott/emacs-pry) (for python)
+    - [inf-ruby](https://github.com/nonsequitur/inf-ruby)
+
+    I also wanted
+    [html-helper-mode](http://download.savannah.gnu.org/releases/baol-hth/),
+    but I've not gotten it working yet.
 
 15. Install RStudio
 
