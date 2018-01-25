@@ -175,6 +175,8 @@ apps.
     - Install with `sudo dpkg -i skypeforlinux-64.deb`
 
 
+18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
+
 16. python3, ruby, coffeescript
 
 19. Install VirtualBox and Windows + Office365
