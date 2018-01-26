@@ -236,7 +236,21 @@ apps.
       application in full screen mode)
 
 
-26. Get terminal to open at startup
+26. Create a `start` script that acts like `open` on a Mac, as a
+    little shell script that just calls `gnome-open` repeatedly for
+    each command-line argument
+
+    ```
+    #!/bin/bash
+
+    for file in "$@"
+    do
+        gnome-open "$file"
+    done
+    ```
+
+
+27. Get terminal to open at startup
 
     - Super key and type "Startup"
     - Click "Add"; for the command, use "`gnome-terminal`"
