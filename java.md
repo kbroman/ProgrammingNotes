@@ -19,4 +19,3 @@ Key steps:
 - Install java 6
 - Install java 8
 - Run `sudo R CMD javareconf`
--
