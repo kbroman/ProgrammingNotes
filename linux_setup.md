@@ -99,6 +99,15 @@ apps.
       <https://support.apple.com/en-in/HT202304>, including need to
       get an app-specific password at
       <https://appleid.apple.com/account/manage>
+    - To control default font in messages, create a file
+      `~/.config/geary/user-message.css`, for example with:
+
+      ```
+      body {
+          font-family: Inconsolata;
+          font-size: 150%
+      }
+      ```
 
 
 12. Install R
