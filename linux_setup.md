@@ -115,7 +115,7 @@ apps.
     ("Could not find function `bit_init()`")
   - Finally just did `sudo apt install r-cran-rsqlite`
   - After that, qtl2 installed fine
-  - **FIX ME**: install a bunch more packages
+
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
