@@ -1,6 +1,11 @@
 ## Java
 
-For the R packages [ReporteRs](https://davidgohel.github.io/ReporteRs/) (also [rJava](http://www.rforge.net/rJava/), [xlsx](https://github.com/dragua/xlsx), and [WriteXLS](https://github.com/marcschwartz/WriteXLS)) on a Mac, need to get java installed in the right way.
+For the R packages
+[ReporteRs](https://davidgohel.github.io/ReporteRs/) (also
+[rJava](http://www.rforge.net/rJava/) and
+[xlsx](https://github.com/dragua/xlsx)) on a Mac, need to get java
+installed in the right way.
+
 The following instructions seemed to work:
 
 - <https://github.com/snowflakedb/dplyr-snowflakedb/wiki/Configuring-R-rJava-RJDBC-on-Mac-OS-X>
