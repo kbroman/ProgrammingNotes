@@ -27,3 +27,5 @@ Notes regarding [System76](https://system76.com)'s
 - Super-D show desktop (doesn't seem to work)
 
 - Super-P cycle display modes
+
+- In terminal, ctrl-shift-left click on an URL to open in browser
