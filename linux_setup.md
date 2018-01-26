@@ -95,6 +95,10 @@ apps.
       - "Geary" in menu bar -> Accounts -> plus sign
       - Service -> Other
       - Settings as at <https://kb.wisc.edu/page.php?id=28427>
+    - Also added my iCloud account, following instructions at
+      <https://support.apple.com/en-in/HT202304>, including need to
+      get an app-specific password at
+      <https://appleid.apple.com/account/manage>
 
 
 12. Install R
