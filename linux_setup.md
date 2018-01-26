@@ -68,6 +68,7 @@ apps.
    - playing with turning wired and wifi on and off, I can no longer
      get a connection to anything at wisc.edu. Logging out and back in
      didn't help, but restarting the computer worked
+   - works fine on my home wifi network, so maybe just an eduroam/vpnc issue
 
 
 9. ssh keys + connect to github
