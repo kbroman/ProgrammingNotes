@@ -227,6 +227,16 @@ apps.
     - `bin-libgnome2` (for `gnome-open` which acts like `open` on a Mac)
     - `gnome-tweak-tool`
 
+26. Get terminal to open at startup
+
+    - Super key and type "Startup"
+    - Click "Add"; for the command, use "`gnome-terminal`"
+    - To start at a particular size and position, use like
+
+      ```
+      gnome-terminal --geometry 117x57+0+0
+      ```
+
 ---
 
 - get the VPN to work
