@@ -53,7 +53,19 @@ apps.
 
    - Followed the instructions at <https://kb.wisc.edu/page.php?id=74947>
    - **FIX ME**: Didn't seem to work for me, though, in that I
-     couldn't connect to BMI servers.
+     couldn't connect to BMI servers. I mean:
+   - When running `sudo vpnc uwmadison.conf`, it did ask for my
+     password and then (after a delay) said `VPNC started in
+     background`, and when I did `ps aux | grep vpnc` I did see the
+     process running, _but_ I couldn't ssh into the biostat servers
+   - While vpnc is running, `ping broman-10.biostat.wisc.edu`
+     indicates I'm not able to connect. Same when I use the IP address
+     (that shows up when I ping without vpnc running). With vpnc
+     running, I seem to lose my network connection completely.
+   - Hmm...if I turn off wifi and connect with an ethernet cable, the
+     vpn works and I can get to the biostat servers. So maybe it's an
+     eduroam issue?
+
 
 9. ssh keys + connect to github
 
@@ -180,7 +192,10 @@ apps.
     - Skype was starting automatically on restarting the computer; had
       to de-select an option in the settings
     - **FIX ME**: shows up _really_ small when screen is in high-def mode
-    - **FIX ME**: camera is not working yet
+    - Camera was not working initially, but when studying it, learned
+      about `cheese` (like Mac photobooth; see more below) and it
+      worked fine. So opened skype again and found the camera was
+      working. Not sure what changed.
 
 
 18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
@@ -272,6 +287,18 @@ apps.
       ```
       gnome-terminal --geometry 117x57+0+0
       ```
+
+28. Testing webcam
+
+    - Look at <https://help.ubuntu.com/community/Webcam>
+
+    - Install cheese (it's like "photobooth" on Mac)
+
+      ```
+      sudo apt install cheese
+      cheese
+      ```
+
 
 ---
 
