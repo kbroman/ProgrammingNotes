@@ -1,7 +1,8 @@
 ## Linux issues
 
 
-- VPN not working
+- VPN not working with eduroam, though it does work with wired
+  ethernet connection
 
 - warnings etc from okular
 
