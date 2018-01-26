@@ -220,12 +220,21 @@ apps.
 
     - `sudo apt install okular`
     - Installs a _ton_ of dependencies
+    - Make it the default app for PDFs:
+      - Open folder and right click on a PDF
+      - Select Properties and then the "Open With" tab
+      - Choose okular and click "Set default"
 
 
 25. Additional packages
 
     - `bin-libgnome2` (for `gnome-open` which acts like `open` on a Mac)
     - `gnome-tweak-tool`
+    - `caffeine` (thought this didn't work initially, but there's no
+      longer a little icon in the "panel"; rather it runs in the
+      background and will turn off screen saver when there's an
+      application in full screen mode)
+
 
 26. Get terminal to open at startup
 
@@ -294,7 +303,6 @@ apps.
 - Additional packages
 
   - `gpaste`
-  - `caffeine` (couldn't get it to work)
   - `autokey`
 
 ---
