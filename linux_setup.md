@@ -65,6 +65,9 @@ apps.
    - Hmm...if I turn off wifi and connect with an ethernet cable, the
      vpn works and I can get to the biostat servers. So maybe it's an
      eduroam issue?
+   - playing with turning wired and wifi on and off, I can no longer
+     get a connection to anything at wisc.edu. Logging out and back in
+     didn't help, but restarting the computer worked
 
 
 9. ssh keys + connect to github
