@@ -303,8 +303,22 @@ apps.
       cheese
       ```
 
-
 ---
+
+
+-   Enable ssh to the laptop
+
+    I'm lookinag at <http://ubuntuhandbook.org/index.php/2016/04/enable-ssh-ubuntu-16-04-lts/>
+
+    ```
+    sudo apt install openssh-server
+    sudo service ssh status
+    ```
+
+    That last command is as a test; put it in `/etc/ssh/sshd_config`
+
+    Then do `sudo service ssh restart`
+
 
 - get the VPN to work
 
