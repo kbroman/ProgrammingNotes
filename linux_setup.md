@@ -336,7 +336,98 @@ apps.
       [Eddy](https://github.com/donadigo/eddy), a debian package
       installer.
 
----
+30. Color picker, [gpick](http://www.gpick.org/)
+
+    ```
+    sudo install gipck
+    ```
+
+31. Copy stuff into `.bashrc`
+
+32. Install some more packages with `sudo apt install`
+
+    - `enscript` (for making PS files from text files, rotated or 2 column)
+    - `gv` (ghostview, for viewing PS files)
+    - `unbuntu-restricted-extras` (allows reading DVDs etc)
+    -
+
+
+33. Install Inconsolata font
+
+    ```
+    sudo apt install fonts-inconsolata
+    sudo fc-cache -fv
+    ```
+
+34. Install a bunch more programms
+
+    - `vlc` (video player)
+    - `calibre` (organizes ebooks)
+    - `gpaste` (clipboard manager)
+    - `autokey-gtk` (desktop automation)
+    - `digikam` (organizing photos)
+    - `k3b` (disk burning)
+
+35. Install npm and coffeescript
+
+    - `sudo apt install npm`
+    - `sudo npm install --global coffeescript`
+
+36. Install ruby (not sure whether I really need this)
+
+    - `sudo apt install ruby-dev` (gives version 2.3.3; close enough?)
+
+37. Install python-dev (not sure whether I really need this)
+
+    - `sudo apt install python-dev python3-dev`
+
+38. Install peek (screen recording)
+
+    ```
+    sudo add-apt-repository ppa:peek-developers/stable
+    sudo apt update
+    sudo apt install peek
+    ```
+
+39. Install java 8 (there's a java 9, but Minecraft still needs 8)
+
+    Followed the instructions at <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>
+
+    ```
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt-get update
+    sudo apt-get install oracle-java8-installer
+    sudo apt install oracle-java8-set-default
+    ```
+
+    Test that it's working:
+
+    ```
+    java -version
+    javac -version
+    ```
+
+40. Install Minecraft; see <https://minecraft.net/en-us/download/>
+
+    - download `Minecraft.jar`
+    - I placed in `/usr/local/lib` and then put a shell script in
+      `/usr/local/bin/minecraft`
+
+      ```
+      #!/bin/bash
+      # start minecraft
+      gnome-open /usr/local/lib/Minecraft.jar
+      ```
+
+
+
+--
+
+
+
+- Install hotot (twitter client)
+
+
 
 
 -   Enable ssh to the laptop
@@ -352,16 +443,6 @@ apps.
 
     Then do `sudo service ssh restart`
 
-
-- get the VPN to work
-
-- copy other stuff into ~/.bashrc
-
-- python3
-
-- ruby
-
-- npm and coffeescript
 
 - VirtualBox and Windows + Office365
   See
@@ -381,19 +462,9 @@ apps.
     no product key, chose Windows 10 Home edition, and said something
     like fresh install
 
-- Java
-
-- Minecraft
-
 - Backups (dejadup)
 
-- Change the wallpaper
-
 - better terminal
-
-- vlc
-
-- get camera to work in skype
 
 - Install ccache and use for compiling R
 
@@ -405,10 +476,6 @@ apps.
   - `sudo apt install conky-all`
   - Download [sidebar-conky](https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928)
 
-- Additional packages
-
-  - `gpaste`
-  - `autokey`
 
 ---
 
