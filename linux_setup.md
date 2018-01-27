@@ -303,6 +303,15 @@ apps.
       cheese
       ```
 
+29. Download
+    [moneydance](https://infinitekind.com/download-moneydance-personal-finance-software)
+
+    - Available for linux as well as Mac :)
+    - Downloaded `.deb` file; right click and "open" in chrome when it
+      was done downloading, and it opened
+      [Eddy](https://github.com/donadigo/eddy), a debian package
+      installer.
+
 ---
 
 
