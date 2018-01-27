@@ -420,8 +420,18 @@ apps.
       ```
 
 
+41. Install [keepassXC](https://keepassxc.org/download/)
 
---
+    ```
+    sudo add-apt-repository ppa:phoerious/keepassxc
+    sudo apt update
+    sudo apt install keepassxc
+    ```
+
+    (this took me a while because I kept typing `keypassxc` rather
+    than `keepassxc`)
+
+---
 
 
 
@@ -475,6 +485,7 @@ apps.
 
   - `sudo apt install conky-all`
   - Download [sidebar-conky](https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928)
+
 
 
 ---
