@@ -366,7 +366,6 @@ apps.
     - `gpaste` (clipboard manager)
     - `autokey-gtk` (desktop automation)
     - `digikam` (organizing photos)
-    - `k3b` (disk burning)
 
 35. Install npm and coffeescript
 
@@ -461,14 +460,27 @@ apps.
     - However, I was able to connect using the GUI file browser.
       Clicked "Other locations" and then typed `smb://192.168.0.3`
 
+43. More stuff via `sudo apt install`
+
+    - `pdftk` (pdf tools)
+    - (tried installing `pdfnup` but it seems it's included with
+      texlive)
+    - `pinta` (like MS paint)
+    - `handbrake` (for ripping DVDs)
+    - `gimp` (like photoshop)
+    - `inkscape` (like illustrator)
+    - `shutter` (image capture)
+    - `k3b` (for burning CDs)
+    - `banshee` (music app)
+    - `rclone` (like rsync for cloud storage)
+    - `filezilla` (ftp client)
+
+
 ---
 
-
-
-- Install hotot (twitter client)
-
-
-
+- Install WINE and PlayOnLinux (windows emulators)
+  <https://www.lifewire.com/wine-runs-windows-applications-2205035>
+  <https://www.lifewire.com/tools-to-run-windows-programs-in-linux-4120713>
 
 -   Enable ssh to the laptop
 
@@ -503,6 +515,7 @@ apps.
     like fresh install
 
 - Backups (dejadup)
+  <https://www.lifewire.com/backup-ubuntu-4126286>
 
 - better terminal
 
