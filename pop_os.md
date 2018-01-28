@@ -26,14 +26,6 @@ Notes regarding [System76](https://system76.com)'s
 
 - Super-D show desktop (doesn't seem to work)
 
-- Super-P cycle display modes
+- Super-P cycle display modes (doesn't seem to work)
 
 - In terminal, ctrl-shift-left click on an URL to open in browser
-
----
-
-Other stuff
-
-- ctrl-alt-G to open gui for gpaste
-- `gpaste-client` has command-line stuff for manipulating gpaste's
-  clipboard history
