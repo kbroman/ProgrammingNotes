@@ -431,6 +431,36 @@ apps.
     (this took me a while because I kept typing `keypassxc` rather
     than `keepassxc`)
 
+42. Mount exFAT drive connect to a router
+
+    - Install `smbclient` and exFAT stuff
+
+      ```
+      sudo apt install smbclient exfat-fuse exfat-utils
+      ```
+
+    - List volumes
+
+      ```
+      smbclient -L //192.168.0.3
+      ```
+
+    - Mount the drive...was trying the following:
+
+      ```
+      sudo mount -t cifs -o username=kbroman //192.168.0.3/volume10/ /media/kbroman
+      ```
+
+      but got an error like one of these two:
+
+      ```
+      mount error(115): Operation now in progress
+      mount error(112): Host is down
+      ```
+
+    - However, I was able to connect using the GUI file browser.
+      Clicked "Other locations" and then typed `smb://192.168.0.3`
+
 ---
 
 
