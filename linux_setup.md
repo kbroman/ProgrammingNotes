@@ -474,6 +474,9 @@ apps.
     - `banshee` (music app)
     - `rclone` (like rsync for cloud storage)
     - `filezilla` (ftp client)
+    - `libnotify-bin` (enables you to create desktop notifications
+      with `notify-send`)
+
 
 
 ---
