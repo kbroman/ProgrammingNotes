@@ -510,6 +510,16 @@ apps.
     [PlayOnLinux](https://www.playonlinux.com/en/) in the same way as
     Slack and Corebird
 
+48. Set up backups
+
+    - Install Deja Dup via "Pop Shop"
+
+    - Used command-line program `gnome-disks` to change to name of my
+      extra hard drive.
+
+    - Set up Deja Dup for a daily backup of my home folder, ignoring
+      the Downloads folder.
+
 ---
 
 -   Enable ssh to the laptop
@@ -542,9 +552,6 @@ apps.
   - Then start the virtual machine to install windows10. I said I had
     no product key, chose Windows 10 Home edition, and said something
     like fresh install
-
-- Backups (dejadup)
-  <https://www.lifewire.com/backup-ubuntu-4126286>
 
 - better terminal
 
