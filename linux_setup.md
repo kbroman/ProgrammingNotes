@@ -497,11 +497,20 @@ apps.
         - esc to exit
     - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
 
----
+45. Install [Slack](https://slack.com/downloads/linux)
 
-- Install WINE and PlayOnLinux (windows emulators)
-  <https://www.lifewire.com/wine-runs-windows-applications-2205035>
-  <https://www.lifewire.com/tools-to-run-windows-programs-in-linux-4120713>
+    - Downloaded `.deb` file; opened it from Chrome to install.
+
+46. Install [Corebird](https://corebird.baedert.org/), twitter client
+
+    - Just used _Pop shop_ (the software installer for
+      [Pop!_OS](http://pop.system76.com/docs)
+
+47. Installed [WINE](https://www.winehq.org/) and
+    [PlayOnLinux](https://www.playonlinux.com/en/) in the same way as
+    Slack and Corebird
+
+---
 
 -   Enable ssh to the laptop
 
@@ -543,11 +552,6 @@ apps.
 
   - `sudo apt install ccache`
   - In `~/.R`:
-
-- Conky system monitor
-
-  - `sudo apt install conky-all`
-  - Download [sidebar-conky](https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928)
 
 - Additional possible gnome extensions:
   - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
