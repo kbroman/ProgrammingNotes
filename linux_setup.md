@@ -294,7 +294,7 @@ apps.
 
 26. Create a `start` script that acts like `open` on a Mac, as a
     little shell script that just calls `gnome-open` repeatedly for
-    each command-line argument
+    each command-line argument. Placed this in `~/.local/bin`
 
     ```
     #!/bin/bash
@@ -363,7 +363,6 @@ apps.
 
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
-    - `gpaste` (clipboard manager)
     - `autokey-gtk` (desktop automation)
     - `digikam` (organizing photos)
 
@@ -476,6 +475,16 @@ apps.
     - `filezilla` (ftp client)
     - `libnotify-bin` (enables you to create desktop notifications
       with `notify-send`)
+
+
+44. [Gnome extensions](https://extensions.gnome.org)
+
+    - (Can install, uninstall, and configure extensions within browser)
+    - [Clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator)
+      (gives clipboard history)
+    - [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
+    - [Audio Output Switcher](https://extensions.gnome.org/extension/751/audio-output-switcher/)
+      (adds selector of audio output, next to volume control)
 
 
 
