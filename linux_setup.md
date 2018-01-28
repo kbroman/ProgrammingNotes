@@ -495,6 +495,7 @@ apps.
         - use Super-Enter (on number key pad) to open gtile
         - click one corner position and then the other on the grid
         - esc to exit
+    - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
 
 ---
 
@@ -514,7 +515,6 @@ apps.
     That last command is as a test; put it in `/etc/ssh/sshd_config`
 
     Then do `sudo service ssh restart`
-
 
 - VirtualBox and Windows + Office365
   See
@@ -549,7 +549,11 @@ apps.
   - `sudo apt install conky-all`
   - Download [sidebar-conky](https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928)
 
-
+- Additional possible gnome extensions:
+  - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
+  - [Pomodoro timer](http://gnomepomodoro.org/)
+  - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
+  - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
 
 ---
 
