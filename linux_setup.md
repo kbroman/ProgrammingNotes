@@ -489,6 +489,12 @@ apps.
       and back in again)
     - [emoji selector](https://extensions.gnome.org/extension/1162/emoji-selector/_
       (also did `sudo apt install fonts-emojione`)
+    - [gtile](https://extensions.gnome.org/extension/28/gtile/) (tile
+      windows with a grid)
+        - select window you want to resize
+        - use Super-Enter (on number key pad) to open gtile
+        - click one corner position and then the other on the grid
+        - esc to exit
 
 ---
 
