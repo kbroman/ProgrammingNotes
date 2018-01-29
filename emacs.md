@@ -48,3 +48,19 @@ Insert unicode character:
 ```
 C-x 8 <enter> [hex] <enter>
 ```
+
+For accented characters, get help with
+
+```
+C-x 8 C-h
+```
+
+Or say
+
+```
+C-x 8 ' C-h
+```
+
+To type é, you'd do: `C-x 8 ' e`
+
+To type ô, you'd do: `C-x 8 ^ o`
