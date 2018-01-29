@@ -520,6 +520,19 @@ apps.
     - Set up Deja Dup for a daily backup of my home folder, ignoring
       the Downloads folder.
 
+49. Copy over music
+
+    - Used `rsync`; issue of having spaces in paths, but can do like
+      this (note the backslashes _and_ quotes):
+
+      ```
+      rsync -a "fig.local:Music/iTunes/iTunes\ Music/They\ Might\ Be\ Giants" .
+      ```
+
+    - In banshee: Tools -> Rescan Music Library
+
+    - `.m4a` files seem to work just as well as `.mp3`
+
 ---
 
 -   Enable ssh to the laptop
