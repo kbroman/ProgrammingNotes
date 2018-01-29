@@ -551,6 +551,41 @@ apps.
     0 2 * * * /bin/bash [path_to_shell_script]
     ```
 
+51. VirtualBox and Windows + Office365
+    See <https://www.extremetech.com/computing/198427-how-to-install-windows-10-in-a-virtual-machine>
+
+    - Download Windows 10 from
+      <https://www.microsoft.com/en-us/software-download/windows10ISO>
+    - Download VirtualBox from
+      <https://www.virtualbox.org/wiki/Downloads>
+      - Add to `/etc/apt/sources.list`
+      - Register Oracle public keys
+      - `sudo apt install virtualbox-5.2`
+      - `sudo apt install dkms`
+    - Start `virtualbox`, create new Windows10 machine, adjust memory,
+      disk size, connect to the windows ISO, and adjust display stuff
+    - Then start the virtual machine to install windows10. I said I had
+      no product key, chose Windows 10 Home edition, and said something
+      like fresh install
+    - The thing was deathly slow. Searched for solutions and found
+      this: <http://blog.jdpfu.com/2012/09/14/solution-for-slow-ubuntu-in-virtualbox>
+
+      - Followed these instructions, except for Network when I tried
+        "Bridged" I didn't get a network connection so I switched back
+        to the default "NAT" and that worked
+
+      - Gave the machine 150 GB harddrive (dynamically sized) and 8192
+        MB RAM. And went for 2 CPUs
+
+      - Once windows was up and running, and changed the VM display to
+        "scaled" and then within windows I changed the screen
+        resolution to 1600x1200. Seems to work better.
+
+      - Within Windows, installed Office365 (by going to office365.com
+        and then logging in with my NetID from UW-Madison), R, Rtools,
+        RStudio, and a bunch of R packages (devtools + tidyverse
+        first)
+
 ---
 
 -   Enable ssh to the laptop
@@ -566,23 +601,6 @@ apps.
 
     Then do `sudo service ssh restart`
 
-- VirtualBox and Windows + Office365
-  See
-  <https://www.extremetech.com/computing/198427-how-to-install-windows-10-in-a-virtual-machine>
-
-  - Download Windows 10 from
-    <https://www.microsoft.com/en-us/software-download/windows10ISO>
-  - Download VirtualBox from
-    <https://www.virtualbox.org/wiki/Downloads>
-    - Add to `/etc/apt/sources.list`
-    - Register Oracle public keys
-    - `sudo apt install virtualbox-5.2`
-    - `sudo apt install dkms`
-  - Start `virtualbox`, create new Windows10 machine, adjust memory,
-    disk size, connect to the windows ISO, and adjust display stuff
-  - Then start the virtual machine to install windows10. I said I had
-    no product key, chose Windows 10 Home edition, and said something
-    like fresh install
 
 - better terminal
 
