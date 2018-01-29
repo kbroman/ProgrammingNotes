@@ -533,6 +533,24 @@ apps.
 
     - `.m4a` files seem to work just as well as `.mp3`
 
+50. [autokey]() is great, but after a day or so it seems to start
+    using up 100% of a CPU. In short term, seems like I could just use
+    a `cron` job to re-start it every evening.
+
+    So I made a shell script with
+
+    ``
+    pkill autokey
+    sleep 10
+    autokey-gtk >& /dev/null &
+    ```
+
+    I then used `crontab -e` to add to my crontab file:
+
+    ```
+    0 2 * * * /bin/bash [path_to_shell_script]
+    ```
+
 ---
 
 -   Enable ssh to the laptop
