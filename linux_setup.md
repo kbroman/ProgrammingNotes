@@ -508,7 +508,10 @@ apps.
 
 47. Installed [WINE](https://www.winehq.org/) and
     [PlayOnLinux](https://www.playonlinux.com/en/) in the same way as
-    Slack and Corebird
+    Slack and Corebird. Seems like if I use PlayOnLinux, I don't
+    really need to have installed WINE. And it seems that Office365
+    (Office 2016) can't be installed with either at this point, so
+    I don't really have any use for these.
 
 48. Set up backups
 
