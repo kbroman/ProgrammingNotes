@@ -6,6 +6,10 @@
   with the laptop's display off. Even better would be to use it with
   the laptop closed.
 
+  The thing that seems to work: log in, select display settings (to
+  have external display as single monitor), then close laptop (to
+  suspend), then open laptop again
+
 - Emoji fonts don't seem to work. For example, using them with
   autokey. Can paste them normally (though black-and-white) but they
   don't show up within autokey
