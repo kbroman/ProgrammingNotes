@@ -1,32 +1,38 @@
 ## Creating a Mac High Sierra VM on Ubuntu
 
+I got a [System76 Oryx Pro
+laptop](https://system76.com/laptops/oryx) running
+[Pop!_OS](https://system76.com/pop) (which is basically Ubuntu). I
+want to run Mac OS X within [VirtualBox](https://www.virtualbox.org).
+
 Initially I tried to install Mac Sierra
 following notes at
 [`suzywu2014.github.io`](http://suzywu2014.github.io/ubuntu/2017/02/23/macos-sierra-virtualbox-vm-on-ubuntu)
 
-But I was getting errors, so I switched to the primary source,
+But I was getting errors, so I switched to following the primary source,
 [`geerlingguy` at GitHub](https://github.com/geerlingguy/macos-virtualbox-vm).
 
 But I was getting errors there, too. And I saw [this issue](https://github.com/geerlingguy/macos-virtualbox-vm/issues/24)
 that the latest Sierra installer doesn't seem to work.
 
-So I then switched to instructions from
+So I then switched to trying to install High Sierra, using instructions from
 [`tobiwashere.de`](http://tobiwashere.de/2017/10/virtualbox-how-to-create-a-macos-high-sierra-vm-to-run-on-a-mac-host-system/)
 
 But I got further errors. Or at least it seemed so.
 
 Finally, I tried the
 [tutorial at `howtogeek.com`](https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
-even though the description concerns Windows 10. Maybe the key advance
-is that they mention the long, slow, scrolling text that looks like
+even though the description concerns Windows 10. I think maybe the key advance
+is that they mention the long, slow, scrolling text that look like
 errors. "Don't worry about it. It's normal." They also select the
-generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
+generic "Mac OS X (64-bit)" rather than the "High Sierra" version
+(though I'm not sure if it matters, I stuck with it.)
 
 1. On Mac, download Sierra installer from
    <https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&mt=12>
 
    Wait that's left over from when I was trying to install Sierra. For
-   High Sierra, it will be easy to find the installer at the App
+   High Sierra, it will be easy to find the installer at the Mac App
    store, and you may already have a copy of the installer sitting in
    `/Applications`. (My Mac is still running Sierra and it's been
    pleading with me to upgrade for months.)
@@ -87,8 +93,8 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
 6. Don't panic.
 
 7. Select language, then Disk Utility, then "Show All Devices", then
-   Erase the "VBOX HARDDISK Media". Then Close Disk Utility and
-   "Install macOS".
+   Erase the "VBOX HARDDISK Media". Then close Disk Utility and
+   select "Install macOS".
 
 8. Shut down the VM, go into VirtualBox, eject the virtual CD, and
    restart the VM.
