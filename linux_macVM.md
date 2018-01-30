@@ -101,3 +101,6 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
     ugliness. Again, don't panic.
 
 11. Finally get to the "Welcome" page. Sigh. We made it.
+
+12. Install stuff: iterm2, R, RStudio, command-line developer tools,
+    Office 365
