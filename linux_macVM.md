@@ -25,6 +25,12 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
 1. On Mac, download Sierra installer from
    <https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&mt=12>
 
+   Wait that's left over from when I was trying to install Sierra. For
+   High Sierra, it will be easy to find the installer at the App
+   store, and you may already have a copy of the installer sitting in
+   `/Applications`. (My Mac is still running Sierra and it's been
+   pleading with me to upgrade for months.)
+
 2. Also on Mac, prepare the High Sierra installer as an ISO
 
    ```
