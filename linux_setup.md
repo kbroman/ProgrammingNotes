@@ -523,6 +523,8 @@ apps.
     - Set up Deja Dup for a daily backup of my home folder, ignoring
       the Downloads folder.
 
+    - Ignore the folders `~/Dropbox` and `~/VirtualBox VMs`
+
 49. Copy over music
 
     - Used `rsync`; issue of having spaces in paths, but can do like
