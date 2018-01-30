@@ -200,6 +200,8 @@ apps.
       about `cheese` (like Mac photobooth; see more below) and it
       worked fine. So opened skype again and found the camera was
       working. Not sure what changed.
+    - Fn-F10 toggles the camera on and off; so maybe it was off and
+      got toggled back on?
 
 
 18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
