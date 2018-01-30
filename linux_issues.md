@@ -1,6 +1,11 @@
 ## Linux issues
 
 
+- Having trouble with displays. In particular, getting the right
+  setting on my external display, and having it work on its own,
+  with the laptop's display off. Even better would be to use it with
+  the laptop closed.
+
 - Emoji fonts don't seem to work. For example, using them with
   autokey. Can paste them normally (though black-and-white) but they
   don't show up within autokey
