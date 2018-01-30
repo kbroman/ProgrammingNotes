@@ -614,6 +614,8 @@ apps.
     - Can open a new terminal in an additional tab with
       ctrl-shift-T
     - Switch between tabs with ctrl-PgUp and ctrl-PgDn
+    - Alt-1, Alt-2, etc., to switch to a particular tab (by number, up
+      to 9; Alt-0 for tab 10)
     - See all keyboard shortcuts by going to Edit -> Preferences ->
       Shortcuts
 
