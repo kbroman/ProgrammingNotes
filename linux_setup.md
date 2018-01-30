@@ -584,10 +584,23 @@ apps.
         "scaled" and then within windows I changed the screen
         resolution to 1600x1200. Seems to work better.
 
-      - Within Windows, installed Office365 (by going to office365.com
-        and then logging in with my NetID from UW-Madison), R, Rtools,
-        RStudio, and a bunch of R packages (devtools + tidyverse
-        first)
+    - Within Windows, installed Office365 (by going to office365.com
+      and then logging in with my NetID from UW-Madison), R, Rtools,
+      RStudio, and a bunch of R packages (devtools + tidyverse
+      first)
+
+    - Need to install "Guest additions". While the virtual box is
+      running, you need the VirtualBox tool bar to be showing (it
+      won't if you're using a "scaled" window, it seems). In the
+      "Devices" menu there's an option to "insert guest additions
+      CD". Then within windows, click on the CD and install the
+      software.
+
+    - Having installed the guest additions, you can share a linux
+      folder with windows. First create a folder in your home
+      directory that you will share. Then in VirtualBox settings, go
+      to "Shared Folders" and right-click on "Machine Folders" and
+      select "Add shared folder" and enter the path to the folder.
 
 ---
 
@@ -603,7 +616,6 @@ apps.
     That last command is as a test; put it in `/etc/ssh/sshd_config`
 
     Then do `sudo service ssh restart`
-
 
 - better terminal
 
