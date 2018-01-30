@@ -115,7 +115,7 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version
 11. Finally get to the "Welcome" page. Sigh. We made it.
 
 12. Install stuff: iterm2, R, RStudio, command-line developer tools,
-    Office 365
+    Office 365, gfortran
 
 13. VirtualBox doesn't have "Guest Additions" for Mac VM, so you can't
     do shared folders like you can with windows. But I'm able to
@@ -126,3 +126,6 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version
     - On the Mac VM, went to Sharing Preferences and turned on "File
       Sharing" and "Remote Login", and gave the guest the name "MacVM"
     - Now can `ssh`/`scp` from linux host to `MacVM.local`.
+    - **But** I don't have internet access with the bridged adaptor;
+      if I switch back to "NAT" and log out and log in again, I have
+      internet again.
