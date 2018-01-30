@@ -608,9 +608,16 @@ apps.
       to "Shared Folders" and right-click on "Machine Folders" and
       select "Add shared folder" and enter the path to the folder.
 
----
+52. Was looking at finding a better linux terminal, but I think the
+    standard gnome terminal will be fine for me.
 
-- better terminal
+    - Can open a new terminal in an additional tab with
+      ctrl-shift-T
+    - Switch between tabs with ctrl-PgUp and ctrl-PgDn
+    - See all keyboard shortcuts by going to Edit -> Preferences ->
+      Shortcuts
+
+---
 
 - Install ccache and use for compiling R
 
