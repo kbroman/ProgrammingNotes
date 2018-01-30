@@ -1,6 +1,10 @@
 ## Linux issues
 
 
+- Emoji fonts don't seem to work. For example, using them with
+  autokey. Can paste them normally (though black-and-white) but they
+  don't show up within autokey
+
 - VPN not working with eduroam, though it does work with wired
   ethernet connection
 
