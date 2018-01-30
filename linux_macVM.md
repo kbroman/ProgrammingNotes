@@ -129,3 +129,8 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version
     - **But** I don't have internet access with the bridged adaptor;
       if I switch back to "NAT" and log out and log in again, I have
       internet again.
+    - Turns out I just need a second network adapter. In settings for
+      the VM, go to "Network". Adapter 1 is "NAT"; adapter 2 is
+      "Bridged network" with the name "wlp110s0". Log out and log in
+      again on the Mac VM and I have both internet connection and the
+      ability to ssh into the VM from my ubuntu host
