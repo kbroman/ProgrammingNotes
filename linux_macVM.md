@@ -104,3 +104,13 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
 
 12. Install stuff: iterm2, R, RStudio, command-line developer tools,
     Office 365
+
+13. VirtualBox doesn't have "Guest Additions" for Mac VM, so you can't
+    do shared folders like you can with windows. But I'm able to
+    `ssh`/`scp` from linux host to the Mac VM by doing the following:
+
+    - Changed the Network setting for the Mac VM in VirtualBox from
+      "NAT" to "Bridged adaptor"
+    - On the Mac VM, went to Sharing Preferences and turned on "File
+      Sharing" and "Remote Login", and gave the guest the name "MacVM"
+    - Now can `ssh`/`scp` from linux host to `MacVM.local`.
