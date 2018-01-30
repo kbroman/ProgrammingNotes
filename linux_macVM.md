@@ -1,18 +1,31 @@
 ## Creating a Mac High Sierra VM on Ubuntu
 
-Initially following notes at
-<http://suzywu2014.github.io/ubuntu/2017/02/23/macos-sierra-virtualbox-vm-on-ubuntu>
+Initially I tried to install Mac Sierra
+following notes at
+[`suzywu2014.github.io`](http://suzywu2014.github.io/ubuntu/2017/02/23/macos-sierra-virtualbox-vm-on-ubuntu)
 
-Then switched to the primary source, <https://github.com/geerlingguy/macos-virtualbox-vm>
+But I was getting errors, so I switched to the primary source,
+[`geerlingguy` at GitHub](https://github.com/geerlingguy/macos-virtualbox-vm).
 
-Then switched to <http://tobiwashere.de/2017/10/virtualbox-how-to-create-a-macos-high-sierra-vm-to-run-on-a-mac-host-system/>
+But I was getting errors there, too. And I saw [this issue](https://github.com/geerlingguy/macos-virtualbox-vm/issues/24)
+that the latest Sierra installer doesn't seem to work.
 
-Then tried <https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/>
+So I then switched to instructions from
+[`tobiwashere.de`](http://tobiwashere.de/2017/10/virtualbox-how-to-create-a-macos-high-sierra-vm-to-run-on-a-mac-host-system/)
+
+But I got further errors. Or at least it seemed so.
+
+Finally, I tried the
+[tutorial at `howtogeek.com`](https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
+even though the description concerns Windows 10. Maybe the key advance
+is that they mention the long, slow, scrolling text that looks like
+errors. "Don't worry about it. It's normal." They also select the
+generic "Mac OS X (64-bit)" rather than the "High Sierra" version.
 
 1. On Mac, download Sierra installer from
    <https://itunes.apple.com/us/app/macos-sierra/id1127487414?ls=1&mt=12>
 
-2. Also on Mac, prepare the Sierra installer
+2. Also on Mac, prepare the High Sierra installer as an ISO
 
    ```
    hdiutil create -o /tmp/HighSierra -size 8G -layout SPUD -fs HFS+J -type SPARSE
@@ -29,7 +42,7 @@ Then tried <https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virt
    ```
    name: MacVM
    MacVM: OSX
-   version: Mac OS X 10.12 Sierra (64-bit)
+   version: Mac OS X (64-bit)
    RAM: 8192 GB
    Create a virtual hard disk (VDI; dynamic): 150 GB
    Pointing device: USB multi-touch tablet
@@ -43,7 +56,16 @@ Then tried <https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virt
    Shared Folders: Machine Folder to /home/kbroman/MacShare
    ```
 
-4. On command line:
+   Also, load the `HighSierra.iso` into the virtual CD:
+
+   - Open Settings for the MacVM in VirtualBox
+   - Click on Storage
+   - Click on the CD drive
+   - Click the disk on the far right and select "Choose Virtual
+     Optical Disk File" and select the `HighSierra.iso` file
+
+
+4. **Close VirtualBox**, and on the command line:
 
    ```
    VBoxManage modifyvm "MacVM" --cpuidset 00000001 000306a9 04100800 7fbae3ff bfebfbff
@@ -54,14 +76,28 @@ Then tried <https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virt
    VBoxManage setextradata "MacVM" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
    ```
 
-5. Install High Sierra:
+5. Install High Sierra by opening virtual box and starting the VM.
 
-   - Open Settings for the MacSierraVM in VirtualBox
-   - Click on Storage
-   - Click on the CD drive
-   - Click the disk on the far right and select "Choose Virtual
-     Optical Disk File" and select the `Sierra.iso` file
-   - Start the VM
+6. Don't panic.
 
-6. Really terrible looking errors scroll by; hung in there and the
-   thing _did_ fire up.
+7. Select language, then Disk Utility, then "Show All Devices", then
+   Erase the "VBOX HARDDISK Media". Then Close Disk Utility and
+   "Install macOS".
+
+8. Shut down the VM, go into VirtualBox, eject the virtual CD, and
+   restart the VM.
+
+9. You get to the "`UEFI`" ugliness. Type:
+
+   ```
+   fs1:
+   cd "macOS Install Data"
+   cd "Locked Files"
+   cd "Boot Files"
+   boot.efi
+   ```
+
+10. Long, slow ugliness, then nice-looking Mac install. Then more
+    ugliness. Again, don't panic.
+
+11. Finally get to the "Welcome" page. Sigh. We made it.
