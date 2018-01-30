@@ -115,7 +115,7 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version
 11. Finally get to the "Welcome" page. Sigh. We made it.
 
 12. Install stuff: iterm2, R, RStudio, command-line developer tools,
-    Office 365, gfortran
+    Office 365, [gfortran](http://gcc.gnu.org/wiki/GFortranBinaries#MacOS)
 
 13. VirtualBox doesn't have "Guest Additions" for Mac VM, so you can't
     do shared folders like you can with windows. But I'm able to
