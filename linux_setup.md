@@ -496,6 +496,10 @@ apps.
         - click one corner position and then the other on the grid
         - esc to exit
     - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
+    - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
+      (adds a refresh button to the wifi connection dialog)
+    - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
+
 
 45. Install [Slack](https://slack.com/downloads/linux)
 
@@ -606,19 +610,6 @@ apps.
 
 ---
 
--   Enable ssh to the laptop
-
-    I'm lookinag at <http://ubuntuhandbook.org/index.php/2016/04/enable-ssh-ubuntu-16-04-lts/>
-
-    ```
-    sudo apt install openssh-server
-    sudo service ssh status
-    ```
-
-    That last command is as a test; put it in `/etc/ssh/sshd_config`
-
-    Then do `sudo service ssh restart`
-
 - better terminal
 
 - Install ccache and use for compiling R
@@ -629,8 +620,6 @@ apps.
 - Additional possible gnome extensions:
   - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
   - [Pomodoro timer](http://gnomepomodoro.org/)
-  - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
-  - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
 
 ---
 
