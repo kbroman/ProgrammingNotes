@@ -64,3 +64,15 @@ C-x 8 ' C-h
 To type é, you'd do: `C-x 8 ' e`
 
 To type ô, you'd do: `C-x 8 ^ o`
+
+
+### Magit
+
+Mode for git within emacs.
+
+- `C-x g` to get into the mode
+- Within the magit frame, press `s` to stage a particular file,
+  press `S` to stage everything.
+- Within the magit frame, press `cc` to commit; type commit message,
+  then `C-c C-c` to finish it.
+- Within the magit frame, press `Pp` to push to github.
