@@ -621,7 +621,14 @@ apps.
     - See all keyboard shortcuts by going to Edit -> Preferences ->
       Shortcuts
 
-53. Installed
+53. Install [gitg](http://gitx.frim.nl/), a git GUI similar to
+    [gitx](http://gitx.frim.nl/) (which is Mac only)
+
+    ```
+    sudo apt install gitg
+    ```
+
+54. Installed
     [Thunderbird](https://www.mozilla.org/en-US/thunderbird/) because
     Geary seems simplistic. Also installed the
     [Lightning](https://www.mozilla.org/en-US/thunderbird/) calendar
