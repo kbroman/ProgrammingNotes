@@ -621,6 +621,13 @@ apps.
     - See all keyboard shortcuts by going to Edit -> Preferences ->
       Shortcuts
 
+53. Installed
+    [Thunderbird](https://www.mozilla.org/en-US/thunderbird/) because
+    Geary seems simplistic. Also installed the
+    [Lightning](https://www.mozilla.org/en-US/thunderbird/) calendar
+    add-on (sandwich button -> Add ons -> Get add ons -> search for
+    lightning).
+
 ---
 
 - Install ccache and use for compiling R
