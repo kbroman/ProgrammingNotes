@@ -633,7 +633,8 @@ apps.
     Geary seems simplistic. Also installed the
     [Lightning](https://www.mozilla.org/en-US/thunderbird/) calendar
     add-on (sandwich button -> Add ons -> Get add ons -> search for
-    lightning).
+    lightning). Also installed the add on "[Provider for google
+    calendar](https://support.mozilla.org/en-US/kb/using-lightning-google-calendar)".
 
 ---
 
