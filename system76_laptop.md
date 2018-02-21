@@ -13,5 +13,5 @@ There are 8 little lights on the front of the machine
 - number lock
 - airplane mode
 - hard disk
+- power adapter
 - battery
-- power adapter?
