@@ -15,3 +15,8 @@ There are 8 little lights on the front of the machine
 - hard disk
 - power adapter
 - battery
+
+### keyboard shortcuts
+
+<super>-P controls display setup (mirror/joined/built-in/external),
+but it forces you to have very small text
