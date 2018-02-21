@@ -283,6 +283,10 @@ apps.
       Icon theme "Mint-X" not found.
       ```
 
+    - Tried also `sudo apt install oxygen-icon-theme`
+
+    - Tried installing [mint themes](https://www.gnome-look.org/p/1175954/)
+
 
 25. Additional packages
 
