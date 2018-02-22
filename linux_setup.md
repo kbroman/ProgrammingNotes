@@ -377,6 +377,10 @@ apps.
     - `sudo apt install npm`
     - `sudo npm install --global coffeescript`
 
+    Also [`gistup`](https://github.com/mbostock/gistup):
+
+    - `sudo npm install -g gistup`
+
 36. Install ruby (not sure whether I really need this)
 
     - `sudo apt install ruby-dev` (gives version 2.3.3; close enough?)
