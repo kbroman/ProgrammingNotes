@@ -18,13 +18,22 @@ There are 8 little lights on the front of the machine
 
 ### keyboard shortcuts
 
-<super>-P controls display setup (mirror/joined/built-in/external),
-but it forces you to have very small text
+- `<super>-P` controls display setup (mirror/joined/built-in/external),
+  but it forces you to have very small text
 
-<super> then type app name
+- `<super>` then type app name
 
-<super>-t to open new terminal
-<ctrl>-<shift>-t to open new tab within terminal
-<ctrl>-<pgup/pgdn> or <alt>-[number] to switch between terminal tabs
-<super>-<tab> to switch between apps
-<super>-~ to switch between windows of a given app
+- `<super>-t` to open new terminal
+- `<ctrl>-<shift>-t` to open new tab within terminal
+- `<ctrl>-<pgup/pgdn>` or `<alt>-[number]` to switch between terminal tabs
+- `<super>-<tab>` to switch between apps
+- `<super>-~` to switch between windows of a given app
+
+- arrange windows: `<ctrl><super><arrow key>`
+- arrange windows more thoroughly with gTile: `<super><enter (on number pad)>`
+
+- clipboard indicator for clipboard with memory:
+  - `<ctrl>-F9` toggle menu
+  - `<ctrl>-F10` clear history (oops!)
+  - `<ctrl>-F11` previous entry
+  - `<ctrl>-F12` next entry
