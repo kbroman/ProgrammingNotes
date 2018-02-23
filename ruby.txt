@@ -298,6 +298,13 @@ p a[1..3]
 p a[-1]
 p a[-3 .. -2]
 
+# concatenate and append to arrays
+x = []
+x.concat(["a"])
+x.concat(["b", "c"])
+x.push(5)
+x.push("hello")
+
 # symbols (literal constants that can have arbitrary value...the name is the important thing)
 #     commonly used as keys for hashes
 current_situation = :good
