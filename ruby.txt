@@ -305,6 +305,14 @@ x.concat(["b", "c"])
 x.push(5)
 x.push("hello")
 
+# delete item from array
+x = ["a", "b", "d"]
+x.delete("b") # deletes this item
+
+# search for element in array
+x.include?("e") # true if "e" is in there; false if not
+x.count("e") # number of times "e" appears in the array
+
 # symbols (literal constants that can have arbitrary value...the name is the important thing)
 #     commonly used as keys for hashes
 current_situation = :good
