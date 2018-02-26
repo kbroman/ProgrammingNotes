@@ -32,6 +32,7 @@ There are 8 little lights on the front of the machine
 - arrange windows: `<ctrl><super><arrow key>`
 - arrange windows more thoroughly with gTile: `<super><enter (on number pad)>`
 
+- `<ctrl>-c/v` for copy-paste except in terminal where you must use `<ctrl>-<shift>-c/v`
 - clipboard indicator for clipboard with memory:
   - `<ctrl>-F9` toggle menu
   - `<ctrl>-F10` clear history (oops!)
