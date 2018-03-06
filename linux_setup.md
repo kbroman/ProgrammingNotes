@@ -644,6 +644,28 @@ apps.
     lightning). Also installed the add on "[Provider for google
     calendar](https://support.mozilla.org/en-US/kb/using-lightning-google-calendar)".
 
+55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
+
+    - `sudo apt install network-manager-openvpn-gnome`
+
+    - `mkdir ~/.tunnelbear_config`
+
+    - Grab [config
+      files](https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip)
+      and unzip to the above `.tunnelbear_config` directory
+
+    - Open Network settings; click plus sign by VPN and choose "Import
+      from file"; find directory created above and select the file for
+      the desired country. Add email address and tunnelbear password.
+      Click "Add".
+
+    - To start/stop: turn on/off VPN in network settings via status
+      bar in top-right of display
+
+    - To test:
+        - [check your IP](https://bearsmyip.com/)
+        - check for DNS leaks with "Extended test" at [dnsleaktest.com](https://www.dnsleaktest.com/)
+
 ---
 
 - Install ccache and use for compiling R
