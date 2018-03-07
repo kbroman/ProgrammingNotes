@@ -71,6 +71,9 @@ github stuff
  git push origin <branch>
  git push origin --delete <branch>
 
+ git remote prune origin --dry-run  # Check for defunct remote branches
+ git remote prune origin            # Delete local copies of defunct remote branches
+
 
 github remotes; see http://help.github.com/remotes/
 
