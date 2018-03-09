@@ -355,8 +355,6 @@ apps.
     - `enscript` (for making PS files from text files, rotated or 2 column)
     - `gv` (ghostview, for viewing PS files)
     - `unbuntu-restricted-extras` (allows reading DVDs etc)
-    -
-
 
 33. Install Inconsolata font
 
