@@ -38,3 +38,14 @@ There are 8 little lights on the front of the machine
   - `<ctrl>-F10` clear history (oops!)
   - `<ctrl>-F11` previous entry
   - `<ctrl>-F12` next entry
+
+- [autokey](https://github.com/autokey/autokey) (like
+  [atext](https://textexpander.com) and
+  [textexpander](https://textexpander.com)): `<ctrl>-F7`
+
+  - toggle monitoring: `<shift>-<super>-k`
+  - show configuration: `<super>-k`
+
+- File explorer `<super>-f`
+
+- App explorer `<super>-a`
