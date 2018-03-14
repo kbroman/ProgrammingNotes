@@ -14,10 +14,6 @@
   autokey. Can paste them normally (though black-and-white) but they
   don't show up within autokey
 
-- VPN not working with eduroam, though it does work with wired
-  ethernet connection. Actually, a week later it seemed to work. Not
-  sure why.
-
 - warnings etc from okular
 
   ```
@@ -35,6 +31,13 @@
   ```
 
 - Apple bluetooth magic mouse and magic trackpad
+
+
+## Solved
+
+- VPN not working with eduroam, though it does work with wired
+  ethernet connection. Actually, a week later it seemed to work. Not
+  sure why.
 
 - Periodic troubles logging in, with a spinning circle and then a
   message "Authentication error" repeat some number of times.
