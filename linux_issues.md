@@ -1,6 +1,28 @@
 ## Linux issues
 
 
+- Periodic troubles logging in, with a spinning circle and then a
+  message "Authentication error" repeat some number of times.
+  Sometimes it ends up logging in, sometimes repeats a ton of times so
+  I eventually restart at which point all is fine.
+
+  - System 76 suggested re-installing the login manager, gdm3
+
+    ```shell
+    sudo apt install --reinstall gdm3
+    ```
+
+  - Well, that didn't work, so following their second suggestion of
+    purging and re-installing:
+
+    ```shell
+    sudo apt purge gdm3
+    sudo apt install gdm3
+    ```
+
+    This didn't work, either.
+
+
 - Having trouble with displays. In particular, getting the right
   setting on my external display, and having it work on its own,
   with the laptop's display off. Even better would be to use it with
@@ -38,22 +60,3 @@
 - VPN not working with eduroam, though it does work with wired
   ethernet connection. Actually, a week later it seemed to work. Not
   sure why.
-
-- Periodic troubles logging in, with a spinning circle and then a
-  message "Authentication error" repeat some number of times.
-  Sometimes it ends up logging in, sometimes repeats a ton of times so
-  I eventually restart at which point all is fine.
-
-  - System 76 suggested re-installing the login manager, gdm3
-
-    ```shell
-    sudo apt install --reinstall gdm3
-    ```
-
-  - Well, that didn't work, so following their second suggestion of
-    purging and re-installing:
-
-    ```shell
-    sudo apt purge gdm3
-    sudo apt install gdm3
-    ```
