@@ -22,6 +22,36 @@
 
     This didn't work, either.
 
+  - [this page](https://ubuntuforums.org/showthread.php?t=2380381)
+    suggests removing a bunch of stuff.
+
+    ```shell
+    sudo apt purge --auto-remove gdm3
+    sudo apt purge --auto-remove gnome-shell
+    sudo apt purge --auto-remove gnome-software
+    sudo apt purge --auto-remove lightdm
+    sudo apt purge --auto-remove gnome-session-bin
+    sudo apt purge --auto-remove gnome-session-common
+    sudo apt purge --auto-remove ubuntu-session
+    sudo apt purge --auto-remove ubuntu-desktop
+    ```
+
+    In a couple of places, I was asked whether I want to use gdm3 or
+    lightdm. I chose gmd3 in all cases.
+
+    I then ran the following:
+
+    ```shell
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install ubuntu-desktop
+    ```
+
+    I went ahead and tried installing all of the other stuff I'd
+    removed, in reverse order of their removal, but it seems that when
+    you install `ubuntu-desktop`, you install all of that stuff.
+
+
 - Sometimes when restarting from having been suspended, the wifi
   connects but there's no actual internet connection.
 
