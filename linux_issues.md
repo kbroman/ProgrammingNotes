@@ -22,6 +22,19 @@
 
     This didn't work, either.
 
+- Sometimes when restarting from having been suspended, the wifi
+  connects but there's no actual internet connection.
+
+  I tried the following, suggested
+  [here](https://www.howopensource.com/2014/12/ubuntu-restart-network/),
+  but no luck.
+
+  ```shell
+  sudo service network-manager restart
+  ```
+
+  Re-starting does the trick.
+
 
 - Having trouble with displays. In particular, getting the right
   setting on my external display, and having it work on its own,
