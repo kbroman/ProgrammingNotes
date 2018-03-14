@@ -15,7 +15,8 @@
   don't show up within autokey
 
 - VPN not working with eduroam, though it does work with wired
-  ethernet connection
+  ethernet connection. Actually, a week later it seemed to work. Not
+  sure why.
 
 - warnings etc from okular
 
