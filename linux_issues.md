@@ -49,3 +49,11 @@
     ```shell
     sudo apt install --reinstall gdm3
     ```
+
+  - Well, that didn't work, so following their second suggestion of
+    purging and re-installing:
+
+    ```shell
+    sudo apt purge gdm3
+    sudo apt install gdm3
+    ```
