@@ -35,3 +35,14 @@
   ```
 
 - Apple bluetooth magic mouse and magic trackpad
+
+- Periodic troubles logging in, with a spinning circle and then a
+  message "Authentication error" repeat some number of times.
+  Sometimes it ends up logging in, sometimes repeats a ton of times so
+  I eventually restart at which point all is fine.
+
+  - System 76 suggested re-installing the login manager, gdm3
+
+    ```shell
+    sudo apt install --reinstall gdm3
+    ```
