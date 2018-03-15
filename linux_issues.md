@@ -51,6 +51,18 @@
     removed, in reverse order of their removal, but it seems that when
     you install `ubuntu-desktop`, you install all of that stuff.
 
+    This seems to have worked, but it means I'm now using the standard
+    ubuntu desktop rather than the pop desktop.
+
+    So I tried installing `pop-desktop`. It asked me to first
+    install `sessioninstaller`, so I did:
+
+    ```shell
+    sudo apt install systeminstaller
+    sudo apt install pop-desktop
+    ```
+
+
 
 - Sometimes when restarting from having been suspended, the wifi
   connects but there's no actual internet connection.
