@@ -58,10 +58,22 @@
     install `sessioninstaller`, so I did:
 
     ```shell
-    sudo apt install systeminstaller
+    sudo apt install sessioninstaller
     sudo apt install pop-desktop
     ```
 
+  - I ended up back at the same problem, so I tried removing
+    `ubuntu-desktop` and then reinstalling it:
+
+    ```shell
+    sudo apt purge --auto-remove ubuntu-desktop
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install ubuntu-desktop
+    sudo apt autoremove
+    ```
+
+    It did say "removing `pop-desktop` and `sessioninstaller`.
 
 
 - Sometimes when restarting from having been suspended, the wifi
