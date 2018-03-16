@@ -76,3 +76,40 @@ Mode for git within emacs.
 - Within the magit frame, press `cc` to commit; type commit message,
   then `C-c C-c` to finish it.
 - Within the magit frame, press `Pp` to push to github.
+
+---
+
+### Melpa
+
+I've been keeping track of code for major modes in `~/.emacs.d`. A lot
+are available via [Melpa](https://melpa.org). The [haskell-mode
+ReadMe](https://github.com/haskell/haskell-mode) has a clear
+explanation of how to use it.
+
+At the start add the following to `~/.emacs`
+
+```lisp
+(require 'package)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa-stable" . "http://stable.melpa.org/packages/")))))
+(package-initialize)
+```
+
+Then within emacs, use the following to download package information:
+
+```
+M-x package-refresh-contents
+```
+
+Then to install haskell-mode, use:
+
+```
+M-x package-install<return>haskell-mode
+```
