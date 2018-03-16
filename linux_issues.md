@@ -75,6 +75,9 @@
 
     It did say "removing `pop-desktop` and `sessioninstaller`.
 
+    Some amount of pop desktop styling still seems to be in place, and
+    I'm having the same problem. So I'm going back to the more
+    extensive purging followed by re-install of `ubuntu-desktop`.
 
 - Sometimes when restarting from having been suspended, the wifi
   connects but there's no actual internet connection.
