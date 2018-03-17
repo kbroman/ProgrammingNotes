@@ -54,3 +54,18 @@ There are 8 little lights on the front of the machine
   `<super>-<arrow key>` to change size/position of a window, and use
   `<ctrl>-<alt>-<arrow key>` or `<super>-<pgup/pgdn> to switch
   workspaces
+
+- `<super>-<shift>-<pgup/pgdn>` to move current application to a
+  different workspace; `<super>-<shift>-<left/right arrow>` to move
+  application to monitor to left or right
+
+- `<ctrl>-q` to close an application; `<ctrl>-w` to close a particular
+  window
+
+- `<super>-m` to open/close "message tray"
+
+- Keyboard settings allows you to add further shortcuts. I created
+
+  - `<super>-b` for browser
+  - `<super>-t` for new terminal
+  - `<super>-c` for calculator
