@@ -52,4 +52,5 @@ There are 8 little lights on the front of the machine
 
 - With standard ubuntu desktop (vs pop desktop), use
   `<super>-<arrow key>` to change size/position of a window, and use
-  `<super>-<ctrl>-<arrow key>` to swich desktops
+  `<ctrl>-<alt>-<arrow key>` or `<super>-<pgup/pgdn> to switch
+  workspaces
