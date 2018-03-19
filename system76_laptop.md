@@ -29,8 +29,12 @@ There are 8 little lights on the front of the machine
 - `<super>-<tab>` to switch between apps
 - `<super>-~` to switch between windows of a given app
 
+
 - arrange windows: `<ctrl><super><arrow key>`
 - arrange windows more thoroughly with gTile: `<super><enter (on number pad)>`
+- `<shift>-<super>-<up/down arrow>` to move current application to
+  workspace above or below
+- `<super>-<up/down arrow>` to move to workspace above or below
 
 - `<ctrl>-c/v` for copy-paste except in terminal where you must use `<ctrl>-<shift>-c/v`
 - clipboard indicator for clipboard with memory:
@@ -47,8 +51,19 @@ There are 8 little lights on the front of the machine
   - show configuration: `<super>-k`
 
 - File explorer `<super>-f`
-
 - App explorer `<super>-a`
+- `<super>-m` to open/close "message tray"
+
+- Keyboard settings allows you to add further shortcuts. I created
+
+  - `<super>-b` for browser
+  - `<super>-t` for new terminal (well, this is already there for Pop,
+    but I added it when I was using the standard ubuntu desktop)
+  - `<super>-c` for calculator
+  - `<super>-g` to open mail client (thunderbird)
+
+
+### keyboard shortcuts for standard ubuntu desktop
 
 - With standard ubuntu desktop (vs pop desktop), use
   `<super>-<arrow key>` to change size/position of a window, and use
@@ -61,11 +76,3 @@ There are 8 little lights on the front of the machine
 
 - `<ctrl>-q` to close an application; `<ctrl>-w` to close a particular
   window
-
-- `<super>-m` to open/close "message tray"
-
-- Keyboard settings allows you to add further shortcuts. I created
-
-  - `<super>-b` for browser
-  - `<super>-t` for new terminal
-  - `<super>-c` for calculator
