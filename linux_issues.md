@@ -88,20 +88,8 @@
     sudo dpkg-configure lightdm
     ```
 
-    Makes a sound at startup, which I don't like. A [fix for
-    that](https://bugs.launchpad.net/ubuntu/+source/unity-greeter/+bug/949782/comments/6):
-
-    - create file `/usr/share/glib-2.0/schemas/50_unity-greeter`
-
-    - Add the following lines:
-
-      ```
-      [com.canonical.unity-greeter]
-      play-ready-sound = false
-      ```
-
-    - Run `glib-compile-schemas /usr/share/glib-2.0/schemas/` (but I
-      get warning messages unless I use `sudo` with that)
+    Makes a sound at startup, which I don't like. Solution is to mute
+    speaker on that page; this seems to persist between logins.
 
 - Sometimes when restarting from having been suspended, the wifi
   connects but there's no actual internet connection.
