@@ -664,6 +664,30 @@ apps.
         - [check your IP](https://bearsmyip.com/)
         - check for DNS leaks with "Extended test" at [dnsleaktest.com](https://www.dnsleaktest.com/)
 
+56. To try to avoid continual (but irregular) login problems, we
+    switched from gdm3 to lightdm as the "display manager". See the
+    [lightDM wiki](https://wiki.archlinux.org/index.php/LightDM).
+
+    ```shell
+    sudo apt install lightdm
+    sudo dpkg-reconfigure lightdm
+    ```
+
+    It asks you to choose between gdm3 and lightdm; choose lightdm.
+
+    At login, there's a startup sound that I don't like. Mute the
+    speaker on that screen; that setting seems to persist between
+    logins.
+
+    I also don't light the background; especially the grid of dots.
+
+    I edited
+    `/usr/share/glib-2.0/schemas/com.canonical.unity-greeter.gschema.xml`
+    to change `"draw-grid"` to `false` and to change `background` to
+    `/usr/share/backgrounds/yosemite....jpg` (a file I'd copied there
+    from `~/Pictures/Wallpapers`. Then ran
+    `sudo glib-compile-schemas /usr/share/glib-2.0/schemas/`
+
 ---
 
 - Install ccache and use for compiling R
