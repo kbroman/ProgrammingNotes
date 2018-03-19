@@ -50,6 +50,8 @@ There are 8 little lights on the front of the machine
   - toggle monitoring: `<shift>-<super>-k`
   - show configuration: `<super>-k`
 
+- `<Fn>-1` to change fan speen
+
 - File explorer `<super>-f`
 - App explorer `<super>-a`
 - `<super>-m` to open/close "message tray"
