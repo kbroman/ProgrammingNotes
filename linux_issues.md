@@ -79,6 +79,30 @@
     I'm having the same problem. So I'm going back to the more
     extensive purging followed by re-install of `ubuntu-desktop`.
 
+  - It really seemed like `ubuntu-desktop` was going to solve the
+    problem, but finally it resurfaced. The latest suggestion was to
+    switch to `lightdm` (rather than `gdm3`).
+
+    ```shell
+    sudo apt install lightdm
+    sudo dpkg-configure lightdm
+    ```
+
+    Makes a sound at startup, which I don't like. A [fix for
+    that](https://bugs.launchpad.net/ubuntu/+source/unity-greeter/+bug/949782/comments/6):
+
+    - create file `/usr/share/glib-2.0/schemas/50_unity-greeter`
+
+    - Add the following lines:
+
+      ```
+      [com.canonical.unity-greeter]
+      play-ready-sound = false
+      ```
+
+    - Run `glib-compile-schemas /usr/share/glib-2.0/schemas/` (but I
+      get warning messages unless I use `sudo` with that)
+
 - Sometimes when restarting from having been suspended, the wifi
   connects but there's no actual internet connection.
 
