@@ -67,3 +67,15 @@ sum [3..10] -- integers 3 to 10
 product [8,10..20] -- even numbers 8 to 20
 'k' `elem` x -- contained in?
 ```
+
+Recursive function example, using "patterns"; return `-999` if input
+is negative.
+
+```haskell
+fib :: Int -> Int
+fib 0 = 0
+fib 1 = 1
+fib n = if n < 0
+  then -999
+  else (fib (n-1)) + (fib (n-2))
+```
