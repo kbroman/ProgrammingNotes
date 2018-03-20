@@ -31,18 +31,22 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 - Install crouton (`-e` to encrypt)
 
   ```shell
-  sudo sh ~/Downloads/crouton -e -r xenial -t gnome,xiwi
+  sudo sh ~/Downloads/crouton -e -r xenial -t gnome,xorg,xiwi
   ```
 
-- The `xiwi` part is to be able to [run linux within a chrome
+- `xorg` is for opening the linux desktop natively. `xiwi`
+  is to be able to [run linux within a chrome
   window](https://github.com/dnschneid/crouton/wiki/crouton-in-a-Chromium-OS-window-(xiwi)).
+  Whichever you put first will be the default; then use `sudo
+  startgnome -X xiwi` to launch the in-a-window version.
 
-  If you do this, need `sudo startgnome -X xorg` to launch the native
-  version. Or update with `sudo sh ~/Downloads/crouton -u -t xorg` and
-  then the default is to launch natively and you'll launch within a
-  window using `sudo startgenome -X xiwi`.
+  You can leave
+  them both off (just `-t gnome`) and then you just get the native version.
+  Or install with `xiwi` and then update to add `xorg` afterwards,
+  using `sudo sh ~/Downloads/crouton -u -t xorg`. But then the second
+  thing you add ends up as the default.
 
-  And note that you need the [crouton integration chrome extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom)
+  And note that for the within-a-window version, you need the [crouton integration chrome extension](https://chrome.google.com/webstore/detail/crouton-integration/gcpneefbbnfalgjniomfjknbcgkbijom)
 
 - Use `sudo startgnome` to start the desktop
 
