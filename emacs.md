@@ -25,7 +25,7 @@ C-x +     Make all windows the same height (balance windows
 
 ### Customize font/face
 
-`C-u C-x` =   Information about face at a particular point
+`C-u C-x =`   (Information about face at a particular point)
 
 - scroll down to "There are text properties here:"
 - Select definition
