@@ -40,6 +40,10 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 - In settings → mouse & trackpad, select "natural scrolling"
 
+- ctrl-alt-shift-forward (arrow key in top row) to switch from linux
+  to chrome; ctrl-alt-shift-backward to go back to linux (the latter
+  can have a *big* delay)
+
 ### Install stuff
 
 - set locale
