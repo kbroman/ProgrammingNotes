@@ -38,6 +38,8 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 - Note that the "search" key acts as a super key
 
+- In settings → mouse & trackpad, select "natural scrolling"
+
 ### Install stuff
 
 - set locale
