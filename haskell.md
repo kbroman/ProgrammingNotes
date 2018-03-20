@@ -16,6 +16,19 @@
     and then, with a `.hs` haskell file loaded in a buffer, use `C-c
     C-l` to get interactive session with that module automatically loaded.
 
+  - At command line, used `stack install intero`; added the emacs
+    melpa package `intero`, and then added the following to my
+    `~/.emacs` file:
+
+    ```lisp
+    (add-hook 'haskell-mode-hook 'intero-mode)
+    (defun haskell-mode-setup ()
+      (setq haskell-process-type 'stack-ghci))
+    (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+    (add-hook 'haskell-mode-hook 'haskell-mode-setup)
+    (require 'inf-haskell)
+    ```
+
 - Use `:l myfile.hs` to load a file
 - Use `:t object` to get the type of an object
 
