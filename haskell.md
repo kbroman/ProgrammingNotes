@@ -49,7 +49,9 @@ doubleMe x = x + x
 
 -- ++ operator to join two lists
 ['c'] ++ ['a', 't']
+```
 
+```haskell
 -- useful functions on lists
 x = "karl has a cat"
 head x
@@ -68,6 +70,12 @@ product [8,10..20] -- even numbers 8 to 20
 'k' `elem` x -- contained in?
 ```
 
+```haskell
+-- list comprehensions
+[t*3 | t <- [5..10]]
+[t*3 | t <- [5..14], t `mod` 3 == 0]
+```
+
 Recursive function example, using "patterns"; return `-999` if input
 is negative.
 
@@ -76,6 +84,6 @@ fib :: Int -> Int
 fib 0 = 0
 fib 1 = 1
 fib n = if n < 0
-  then -999
+  then error "n should be non-negative"
   else (fib (n-1)) + (fib (n-2))
 ```
