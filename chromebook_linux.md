@@ -80,3 +80,19 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
   java -jar /home/kbroman/games/minecraft/Minecraft.jar
   ```
+
+- I installed Firefox with `sudo install firefox`, but gnome
+  extensions don't work with that, so it's maybe better to install
+  chrome.
+
+  - Download from <https://www.google.com/chrome/browser/desktop/index.html>
+  - Install with `sudo dpkg -i google-chrome-*.deb`
+  - Needed libappindicator1; used `sudo apt --fix-broken install`
+  - Go to <https://extensions.gnome.org>
+  - Install the [gnome shell integration
+    extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep?hl=en)
+  - Install the "native host connector" with `sudo apt install chrome-gnome-shell`
+  - All this to install a [log-out button extension](https://extensions.gnome.org/extension/1143/logout-button)
+  - Chrome (annoyingly) asks for a keyring password. There are [ways
+    to disable
+    that](https://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup)
