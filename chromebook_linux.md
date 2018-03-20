@@ -56,3 +56,17 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 - `sudo install emacs mg gnome-terminal`
 
 - Follow [Jenny's instructions](https://github.com/jennybc/operation-chromebook) to get R and RStudio
+
+- Also follow [Jenny's
+  instructions](https://github.com/jennybc/operation-chromebook) to
+  install Minecraft. One clarification: Having made `Minecraft.jar`
+  executable, you can launch it from a file browser by
+  double-clicking, but not from the command line. To launch from the
+  command line, make an executable bash script with the full path to
+  `Minecraft.jar`:
+
+  ```shell
+  #!/bin/bash
+
+  java -jar /home/kbroman/games/minecraft/Minecraft.jar
+  ```
