@@ -1,5 +1,69 @@
 ## Linux issues
 
+- Sometimes when restarting from having been suspended, the wifi
+  connects but there's no actual internet connection.
+
+  I tried the following, suggested
+  [here](https://www.howopensource.com/2014/12/ubuntu-restart-network/),
+  but no luck.
+
+  ```shell
+  sudo service network-manager restart
+  ```
+
+  Re-starting does the trick, but it takes a while. [This askubuntu
+  Q&A](https://askubuntu.com/questions/271387/how-to-restart-wifi-connection)
+  has some further suggestions:
+
+  ```shell
+  ifconfig wlan0 down
+  ifconfig wlan0 up
+  ```
+
+  ```shell
+  nmcli networking off
+  nmcli networking on
+  ```
+
+
+- Having trouble with displays. In particular, getting the right
+  setting on my external display, and having it work on its own,
+  with the laptop's display off. Even better would be to use it with
+  the laptop closed.
+
+  The thing that seems to work: log in, select display settings (to
+  have external display as single monitor), then close laptop (to
+  suspend), then open laptop again
+
+- Emoji fonts don't seem to work. For example, using them with
+  autokey. Can paste them normally (though black-and-white) but they
+  don't show up within autokey
+
+- warnings etc from okular
+
+  ```
+  Icon theme "breeze" not found.
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/16/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/22/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/24/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/32/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/48/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/64/"
+  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/128/"
+  Icon theme "Mint-X" not found.
+  Icon theme "elementary" not found.
+  Illegal icon group:  7
+  ```
+
+- Apple bluetooth magic mouse and magic trackpad
+
+
+## Solved
+
+- VPN not working with eduroam, though it does work with wired
+  ethernet connection. Actually, a week later it seemed to work. Not
+  sure why.
+
 
 - Periodic troubles logging in, with a spinning circle and then a
   message "Authentication error" repeat some number of times.
@@ -90,55 +154,3 @@
 
     Makes a sound at startup, which I don't like. Solution is to mute
     speaker on that page; this seems to persist between logins.
-
-- Sometimes when restarting from having been suspended, the wifi
-  connects but there's no actual internet connection.
-
-  I tried the following, suggested
-  [here](https://www.howopensource.com/2014/12/ubuntu-restart-network/),
-  but no luck.
-
-  ```shell
-  sudo service network-manager restart
-  ```
-
-  Re-starting does the trick.
-
-
-- Having trouble with displays. In particular, getting the right
-  setting on my external display, and having it work on its own,
-  with the laptop's display off. Even better would be to use it with
-  the laptop closed.
-
-  The thing that seems to work: log in, select display settings (to
-  have external display as single monitor), then close laptop (to
-  suspend), then open laptop again
-
-- Emoji fonts don't seem to work. For example, using them with
-  autokey. Can paste them normally (though black-and-white) but they
-  don't show up within autokey
-
-- warnings etc from okular
-
-  ```
-  Icon theme "breeze" not found.
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/16/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/22/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/24/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/32/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/48/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/64/"
-  Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/128/"
-  Icon theme "Mint-X" not found.
-  Icon theme "elementary" not found.
-  Illegal icon group:  7
-  ```
-
-- Apple bluetooth magic mouse and magic trackpad
-
-
-## Solved
-
-- VPN not working with eduroam, though it does work with wired
-  ethernet connection. Actually, a week later it seemed to work. Not
-  sure why.
