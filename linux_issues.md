@@ -25,6 +25,24 @@
   nmcli networking on
   ```
 
+  ```shell
+  iwconfig wlan0 txpower off
+  iwconfig wlan0 txpower on
+  ```
+
+  ```shell
+  rfkill block wifi
+  rfkill unblock wifi
+  ```
+
+  ```shell
+  systemctl restart NetworkManager
+  ```
+
+  ```shell
+  sudo initctl restart network-manager
+  ```
+
 
 - Having trouble with displays. In particular, getting the right
   setting on my external display, and having it work on its own,
