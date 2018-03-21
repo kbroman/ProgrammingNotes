@@ -56,6 +56,9 @@ There are 8 little lights on the front of the machine
 - App explorer `<super>-a`
 - `<super>-m` to open/close "message tray"
 
+- `<super>-q` seems to switch between different sound output options
+  (eg laptop speakers vs those on my home display)
+
 - Keyboard settings allows you to add further shortcuts. I created
 
   - `<super>-b` for browser
