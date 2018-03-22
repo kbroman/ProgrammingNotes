@@ -73,3 +73,17 @@ when he's at school.
    ```r
    RStudioAMI::passwd()
    ```
+
+---
+
+I could connect to the instance from my work computer but not from my
+laptop. It turns out that I'd restricted the inbound rules to be from
+my IP address for my work desktop or at home.
+
+It's possible to edit the security group while it's running:
+
+- Go to the EC2 Dashboard
+- Click on "Security Groups"
+- Select the relevant group and then the "Action" button above, and
+  then choose "Edit inbound rules"
+- You could add additional lines that make it open from other IPs
