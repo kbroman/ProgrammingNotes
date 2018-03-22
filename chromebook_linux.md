@@ -106,7 +106,7 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 I wanted to be able to connect to a computer on my local network,
 `bromine.local`, that's running a minecraft server. But I wasn't
-finding it via by name, and `ping bromine.local` didn't work either
+finding it by name, and `ping bromine.local` didn't work either
 ("host name not found").
 
 But I found the IP address by pinging the name on my mac laptop. Using
@@ -123,7 +123,8 @@ Actually, I had to run it twice. The first time it gave what looked
 like sort of like hex values, but _much_ bigger numbers than they
 should be. But then the second and subsequent times it worked.
 
-On the linux side, I needed to fire up a daemon first:
+On the linux side, I needed to fire up a daemon first. (On the
+chromium side, seems like the daemon is already running.)
 
 ```shell
 sudo avahi-daemon
