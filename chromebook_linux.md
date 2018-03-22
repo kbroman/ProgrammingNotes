@@ -100,3 +100,37 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
   - Chrome (annoyingly) asks for a keyring password. There are [ways
     to disable
     that](https://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup)
+
+
+### Connecting to locally networked computers
+
+I wanted to be able to connect to a computer on my local network,
+`bromine.local`, that's running a minecraft server. But I wasn't
+finding it via by name, and `ping bromine.local` didn't work either
+("host name not found").
+
+But I found the IP address by pinging the name on my mac laptop. Using
+that, I could both ping and connect to the minecraft server using the
+IP.
+
+But the following worked to determine the IP address:
+
+```shell
+avahi-resolve -n bromine.local
+```
+
+Actually, I had to run it twice. The first time it gave what looked
+like sort of like hex values, but _much_ bigger numbers than they
+should be. But then the second and subsequent times it worked.
+
+On the linux side, I needed to fire up a daemon first:
+
+```shell
+sudo avahi-daemon
+```
+
+I installed both tools using `sudo apt install avahi-utils` (which
+also installed `avahi-daemon`).
+
+And note that once the `avahi-daemon` was running, I could use
+`bromine.local` in both ping and in minecraft.
