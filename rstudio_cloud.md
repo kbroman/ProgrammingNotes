@@ -6,7 +6,11 @@ get RStudio in a web browser using Amazon Web Services. (And then I
 left it running for months. Oops.)
 
 I want to get back and fire one up for my son to use on his chromebook
-when he's at school.
+when he's at school. Instructions below.
+
+But all this is basically made moot by the introduction of [RStudio
+Cloud](https://rstudio.cloud), which basically does the same thing
+better and easier, plus more, and at least for now it's free.
 
 1. Log into the [AWS Console](https://console.aws.amazon.com)
 
