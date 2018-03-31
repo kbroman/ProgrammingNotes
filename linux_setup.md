@@ -485,7 +485,7 @@ apps.
       with `notify-send`)
 
 
-44. [Gnome extensions](https://extensions.gnome.org)
+4. [Gnome extensions](https://extensions.gnome.org)
 
     - (Can install, uninstall, and configure extensions within browser)
     - [Clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator)
@@ -507,6 +507,7 @@ apps.
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
     - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
+    - [log out button](https://extensions.gnome.org/extension/1143/logout-button/)
 
 
 45. Install [Slack](https://slack.com/downloads/linux)
