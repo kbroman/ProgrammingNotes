@@ -1,49 +1,3 @@
-## Linux issues
-
-- Sometimes when restarting from having been suspended, the wifi
-  connects but there's no actual internet connection.
-
-  I tried the following, suggested
-  [here](https://www.howopensource.com/2014/12/ubuntu-restart-network/),
-  but no luck.
-
-  ```shell
-  sudo service network-manager restart
-  ```
-
-  Re-starting does the trick, but it takes a while. [This askubuntu
-  Q&A](https://askubuntu.com/questions/271387/how-to-restart-wifi-connection)
-  has some further suggestions:
-
-  ```shell
-  ifconfig wlan0 down
-  ifconfig wlan0 up
-  ```
-
-  ```shell
-  nmcli networking off
-  nmcli networking on
-  ```
-
-  ```shell
-  iwconfig wlan0 txpower off
-  iwconfig wlan0 txpower on
-  ```
-
-  ```shell
-  rfkill block wifi
-  rfkill unblock wifi
-  ```
-
-  ```shell
-  systemctl restart NetworkManager
-  ```
-
-  ```shell
-  sudo initctl restart network-manager
-  ```
-
-
 - Having trouble with displays. In particular, getting the right
   setting on my external display, and having it work on its own,
   with the laptop's display off. Even better would be to use it with
@@ -172,3 +126,55 @@
 
     Makes a sound at startup, which I don't like. Solution is to mute
     speaker on that page; this seems to persist between logins.
+
+## Linux issues
+
+- Sometimes when restarting from having been suspended, the wifi
+  connects but there's no actual internet connection.
+
+  I tried the following, suggested
+  [here](https://www.howopensource.com/2014/12/ubuntu-restart-network/),
+  but no luck.
+
+  ```shell
+  sudo service network-manager restart
+  ```
+
+  Re-starting does the trick, but it takes a while. [This askubuntu
+  Q&A](https://askubuntu.com/questions/271387/how-to-restart-wifi-connection)
+  has some further suggestions:
+
+  ```shell
+  ifconfig wlan0 down
+  ifconfig wlan0 up
+  ```
+
+  ```shell
+  nmcli networking off
+  nmcli networking on
+  ```
+
+  ```shell
+  iwconfig wlan0 txpower off
+  iwconfig wlan0 txpower on
+  ```
+
+  ```shell
+  rfkill block wifi
+  rfkill unblock wifi
+  ```
+
+  ```shell
+  systemctl restart NetworkManager
+  ```
+
+  ```shell
+  sudo initctl restart network-manager
+  ```
+
+  **What seemed to work was**
+
+  ```shell
+  nmcli networking off
+  nmcli networking on
+  ```
