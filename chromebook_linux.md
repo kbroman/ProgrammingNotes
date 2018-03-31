@@ -67,7 +67,7 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
   sudo dpkg-reconfigure locales
   ```
 
-- `sudo install emacs mg gnome-terminal`
+- `sudo apt install emacs mg gnome-terminal`
 
 - Follow [Jenny's instructions](https://github.com/jennybc/operation-chromebook) to get R and RStudio
 
@@ -85,7 +85,7 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
   java -jar /home/kbroman/games/minecraft/Minecraft.jar
   ```
 
-- I installed Firefox with `sudo install firefox`, but gnome
+- I installed Firefox with `sudo apt install firefox`, but gnome
   extensions don't work with that, so it's maybe better to install
   chrome.
 
