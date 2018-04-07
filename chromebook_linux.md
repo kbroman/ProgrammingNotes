@@ -85,9 +85,12 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
   java -jar /home/kbroman/games/minecraft/Minecraft.jar
   ```
 
-- I installed Firefox with `sudo apt install firefox`, but gnome
-  extensions don't work with that, so it's maybe better to install
-  chrome.
+- I installed Firefox with `sudo apt install firefox`.
+  To use gnome extensions, also need [Gnome shell
+  integration](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/)
+  add-on.
+
+- Could also install chrome:
 
   - Download from <https://www.google.com/chrome/browser/desktop/index.html>
   - Install with `sudo dpkg -i google-chrome-*.deb`
