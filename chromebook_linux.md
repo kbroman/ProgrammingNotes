@@ -69,7 +69,10 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 - `sudo apt install emacs mg gnome-terminal`
 
-- Follow [Jenny's instructions](https://github.com/jennybc/operation-chromebook) to get R and RStudio
+- Follow [Jenny's
+  instructions](https://github.com/jennybc/operation-chromebook) to
+  install R and RStudio. (I skipped the bit about the old version of
+  gstreamer; latest version seemed to work fine.)
 
 - Also follow [Jenny's
   instructions](https://github.com/jennybc/operation-chromebook) to
