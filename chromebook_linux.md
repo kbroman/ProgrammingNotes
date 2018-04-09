@@ -91,7 +91,7 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 - I installed Firefox with `sudo apt install firefox`.
   To use gnome extensions, also need [Gnome shell
   integration](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/)
-  add-on.
+  add-on. Also need to install the "native host connector" with `sudo apt install chrome-gnome-shell`
 
 - Could also install chrome:
 
