@@ -52,7 +52,12 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 - Note that the "search" key acts as a super key
 
-- In settings → mouse & trackpad, select "natural scrolling"
+- In settings:
+
+  - mouse & trackpad: select "natural scrolling"
+  - background: change to plain colors
+  - sounds: in sound effects tab, turn off alert volume
+  - date/time: set time to am/pm rather than 24 hr
 
 - ctrl-alt-shift-forward (arrow key in top row) to switch from linux
   to chrome; ctrl-alt-shift-backward to go back to linux (the latter
