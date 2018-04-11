@@ -74,6 +74,9 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
 - `sudo apt install emacs mg gnome-terminal`
 
+  (Seemed necessary to log out and log in again, to get `gnome-terminal`
+  to work. At first, when running it, the window just didn't open.)
+
 - Follow [Jenny's
   instructions](https://github.com/jennybc/operation-chromebook) to
   install R and RStudio. (I skipped the bit about the old version of
