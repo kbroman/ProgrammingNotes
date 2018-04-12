@@ -149,3 +149,20 @@ also installed `avahi-daemon`).
 
 And note that once the `avahi-daemon` was running, I could use
 `bromine.local` in both ping and in minecraft.
+
+
+### Other issues
+
+- When running `sudo apt update` I'm often getting an error like
+
+  ```
+  E: Method http as died unexpectedly!
+  E: Sub-process http received a segmentation fault.
+  ```
+
+  Not sure what to do. Tried logging out of linux and re-installing
+  with crouton
+
+  ```
+  sudo sh ~/Downloads/crouton -n xenial -u -u
+  ```
