@@ -115,6 +115,9 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
     to disable
     that](https://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup)
 
+- For connecting to [eduroam](https://www.eduroam.us/), see
+  <https://kb.wisc.edu/page.php?id=22075>
+
 
 ### Connecting to locally networked computers
 
