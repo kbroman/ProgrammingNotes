@@ -118,6 +118,9 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 - For connecting to [eduroam](https://www.eduroam.us/), see
   <https://kb.wisc.edu/page.php?id=22075>
 
+- For connecting to Wisc VPN, see
+  <https://kb.wisc.edu/helpdesk/page.php?id=54507>
+
 
 ### Connecting to locally networked computers
 
