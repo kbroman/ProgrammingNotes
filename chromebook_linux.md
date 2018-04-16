@@ -115,11 +115,19 @@ CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
     to disable
     that](https://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup)
 
+
+### Extra stuff
+
+- To have a terminal open automatically, press <super> and search for
+  "startup", to open "Startup Applications". Add `gnome-terminal`.
+
 - For connecting to [eduroam](https://www.eduroam.us/), see
   <https://kb.wisc.edu/page.php?id=22075>
 
 - For connecting to Wisc VPN, see
   <https://kb.wisc.edu/helpdesk/page.php?id=54507>
+
+
 
 
 ### Connecting to locally networked computers
