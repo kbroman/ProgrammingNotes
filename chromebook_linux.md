@@ -5,6 +5,15 @@ Got an [Acer Chromebook
 with 1920x1080 screen, 4 GB RAM, and 32 GB SSD (says model number
 CB3-431; chromeOS model `EDGAR D25-E5K-S8I-A85`)
 
+I also bought two [Acer
+C910-54M1](https://www.acer.com/ac/en/US/content/professional-model/NX.EF3AA.011):1920x1080
+screen, 4 GB RAM, 32 GB SSD, and Intel i5 chips (vs. Celeron for the
+Chromebook 14). The SSD can be upgraded; I used [this 128 GB
+SSD](https://www.amazon.com/gp/product/B01N659X8H?ie=UTF8&tag=7210-20).
+The chromeOS model numbers were slightly different: `YUNA
+D25-A3G-K4A-A3L` and `YUNA D25-C3C-43I-A6F`.
+
+
 ### Some links
 
 - [lifehacker](https://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343)
