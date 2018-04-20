@@ -189,3 +189,23 @@ And note that once the `avahi-daemon` was running, I could use
   ```
   sudo sh ~/Downloads/crouton -n xenial -u -u
   ```
+
+  The solution is at the very end of [this thread on
+  github](https://github.com/dnschneid/crouton/issues/2688), and is
+  quite weird.
+
+  - At some point when `apt` is working, save a copy of the `http`
+    method:
+
+    ```
+    sudo cp /usr/lib/apt/methods/http /usr/lib/apt/methods/http-backup
+    ```
+
+  - Then, when http is messed up, copy the backup over the regular version:
+
+    ```
+    sudo cp /usr/lib/apt/methods/http-backup /usr/lib/apt/methods/http
+    ```
+
+  - Put this last line in a bash script (e.g., called `fixapt`) to
+    make it easier.
