@@ -175,6 +175,14 @@ also installed `avahi-daemon`).
 And note that once the `avahi-daemon` was running, I could use
 `bromine.local` in both ping and in minecraft.
 
+To have `avahi-daemon` start automatically, I followed [instructions
+in the crouton
+wiki](https://github.com/dnschneid/crouton/wiki/Running-servers-in-crouton),
+namely to add the following to `/etc/rc.local`
+
+```shell
+/usr/sbin/avai-daemon --syslog &
+```
 
 ### Other issues
 
