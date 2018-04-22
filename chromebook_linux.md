@@ -84,7 +84,9 @@ D25-A3G-K4A-A3L` and `YUNA D25-C3C-43I-A6F`.
 - `sudo apt install emacs mg gnome-terminal`
 
   (Seemed necessary to log out and log in again, to get `gnome-terminal`
-  to work. At first, when running it, the window just didn't open.)
+  to work. At first, when running it, the window just didn't open.
+  Also, with gnome-terminal, I changed the profile so the colors are
+  `solarized-dark`.)
 
 - Follow [Jenny's
   instructions](https://github.com/jennybc/operation-chromebook) to
