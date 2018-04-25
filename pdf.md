@@ -18,6 +18,13 @@
   pdfseparate -f 2 -l 10 input.pdf output%d.pdf
   ```
 
+  Alternatively, `pdftk` to pull out selected set of pages (for
+  example to delete a page):
+
+  ```shell
+  pdftk input.pdf cat 1-2 4-end output output.pdf
+  ```
+
 - Use `gs` to reduce file size
 
   ```shell
