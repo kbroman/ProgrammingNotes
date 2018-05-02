@@ -134,3 +134,28 @@ generic "Mac OS X (64-bit)" rather than the "High Sierra" version
       "Bridged network" with the name "wlp110s0". Log out and log in
       again on the Mac VM and I have both internet connection and the
       ability to ssh into the VM from my ubuntu host
+
+---
+
+## Updating the OS
+
+Have difficulty updating the OS using the App Store. It downloads and
+reboots but doesn't do the install properly. It seems that with
+VirtualBox it's not finding the right boot file to initiate the
+update.
+
+Follow the instructions at
+<https://forums.virtualbox.org/viewtopic.php?f=22&t=85631>
+
+- Do the download and restart
+
+- Repeatedly press <F12> to get into boot manager
+
+- Choose "Boot Maintenance Manager"
+
+- Choose "Boot from File"
+
+- Select the option that has `HD(2,G`
+
+- Choose `macOS Install Data` then `Locked Files` then `Boot Files`
+  and finally `boot.efi`
