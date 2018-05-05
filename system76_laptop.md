@@ -52,7 +52,7 @@ There are 8 little lights on the front of the machine
   - toggle monitoring: `<shift>-<super>-k`
   - show configuration: `<super>-k`
 
-- `<Fn>-1` to change fan speen
+- `<Fn>-1` to change fan speed
 
 - File explorer `<super>-f`
 - App explorer `<super>-a`
