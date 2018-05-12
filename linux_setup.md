@@ -345,7 +345,7 @@ apps.
 30. Color picker, [gpick](http://www.gpick.org/)
 
     ```
-    sudo apt install gipck
+    sudo apt install gpick
     ```
 
 31. Copy stuff into `.bashrc`
