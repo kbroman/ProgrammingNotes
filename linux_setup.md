@@ -292,10 +292,6 @@ apps.
 
     - `libgnome2-bin` (for `gnome-open` which acts like `open` on a Mac)
     - `gnome-tweak-tool`
-    - `caffeine` (thought this didn't work initially, but there's no
-      longer a little icon in the "panel"; rather it runs in the
-      background and will turn off screen saver when there's an
-      application in full screen mode)
 
 
 26. Create a `start` script that acts like `open` on a Mac, as a
