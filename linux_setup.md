@@ -290,7 +290,7 @@ apps.
 
 25. Additional packages
 
-    - `bin-libgnome2` (for `gnome-open` which acts like `open` on a Mac)
+    - `libgnome2-bin` (for `gnome-open` which acts like `open` on a Mac)
     - `gnome-tweak-tool`
     - `caffeine` (thought this didn't work initially, but there's no
       longer a little icon in the "panel"; rather it runs in the
