@@ -183,7 +183,6 @@ apps.
 
 16. Install SimpleNote
 
-    - Following instructions at <https://www.dropbox.com/install-linux>
     - Download `.deb` file from <https://simplenote.com>
     - Need dependency: `sudo apt install pango1.0-0`
     - `sudo dpkg -i Simplenote-*.deb`
