@@ -490,7 +490,7 @@ apps.
     - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
       (also needed `sudo apt install gir1.2-gtop-2.0`, and to log out
       and back in again)
-    - [emoji selector](https://extensions.gnome.org/extension/1162/emoji-selector/_
+    - [emoji selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
       (also did `sudo apt install fonts-emojione`)
     - [gtile](https://extensions.gnome.org/extension/28/gtile/) (tile
       windows with a grid)
