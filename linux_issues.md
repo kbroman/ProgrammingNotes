@@ -121,7 +121,7 @@
 
     ```shell
     sudo apt install lightdm
-    sudo dpkg-configure lightdm
+    sudo dpkg-reconfigure lightdm
     ```
 
     Makes a sound at startup, which I don't like. Solution is to mute
