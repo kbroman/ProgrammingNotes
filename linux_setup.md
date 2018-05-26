@@ -675,7 +675,7 @@ apps.
     speaker on that screen; that setting seems to persist between
     logins.
 
-    I also don't light the background; especially the grid of dots.
+    I also don't like the background; especially the grid of dots.
 
     I edited
     `/usr/share/glib-2.0/schemas/com.canonical.unity-greeter.gschema.xml`
