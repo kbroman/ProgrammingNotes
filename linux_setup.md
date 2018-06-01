@@ -146,6 +146,17 @@ apps.
   - After that, qtl2 installed fine
 
 
+  (For R version 3.5, needed to remove r-base etc and add an apt
+  repository)
+
+  ```shell
+  sudo apt update
+  sudo apt install software-properties-common
+  sudo add-apt-repository ppa:marutter/rrutter3.5
+  sudo apt update
+  sudo apt install r-base r-recommended
+  ```
+
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
