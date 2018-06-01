@@ -684,6 +684,44 @@ apps.
     from `~/Pictures/Wallpapers`. Then ran
     `sudo glib-compile-schemas /usr/share/glib-2.0/schemas/`
 
+57. OpenRefine
+
+    - Download `.tar.gz` file from
+      <http://openrefine.org/download.html>
+
+    - Extract and move to `~/.local/
+
+    - Create a shell script, as ~/.local/bin/refine`, containing:
+
+      ```shell
+      #!/bin/bash
+
+      cd /home/kbroman/.local/openrefine-2.8
+      ./refine
+      ```
+
+58. DB Browser for SQLite
+
+    - Download `.tar.gz` file from <https://sqlitebrowser.org/>
+
+    - Extract and change into directory
+
+    - Need to install a bunch of stuff:
+
+      ```shell
+      sudo apt install cmake
+      sudo apt install qt5-default qttools5-dev qttools5-dev-tools
+      sudo apt install libsqlite3-dev libantlr-dev libqscintilla2-qt5-dev
+      ```
+
+    - build and install
+
+      ```shell
+      cmake .
+      make
+      sudo make install
+      ```
+
 ---
 
 - Install ccache and use for compiling R
