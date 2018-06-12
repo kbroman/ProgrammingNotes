@@ -733,6 +733,10 @@ apps.
       sudo make install
       ```
 
+59. [kmag](https://stackoverflow.com/a/26418432) useful for simulating
+    color blindness: `sudo apt install kmag`
+
+
 ---
 
 - Install ccache and use for compiling R
