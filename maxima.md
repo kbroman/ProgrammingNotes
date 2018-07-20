@@ -6,6 +6,8 @@
   exec '/Applications/Maxima.app/Contents/Resources/maxima.sh'
   ```
 
+- Exit maxima with `quit();`
+
 - Derivative
 
   ```
