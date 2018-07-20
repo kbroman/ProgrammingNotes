@@ -19,3 +19,17 @@
   ```
   solve( [R = 1/8 - 1/8*(1-r)^3/(1+2*r)], [r]);
   ```
+
+- Assign something a name with `:` for example
+
+  ```
+  y : log(x/(1-x));
+  ```
+
+- Simplify an expression with `radcan();`. For example:
+
+  ```
+  y : log(x/(1-x));
+  z : diff(y, x);
+  radcan(z);
+  ```
