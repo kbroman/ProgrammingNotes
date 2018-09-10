@@ -219,3 +219,31 @@ namely to add the following to `/etc/rc.local`
 
   - Put this last line in a bash script (e.g., called `fixapt`) to
     make it easier.
+
+- I've started to have this same problem with `https`. Namely, when
+  running `sudo apt update` I'm often getting an error like
+
+  ```
+  E: Method https as died unexpectedly!
+  E: Sub-process https received a segmentation fault.
+  ```
+
+  I tried a whole bunch of things, including reinstalling
+  `apt`, `apt-transport-https`, and `libapt-pkg5.0`, with
+
+  ```
+  sudo apt install --reinstall apt libapt-pkg5.0 apt-transport-https
+  ```
+
+  Also, I installed a second version of xenial (with a different
+  name) and grabbed a copy of that `https` method for apt. Having
+  created a second "chroot", you select which one to boot with `-n`,
+  as follows:
+
+  ```
+  sudo startgnome -n xenial
+  ```
+
+  None of this worked, and then I realized that the only thing needing
+  `https` was skype (in `/etc/apt/sources.list.d/skype-stable.list`),
+  which I'd installed but then changed my mind about.
