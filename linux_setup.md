@@ -649,6 +649,9 @@ apps.
     lightning). Also installed the add on "[Provider for google
     calendar](https://support.mozilla.org/en-US/kb/using-lightning-google-calendar)".
 
+    For read-only access to a google calendar, use ICS. Go to the
+    calendar's settings; the iCal URL is the ICS URL.
+
 55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
 
     - `sudo apt install network-manager-openvpn-gnome`
