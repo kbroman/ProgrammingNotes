@@ -43,3 +43,7 @@
 10. Resize ignoring aspect ratio
 
        convert -resize 50x100\! original.png result.png
+
+11. Rotate 90 degrees clockwise
+
+        convert -rotate "90" input.png output.png
