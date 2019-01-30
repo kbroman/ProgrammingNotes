@@ -740,6 +740,23 @@ apps.
     color blindness: `sudo apt install kmag`
 
 
+60. Regarding battery life, see [this system76
+    article](https://support.system76.com/articles/battery/) which
+    recommends:
+
+    ```
+    sudo apt install tlp tlp-rdw --no-install-recommends
+    sudo tlp-stat
+
+    sudo apt install powertop
+    sudo powertop -c
+    sudo powertop --help=report
+    sudo powertop --auto-tune
+    ```
+
+    Configure `tlp` by editing `/etc/default/tlp`.
+
+
 ---
 
 - Install ccache and use for compiling R
