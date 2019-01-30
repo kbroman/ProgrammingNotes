@@ -36,7 +36,8 @@ There are 8 little lights on the front of the machine
   workspace above or below
 - `<super>-<up/down arrow>` to move to workspace above or below
 - `<super>-<ctrl>-<shift>-<left/right arrow>` to move window to
-  monitor to left or right
+  monitor to left or right (or maybe up/down arrow, depending on how
+  the monitors are set up)
 
 - `<ctrl>-c/v` for copy-paste except in terminal where you must use `<ctrl>-<shift>-c/v`
 - clipboard indicator for clipboard with memory:
