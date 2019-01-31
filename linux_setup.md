@@ -51,25 +51,13 @@ apps.
 
 8. Get UW-Madison VPN working
 
-   - Followed the instructions at <https://kb.wisc.edu/page.php?id=74947>
-   - **FIX ME**: Didn't seem to work for me, though, in that I
-     couldn't connect to BMI servers. I mean:
-   - When running `sudo vpnc uwmadison.conf`, it did ask for my
-     password and then (after a delay) said `VPNC started in
-     background`, and when I did `ps aux | grep vpnc` I did see the
-     process running, _but_ I couldn't ssh into the biostat servers
-   - While vpnc is running, `ping broman-10.biostat.wisc.edu`
-     indicates I'm not able to connect. Same when I use the IP address
-     (that shows up when I ping without vpnc running). With vpnc
-     running, I seem to lose my network connection completely.
-   - Hmm...if I turn off wifi and connect with an ethernet cable, the
-     vpn works and I can get to the biostat servers. So maybe it's an
-     eduroam issue?
-   - playing with turning wired and wifi on and off, I can no longer
-     get a connection to anything at wisc.edu. Logging out and back in
-     didn't help, but restarting the computer worked
-   - works fine on my home wifi network, so maybe just an eduroam/vpnc issue
+   Now using GlobalProtect, instructions at
+   <https://kb.wisc.edu/helpdesk/page.php?id=85193>
 
+   - Download and extract `PanGPLinux-*.tgz`
+   - This gives a `GlobalProtext_*.deb` file, to install via
+     `sudo dpkg -i GlobalProtect_*.deb`
+   - Then use `globalprotect connect` and `globalprotect disconnect`.
 
 9. ssh keys + connect to github
 
