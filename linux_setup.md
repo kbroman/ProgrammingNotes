@@ -54,9 +54,9 @@ apps.
    Now using GlobalProtect, instructions at
    <https://kb.wisc.edu/helpdesk/page.php?id=85193>
 
-   - Download and extract `PanGPLinux-*.tgz`
+   - Download and extract `PanGPLinux-*.tgz` from <https://www.net.wisc.edu/vpn/clients/>.
    - This gives a `GlobalProtext_*.deb` file, to install via
-     `sudo dpkg -i GlobalProtect_*.deb`
+     `sudo dpkg -i GlobalProtect_*.deb`.
    - Then use `globalprotect connect` and `globalprotect disconnect`.
 
 9. ssh keys + connect to github
