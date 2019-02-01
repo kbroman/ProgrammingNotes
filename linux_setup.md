@@ -122,30 +122,17 @@ apps.
 
      ```
      sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-     sudo add-apt-repository 'deb https://cran.rstudio.com/bin/linux/ubuntu artful/'
+     sudo add-apt-repository ppa:marutter/rrutter3.5
      sudo apt update
-     sudo apt install r-base
+     sudo apt install software-properties-common
+     sudo apt update
+     sudo apt install r-base r-recommended
      ```
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
   - Also copy over `.rpushpullet.json`
+  - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev r-cran-sqlite`
   - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
-  - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev`
-  - When installing qtl2, error when installing bit64 package
-    ("Could not find function `bit_init()`")
-  - Finally just did `sudo apt install r-cran-rsqlite`
-  - After that, qtl2 installed fine
 
-
-  (For R version 3.5, needed to remove r-base etc and add an apt
-  repository)
-
-  ```shell
-  sudo apt update
-  sudo apt install software-properties-common
-  sudo add-apt-repository ppa:marutter/rrutter3.5
-  sudo apt update
-  sudo apt install r-base r-recommended
-  ```
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
