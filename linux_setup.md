@@ -396,15 +396,7 @@ apps.
 
 40. Install Minecraft; see <https://minecraft.net/en-us/download/>
 
-    - download `Minecraft.jar`
-    - I placed in `/usr/local/lib` and then put a shell script in
-      `/usr/local/bin/minecraft`
-
-      ```
-      #!/bin/bash
-      # start minecraft
-      gnome-open /usr/local/lib/Minecraft.jar
-      ```
+    - Download `Minecraft.deb` and install with `sudo dpkg -i Minecraft.deb`.
 
 
 41. Install [keepassXC](https://keepassxc.org/download/)
