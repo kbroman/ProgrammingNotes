@@ -721,6 +721,12 @@ apps.
 
     Configure `tlp` by editing `/etc/default/tlp`.
 
+61. Made a keyboard shortcut to open toodledo.com in a web browser:
+
+    - open Settings -> Keyboard
+    - Scroll to the bottom of the Keyboard Shortcuts and click the +
+    - Create a new shortcut (I used ctrl-alt-T) with the command
+      `firefox https://toodledo.com/tasks/index.php`
 
 ---
 
