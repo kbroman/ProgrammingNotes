@@ -502,7 +502,8 @@ apps.
     - Install Deja Dup via "Pop Shop"
 
     - Used command-line program `gnome-disks` to change to name of my
-      extra hard drive.
+      extra hard drive. (Select the drive, click the gears, choose
+      "Edit Filesystem...")
 
     - Set up Deja Dup for a daily backup of my home folder, ignoring
       the Downloads folder.
