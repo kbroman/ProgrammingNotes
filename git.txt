@@ -59,20 +59,25 @@ Going back
 
 github stuff
 
- git checkout MQM
- git pull git@github.com:myfriend/rqtl-mqm.git
- git pull git@github.com:myfriend/rqtl-mqm.git/master
+  git checkout MQM
+  git pull git@github.com:myfriend/rqtl-mqm.git
+  git pull git@github.com:myfriend/rqtl-mqm.git/master
+
+  git pull myfriend master
+  git pull myfriend myfriend
+
+  git push --set-upstream origin <branch>
+  git push origin <branch>
+  git push origin --delete <branch>
+
+  git remote prune origin --dry-run  # Check for defunct remote branches
+  git remote prune origin            # Delete local copies of defunct remote branches
 
 
- git pull myfriend master
- git pull myfriend myfriend
+To remove a local copy of a remote branch (say it shows up in
+"branch -a" as "remotes/origin/pptx
 
- git push --set-upstream origin <branch>
- git push origin <branch>
- git push origin --delete <branch>
-
- git remote prune origin --dry-run  # Check for defunct remote branches
- git remote prune origin            # Delete local copies of defunct remote branches
+  git branch -r -d origin/pptx
 
 
 github remotes; see http://help.github.com/remotes/

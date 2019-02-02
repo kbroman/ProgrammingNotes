@@ -440,14 +440,14 @@ apps.
 
 43. More stuff via `sudo apt install`
 
-    - `pdftk` (pdf tools)
+    - `pdftk` (pdf tools) [now it suggests `pdftk-java` instead)
     - (tried installing `pdfnup` but it seems it's included with
       texlive)
     - `pinta` (like MS paint)
     - `handbrake` (for ripping DVDs)
     - `gimp` (like photoshop)
     - `inkscape` (like illustrator)
-    - `shutter` (image capture)
+    - `shutter` (image capture) [no longer available]
     - `k3b` (for burning CDs)
     - `banshee` (music app)
     - `rclone` (like rsync for cloud storage)
