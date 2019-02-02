@@ -373,8 +373,6 @@ apps.
 38. Install peek (screen recording)
 
     ```
-    sudo add-apt-repository ppa:peek-developers/stable
-    sudo apt update
     sudo apt install peek
     ```
 
@@ -412,8 +410,6 @@ apps.
 41. Install [keepassXC](https://keepassxc.org/download/)
 
     ```
-    sudo add-apt-repository ppa:phoerious/keepassxc
-    sudo apt update
     sudo apt install keepassxc
     ```
 
