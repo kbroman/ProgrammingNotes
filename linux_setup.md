@@ -140,6 +140,7 @@ apps.
     ```
     sudo apt install xauth xorg libx11-dev openbox
     sudo apt install libglu1-mesa-dev libfreetype6-dev
+    sudo apt install libtiff-dev fftw3
     ```
 
 
