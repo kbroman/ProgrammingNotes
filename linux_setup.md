@@ -618,6 +618,11 @@ apps.
     For read-only access to a google calendar, use ICS. Go to the
     calendar's settings; the iCal URL is the ICS URL.
 
+    For access to Apple Calendar, go to [icloud](https://icloud.com)
+    and get the url for a particular calendar, then in thunderbird,
+    under calendars, right-click and select "New calendar" and then
+    "On network"; then give it a name and paste in the location.
+
 55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
 
     - `sudo apt install network-manager-openvpn-gnome`
