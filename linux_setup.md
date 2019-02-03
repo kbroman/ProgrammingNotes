@@ -132,6 +132,15 @@ apps.
   - Also copy over `.rpushpullet.json`
   - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev r-cran-sqlite`
   - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
+  - For the [imager package](https://cran.rstudio.com/package=imager),
+    I got an error about X11. I ended up installing a bunch more
+    ubuntu things. Some of these may not be necessary; was looking at
+    what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
+
+    ```
+    sudo apt install xauth xorg libx11-dev openbox
+    sudo apt install libglu1-mesa-dev libfreetype6-dev
+    ```
 
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
