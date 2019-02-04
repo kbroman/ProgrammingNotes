@@ -13,6 +13,12 @@ In `.emacs`:
 
 ---
 
+On linux, installed by downloading `.sh` file with "generic linux
+binaries", extracted to `/usr/local/src`, and put symbolic link to
+`/usr/local/src/julia-1.1.0/bin/julia` in `/usr/local/bin`
+
+---
+
 Installing packages:
 
 ```
@@ -27,4 +33,13 @@ run script from within Julia:
 
 ```
 include("lmmtest.jl")
+```
+
+---
+
+To enable use in jupyter notbooks:
+
+```
+using Pkg
+Pkg.add("IJulia")
 ```
