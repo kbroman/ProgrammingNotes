@@ -5,6 +5,10 @@ I got a new linux laptop, an
 [System76](https://system76.com). This document describes what I did
 when setting it up.
 
+(I later purchased a System76 [Galago
+Pro](https://system76.com/laptops/galago); I made some changes to the
+instructions below, the second time around.)
+
 I had them install their [Pop!_OS](https://system76.com/pop) which is basically Ubuntu but
 with some re-configured sessions and different choices of included
 apps.
