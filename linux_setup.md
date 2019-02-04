@@ -763,6 +763,24 @@ apps.
     - Create a new shortcut (I used ctrl-alt-T) with the command
       `firefox https://toodledo.com/tasks/index.php`
 
+62. I installed Anaconda by downloading the `.sh` script from
+    [its web
+    site](https://www.anaconda.com/distribution/#download-section)
+    and running `bash Anaconda-*.sh`. I chose to install it in
+    `~/.anaconda3` and had it modify my `.bashrc` file.
+
+63. Installed Julia with `sudo apt install julia` but this gave
+    version 1.0.1 which seems really old (current is 1.1 and long-term
+    support release is 1.0.3). So I instead
+
+    - downloaded the `.tar.gz` file with "generic linux
+    binaries", from <https://julialang.org/downloads/>
+
+    - extracted into `/usr/local/src`
+
+    - created symbolic link to `/usr/local/src/julia-1.1.0/bin/julia`
+      in `/usr/local/bin`
+
 ---
 
 - Install ccache and use for compiling R
