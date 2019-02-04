@@ -365,8 +365,22 @@ apps.
 
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
-    - `autokey-gtk` (desktop automation)
     - `digikam` (organizing photos)
+    - `autokey-gtk` (desktop automation)
+
+    Autokey had some wrinkles on my new system, running Pop OS 18.10.
+    Added a ppa for autokey:
+
+    ```
+    sudo add-apt-repository ppa:sporkwitch/autokey
+    ```
+
+    This worked fine on Pop OS 18.04, but on Pop OS 18.10, you need to
+    go in and edit the record, replacing `cosmic` (nominally for 18.10) with
+    `bionic` (for 18.04). There was a file in
+    `/etc/apt/sources.list.d` named
+    `sporkwitch-ubuntu-autokey-cosmic.list`; changed the `cosmic` in
+    its name and contents to `bionic` and after that all was well.
 
 35. Install npm and coffeescript
 
