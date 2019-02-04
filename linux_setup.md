@@ -781,6 +781,17 @@ apps.
     - created symbolic link to `/usr/local/src/julia-1.1.0/bin/julia`
       in `/usr/local/bin`
 
+    - ran `julia` and installed IJulia to enable use in jupyter
+      notebooks
+
+      ```
+      using Pkg
+      Pkg.add("IJulia")
+      ```
+
+      then when running `jupyter notebook`, can click "New" and the
+      options are both "Python3" and "Julia1.1.1"
+
 ---
 
 - Install ccache and use for compiling R
