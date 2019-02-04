@@ -15,3 +15,10 @@
   using Pkg
   Pkg.add("IJulia")
   ```
+
+- To allow use of R in jupyter notebooks, run R and do:
+
+  ```r
+  install.packages("IRkernel")
+  IRkernel::installspec()  # for all users
+  ```
