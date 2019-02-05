@@ -482,7 +482,10 @@ apps.
     - `rclone` (like rsync for cloud storage)
     - `filezilla` (ftp client)
     - `libnotify-bin` (enables you to create desktop notifications
-      with `notify-send`)
+      with `notify-send`; so in R you could do like
+      `system('notify-send "R is done!"')`)
+    - `trash-cli` (move files to "trash" via the command line (`trash`
+      in place of `rm`)
 
 
 4. [Gnome extensions](https://extensions.gnome.org)
