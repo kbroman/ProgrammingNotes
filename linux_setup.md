@@ -792,6 +792,18 @@ apps.
       then when running `jupyter notebook`, can click "New" and the
       options are both "Python3" and "Julia1.1.1"
 
+64. Mouse acceleration (also want touchpad acceleration, but there
+    doesn't seem to be a setting for it):
+
+    ```
+    gsettings list-keys org.gnome.desktop.peripherals.mouse
+    gsettings list-keys org.gnome.desktop.peripherals.touchpad
+    sudo gsettings get org.gnome.desktop.peripherals.mouse accel-profile
+    sudo gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'adaptive'
+    ```
+
+    Can also change these settings with the gnome tweaks gui.
+
 ---
 
 - Install ccache and use for compiling R
