@@ -804,6 +804,16 @@ apps.
 
     Can also change these settings with the gnome tweaks gui.
 
+65. Installed the mini-emacs application, `mg` via
+
+    ```
+    sudo apt install mg
+    ```
+
+    Made it the default for git commit messages by editing
+    `~/.gitconfig`. More than sufficient for that, and way faster to
+    start up.
+
 ---
 
 - Install ccache and use for compiling R
