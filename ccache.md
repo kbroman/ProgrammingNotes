@@ -26,3 +26,12 @@
   ```shell
   ccache --clear
   ```
+
+- For R, create a `~/.R/Makevars` file with something like the following:
+
+  ```
+  CC=ccache gcc
+  CXX=ccache g++
+  CFLAGS=-fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
+  CXXFLAGS=-fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
+  ```
