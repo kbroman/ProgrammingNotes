@@ -1,0 +1,48 @@
+
+To create-your-own natbib format:
+
+ - Copy all the files in /sw/share/texmf/source/latex/custom-bib
+   to a new directory.
+
+ - Run "latex makebst.ins" within that directory.
+
+ - Run "latex makebst.tex", select merlin, and then answer all the
+   questions.
+
+ - Within your latex document:
+
+   \usepackage[round]{natbib}
+
+   % revise citations to exclude the comma between authors and year
+   \bibpunct{(}{)}{;}{a}{}{,}
+
+   \renewcommand{\bibsection}{\section{Literature Cited}}
+   \bibliographystyle{mystyle}
+   \bibliography{mybib}
+
+ - You may want to create a new style for special sectioning formats, 
+   a file like "mystyle.sty" with stuff like that below.  
+   Then include "\usepackage{mystyle}" in your latex document.
+
+\NeedsTeXFormat{LaTeX2e}[1996/06/01]
+\ProvidesPackage{mystle}[2004/01/23 v1.0 (KWB)]
+
+\renewcommand{\section}{\@startsection{section}{1}{0pt}%
+    {-1.5ex}%
+    {0.2ex}%
+    {\sffamily\Large\bfseries}}
+
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}%
+    {-1.0ex}%
+    {0.2ex}%
+    {\sffamily\large\bfseries}}
+
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0pt}%
+    {-1.0ex}%
+    {0.2ex}%
+    {\sffamily\bfseries}}
+
+\renewcommand{\@seccntformat}[1]{\@nameuse{the#1}. }
+
+\renewcommand{\thesection}{\Alph{section}}
+
