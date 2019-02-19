@@ -11,3 +11,29 @@ ssh-add ~/.ssh/id_rsa &> /dev/null
 
 I really don't understand this; seems you need to run both ssh-agent
 and ssh-add in each shell
+
+
+---
+
+GitHub instructions re [ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
+
+- Start `ssh-agent` in the background (in `~/.bash_profile`?)
+
+  ```
+  eval "$(ssh-agent -s)"
+  ```
+
+- Modify (or create) `~/.ssh/config`
+
+  ```
+  Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+  ```
+
+- Add your private key to the ssh-agent
+
+  ```
+  ssh-add -K ~/.ssh/id_rsa
+  ```
