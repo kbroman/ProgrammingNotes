@@ -15,7 +15,9 @@ and ssh-add in each shell
 
 ---
 
-GitHub instructions re [ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
+### GitHub instructions re [ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
+
+I think this is just needed on a Mac
 
 - Start `ssh-agent` in the background (in `~/.bash_profile`?)
 
