@@ -117,3 +117,9 @@ R CMD INSTALL --build [package_dir]
 R CMD INSTALL --build --compile-both qtl_1.32-3.tar.gz
 
 (don't seem to need the --compile-both)
+
+---
+
+To install package sf (on ubuntu), I needed to install gdal
+
+sudo apt install libgdal-dev
