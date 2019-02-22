@@ -123,3 +123,5 @@ R CMD INSTALL --build --compile-both qtl_1.32-3.tar.gz
 To install package sf (on ubuntu), I needed to install gdal
 
 sudo apt install libgdal-dev
+
+On Mac, I used "brew install gdal"
