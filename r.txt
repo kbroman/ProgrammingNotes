@@ -125,3 +125,5 @@ To install package sf (on ubuntu), I needed to install gdal
 sudo apt install libgdal-dev
 
 On Mac, I used "brew install gdal"
+
+On unbuntu, I also needed to install libudunits2-dev
