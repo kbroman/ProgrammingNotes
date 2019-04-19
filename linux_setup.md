@@ -405,15 +405,11 @@ apps.
     sudo apt install peek
     ```
 
-39. Install java 8 (there's a java 9, but Minecraft still needs 8)
-
-    Followed the instructions at <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>
+39. Install java
 
     ```
-    sudo add-apt-repository ppa:webupd8team/java
     sudo apt update
-    sudo apt install oracle-java8-installer
-    sudo apt install oracle-java8-set-default
+    sudo apt install default-jre default-jdk
     ```
 
     Test that it's working:
