@@ -3,19 +3,30 @@
 For the R packages
 [ReporteRs](https://davidgohel.github.io/ReporteRs/) (also
 [rJava](http://www.rforge.net/rJava/) and
-[xlsx](https://github.com/dragua/xlsx)) on a Mac, need to get java
+[xlsx](https://github.com/dragua/xlsx)), need to get java
 installed in the right way.
 
-The following instructions seemed to work:
+Here are Mac instructions:
 
 - <https://github.com/snowflakedb/dplyr-snowflakedb/wiki/Configuring-R-rJava-RJDBC-on-Mac-OS-X>
 
-One change: for Java 8 development kit, I went to the following:
+On linux, I did:
+
+```shell
+sudo apt update
+sudo apt install default-jre default-jdk
+```
+
+And then in my `~/.bashrc` file, I included
+
+```shell
+export JAVA_HOME="/usr/lib/jvm/default-java"
+```
 
 - <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
-Key steps:
+I also needed to run
 
-- Install java 6
-- Install java 8
-- Run `sudo R CMD javareconf`
+```shell
+sudo R CMD javareconf
+```
