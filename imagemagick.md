@@ -36,6 +36,11 @@
 
        convert -scale 10% -scale 1000% original.jpg pixelated.jpg
 
+9. Add white to left and white side, padding to a greater width
+
+       convert input.png -background white -gravity northeast -splice 30x0 intermediate.png
+       convert intermediate.png -background white -gravity northwest -splice 30x0 result.png
+
 9. Resize
 
        convert -resize 50x100 original.png result.png
