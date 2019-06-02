@@ -484,7 +484,7 @@ apps.
       in place of `rm`)
 
 
-4. [Gnome extensions](https://extensions.gnome.org)
+44. [Gnome extensions](https://extensions.gnome.org)
 
     - (Can install, uninstall, and configure extensions within browser)
     - [Clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator)
@@ -812,6 +812,13 @@ apps.
     Made it the default for git commit messages by editing
     `~/.gitconfig`. More than sufficient for that, and way faster to
     start up.
+
+66. Setup playback of dvds
+
+    ```
+    sudo apt install libdvd-pkg
+    sudo dpkg-reconfigure libdvd-pkg
+    ```
 
 ---
 
