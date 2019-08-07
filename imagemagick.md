@@ -52,3 +52,7 @@
 11. Rotate 90 degrees clockwise
 
         convert -rotate "90" input.png output.png
+
+12. Crop (width x height + left + top)
+
+        convert -crop 587x587+0+32 original.jpg result.jpg
