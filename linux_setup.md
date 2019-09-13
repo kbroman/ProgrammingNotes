@@ -651,6 +651,9 @@ apps.
     under calendars, right-click and select "New calendar" and then
     "On network"; then give it a name and paste in the location.
 
+    (Note: for iphone/ipad access to shared google calendars, go to
+    <https://calendar.google.com/calendar/iphoneselect>)
+
 55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
 
     - `sudo apt install network-manager-openvpn-gnome`
