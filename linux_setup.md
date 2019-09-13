@@ -652,7 +652,9 @@ apps.
     "On network"; then give it a name and paste in the location.
 
     (Note: for iphone/ipad access to shared google calendars, go to
-    <https://calendar.google.com/calendar/iphoneselect>)
+    <https://calendar.google.com/calendar/iphoneselect>. Also note:
+    work calendar is at <https://outlook.office365.com/calendar/>.)
+
 
 55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
 
