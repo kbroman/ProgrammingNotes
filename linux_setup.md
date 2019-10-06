@@ -871,3 +871,16 @@ apps.
 
     - **FIX ME**: At present, it's not working
     - Removed Touchégg with `sudo make uninstall`
+
+----
+
+### Problems
+
+1. I hade some gnome extensions that
+weren't working but that I couldn't delete. Followed [these
+instructions](https://unix.stackexchange.com/a/403674):
+
+  - Look in `~/.local/share/gnome-shell/extensions`
+    and also `/usr/share/gnome-shell/extensions`
+  - Delete the directories for extensions you want to get rid of
+  - Reload gnome-shell by pressing ALT+F2, typing `r`, and pressing ENTER.
