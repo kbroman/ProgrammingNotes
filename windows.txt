@@ -71,7 +71,7 @@ Git Bash
 ssh stuff
 
 ssh-keygen as in
-<http://kbroman.org/github_tutorial/pages/first_time.html>
+<https://kbroman.org/github_tutorial/pages/first_time.html>
 
 eval $(ssh-agent -s)
 ssh-add
