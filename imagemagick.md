@@ -56,3 +56,8 @@
 12. Crop (width x height + left + top)
 
         convert -crop 587x587+0+32 original.jpg result.jpg
+
+---
+
+Note: [gThumb](https://wiki.gnome.org/Apps/Gthumb) is a simple GUI
+image manipulator, for example for cropping.
