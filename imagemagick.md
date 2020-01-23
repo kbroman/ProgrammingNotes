@@ -61,3 +61,9 @@
 
 Note: [gThumb](https://wiki.gnome.org/Apps/Gthumb) is a simple GUI
 image manipulator, for example for cropping.
+
+Example swapping colors in meiosis figure
+
+    convert meiosis.png -fill 'rgb(0,0,0)' -fuzz 5% -opaque 'rgb(255,255,255)' meiosis2.png
+    convert meiosis2.png -fill 'rgb(255,255,255)' -fuzz 15% -opaque 'rgb(0,4,81)' meiosis3.png
+    convert meiosis3.png -fill 'rgb(0,4,81)' -fuzz 15% -opaque 'rgb(254,102,255)' meiosis4.png
