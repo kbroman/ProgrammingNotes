@@ -59,7 +59,7 @@
 
 ---
 
-Note: [gThumb](https://wiki.gnome.org/Apps/Gthumb) is a simple GUI
+Note: [gthumb](https://wiki.gnome.org/Apps/Gthumb) is a simple GUI
 image manipulator, for example for cropping.
 
 Example swapping colors in meiosis figure
