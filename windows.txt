@@ -75,3 +75,20 @@ ssh-keygen as in
 
 eval $(ssh-agent -s)
 ssh-add
+
+
+---
+
+Installing linux within Windows 10
+
+1. Control panel -> Programs -> Turn windows features on or off
+   -> select "Windows Subsystem for Linux"
+
+2. Go to windows store (e.g. https://aka.ms/wslstore
+
+3. Find and "get" ubuntu, then click "Install", then click "Launch"
+
+4. Opens a terminal and installs stuff; asks to create user name and
+   create password
+
+5. You can also then open the "power shell" and
