@@ -86,3 +86,15 @@ brew install cpanminus
 cpanm URI
 brew install okular
 ```
+
+But I got an error. Needed to install a perl module:
+
+```shell
+sudo perl -MCPAN -e shell
+o conf init
+exit
+```
+
+```shell
+sudo perl -MCPAN -e 'install URI::Escape'
+```
