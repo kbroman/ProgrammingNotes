@@ -72,3 +72,17 @@ rvm autolibs homebrew
 brew install python
 brew install python3
 ```
+
+---
+
+Installing [okular](https://okular.kde.org/) on Mac:
+
+See [this post](https://news.ycombinator.com/item?id=19494107) at
+Hacker News:
+
+```shell
+brew tap kde-mac/kde
+brew install cpanminus
+cpanm URI
+brew install okular
+```
