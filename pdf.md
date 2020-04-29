@@ -35,10 +35,29 @@
   For `PDFSETTINGS` you can use `/screen`, `/ebook`, `/printer`, or
   `/prepress`.
 
-- To install pdftk with Ubuntu 18.04 (Bionic), needed to
-  [do the following](https://askubuntu.com/a/1046476):
+- Rotate pdf 90 degrees counter-clockwise with pdftk:
 
+  ```shell
+  pdftk input.pdf cat 1west output output.pdf
   ```
+
+---
+
+### Installing `pdftk`
+
+To install pdftk with Ubuntu, needed to [do the
+following](https://askubuntu.com/a/1028983):
+
+```shell
+sudo add-apt-repository ppa:malteworld/ppa
+sudo apt install pdftk
+```
+
+If that doesn't work, [here's a page with some
+alternatives](https://linuxhint.com/install_pdftk_ubuntu/).
+Or use the [following bash script](https://askubuntu.com/a/1046476):
+
+```
 #!/bin/bash
 #
 # author: abu
@@ -56,7 +75,7 @@ wget http://launchpadlibrarian.net/340410966/libgcj17_6.4.0-8ubuntu1_amd64.deb \
 
 
 echo -e "Packages for pdftk downloaded\n\n"
-# install packages 
+# install packages
 echo -e "\n\n Installing pdftk: \n\n"
 sudo apt-get install ./libgcj17_6.4.0-8ubuntu1_amd64.deb \
     ./libgcj-common_6.4-3ubuntu1_all.deb \
@@ -69,15 +88,12 @@ rm ./libgcj17_6.4.0-8ubuntu1_amd64.deb
 rm ./libgcj-common_6.4-3ubuntu1_all.deb
 rm ./pdftk_2.02-4build1_amd64.deb
 rm ./pdftk-dbg_2.02-4build1_amd64.deb
-  ```
-To run this script, copy it in an editor and save it e.g. pdftk_installer. Then run it in a terminal with
+```
+
+To run this script, copy it in an editor and save it as
+`pdftk_installer`. Then run it in a terminal with
 
 ```shell
 chmod 755 pdftk_installer
 ./pdftk_installer
 ```
-- Rotate pdf 90 degrees counter-clockwise with pdftk:
-
-  ```shell
-  pdftk input.pdf cat 1west output output.pdf
-  ```
