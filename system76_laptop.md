@@ -84,3 +84,12 @@ There are 8 little lights on the front of the machine
 
 - `<ctrl>-q` to close an application; `<ctrl>-w` to close a particular
   window
+
+
+### [gTile keyboard shortcuts](https://github.com/gTile/gTile/blob/master/README.md#usage-with-no-interface)
+
+- `<super>-<shift>-<number key>` for 4x4 tilings
+- `<super>-<ctrl>-<number key>` for 3x3 tilings
+- `<super>-<alt>-<number key>` for 2x2 tilings
+- can press shortcut repeatedly to have it gradually increase in size
+- `<super>-m` to toggle maximize state of window
