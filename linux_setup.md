@@ -825,6 +825,27 @@ apps.
     sudo dpkg-reconfigure libdvd-pkg
     ```
 
+67. Oryx Pro fan can be really loud. To lower it, use
+    [clevo-indicator](https://github.com/davidrohr/clevo-indicator)
+
+    ```
+    sudo apt install libappindicator3-dev
+    git clone https://github.com/davidrohr/clevo-indicator
+    cd clevo-indicator
+    make
+    ```
+
+    To use: put `bin/clevo-indicator` in `~/.local/bin/`
+
+    ```
+    sudo clevo-indicator
+    sudo clevo-indicator set 50
+    sudo clevo-indicator setg 50
+    ```
+
+68. [neofetch](https://github.com/dylanaraps/neofetch)
+    provides system info at the command-line
+
 ---
 
 - Install ccache and use for compiling R
@@ -835,6 +856,8 @@ apps.
 - Additional possible gnome extensions:
   - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
   - [Pomodoro timer](http://gnomepomodoro.org/)
+
+
 
 ---
 
