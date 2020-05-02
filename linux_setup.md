@@ -361,7 +361,7 @@ apps.
     sudo fc-cache -fv
     ```
 
-34. Install a bunch more programms
+34. Install a bunch more programs
 
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
