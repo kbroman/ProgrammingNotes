@@ -462,6 +462,7 @@ apps.
 
     - However, I was able to connect using the GUI file browser.
       Clicked "Other locations" and then typed `smb://192.168.0.3`
+      (but not even that is working currently)
 
 43. More stuff via `sudo apt install`
 
