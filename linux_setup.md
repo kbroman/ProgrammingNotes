@@ -465,6 +465,13 @@ apps.
       Clicked "Other locations" and then typed `smb://192.168.0.3`
       (but not even that is working currently)
 
+    - The error I was getting was like "Failed to mount Windows share:
+      Software caused connection abort." [As reported
+      here on
+      reddit](https://www.reddit.com/r/linuxquestions/comments/djvpdn/smb_connection_nautilus_error_debian_bullseye/),
+      it seems like I needed to add `client min protocol = CORE` in
+      the `[global]` section of the `/etc/samba/smb.conf` file.
+
 43. More stuff via `sudo apt install`
 
     - `pdftk` (pdf tools) [now it suggests `pdftk-java` instead)
