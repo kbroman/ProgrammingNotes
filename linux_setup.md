@@ -135,6 +135,8 @@ apps.
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
   - Also copy over `.rpushpullet.json`
   - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev r-cran-sqlite`
+  - For checking configure scripts in packages, needed `sudo apt install devscripts`
+    (would get a warning otherwise)
   - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
   - For the [imager package](https://cran.rstudio.com/package=imager),
     I got an error about X11. I ended up installing a bunch more
