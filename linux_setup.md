@@ -857,8 +857,7 @@ apps.
     sudo clevo-indicator setg 50
     ```
 
-68. [neofetch](https://github.com/dylanaraps/neofetch)
-    provides system info at the command-line
+68. [neofetch](https://github.com/dylanaraps/neofetch) provides system info at the command-line
 
 ---
 
