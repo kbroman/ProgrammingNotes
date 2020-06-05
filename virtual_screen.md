@@ -31,3 +31,17 @@ See [this about xrandr](https://linuxconfig.org/how-to-configure-your-monitors-w
 
 - Log out and log in again, and when you type `xrandr` there'll be
   `VIRTUAL1` and `VIRTUAL2` listed
+
+---
+
+### TightVNC and Remote Ripple
+
+[TightVNC](https://www.tightvnc.com) is a free remote control software
+package. Also has a viewer for iOS: [Remote
+Ripple](https://itunes.apple.com/ru/app/remote-ripple/id1071186450?~=en&mt=8)
+
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
+- https://www.poftut.com/how-to-install-and-access-tightvnc-remote-desktop-in-linux/
+- https://www.poftut.com/best-vnc-viewer-clients-linux/
+- Vinagre
+- https://www.smarthomebeginner.com/setup-vnc-server-on-ubuntu-linux/
