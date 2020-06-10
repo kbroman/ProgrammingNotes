@@ -72,6 +72,7 @@ slow reinstall
 
    ```shell
    sudo dpkg -i Simplenote-linux-1.17.0-amd64.deb
+   sudo apt --fix-broken install
    ```
 
 10. wanted to install `libgnome2-bin` for `gnome-open`, but it's no
@@ -131,9 +132,33 @@ slow reinstall
     sudo dpkg-reconfigure libdvd-pkg
     ```
 
+17. LibreOffice
 
+    ```shell
+    sudo apt install libreoffice
+    sudo apt install okular
+    ```
 
+18. [moneydance](https://infinitekind.com/download-moneydance-personal-finance-software)
 
+    ```shell
+    sudo dpkg -i moneydance_linux_amd64.deb
+    ```
+
+19. [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+
+    ```shell
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    sudo apt --fix-broken install
+    ```
+
+20. [RStudio](https://rstudio.com/products/rstudio/download/#download)
+    (check file download with `sha256sum`)
+
+    ```shell
+    sudo apt install libclang-dev
+    sudo dpkg -i rstudio-1.3.959-amd64.deb
+    ```
 
 ---
 
@@ -143,14 +168,14 @@ to do:
 - tunnelbear
 - eduroam
 - globalprotect vpn
-- libreoffice
-- anaconda
 - julia
-
 - skype
-- rstudio (+ link to pandoc in /usr/local/bin)
-- chrome
-- okular
-- moneydance
 - java
 - Minecraft
+
+---
+
+No need
+
+- Conda was installed in `~/.anaconda3` so still there and working
+- pandoc was installed with conda
