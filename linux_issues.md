@@ -73,7 +73,7 @@
     ```
 
     In a couple of places, I was asked whether I want to use gdm3 or
-    lightdm. I chose gmd3 in all cases.
+    lightdm. I chose gdm3 in all cases.
 
     I then ran the following:
 
