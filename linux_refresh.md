@@ -40,7 +40,7 @@ slow reinstall
    sudo apt [whole bunch of libraries]
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
-d   ```
+   ```
 
 5. LaTeX
 
@@ -161,12 +161,32 @@ d   ```
     sudo dpkg -i rstudio-1.3.959-amd64.deb
     ```
 
+21. Set up backups
+
+    - Install Deja Dup via "Pop Shop"
+
+    - Folders to save: "Home (kbroman)"
+
+    - Folders to ignore: `Downloads`, `Dropbox`, `ISOs`, and
+      `~/VirtualBox VMs`.
+
+    - Storage Location: Local Folder,
+      `/media/kbroman/Broster2Backup/kbroman_backup`
+
+    - Needed to enter decryption password for Deja Dup
+      (see keepassxc)
+
+    - complaint about "broster2" vs "broster2.localdomain", but it
+      seemed to work
+
+22. Tunnelbear
+
+    - `sudo apt install network-manager-openvpn-gnome`
+    - previous configuration files were already there
 ---
 
 to do:
-- set up backups
 - virtual box?
-- tunnelbear
 - eduroam
 - globalprotect vpn
 - julia
