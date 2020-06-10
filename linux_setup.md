@@ -404,7 +404,8 @@ apps.
 35. Install npm and coffeescript
 
     - `sudo apt install npm`
-    - `sudo npm install --global coffeescript`
+    - `sudo npm install -g coffeescript`
+    - `sudo npm install -g yarn`
 
     Also [`gistup`](https://github.com/mbostock/gistup):
 
@@ -416,7 +417,7 @@ apps.
 
 37. Install python-dev (not sure whether I really need this)
 
-    - `sudo apt install python-dev python3-dev`
+    - `sudo apt install python3-dev`
 
 38. Install peek (screen recording)
 
