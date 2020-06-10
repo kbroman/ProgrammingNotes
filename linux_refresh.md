@@ -40,7 +40,7 @@ slow reinstall
    sudo apt [whole bunch of libraries]
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
-   ```
+d   ```
 
 5. LaTeX
 
@@ -92,6 +92,7 @@ slow reinstall
     sudo apt install cheese gpick enscript gv ubuntu-restricted-extras
     sudo apt install vlc calibre handbrake gitg mg neofetch
     sudo apt install pdftk imagemagick trash-cli clementine
+    sudo apt install ccache openssh-server
     ```
 
 13. libnotify (desktop notifications with notify-send)
