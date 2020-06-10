@@ -46,7 +46,7 @@ apps.
 6. Install emacs
 
    ```
-   sudo apt install emacs25
+   sudo apt install emacs
    ```
 
 7. Connect to the internet (wifi), using eduroam
@@ -122,19 +122,41 @@ apps.
 
 12. Install R
 
-   - See [instructions at digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2)
+  - Install a bunch of linux stuff
 
-     ```
-     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-     sudo add-apt-repository ppa:marutter/rrutter3.5
-     sudo apt update
-     sudo apt install software-properties-common
-     sudo apt update
-     sudo apt install r-base r-recommended
-     ```
+    ```shell
+    sudo apt install xauth xorg libx11-dev openbox
+    sudo apt install libglu1-mesa-dev libfreetype6-dev
+    sudo apt install libtiff-dev fftw3 libfftw3-dev
+    sudo apt install gfortran-9 gdal
+    sudo apt install libcurl4-openssl-dev libssl-dev
+    sudo apt install libxml2-dev libssh2-1-dev
+    ```
+
+  - Set up secure apt
+
+    ```shell
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+    ```
+
+  - Add the following line to `/etc/apt/sources.list`
+
+    ```
+    deb https://cloud.r-project.org/bin/linux/ubuntu/ focal-cran40/
+    ```
+
+  - sudo
+    sudo apt update
+    sudo apt install software-properties-common
+    sudo apt update
+    sudo apt install r-base r-recommended
+    ```
+
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
   - Also copy over `.rpushpullet.json`
-  - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev r-cran-sqlite`
+
+  - Need `r-cran-sqlite`?
+
   - For checking configure scripts in packages, needed `sudo apt install devscripts`
     (would get a warning otherwise)
   - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
@@ -142,13 +164,6 @@ apps.
     I got an error about X11. I ended up installing a bunch more
     ubuntu things. Some of these may not be necessary; was looking at
     what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
-
-    ```
-    sudo apt install xauth xorg libx11-dev openbox
-    sudo apt install libglu1-mesa-dev libfreetype6-dev
-    sudo apt install libtiff-dev fftw3 libfftw3-dev
-    sudo apt install gfortran-7
-    ```
 
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
@@ -184,7 +199,7 @@ apps.
 15. Install DropBox
 
     - Download `.deb` file from <https://www.dropbox.com/install-linux>
-    - Use `sudo dpkg -i dropbox_2015.10.28_amd64.deb`
+    - Use `sudo dpkg -i dropbox_2020.03.04_amd64.deb`
 
 16. Install SimpleNote
 
@@ -210,6 +225,8 @@ apps.
 
 18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
+    - replace `popos` or whatever with what you want, single line in
+      `/etc/hostname` and on the line with `128.0.1.1` in `/etc/hosts`
 
 19. Connect to printer
 
