@@ -37,7 +37,8 @@ slow reinstall
 4. R
 
    ```shell
-   sudo apt [whole bunch of libraries]
+   sudo apt install [whole bunch of libraries]
+   sudo apt install libudunits2-dev libmagick++-dev
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
    ```
