@@ -93,7 +93,7 @@ slow reinstall
     sudo apt install cheese gpick enscript gv ubuntu-restricted-extras
     sudo apt install vlc calibre handbrake gitg mg neofetch
     sudo apt install pdftk imagemagick trash-cli clementine
-    sudo apt install ccache openssh-server
+    sudo apt install ccache openssh-server htop
     ```
 
 13. libnotify (desktop notifications with notify-send)
