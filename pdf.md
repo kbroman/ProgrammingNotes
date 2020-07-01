@@ -47,6 +47,12 @@
   pdftk input.pdf cat 1-endsouth output output.pdf
   ```
 
+- crop pdf (left top right bottom, in points)
+  positive values pad margins; negative values crop
+
+  ```shell
+  pdfcrop --margins 0 -150 0 0` input.pdf output.pdf
+  ```
 
 
 ---
