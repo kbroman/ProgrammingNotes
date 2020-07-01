@@ -35,11 +35,19 @@
   For `PDFSETTINGS` you can use `/screen`, `/ebook`, `/printer`, or
   `/prepress`.
 
-- Rotate pdf 90 degrees counter-clockwise with pdftk:
+- Rotate pdf 90 degrees counter-clockwise with pdftk (just the first page):
 
   ```shell
   pdftk input.pdf cat 1west output output.pdf
   ```
+
+  Rotate all of the pages 180 degrees:
+
+  ```shell
+  pdftk input.pdf cat 1-endsouth output output.pdf
+  ```
+
+
 
 ---
 
