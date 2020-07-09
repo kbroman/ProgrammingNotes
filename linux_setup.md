@@ -610,7 +610,7 @@ apps.
       <https://www.virtualbox.org/wiki/Downloads>
       - Add to `/etc/apt/sources.list`
       - Register Oracle public keys
-      - `sudo apt install virtualbox-5.2`
+      - `sudo apt install virtualbox-6.1`
       - `sudo apt install dkms`
     - Start `virtualbox`, create new Windows10 machine, adjust memory,
       disk size, connect to the windows ISO, and adjust display stuff
