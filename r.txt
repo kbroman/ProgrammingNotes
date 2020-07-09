@@ -127,3 +127,32 @@ sudo apt install libgdal-dev
 On Mac, I used "brew install gdal"
 
 On unbuntu, I also needed to install libudunits2-dev
+
+---
+
+R Solaris on VirtualBox
+(user rhub)
+
+sudo pkgutil -y -i git
+sudo pkgutil -y -i gcc5gfortran
+sudo pkgutil -y -i libxml2_dev
+sudo pkgutil -y -i libcurl_dev
+sudo pkgutil -y -i libssl_dev
+sudo pkgutil -y -i libiconv_dev
+sudo pkgutil -y -i libcairo_dev
+sudo pkgutil -y -i r_base
+sudo pkgutil -y -i gmake
+
+created ~/.Renviron file with MAKE=gmake
+
+sudo R -e "install.packages(c('Rcpp', 'yaml', 'jsonlite', 'RcppEigen', 'RSQLite', 'data.table'))"
+sudo R -e "install.packages(c('devtools', 'testthat', 'vdiffr', 'qtl', 'roxygen2'))"
+
+
+- can't install gdtools needed for vdiffr
+- need libraries cairo and freetype2
+
+git clone git://github.com/kbroman/qtl2
+R CMD build qtl2
+sudo R CMD INSTALL qtl2_0.22-10.tar.gz
+R CMD check qtl2
