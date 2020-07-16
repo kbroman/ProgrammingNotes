@@ -109,6 +109,11 @@ ssh nebula-2
 export PATH="/s/pkg/linux64/gcc/4.8.4/bin:$PATH"
 R -e "install.packages('fst')"
 
+Also need ~/.R/Makevars that is like:
+CFLAGS=-g -O2 -std=gnu99
+CXXFLAGS=-g -O2  -std=gnu++11
+
+
 ---
 
 Windows
