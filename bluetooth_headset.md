@@ -86,8 +86,15 @@ really hfp, since there's apparently not support for hsp.
 11. Then I could go back to the bluetooth manager, right-click the
     airpods, and select "Audio Profile" and then "Headset Head Unit".
 
+12. After restarting my system, I needed to re-run the
+    `ofono-phonesim` command, but then it still didn't work. I needed
+    to clone ofono and run the script `enable-modem`:
 
-
+    ```shell
+    git clone git://git.kernel.org/pub/scm/network/ofono/ofono.git
+    cd ofono/test
+    ./enable-modem
+    ```
 
 The key sites that helped:
 - <https://askubuntu.com/questions/985615/bluetooth-profile-locked-to-a2dp-high-quality-audio-sink-but-cannot-change-to/1223200#1223200>
