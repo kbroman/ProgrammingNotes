@@ -21,3 +21,9 @@
 
   - Main problem I had is that the cable I was using was bad; switched
     cables and it worked.
+
+- Gnome extensions give error: try restarting `gnome-shell`
+
+  ```shell
+  killall -3 gnome-shell
+  ```
