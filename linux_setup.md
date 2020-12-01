@@ -127,8 +127,8 @@ apps.
     ```shell
     sudo apt install xauth xorg libx11-dev openbox
     sudo apt install libglu1-mesa-dev libfreetype6-dev
-    sudo apt install libtiff-dev fftw3 libfftw3-dev
-    sudo apt install gfortran-9 gdal
+    sudo apt install libtiff-dev libfftw3-dev
+    sudo apt install gfortran-9 libgdal-dev libproj-dev
     sudo apt install libcurl4-openssl-dev libssl-dev
     sudo apt install libxml2-dev libssh2-1-dev
     ```
