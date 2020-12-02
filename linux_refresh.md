@@ -184,6 +184,20 @@ slow reinstall
 
     - `sudo apt install network-manager-openvpn-gnome`
     - previous configuration files were already there
+
+24. Globalprotect vpn
+
+   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
+   - This gives a `GlobalProtext_deb-[version].deb` file, to install via
+     `sudo dpkg -i GlobalProtect_deb-*.deb`.
+   - First time, use `globalprotect connect --portal uwmadison.vpn.wisc.edu`
+   - Then use `globalprotect connect` and `globalprotect disconnect`.
+   - Use NetID and password; use `[username]_1` for static IP.
+
+25. Julia
+
+26. Skype
+
 ---
 
 to do:
