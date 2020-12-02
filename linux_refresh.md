@@ -120,41 +120,34 @@ slow reinstall
     sudo apt install autokey-gtk
     ```
 
-15. keepassxc
-
-    ```shell
-    sudo add-apt-repository ppa:phoerious/keepassxc
-    sudo apt install keepassxc
-    ```
-
-16. playback of DVDs
+15. playback of DVDs
 
     ```shell
     sudo apt install libdvd-pkg
     sudo dpkg-reconfigure libdvd-pkg
     ```
 
-17. LibreOffice
+16. LibreOffice
 
     ```shell
     sudo apt install libreoffice
     sudo apt install okular
     ```
 
-18. [moneydance](https://infinitekind.com/download-moneydance-personal-finance-software)
+17. [moneydance](https://infinitekind.com/download-moneydance-personal-finance-software)
 
     ```shell
     sudo dpkg -i moneydance_linux_amd64.deb
     ```
 
-19. [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+18. [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 
     ```shell
     sudo dpkg -i google-chrome-stable_current_amd64.deb
     sudo apt --fix-broken install
     ```
 
-20. [RStudio](https://rstudio.com/products/rstudio/download/#download)
+19. [RStudio](https://rstudio.com/products/rstudio/download/#download)
     (check file download with `sha256sum`)
 
     ```shell
@@ -162,7 +155,7 @@ slow reinstall
     sudo dpkg -i rstudio-1.3.959-amd64.deb
     ```
 
-21. Set up backups
+20. Set up backups
 
     - Install Deja Dup via "Pop Shop"
 
@@ -180,12 +173,12 @@ slow reinstall
     - complaint about "broster2" vs "broster2.localdomain", but it
       seemed to work
 
-22. Tunnelbear
+21. Tunnelbear
 
     - `sudo apt install network-manager-openvpn-gnome`
     - previous configuration files were already there
 
-24. Globalprotect vpn
+22. Globalprotect vpn
 
    - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
    - This gives a `GlobalProtext_deb-[version].deb` file, to install via
@@ -194,19 +187,19 @@ slow reinstall
    - Then use `globalprotect connect` and `globalprotect disconnect`.
    - Use NetID and password; use `[username]_1` for static IP.
 
-25. Skype
+23. Skype
 
     - Download `.deb` file from <https://www.skype.com/en/get-skype/>
     - Install with `sudo dpkg -i skypeforlinux-64.deb`
 
-26. Zoom
+24. Zoom
 
     - Download `.deb` file from <https://zoom.us/download>
     - `sudo dpkg -i zoom_amd64.deb`
     - Needed to install libegl1-mesa, libgl1-mesa-glx, libxcb-xtest0;
       accomplished with `sudo apt --fix-broken install`
 
-27. Julia
+25. Julia
 
     - downloaded the `.tar.gz` file with "generic linux
     binaries", from <https://julialang.org/downloads/>
