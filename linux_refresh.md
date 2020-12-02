@@ -208,14 +208,30 @@ slow reinstall
 
 27. Julia
 
+    - downloaded the `.tar.gz` file with "generic linux
+    binaries", from <https://julialang.org/downloads/>
+
+    - extracted into `/usr/local/`
+
+    - created symbolic link to `/usr/local/src/julia-1.5.3/bin/julia`
+      in `/usr/local/bin`
+
+    - ran `julia` and installed IJulia to enable use in jupyter
+      notebooks
+
+      ```
+      using Pkg
+      Pkg.add("IJulia")
+      ```
+
+      then when running `jupyter notebook`, can click "New" and the
+      options are both "Python3" and "Julia1.1.1"
+
 ---
 
 to do:
 - virtual box?
 - eduroam
-- globalprotect vpn
-- julia
-- skype
 - java
 - Minecraft
 
