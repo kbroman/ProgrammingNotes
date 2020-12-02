@@ -194,9 +194,19 @@ slow reinstall
    - Then use `globalprotect connect` and `globalprotect disconnect`.
    - Use NetID and password; use `[username]_1` for static IP.
 
-25. Julia
+25. Skype
 
-26. Skype
+    - Download `.deb` file from <https://www.skype.com/en/get-skype/>
+    - Install with `sudo dpkg -i skypeforlinux-64.deb`
+
+26. Zoom
+
+    - Download `.deb` file from <https://zoom.us/download>
+    - `sudo dpkg -i zoom_amd64.deb`
+    - Needed to install libegl1-mesa, libgl1-mesa-glx, libxcb-xtest0;
+      accomplished with `sudo apt --fix-broken install`
+
+27. Julia
 
 ---
 
