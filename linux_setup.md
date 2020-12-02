@@ -58,9 +58,9 @@ apps.
    Now using GlobalProtect, instructions at
    <https://kb.wisc.edu/helpdesk/page.php?id=85193>
 
-   - Download and extract `PanGPLinux-*.tgz` from <https://www.net.wisc.edu/vpn/clients/>.
-   - This gives a `GlobalProtext_*.deb` file, to install via
-     `sudo dpkg -i GlobalProtect_*.deb`.
+   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
+   - This gives a `GlobalProtext_deb-[version].deb` file, to install via
+     `sudo dpkg -i GlobalProtect_deb-*.deb`.
    - First time, use `globalprotect connect --portal uwmadison.vpn.wisc.edu`
    - Then use `globalprotect connect` and `globalprotect disconnect`.
    - Use NetID and password; use `[username]_1` for static IP.
