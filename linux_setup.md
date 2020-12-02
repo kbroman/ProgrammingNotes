@@ -533,7 +533,7 @@ apps.
         - esc to exit
         - also use Super-Alt-[keypad numbers]
         - In Pop_OS! 20.04, disabled the pop shell extension
-          (with Tile Windows)
+          (with Tile Windows), disabled in the extensions app
     - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
