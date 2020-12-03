@@ -5,6 +5,13 @@
 
   The instructions are [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
+  Ended up doing:
+
+  ```
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  ```
+
 - To install docker for minecraft, I changed to the directory
   containing the Dockerfile` in the miner package installation, and then
   followed the instructions in the [miner
