@@ -38,3 +38,8 @@
   ```
 
   Look for lines following "docker"
+
+- My slides about docker:
+  - [without notes](https://kbroman.org/AdvData/26_containers.pdf)
+  - [with notes](https://kbroman.org/AdvData/26_containers_notes.pdf)
+  - [video of the lecture](https://us-lti.bbcollab.com/recording/0fc7d7a1d7ac472084798e61c43e4a63)
