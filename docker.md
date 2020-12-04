@@ -78,7 +78,7 @@
 - Run a container from an image, interactively in a bash shell
 
   ```
-  sudo docker run -it ubuntu bash
+  sudo docker run -it [image_name] bash
   ```
 
 - Remove a running container
