@@ -39,7 +39,7 @@
 
   ```
   FROM rocker/r-devel
-  RUN R -e "install.packages('qtl')"
+  RUN RD -e "install.packages('qtl')"
   ```
 
   and then do `sudo docker build -t rdevel-qtl .`
