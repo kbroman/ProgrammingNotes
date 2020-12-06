@@ -106,3 +106,16 @@ The key sites that helped:
   - [pulseaudio issue](https://gitlab.freedesktop.org/pulseaudio/pulseaudio/-/issues/81)
   - [askubuntu](https://askubuntu.com/questions/1085480/bluetooth-headphones-switches-from-a2dp-sink-to-hsp-hfp-when-starting-voip-a)
   - [another askubuntu question](https://askubuntu.com/questions/354383/headphones-microphone-is-not-working)
+
+---
+
+- airpods as headphones sound nice
+- airpods as headset: seems like both the headphones and the mic are
+  really crappy quality...not worth the trouble
+- so best to just leave them as headphones
+- but on galago pro, while I could pair and connect/disconnect
+  airpods, I'm having trouble getting pulseaudio to recognize them
+- what worked was [this answer]:
+  - unpair the airpods
+  - `sudo pkill pulseaudio`
+  - re-pair the airpods
