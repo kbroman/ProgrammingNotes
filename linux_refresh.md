@@ -220,6 +220,19 @@ slow reinstall
       then when running `jupyter notebook`, can click "New" and the
       options are both "Python3" and "Julia1.1.1"
 
+26. Gnome extensions: for system-monitor, needed:
+
+    ```shell
+    sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0
+    ```
+
+    In the preferences, deselected "Display icon" and selected "show
+    tooltip", "move the clock", and "disply in the middle".
+
+    De-selected "Display" in the "Net" tab, and de-selected "Show
+    text" in the "Cpu" and "Memory" tabs.
+
+
 ---
 
 to do:
