@@ -177,7 +177,14 @@ slow reinstall
 21. Tunnelbear
 
     - `sudo apt install network-manager-openvpn-gnome`
-    - previous configuration files were already there
+    - previous configuration files were already there, but needed to
+      make use of them
+    - Open Network settings; click plus sign by VPN and choose "Import
+      from file"
+    - needed to right-click and show hidden files, then navigated to
+      `.tunnelbear_config/openvpn` and selected a file and clicked "Add"
+    - need to open config and add tunnelbear email and password
+      under "identify" tab
 
 22. Globalprotect vpn
 
