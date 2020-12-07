@@ -119,3 +119,4 @@ The key sites that helped:
   - unpair the airpods
   - `sudo pkill pulseaudio`
   - re-pair the airpods
+- upgrading to PopOS 20.10 fixed this problem
