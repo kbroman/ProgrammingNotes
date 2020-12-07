@@ -39,6 +39,7 @@ slow reinstall
    ```shell
    sudo apt install [whole bunch of libraries]
    sudo apt install libudunits2-dev libmagick++-dev
+   sudo apt install qpdf
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
    ```
