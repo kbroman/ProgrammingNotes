@@ -40,6 +40,7 @@ slow reinstall
    sudo apt install [whole bunch of libraries]
    sudo apt install libudunits2-dev libmagick++-dev
    sudo apt install qpdf
+   sudo apt install libgit2-dev
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
    ```
@@ -240,6 +241,17 @@ slow reinstall
     De-selected "Display" in the "Net" tab, and de-selected "Show
     text" in the "Cpu" and "Memory" tabs.
 
+27. Ability to connect to USB drive attached to a router
+
+    ```shell
+    sudo apt install smbclient exfat-fuse exfat-utils
+    ```
+
+    Add to `[global]` section of `/etc/samba/smb.conf`:
+
+    ```
+    client min protocol = CORE
+    ```
 
 ---
 
