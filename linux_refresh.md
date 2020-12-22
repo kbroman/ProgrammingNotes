@@ -207,6 +207,11 @@ slow reinstall
     - `sudo dpkg -i zoom_amd64.deb`
     - Needed to install libegl1-mesa, libgl1-mesa-glx, libxcb-xtest0;
       accomplished with `sudo apt --fix-broken install`
+    - decided to remove those with `sudo apt remove zoom` and `sudo
+      apt autoremove` and then install via "pop shop", but then needed
+      to edit `~/.config/zoomus.conf` to have `autoScale=false`
+      (otherwise, text in the GUI was super small, for example chat
+      was nearly unreadable)
 
 25. Julia
 
