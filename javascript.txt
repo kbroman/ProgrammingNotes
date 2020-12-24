@@ -181,3 +181,17 @@ y = JSON.parse(x)
 x = [{name:”elf”}, {name:”deer”}, {name:”green bay”}, {name:”shelf”}]
 x.filter( v => v.name==“deer” )
 x.filter( ({name}) => name==“deer” ) // note need for () around the {name}
+
+// debugging code
+// ctrl-shift-j to open debugger tools
+debugger // halt code at that point; can then step through while inspecting
+
+// regular expressions
+regex = new RegEx("^[01]+$");
+regex2 = /\b[01]+\b/;     // \b = word boundary
+regex.test("0110001");
+regex.match("0110001"); // vector
+"0110001".match(regex);
+result = "001x 001011 00201".match(regex2);
+result.index;
+result2 = regex2.exec("001x 001011 00201");  // equivalent
