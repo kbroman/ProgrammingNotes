@@ -175,6 +175,11 @@ x = JSON.stringify({events:[“work”, “eat”, “sleep”], tired:true})
 y = JSON.parse(x)
 
 // map, reduce, filter, some
+[0,1,2,3].map(v => v+2)
+[0,1,2,3].map(v => v+2).filter(v => v < 3)
+[0,1,2,3].some(v => v < 1)
+[0,1,2,3].map(v => v+1).some(v => v < 1)
+[0,1,2,3].reduce((a,b) => a+b)
 
 // these two things are the same
 // (shortcut if you’re just looking at a particular part of an object)
