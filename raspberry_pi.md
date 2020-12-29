@@ -129,4 +129,4 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 ```
 
-Also to get coffeescript, `sudo npm install -g coffee-script
+Also to get coffeescript, `sudo npm install -g coffee-script`
