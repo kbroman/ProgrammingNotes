@@ -134,3 +134,13 @@ sudo apt-get install -y build-essential
 ```
 
 Also to get coffeescript, `sudo npm install -g coffee-script`
+
+
+### Network diagnostics
+
+Cool project to make web server with local network diagnostics:
+<https://pimylifeup.com/raspberry-pi-nagios/>
+
+Also tried to use this to:
+- check internet speed, <https://github.com/jonwitts/nagios-speedtest>
+- check websites, <https://github.com/catinello/nagios-check-website>
