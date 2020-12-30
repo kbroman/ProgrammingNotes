@@ -2,9 +2,13 @@
 
 ### Set up
 
-- Use
-  [full Raspbian](https://www.raspberrypi.org/downloads/raspbian/); to
-  get on SD card, use [Etcher](https://etcher.io/).
+- Downloaded and installed Raspberry Pi Imager,
+  <https://www.raspberrypi.org/software/>
+
+- Downloaded Raspberry Pi OS,
+  <https://www.raspberrypi.org/software/operating-systems/>
+
+- Wrote Raspberry Pi OS to SD card using Imager
 
 - `sudo raspi-config`:
 
