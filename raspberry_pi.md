@@ -144,3 +144,4 @@ Cool project to make web server with local network diagnostics:
 Also tried to use this to:
 - check internet speed, <https://github.com/jonwitts/nagios-speedtest>
 - check websites, <https://github.com/catinello/nagios-check-website>
+- graphs, <https://blog.ruanbekker.com/blog/2019/03/18/how-to-setup-the-nagiosgraph-plugin-on-nagios-monitoring-server/>
