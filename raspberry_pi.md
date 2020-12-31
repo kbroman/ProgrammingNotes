@@ -209,3 +209,18 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
           led.off()
       sleep(0.1)
   ```
+
+- even better, with button and led:
+
+  ```python
+  from gpiozero import LED, Button
+  from signal import pause
+
+  led = LED(20)
+  button = Button(21)
+
+  button.when_pressed = led.on
+  button.when_released = led.off
+
+  pause()
+  ```
