@@ -180,7 +180,7 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
   sudo pip3 install gpiozero
   ```
 
-- pin 20 -> long leg of LED -> resistor -> ground
+- LED: pin 20 -> long leg of LED -> resistor -> ground
 
   ```python
   from gpiozero import LED
@@ -191,4 +191,21 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
   led.on()
   sleep(1)
   led.off()
+  ```
+
+- button: pin 21 -> button; other side of button -> resistor -> ground
+
+  ```python
+  from gpiozero import Button
+  from gpiozero import LED
+  from time import sleep
+
+  led = LED(20)
+  button = Button(21)
+  while True:
+      if button.is_pressed
+          led.on()
+      else
+          led.off()
+      sleep(0.1)
   ```
