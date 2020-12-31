@@ -145,3 +145,50 @@ Also tried to use this to:
 - check internet speed, <https://github.com/jonwitts/nagios-speedtest>
 - check websites, <https://github.com/catinello/nagios-check-website>
 - graphs, <https://blog.ruanbekker.com/blog/2019/03/18/how-to-setup-the-nagiosgraph-plugin-on-nagios-monitoring-server/>
+
+
+### GPIO
+
+See the [Adafruit lesson about GPIO with Raspberry
+Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
+
+- Install stuff (didn't seem necessary for me)
+
+  ```
+  sudo apt install -y python-smbus i2c-tools
+  ```
+
+- Configuration: use `sudo raspi-config` and
+  go to Interfacing Options -> I2C and enable.
+  Also an option for remote GPIO.
+  Also enable SPI
+
+- Test I2C
+
+  ```
+  sudo i2cdetect -y 1
+  ```
+
+- Reboot
+
+- See also [the official
+  docs](https://www.raspberrypi.org/documentation/usage/gpio/python/README.md)
+  which suggests using the [GPIO
+  zero](https://gpiozero.readthedocs.io/en/stable/) library:
+
+  ```
+  sudo pip3 install gpiozero
+  ```
+
+- pin 20 -> long leg of LED -> resistor -> ground
+
+  ```python
+  from gpiozero import LED
+  from time import sleep
+
+  led = LED(20)
+
+  led.on()
+  sleep(1)
+  led.off()
+  ```
