@@ -174,11 +174,8 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
 - See also [the official
   docs](https://www.raspberrypi.org/documentation/usage/gpio/python/README.md)
   which suggests using the [GPIO
-  zero](https://gpiozero.readthedocs.io/en/stable/) library:
-
-  ```
-  sudo pip3 install gpiozero
-  ```
+  zero](https://gpiozero.readthedocs.io/en/stable/) library, which
+  seems to be distributed with the [standard Rpi OS])
 
 - LED: pin 20 -> long leg of LED -> resistor -> ground
 
