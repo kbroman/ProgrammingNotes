@@ -221,3 +221,26 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
 
   pause()
   ```
+
+### Background jobs
+
+- To run a script in the background at startup, seems easiest to
+  [make a cron
+  job](https://www.instructables.com/Raspberry-Pi-Launch-Python-script-on-startup/).
+
+  Run:
+
+  ```
+  sudo crontab -e
+  ```
+
+  Then enter line:
+
+  ```
+  @reboot /full/path/to/script/my_script.py
+  ```
+
+- If you want to make sure there's a network connection before your
+  script gets run, there's a configuration setting to wait for the
+  network when booting: `sudo raspi-config` then "System options" then
+  "Network at boot".
