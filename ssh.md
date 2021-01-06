@@ -39,3 +39,11 @@ I think this is just needed on a Mac
   ```
   ssh-add -K ~/.ssh/id_rsa
   ```
+
+---
+
+To change passphrase:
+
+```
+ssh-keygen -p
+```
