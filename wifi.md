@@ -1,11 +1,22 @@
 ## Wifi networking diagnostics in linux
 
 
-```
-nmcli dev wifi
+- Check network devices
 
-ifconfig -a
+  ```
+  ifconfig -a
+  ```
 
-iwconfig
-iwconfig [wlan0] | grep -i signal
-```
+- Check wifi signal strength
+
+  ```
+  iwconfig
+  iwconfig [wlan0] | grep -i signal
+  ```
+
+- command-line tool giving detailed info on wifi networks and signal
+  strengths
+
+  ```
+  nmcli dev wifi
+  ```
