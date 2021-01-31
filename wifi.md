@@ -27,3 +27,9 @@
 
 
 - linssid - similar more graphic version of wavemon
+
+- fast (`sudo snap install fast`): gives download speed using
+  Netflix's speed testing service, <https://fast.com>
+
+- speedtest (`sudo apt install speedtest-cli`): upload and download speed
+  (using Ookla speedtest.net; see <https://www.speedtest.net/apps/cli>)
