@@ -21,6 +21,9 @@
 
 ### Sharing screen
 
+- To enable others to share their screen, click the arrow next to
+  screen sharing, and then "advanced options"
+
 ### Annotating slides
 
 ### White board
