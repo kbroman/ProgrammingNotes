@@ -45,3 +45,8 @@ settings](https://support.apple.com/en-us/HT202068).
 - definitely convenient to have a single SSID, if it works. I'm still
   having trouble with one device that wants to go to GHz 2.4 band when
   I think it should go to the 5 GHz band.
+
+---
+
+Look up MAC address to try to identify device:
+<https://dnschecker.org/mac-lookup.php>
