@@ -33,3 +33,8 @@
 
 - speedtest (`sudo apt install speedtest-cli`): upload and download speed
   (using Ookla speedtest.net; see <https://www.speedtest.net/apps/cli>)
+
+---
+
+Apple has useful [suggestions on router
+settings](https://support.apple.com/en-us/HT202068).
