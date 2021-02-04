@@ -38,3 +38,10 @@
 
 Apple has useful [suggestions on router
 settings](https://support.apple.com/en-us/HT202068).
+
+- they suggest using a common SSID for both 2.4 and 5 GHz bands;
+  that leaves it up to router and devices to balance usage
+
+- definitely convenient to have a single SSID, if it works. I'm still
+  having trouble with one device that wants to go to GHz 2.4 band when
+  I think it should go to the 5 GHz band.
