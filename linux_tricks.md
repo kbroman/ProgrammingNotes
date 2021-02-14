@@ -27,3 +27,14 @@
   ```shell
   killall -3 gnome-shell
   ```
+
+- I have a Jabra Evolve2 40 usb headset; have had some trouble having
+  it shown up as both input and output
+
+  Solution seems to be to run `pavucontrol` and
+  in the configuration tab under "Jabra Evolve2 40", select
+  "Digital Stereo output + multichannel input"
+
+  If it doesn't show up there, unplug and replug the headset.
+  Sometimes it shows up as just an input, and then after that it seems
+  stuck that way.
