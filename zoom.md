@@ -27,3 +27,23 @@
 ### Annotating slides
 
 ### White board
+
+### Recording
+
+- If you record while sharing screen, you'll get a little thumbnail of
+  the speaker in the upper-right. If you have selected a larger
+  thumbnail before recording, the recording will have a larger
+  thumbnail. (On my linux laptop, the thumbnail is _really_ small.)
+
+- When I don't select "HD video" in video settings, there are black
+  bars on left and right; this is also included in the recording.
+
+### Video
+
+- selecting "HD" means it captures a really wide angle
+
+- selecting "original ratio" without "HD" will result in black bars on
+  the right and left
+
+- deselecting both "original ratio" and "HD" results in video being
+  much more zoomed-in ... probably better
