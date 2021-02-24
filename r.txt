@@ -161,3 +161,9 @@ git clone git://github.com/kbroman/qtl2
 R CMD build qtl2
 sudo R CMD INSTALL qtl2_0.22-10.tar.gz
 R CMD check qtl2
+
+---
+
+Had trouble installing igraph
+Got an error 'libgfortran.so.4: cannot open shared object file: No such file or directory'
+What seemed to work was 'conda deactivate'
