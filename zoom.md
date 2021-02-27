@@ -47,3 +47,14 @@
 
 - deselecting both "original ratio" and "HD" results in video being
   much more zoomed-in ... probably better
+
+### Recording a lecture
+
+- put slides in full screen
+- start zoom
+- start video and unmute
+- double-check it's set to the right microphone
+- start screen sharing
+- move zoom controls to other display
+- enlarge video so it's larger when recorded
+- turn on local recording
