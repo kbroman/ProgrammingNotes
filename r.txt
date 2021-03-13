@@ -153,7 +153,6 @@ created ~/.Renviron file with MAKE=gmake
 sudo R -e "install.packages(c('Rcpp', 'yaml', 'jsonlite', 'RcppEigen', 'RSQLite', 'data.table'))"
 sudo R -e "install.packages(c('devtools', 'testthat', 'vdiffr', 'qtl', 'roxygen2'))"
 
-
 - can't install gdtools needed for vdiffr
 - need libraries cairo and freetype2
 
