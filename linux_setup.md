@@ -495,8 +495,9 @@ apps.
 43. More stuff via `sudo apt install`
 
     - `pdftk` (pdf tools) [now it suggests `pdftk-java` instead)
-    - (tried installing `pdfnup` but it seems it's included with
-      texlive)
+    - tried installing `pdfnup` but it seems it's included with
+      texlive; actually no longer included in texlive. got it from
+      <https://github.com/rrthomas/pdfjam-extras>
     - `pinta` (like MS paint)
     - `handbrake` (for ripping DVDs)
     - `gimp` (like photoshop)
