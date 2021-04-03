@@ -111,3 +111,16 @@ To run this script, copy it in an editor and save it as
 chmod 755 pdftk_installer
 ./pdftk_installer
 ```
+
+---
+
+## pdfnup
+
+pdfnup is super useful for making documents with slides + notes or
+multiple slides per page. Previously it was available via
+[texlive](https://tug.org/texlive/), but now I need to use
+[pdfjam](https://github.com/rrthomas/pdfjam) plus the pdfnup script in
+the [pdfjam extras](https://github.com/rrthomas/pdfjam-extras>).
+
+But probably we could just get by with pdfjam; pdfnup is just a
+wrapper with specific settings.
