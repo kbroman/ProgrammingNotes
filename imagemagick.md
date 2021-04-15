@@ -67,3 +67,10 @@ Example swapping colors in meiosis figure
     convert meiosis.png -fill 'rgb(0,0,0)' -fuzz 5% -opaque 'rgb(255,255,255)' meiosis2.png
     convert meiosis2.png -fill 'rgb(255,255,255)' -fuzz 15% -opaque 'rgb(0,4,81)' meiosis3.png
     convert meiosis3.png -fill 'rgb(0,4,81)' -fuzz 15% -opaque 'rgb(254,102,255)' meiosis4.png
+
+---
+
+no support for HEIC files yet, so do (see [here](https://askubuntu.com/a/1108325)):
+
+    sudo apt install libheif-examples
+    heif-convert myfile.heif myfile.jpg
