@@ -124,3 +124,13 @@ the [pdfjam extras](https://github.com/rrthomas/pdfjam-extras>).
 
 But probably we could just get by with pdfjam; pdfnup is just a
 wrapper with specific settings.
+
+---
+
+## pdftools
+
+The R package pdftools uses `libpoppler-cpp-dev`
+
+```
+sudo apt install libpoppler-cpp-dev
+```
