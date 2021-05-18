@@ -37,4 +37,8 @@
 
   If it doesn't show up there, unplug and replug the headset.
   Sometimes it shows up as just an input, and then after that it seems
-  stuck that way.
+  stuck that way. Sometimes I need to plug/unplug several times before
+  all of the options show up.
+
+  It also seems like the volume is too low with "digital stereo
+  output" and that it works better with "Analog stereo output"
