@@ -225,3 +225,27 @@ green squares. On even attempts, it'd work.
 - Then did the thing above, to set up keyboard shortcut to `dm-tool lock`.
 - Also needed to switch the background on the lock screen
 - Followed instructions at step 56 of `linux_setup.md`.
+
+---
+
+### Problem with black screen on Galago Pro
+
+- Had a problem with the Galago Pro where upgrade of intel-microcode
+  led to it not being able to boot; would just go to a black screen
+
+- Saved an [old version](http://ppa.launchpad.net/vicamo/ppa-1862751/ubuntu/pool/main/i/intel-microcode/intel-microcode_3.20191115.1ubuntu4_amd64.deb)
+  of the software in `/usr/local/src`
+
+  ```
+  intel-microcode-3.20191115.1ubuntu4_amd64.deb
+  ```
+
+- Boot while holding down the <Esc> key and select "boot old kernel";
+  then use `sudo dpkg -i /usr/local/src/intel-*.deb` to install the
+  old version of intel-microcode.
+
+- Need to "hold back" that intel-microcode:
+
+  ```
+  sudo apt-mark hold intel-microcode
+  ```
