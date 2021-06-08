@@ -13,9 +13,10 @@ In `.emacs`:
 
 ---
 
-On linux, installed by downloading `.sh` file with "generic linux
-binaries", extracted to `/usr/local/src`, and put symbolic link to
-`/usr/local/src/julia-1.1.0/bin/julia` in `/usr/local/bin`
+On linux, installed by [downloading the `.tar.gz`
+file](https://julialang.org/downloads/) with "generic linux on x86",
+extracted to `/usr/local`, and put symbolic link to
+`/usr/local/julia-1.6.1/bin/julia` in `/usr/local/bin`
 
 ---
 
@@ -43,3 +44,6 @@ To enable use in jupyter notbooks:
 using Pkg
 Pkg.add("IJulia")
 ```
+
+Start jupyter by typing `jupyter notebook` at unix prompt, then click
+New to create a new notebook, choosing the desired language.
