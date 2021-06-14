@@ -42,3 +42,7 @@
 
   It also seems like the volume is too low with "digital stereo
   output" and that it works better with "Analog stereo output"
+
+  Now it's giving me a different set of options; going to try
+  stereo output + mono input. In zoom, the headset has been really
+  quiet.
