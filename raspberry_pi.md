@@ -244,3 +244,12 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
   script gets run, there's a configuration setting to wait for the
   network when booting: `sudo raspi-config` then "System options" then
   "Network at boot".
+
+### Turn off wifi
+
+- Seems like my pi has been using wifi rather than ethernet. To force
+use of ethernet, can turn off wifi completely:
+
+```
+sudo ifconfig wlan0 down
+```
