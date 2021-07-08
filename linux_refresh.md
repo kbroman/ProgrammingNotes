@@ -234,7 +234,16 @@ slow reinstall
       then when running `jupyter notebook`, can click "New" and the
       options are both "Python3" and "Julia1.1.1"
 
-26. Gnome extensions: for system-monitor, needed:
+26. [Gnome extensions](https://extensions.gnome.org)
+
+    - audio switcher by Gwynbleid94
+    - clipboard indicator by Tudmotu
+    - emoji selector by Maestroschan
+    - gTile by scherepanov
+    - OpenWeather by jens
+    - system-monitor by Cerin
+
+27. Gnome extensions: for system-monitor, needed:
 
     ```shell
     sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0
@@ -246,7 +255,8 @@ slow reinstall
     De-selected "Display" in the "Net" tab, and de-selected "Show
     text" in the "Cpu" and "Memory" tabs.
 
-27. Ability to connect to USB drive attached to a router
+
+28. Ability to connect to USB drive attached to a router
 
     ```shell
     sudo apt install smbclient exfat-fuse exfat-utils
