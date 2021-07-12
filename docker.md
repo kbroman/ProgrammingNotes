@@ -13,7 +13,7 @@
   ```
 
 - To install docker for minecraft, I changed to the directory
-  containing the Dockerfile` in the miner package installation, and then
+  containing the `Dockerfile` in the miner package installation, and then
   followed the instructions in the [miner
   book](https://ropenscilabs.github.io/miner_book/installation-and-configuration.html#docker).
 
