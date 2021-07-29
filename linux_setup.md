@@ -46,7 +46,7 @@ apps.
 6. Install emacs
 
    ```
-   sudo apt install emacs25
+   sudo apt install emacs
    ```
 
 7. Connect to the internet (wifi), using eduroam
@@ -58,9 +58,9 @@ apps.
    Now using GlobalProtect, instructions at
    <https://kb.wisc.edu/helpdesk/page.php?id=85193>
 
-   - Download and extract `PanGPLinux-*.tgz` from <https://www.net.wisc.edu/vpn/clients/>.
-   - This gives a `GlobalProtext_*.deb` file, to install via
-     `sudo dpkg -i GlobalProtect_*.deb`.
+   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
+   - This gives a `GlobalProtext_deb-[version].deb` file, to install via
+     `sudo dpkg -i GlobalProtect_deb-*.deb`.
    - First time, use `globalprotect connect --portal uwmadison.vpn.wisc.edu`
    - Then use `globalprotect connect` and `globalprotect disconnect`.
    - Use NetID and password; use `[username]_1` for static IP.
@@ -122,31 +122,48 @@ apps.
 
 12. Install R
 
-   - See [instructions at digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2)
+  - Install a bunch of linux stuff
 
-     ```
-     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-     sudo add-apt-repository ppa:marutter/rrutter3.5
-     sudo apt update
-     sudo apt install software-properties-common
-     sudo apt update
-     sudo apt install r-base r-recommended
-     ```
+    ```shell
+    sudo apt install xauth xorg libx11-dev openbox
+    sudo apt install libglu1-mesa-dev libfreetype6-dev
+    sudo apt install libtiff-dev libfftw3-dev
+    sudo apt install gfortran-9 libgdal-dev libproj-dev
+    sudo apt install libcurl4-openssl-dev libssl-dev
+    sudo apt install libxml2-dev libssh2-1-dev
+    ```
+
+  - Set up secure apt
+
+    ```shell
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+    ```
+
+  - Add the following line to `/etc/apt/sources.list`
+
+    ```
+    deb https://cloud.r-project.org/bin/linux/ubuntu/ focal-cran40/
+    ```
+
+  - sudo
+    sudo apt update
+    sudo apt install software-properties-common
+    sudo apt update
+    sudo apt install r-base r-recommended
+    ```
+
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
   - Also copy over `.rpushpullet.json`
-  - Needed `sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev r-cran-sqlite`
+
+  - Need `r-cran-sqlite`?
+
+  - For checking configure scripts in packages, needed `sudo apt install devscripts`
+    (would get a warning otherwise)
   - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
   - For the [imager package](https://cran.rstudio.com/package=imager),
     I got an error about X11. I ended up installing a bunch more
     ubuntu things. Some of these may not be necessary; was looking at
     what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
-
-    ```
-    sudo apt install xauth xorg libx11-dev openbox
-    sudo apt install libglu1-mesa-dev libfreetype6-dev
-    sudo apt install libtiff-dev fftw3 libfftw3-dev
-    sudo apt install gfortran-7
-    ```
 
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
@@ -182,7 +199,7 @@ apps.
 15. Install DropBox
 
     - Download `.deb` file from <https://www.dropbox.com/install-linux>
-    - Use `sudo dpkg -i dropbox_2015.10.28_amd64.deb`
+    - Use `sudo dpkg -i dropbox_2020.03.04_amd64.deb`
 
 16. Install SimpleNote
 
@@ -208,6 +225,8 @@ apps.
 
 18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
+    - replace `popos` or whatever with what you want, single line in
+      `/etc/hostname` and on the line with `128.0.1.1` in `/etc/hosts`
 
 19. Connect to printer
 
@@ -361,7 +380,7 @@ apps.
     sudo fc-cache -fv
     ```
 
-34. Install a bunch more programms
+34. Install a bunch more programs
 
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
@@ -385,7 +404,8 @@ apps.
 35. Install npm and coffeescript
 
     - `sudo apt install npm`
-    - `sudo npm install --global coffeescript`
+    - `sudo npm install -g coffeescript`
+    - `sudo npm install -g yarn`
 
     Also [`gistup`](https://github.com/mbostock/gistup):
 
@@ -397,7 +417,7 @@ apps.
 
 37. Install python-dev (not sure whether I really need this)
 
-    - `sudo apt install python-dev python3-dev`
+    - `sudo apt install python3-dev`
 
 38. Install peek (screen recording)
 
@@ -427,6 +447,7 @@ apps.
 41. Install [keepassXC](https://keepassxc.org/download/)
 
     ```
+    sudo add-apt-repository ppa:phoerious/keepassxc
     sudo apt install keepassxc
     ```
 
@@ -462,12 +483,21 @@ apps.
 
     - However, I was able to connect using the GUI file browser.
       Clicked "Other locations" and then typed `smb://192.168.0.3`
+      (but not even that is working currently)
+
+    - The error I was getting was like "Failed to mount Windows share:
+      Software caused connection abort." [As reported
+      here on
+      reddit](https://www.reddit.com/r/linuxquestions/comments/djvpdn/smb_connection_nautilus_error_debian_bullseye/),
+      it seems like I needed to add `client min protocol = CORE` in
+      the `[global]` section of the `/etc/samba/smb.conf` file.
 
 43. More stuff via `sudo apt install`
 
     - `pdftk` (pdf tools) [now it suggests `pdftk-java` instead)
-    - (tried installing `pdfnup` but it seems it's included with
-      texlive)
+    - tried installing `pdfnup` but it seems it's included with
+      texlive; actually no longer included in texlive. got it from
+      <https://github.com/rrthomas/pdfjam-extras>
     - `pinta` (like MS paint)
     - `handbrake` (for ripping DVDs)
     - `gimp` (like photoshop)
@@ -502,6 +532,9 @@ apps.
         - use Super-Enter (on number key pad) to open gtile
         - click one corner position and then the other on the grid
         - esc to exit
+        - also use Super-Alt-[keypad numbers]
+        - In Pop_OS! 20.04, disabled the pop shell extension
+          (with Tile Windows), disabled in the extensions app
     - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
@@ -578,7 +611,7 @@ apps.
       <https://www.virtualbox.org/wiki/Downloads>
       - Add to `/etc/apt/sources.list`
       - Register Oracle public keys
-      - `sudo apt install virtualbox-5.2`
+      - `sudo apt install virtualbox-6.1`
       - `sudo apt install dkms`
     - Start `virtualbox`, create new Windows10 machine, adjust memory,
       disk size, connect to the windows ISO, and adjust display stuff
@@ -825,6 +858,26 @@ apps.
     sudo dpkg-reconfigure libdvd-pkg
     ```
 
+67. Oryx Pro fan can be really loud. To lower it, use
+    [clevo-indicator](https://github.com/davidrohr/clevo-indicator)
+
+    ```
+    sudo apt install libappindicator3-dev
+    git clone https://github.com/davidrohr/clevo-indicator
+    cd clevo-indicator
+    make
+    ```
+
+    To use: put `bin/clevo-indicator` in `~/.local/bin/`
+
+    ```
+    sudo clevo-indicator
+    sudo clevo-indicator set 50
+    sudo clevo-indicator setg 50
+    ```
+
+68. [neofetch](https://github.com/dylanaraps/neofetch) provides system info at the command-line
+
 ---
 
 - Install ccache and use for compiling R
@@ -835,6 +888,8 @@ apps.
 - Additional possible gnome extensions:
   - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
   - [Pomodoro timer](http://gnomepomodoro.org/)
+
+
 
 ---
 

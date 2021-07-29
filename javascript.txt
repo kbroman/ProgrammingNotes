@@ -66,10 +66,6 @@ Math.max(...x)
 // .bind permanently attaches an object (as "this") to a function
 updateBruce = update.bind(bruce)
 
-/////////////////////////////////
-// ES6
-/////////////////////////////////
-
 // .map, .filter with =>
 x = [1,3,0,-2]
 x.filter( d => d > 0 )
@@ -79,3 +75,129 @@ x.map( d => d**2 )
 //   backticks and ${}
 x = 5
 y = `blah: ${x}`
+
+//////////////////////////////////////////////////////////////////////
+
+// working through Eloquent Javascript
+// free online https://eloquentjavascript.net
+// with code "playground" at https://eloquentjavascript.net/code
+
+// backtick strings have variable insertion
+let x = “blah”;
+let y = `blah blah ${ x }`;
+
+// use Number() to convert to number
+let z = 5 ** 2 + “50”;
+let w = 5 ** 2 + Number(“50”); // <- Number() turns a value into a number
+
+// use || operator to allow defaults
+w || “default”
+let x = {a: “5”, b: 2};
+x.c || “default”;  // <- x.c is undefined
+
+// check if not a number
+Number.isNaN( x ) // <- test if x is a number
+
+// copy properties from one object to another
+x = {a: 1, b: 2}
+Object.assign(x, {b: 3, c: 2})
+
+// shortcut for defining an object
+events = [“work”, “sleep”, “eat”]
+tired = true
+x = {events, tired}
+// same as:
+x = {events: [“work”, “sleep”, “eat”], tired: true}
+
+// looping over arrays
+for(let i=0; i<v.length; i++) { x = v[i]; }
+for(let x of v) { }
+for(let i in v) { x = v[i]; } // <- “in” to loop over the index
+
+// array methods
+x = [“work”, “sleep”, “eat”]
+x.includes(“eat”)
+
+// push and pop to add to end of array
+x = [1, 2, 3]
+x.push(5)
+x.pop()
+
+// unshift and shift to add to beginning of array
+x.unshift(5)
+x.shift()
+// note that push and unshift return the new length of the array
+
+// indexOf, lastIndexOf (also include optional 2nd arg indicating where to start search)
+x = [“egg”, “waffle”, “pancake”, “egg”, “bagel”]
+x.indexOf(“egg”)
+x.lastIndexOf(“egg”)
+x.indexOf(“egg”, 2)
+
+// also findIndex which is like indexOf but takes a function
+x.findIndex( v => v == “pancake” )
+
+// slice
+x = [“egg”, “waffle”, “pancake”, “egg”, “bagel”]
+x.slice(2) // index 2 to end of array
+x.slice(2,4) // includes first index not the last one
+x.slice() // copies the array
+x.slice(2,2) // empty array
+“aardvark”.slice(4,7)
+
+// concat
+x.concat(5)
+x.concat([5,7])
+“a“.concat(“ardvark”)
+
+// other string methods
+“one two three”.indexof(“e”)
+“one two three”.indexof(“ee”)
+“one”.toUpperCase()
+“50”.padStart(5, “0”)
+“hello there dude”.split(“ “)
+words.join(“ “)
+“ ya ya “.trim()
+“LA “.repeat(8)
+
+// rest parameters
+function max(...numbers) { }
+// can also call function to spread out an array
+Math.max(...[1, 5, 3, 7, -11])
+// can use it to shove an array into another
+x = [2,4,8]
+y = [8, ...x, -3]
+// can do sort of the reverse, array arg that names the values
+function phi( [n11, n10, n01, n00] ) { }
+
+// convert to and from json
+x = JSON.stringify({events:[“work”, “eat”, “sleep”], tired:true})
+y = JSON.parse(x)
+
+// map, reduce, filter, some
+[0,1,2,3].map(v => v+2)
+[0,1,2,3].map(v => v+2).filter(v => v < 3)
+[0,1,2,3].some(v => v < 1)
+[0,1,2,3].map(v => v+1).some(v => v < 1)
+[0,1,2,3].reduce((a,b) => a+b)
+
+// these two things are the same
+// (shortcut if you’re just looking at a particular part of an object)
+x = [{name:”elf”}, {name:”deer”}, {name:”green bay”}, {name:”shelf”}]
+x.filter( v => v.name==“deer” )
+x.filter( ({name}) => name==“deer” ) // note need for () around the {name}
+
+// debugging code
+// ctrl-shift-j to open debugger tools
+debugger // halt code at that point; can then step through while inspecting
+
+// regular expressions
+regex = new RegEx("^[01]+$");
+regex2 = /\b[01]+\b/;     // \b = word boundary
+regex.test("0110001");
+regex.match("0110001"); // vector
+"0110001".match(regex);
+result = "001x 001011 00201".match(regex2);
+result.index;
+result2 = regex2.exec("001x 001011 00201");  // equivalent
+"Broman, Karl".replace(/(\w+), (\w+)/, "$2 $1")

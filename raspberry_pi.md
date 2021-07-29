@@ -2,9 +2,13 @@
 
 ### Set up
 
-- Use
-  [full Raspbian](https://www.raspberrypi.org/downloads/raspbian/); to
-  get on SD card, use [Etcher](https://etcher.io/).
+- Downloaded and installed Raspberry Pi Imager,
+  <https://www.raspberrypi.org/software/>
+
+- Downloaded Raspberry Pi OS,
+  <https://www.raspberrypi.org/software/operating-systems/>
+
+- Wrote Raspberry Pi OS to SD card using Imager
 
 - `sudo raspi-config`:
 
@@ -129,4 +133,123 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 ```
 
-Also to get coffeescript, `sudo npm install -g coffee-script
+Also to get coffeescript, `sudo npm install -g coffee-script`
+
+
+### Network diagnostics
+
+Cool project to make web server with local network diagnostics:
+<https://pimylifeup.com/raspberry-pi-nagios/>
+
+Also tried to use this to:
+- check internet speed, <https://github.com/jonwitts/nagios-speedtest>
+- check websites, <https://github.com/catinello/nagios-check-website>
+- graphs, <https://blog.ruanbekker.com/blog/2019/03/18/how-to-setup-the-nagiosgraph-plugin-on-nagios-monitoring-server/>
+
+
+### GPIO
+
+See the [Adafruit lesson about GPIO with Raspberry
+Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
+
+- Install stuff (didn't seem necessary for me)
+
+  ```
+  sudo apt install -y python-smbus i2c-tools
+  ```
+
+- Configuration: use `sudo raspi-config` and
+  go to Interfacing Options -> I2C and enable.
+  Also an option for remote GPIO.
+  Also enable SPI
+
+- Test I2C
+
+  ```
+  sudo i2cdetect -y 1
+  ```
+
+- Reboot
+
+- See also [the official
+  docs](https://www.raspberrypi.org/documentation/usage/gpio/python/README.md)
+  which suggests using the [GPIO
+  zero](https://gpiozero.readthedocs.io/en/stable/) library, which
+  seems to be distributed with the [standard Rpi OS])
+
+- LED: pin 20 -> long leg of LED -> resistor -> ground
+
+  ```python
+  from gpiozero import LED
+  from time import sleep
+
+  led = LED(20)
+
+  led.on()
+  sleep(1)
+  led.off()
+  ```
+
+- button: pin 21 -> button; other side of button -> resistor -> ground
+
+  ```python
+  from gpiozero import Button
+  from gpiozero import LED
+  from time import sleep
+
+  led = LED(20)
+  button = Button(21)
+  while True:
+      if button.is_pressed
+          led.on()
+      else
+          led.off()
+      sleep(0.1)
+  ```
+
+- even better, with button and led:
+
+  ```python
+  from gpiozero import LED, Button
+  from signal import pause
+
+  led = LED(20)
+  button = Button(21)
+
+  button.when_pressed = led.on
+  button.when_released = led.off
+
+  pause()
+  ```
+
+### Background jobs
+
+- To run a script in the background at startup, seems easiest to
+  [make a cron
+  job](https://www.instructables.com/Raspberry-Pi-Launch-Python-script-on-startup/).
+
+  Run:
+
+  ```
+  sudo crontab -e
+  ```
+
+  Then enter line:
+
+  ```
+  @reboot /full/path/to/script/my_script.py
+  ```
+
+- If you want to make sure there's a network connection before your
+  script gets run, there's a configuration setting to wait for the
+  network when booting: `sudo raspi-config` then "System options" then
+  "Network at boot".
+
+### Turn off wifi
+
+- Seems like my pi has been using wifi rather than ethernet. To force
+use of ethernet, can turn off wifi completely:
+
+```
+sudo ifconfig wlan0 down
+```

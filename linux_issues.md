@@ -73,7 +73,7 @@
     ```
 
     In a couple of places, I was asked whether I want to use gdm3 or
-    lightdm. I chose gmd3 in all cases.
+    lightdm. I chose gdm3 in all cases.
 
     I then ran the following:
 
@@ -177,4 +177,75 @@
   ```shell
   nmcli networking off
   nmcli networking on
+  ```
+
+## Display lock in Pop_OS! 20.04
+
+### Problem with display lock on Oryx Pro
+
+When upgrading top Pop_OS! 20.04, my Oryx Pro's display wouldn't lock.
+
+1. Created system log
+
+   - used Super -> "system" -> "System76 Driver"
+   - entered password
+   - "Create Log Files"
+   - creates `~/system76-logs.tgz`
+   - `tar xzvf` that and look in `syslog`
+
+   ```
+   gsd-media-keys[2999]: Couldn't lock screen: Cannot invoke method; proxy is for the well-known name org.gnome.ScreenSaver without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+   ```
+
+2. Googled that error message and found
+   [this](https://askubuntu.com/questions/1245071/cant-lock-screen-with-shortcut-on-ubuntu-20-04-gnome).
+
+   - seems like I have `lightdm` installed as display manager
+   - can check that with `sudo systemctl status display-manager`
+   - could switch to gdm3
+   - Or use `dm-tool lock` to lock the screen; tie that to a keyboard shortcut
+
+3. Set up keyboard shortcut
+
+   - Super -> "keyboard" -> "keyboard shortcuts"
+   - Search for "Lock Screen" and change that shortcut to something
+     else (eg Shift+Super+Q)
+   - Scroll to bottom and click "+"
+   - Give new command a name ("Lock display with lightdm")
+   - Give the command (`dm-tool lock`)
+   - Give shortcut (Super+Escape)
+
+### Problem with display lock on Galago Pro
+
+When upgrading top Pop_OS! 20.04, my Galago Pro would on odd attempts
+not lock and then mess up the desktop background image with little
+green squares. On even attempts, it'd work.
+
+- Switched to lightdm display manager
+- Then did the thing above, to set up keyboard shortcut to `dm-tool lock`.
+- Also needed to switch the background on the lock screen
+- Followed instructions at step 56 of `linux_setup.md`.
+
+---
+
+### Problem with black screen on Galago Pro
+
+- Had a problem with the Galago Pro where upgrade of intel-microcode
+  led to it not being able to boot; would just go to a black screen
+
+- Saved an [old version](http://ppa.launchpad.net/vicamo/ppa-1862751/ubuntu/pool/main/i/intel-microcode/intel-microcode_3.20191115.1ubuntu4_amd64.deb)
+  of the software in `/usr/local/src`
+
+  ```
+  intel-microcode-3.20191115.1ubuntu4_amd64.deb
+  ```
+
+- Boot while holding down the <Esc> key and select "boot old kernel";
+  then use `sudo dpkg -i /usr/local/src/intel-*.deb` to install the
+  old version of intel-microcode.
+
+- Need to "hold back" that intel-microcode:
+
+  ```
+  sudo apt-mark hold intel-microcode
   ```
