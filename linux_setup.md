@@ -165,6 +165,13 @@ apps.
     ubuntu things. Some of these may not be necessary; was looking at
     what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
 
+  - In some cases, `R CMD check` needs `checkbashisms`, which is
+    installed with `devscripts`:
+
+    ```
+    sudo apt install devscripts
+    ```
+
 
 13. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.

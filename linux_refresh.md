@@ -41,6 +41,7 @@ slow reinstall
    sudo apt install libudunits2-dev libmagick++-dev
    sudo apt install qpdf
    sudo apt install libgit2-dev
+   sudo apt install devscripts
    sudo apt-key [blah blah blah]
    sudo apt r-base r-recommended
    ```
