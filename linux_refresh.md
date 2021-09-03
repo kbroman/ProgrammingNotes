@@ -176,6 +176,23 @@ slow reinstall
     - complaint about "broster2" vs "broster2.localdomain", but it
       seemed to work
 
+    - Also want to have the drive mounted automatically. I found [this
+      post at
+      techrepublic](https://www.techrepublic.com/article/how-to-properly-automount-a-drive-in-ubuntu-linux/)
+      helpful.
+
+      - `sudo fdisk -l` to find the drive
+
+      - `sudo blkid` to get the UUID for the drive
+
+      - add line to `/etc/fstab`
+
+        ```
+        UUID=[blah blah] /media/kbroman/Broster2Backup auto nosuid,nodev,nofail,x-gvfs-show 0 0
+        ```
+
+      - verify fstab with `sudo mount -a`
+
 21. Tunnelbear
 
     - `sudo apt install network-manager-openvpn-gnome`
