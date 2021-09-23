@@ -207,12 +207,13 @@ slow reinstall
 
 22. Globalprotect vpn
 
-   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
-   - This gives a `GlobalProtext_deb-[version].deb` file, to install via
-     `sudo dpkg -i GlobalProtect_deb-*.deb`.
-   - First time, use `globalprotect connect --portal uwmadison.vpn.wisc.edu`
-   - Then use `globalprotect connect` and `globalprotect disconnect`.
+   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>
+   - This gives a `GlobalProtext_UI_deb-[version].deb` file, to install via
+     `sudo dpkg -i GlobalProtect_UI_deb-*.deb`.
+   - Use `globalprotect launch-ui`
    - Use NetID and password; use `[username]_1` for static IP.
+   - type `1` to have it push a DUO verification to your phone
+
 
 23. Skype
 

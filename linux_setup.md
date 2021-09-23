@@ -56,14 +56,14 @@ apps.
 8. Get UW-Madison VPN working
 
    Now using GlobalProtect, instructions at
-   <https://kb.wisc.edu/helpdesk/page.php?id=85193>
+   <https://kb.wisc.edu/helpdesk/page.php?id=105971>
 
-   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>.
-   - This gives a `GlobalProtext_deb-[version].deb` file, to install via
-     `sudo dpkg -i GlobalProtect_deb-*.deb`.
-   - First time, use `globalprotect connect --portal uwmadison.vpn.wisc.edu`
-   - Then use `globalprotect connect` and `globalprotect disconnect`.
+   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>
+   - This gives a `GlobalProtext_UI_deb-[version].deb` file, to install via
+     `sudo dpkg -i GlobalProtect_UI_deb-*.deb`.
+   - Use `globalprotect launch-ui`
    - Use NetID and password; use `[username]_1` for static IP.
+   - type `1` to have it push a DUO verification to your phone
 
 9. ssh keys + connect to github
 
