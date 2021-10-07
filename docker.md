@@ -56,6 +56,18 @@
 
   Also note: with rocker/r-devel, you start R using `RD`.
 
+- To use R-devel with the clang compiler and UBsan (undefined behavior
+  checker), use `FROM rocker/r-devel-ubsan-clang`. You again need to
+  use `RD` within the container to run R, and also need
+  `docker run --cap-add SYS_PTRACE`.
+
+  So once you've created the container (with say
+  `sudo docker build -t rdevel-clang-ubsan .`), you run it with:
+
+  ```shell
+  sudo docker run --cap-add SYS_PTRACE -it rdevel-clang-ubsan bash`
+  ```
+
 - View images
 
   ```
