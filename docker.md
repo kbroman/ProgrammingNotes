@@ -98,3 +98,9 @@
   ```
   sudo docker rm [container_name]
   ```
+
+- Remove an image
+
+  ```shell
+  sudo docker image rm [repository or image id]
+  ```
