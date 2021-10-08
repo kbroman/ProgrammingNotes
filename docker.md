@@ -65,7 +65,7 @@
   `sudo docker build -t rdevel-clang-ubsan .`), you run it with:
 
   ```shell
-  sudo docker run --cap-add SYS_PTRACE -it rdevel-clang-ubsan bash`
+  sudo docker run --cap-add SYS_PTRACE -it rdevel-clang-ubsan bash
   ```
 
 - View images
