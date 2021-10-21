@@ -46,7 +46,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
    sudo apt --fix-broken install
    ```
 
-6. Get UW-Madison VPN working
+7. Get UW-Madison VPN working
 
    - download PanGPLinux-5.3.0-c32... from <https://www.net.wisc.edu/vpn/clients/>
 
@@ -62,22 +62,22 @@ particular, I'm installing System76 Pop!_OS 21.04.
    - it started up automatically; use `uwmadison.vpn.wisc.edu` as the portal
      and `broman_1` as the user name
 
-7. Copy .bashrc from broster2 laptop
+8. Copy .bashrc from broster2 laptop
 
-8. Copy wallpapers from broster2 laptop, in `~/Pictures/Wallpaper` and
+9. Copy wallpapers from broster2 laptop, in `~/Pictures/Wallpaper` and
    change background using Settings -> Desktop -> Background; then
    "Add Picture" and select it.
 
-9. Test webcam by installing cheese (like photobooth on Mac)
+10. Test webcam by installing cheese (like photobooth on Mac)
 
-   ```
-   sudo apt install cheese
-   cheese
-   ```
+    ```
+    sudo apt install cheese
+    cheese
+    ```
 
-10. Install zoom from within Pop!_Shop
+11. Install zoom from within Pop!_Shop
 
-11. Set up ssh + connect to github
+12. Set up ssh + connect to github
 
    - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
    - installed xclip with `sudo apt install xclip`
@@ -96,23 +96,48 @@ particular, I'm installing System76 Pop!_OS 21.04.
      ```
 
 
+13. [Gnome extensions](https://extensions.gnome.org)
+
+    - install utility for system-monitor
+
+      ```
+      sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0 gnome-system-monitor
+      ```
+    - audio switcher by Gwynbleid94
+    - clipboard indicator by Tudmotu
+    - emoji selector by Maestroschan
+    - gTile by scherepanov
+    - OpenWeather by jens
+    - system-monitor by Cerin
+    - turn off Pop Shell (using GTile instead)
+
+
+14. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
+
+15. Keyboard shortcuts
+
+    Launchers/launch calculator: super+c
+    Navigation: move window one monitor to left: shift+super+left
+    Navigation: move window one monitor to right: shift+super+right
+    Navigation: move window one workspace down: shift+super+down
+    Navigation: move window one workspace up: shift+super+up
+    Screenshots: Save a screenshot of an area: shift+alt+P
+
+15. Install various utilities
+
+    neofetch (command-line system info)
+    gnome-tweak-tool
+    gpick gv ubuntu-restricted-extras vlc calibre
+    handbrake gitg pdftk imagemagick trash-cli ccache openssh-server htop
+
+
 ---
-
-9. Set up ssh
-
-10. Set up git
-
-11. Get gnome utilities installed
 
 11. Install R
 
 12. Install ESS and other emacs modes
 
 13. Install Latex
-
-14. Install Dropbox
-
-15. Install SimpleNote
 
 17. connect to printer
 
@@ -124,12 +149,19 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 21. Link to pandoc that shipped with RStudio
 
-22. Okular pdf reader
-
 23. additional packages
 
 24. create "start" script that acts like "open" on a mac
 
 25. get terminal to open at startup
 
-16. Install Skype
+26. tunnelbear
+
+27. Julia
+
+28. node
+
+29. ruby
+
+
+    
