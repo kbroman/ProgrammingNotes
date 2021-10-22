@@ -114,6 +114,8 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 14. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
 
+    - seemed like I had to do something else to get dropbox running in the background, but I'm not sure what I did
+
 15. Keyboard shortcuts
 
     Launchers/launch calculator: super+c
@@ -127,7 +129,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     neofetch (command-line system info)
     gnome-tweak-tool
-    gpick gv ubuntu-restricted-extras vlc calibre
+    gpick gv ubuntu-restricted-extras vlc calibre enscript
     handbrake gitg pdftk imagemagick trash-cli ccache openssh-server htop
 
 17. Install `libnotify-bin` (needed by espanso, plus it enables you to
@@ -151,7 +153,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 18. Install R
 
     - Install a bunch of linux stuff
-    
+
       ```shell
       sudo apt install --no-install-recommends software-properties-common dirmngr
       sudo apt install xauth xorg libx11-dev openbox
@@ -161,6 +163,9 @@ particular, I'm installing System76 Pop!_OS 21.04.
       sudo apt install libcurl4-openssl-dev libssl-dev
       sudo apt install libxml2-dev libssh2-1-dev
       sudo apt install libblas-dev liblapack-dev gfortran
+      sudo apt install libgit2-dev
+      sudo apt install devscripts
+      sudo apt install libjpeg62
       ```
 
     - Set up secure apt; see instructions at <https://cran.r-project.org/bin/linux/ubuntu/#install-r>
@@ -168,7 +173,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
       ```
       wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
       sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
-      ``` 
+      ```
 
     - Install R
 
@@ -186,42 +191,127 @@ particular, I'm installing System76 Pop!_OS 21.04.
       - changed the name under "Identify"
       - Under IPv4, selected "Manual" and entered address 10.0.0.2 and netmask 255.255.255.0 and de-selected DNS
 
+20. Copy ssh keys between desktop and laptop
+
+21. Install npm and coffeescript
+
+    - `sudo apt install npm`
+    - `sudo npm install -g coffeescript`
+    - `sudo npm install -g yarn`
+
+    Also [`gistup`](https://github.com/mbostock/gistup):
+
+    - `sudo npm install -g gistup`
+
+22. Install ruby
+
+    - `sudo apt install ruby-dev` (gives version 2.3.3; close enough?)
+
+23. Install python-dev
+
+    - `sudo apt install python3-dev`
+
+
+24. Install ESS and other emacs modes
+
+    - ess downloaded from <https://ess.r-project.org> and placed in `~/.emacs.d/site-lisp`
+    - install other packages using [Melpa](https://melpa.org):
+
+      - include some stuff in `~/.emacs` file
+
+      - `M-x package-refresh-contents` and then `M-x package-install`
+        and name of package: markdown-mode,
+
+        ```
+        haskell-mode
+        magit
+        coffee-mode
+        psci (purescript repl)
+        d-mode
+        markdown-mode
+        inf-ruby
+        json-mode
+        ```
+
+25. Install LaTeX (texlive)
+
+    - I just did plain `sudo apt install texlive-full`
+
+
+26. create "start" script that acts like "open" on a mac; need `xdg-open`
+
+    ```
+    sudo apt install xdg-utils
+    ```
+
+    the bash script (in `~/.local/bin/start`):
+
+    ```bash
+    for file in "$@"
+    do
+        xdg-open "$file" >& /dev/null  # ">& /dev/null" to suppress all warnings
+    done
+    ```
+
+27. connect to printer (it happened automatically, somehow)
+
+28. connect a usb stick (in just worked, in `/media/kbroman/[volume name]`)
+
+29. Install Google Chrome
+
+    - Download from <https://www.google.com/chrome/browser/desktop/index.html>
+    - Install libappindicator1 with `sudo apt install libappindicator1`
+    - Install chrome with `sudo dpkg -i google-chrome-*.deb`
+
+30. Install RStudio
+
+    - Download from <https://www.rstudio.com/products/rstudio/download/#download>
+    - `sudo apt install libclang-dev libpq5`
+    - Install with `sudo dpkg -i rstudio*.deb`
+
+31. Install Inconsolata font
+
+    ```
+    sudo apt install fonts-inconsolata
+    sudo fc-cache -fv
+    ```
+32. deja dup + set up backups
+
+    - Install Deja Dup via "Pop Shop"
+
+    - Folders to save: "Home (kbroman)"
+
+    - Folders to ignore: `Downloads`, `Dropbox`, `ISOs`,
+      `~/VirtualBox VMs`, `.zoom`
+
+    - Storage Location: Local Folder,
+      `/media/kbroman/figBackup/kbroman_backup`
+
+    - Needed to enter decryption password for Deja Dup
+
+33. Tunnelbear
+
+    - `sudo apt install network-manager-openvpn-gnome`
+    - copy over configuration files from
+      `~/.tunnelbear_conofig/openvpn` on another computer
+    - Open Network settings; click plus sign by VPN and choose "Import
+      from file"
+    - needed to right-click and show hidden files, then navigated to
+      `.tunnelbear_config/openvpn` and selected a file and clicked "Add"
+    - need to open config and add tunnelbear email and password
+      under "identify" tab
 
 ---
 
 
-12. Install ESS and other emacs modes
-
-13. Install Latex
-
-17. connect to printer
-
-18. install google chrome
-
-19. connect a usb stick
-
-20. Install RStudio
+20 Install docker
 
 21. Link to pandoc that shipped with RStudio
 
-23. additional packages
-
-24. create "start" script that acts like "open" on a mac
-
 25. get terminal to open at startup
-
-26. tunnelbear
 
 27. Julia
 
-28. node
-
-29. ruby
-
-
-32. libnotify
-33. inconsolata font
 34. playback of dvds
-35. deja dup + set up backups
-36. tunnelbear
+
 37. conda, python3
