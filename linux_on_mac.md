@@ -109,7 +109,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - gTile by scherepanov
     - OpenWeather by jens
     - system-monitor by Cerin
-    - turn off Pop Shell (using GTile instead)
+    - turn off Pop Shell (using GTile instead); seems like you need to do this from the application `gnome-extensions`
 
 
 14. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
@@ -123,17 +123,60 @@ particular, I'm installing System76 Pop!_OS 21.04.
     Navigation: move window one workspace up: shift+super+up
     Screenshots: Save a screenshot of an area: shift+alt+P
 
-15. Install various utilities
+16. Install various utilities
 
     neofetch (command-line system info)
     gnome-tweak-tool
     gpick gv ubuntu-restricted-extras vlc calibre
     handbrake gitg pdftk imagemagick trash-cli ccache openssh-server htop
 
+17. Install `libnotify-bin` (needed by espanso, plus it enables you to
+    create desktop notifications with `notify-send`; so in R you
+    could do like `system('notify-send "R is done!"')`)
+
+    ```
+    sudo apt install libnotify-bin
+    ```
+
+
+17. Install [espanso](https://espanso.org) (*much* better than autokey) for text expansion;
+    customizations in `~/.config/espanso/default.yml`
+
+    ```
+    sudo apt install snapd
+    sudo snap install espanso --classic
+    espanso start
+    ```
+
+18. Install R
+
+    - Install a bunch of linux stuff
+    
+      ```shell
+      sudo apt install --no-install-recommends software-properties-common dirmngr
+      sudo apt install xauth xorg libx11-dev openbox
+      sudo apt install libglu1-mesa-dev libfreetype6-dev
+      sudo apt install libtiff-dev libfftw3-dev
+      sudo apt install gfortran-9 libgdal-dev libproj-dev
+      sudo apt install libcurl4-openssl-dev libssl-dev
+      sudo apt install libxml2-dev libssh2-1-dev
+      ```
+
+    - Set up secure apt; see instructions at <https://cran.r-project.org/bin/linux/ubuntu/#install-r>
+
+      ```
+      wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+      sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+      ``` 
+
+    - Install R
+
+      ```
+      sudo apt install --no-install-recommends r-base
+      ```
 
 ---
 
-11. Install R
 
 12. Install ESS and other emacs modes
 
@@ -163,7 +206,6 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 29. ruby
 
-30. [espanso](https://espanso.org) (*much* better than autokey) for text expansion
 
 31. direct-connect computers via ethernet; or is it share ethernet
     connection? <https://help.ubuntu.com/community/Internet/ConnectionSharing>
