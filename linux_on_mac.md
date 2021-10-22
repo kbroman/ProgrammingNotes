@@ -1,3 +1,5 @@
+## Pop!_OS Linux on a Mac Pro
+
 I have a Mac Pro desktop (mid 2012) where the MacOS can't be upgraded
 anymore, so upon advice from Twitter, I'm installing linux on it. In
 particular, I'm installing System76 Pop!_OS 21.04.
@@ -161,5 +163,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 29. ruby
 
-
 30. [espanso](https://espanso.org) (*much* better than autokey) for text expansion
+
+31. direct-connect computers via ethernet; or is it share ethernet
+    connection? <https://help.ubuntu.com/community/Internet/ConnectionSharing>
