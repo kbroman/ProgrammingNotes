@@ -160,6 +160,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
       sudo apt install gfortran-9 libgdal-dev libproj-dev
       sudo apt install libcurl4-openssl-dev libssl-dev
       sudo apt install libxml2-dev libssh2-1-dev
+      sudo apt install libblas-dev liblapack-dev gfortran
       ```
 
     - Set up secure apt; see instructions at <https://cran.r-project.org/bin/linux/ubuntu/#install-r>
@@ -174,6 +175,17 @@ particular, I'm installing System76 Pop!_OS 21.04.
       ```
       sudo apt install --no-install-recommends r-base
       ```
+
+19. Direct-connect computers via ethernet
+
+    - My Mac Pro has a second ethernet port, which I'm using to directly connect to a laptop
+    - On Mac Pro in Network settings, there are separate lines for the two ethernet jacks; for the jack of interest:
+      - changed the name under "Identity"
+      - Under IPv4, selected "Manual" and entered address 10.0.0.1 and netmask 255.255.255.0 and de-selected DNS
+    - On my linux laptop in Network settings, I clicked "+" next to "Wired" to add another profile
+      - changed the name under "Identify"
+      - Under IPv4, selected "Manual" and entered address 10.0.0.2 and netmask 255.255.255.0 and de-selected DNS
+
 
 ---
 
@@ -206,9 +218,6 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 29. ruby
 
-
-31. direct-connect computers via ethernet; or is it share ethernet
-    connection? <https://help.ubuntu.com/community/Internet/ConnectionSharing>
 
 32. libnotify
 33. inconsolata font
