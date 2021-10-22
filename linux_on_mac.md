@@ -167,3 +167,10 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 31. direct-connect computers via ethernet; or is it share ethernet
     connection? <https://help.ubuntu.com/community/Internet/ConnectionSharing>
+
+32. libnotify
+33. inconsolata font
+34. playback of dvds
+35. deja dup + set up backups
+36. tunnelbear
+37. conda, python3
