@@ -303,15 +303,33 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 ---
 
+34. remap super key action to "applications" rather than "launcher"
 
-20 Install docker
+    - go to settings -> general, and at the top is "Super Key Action"
 
-21. Link to pandoc that shipped with RStudio
 
-25. get terminal to open at startup
+35. Link to pandoc that shipped with RStudio
 
-27. Julia
+    ```
+    ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin/pandoc
+    ```
 
-34. playback of dvds
+36. get terminal to open at startup
 
-37. conda, python3
+    - Super key and type "Startup"
+    - Click "Add"; for the command, use "`gnome-terminal`"
+    - To start at a particular size and position, use like
+
+      ```
+      gnome-terminal --geometry 117x57+0+0
+      ```
+
+37. Install docker
+
+    ```
+    sudo apt install docker-ce docker-ce-cli containerd.io
+    ```
+
+38. Julia
+
+39. conda?
