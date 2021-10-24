@@ -205,7 +205,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 22. Install ruby
 
-    - `sudo apt install ruby-dev` (gives version 2.3.3; close enough?)
+    - `sudo apt install ruby-dev`
 
 23. Install python-dev
 
