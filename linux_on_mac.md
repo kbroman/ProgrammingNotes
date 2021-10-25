@@ -301,7 +301,6 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - need to open config and add tunnelbear email and password
       under "identify" tab
 
----
 
 34. remap super key action to "applications" rather than "launcher"
 
@@ -321,14 +320,33 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - To start at a particular size and position, use like
 
       ```
-      gnome-terminal --geometry 117x57+0+0
+      gnome-terminal --geometry 980x1000+0+0
       ```
 
-37. Install docker
+37. Install docker. See instructions at
+    <https://docs.docker.com/engine/install/ubuntu>
 
-    ```
-    sudo apt install docker-ce docker-ce-cli containerd.io
-    ```
+    - add docker's official GPG key
+
+      ```
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+      ```
+
+    - add apt repository
+
+      ```
+      echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      ```
+
+    - install docker
+
+      ```
+      sudo apt install docker-ce docker-ce-cli containerd.io
+      ```
+
+---
 
 38. Julia
 
