@@ -376,6 +376,23 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - make executable and run
 
----
+40. Add julia kernel to Jupyter
 
-39. Add R and julia kernels to Jupyter
+    - start `julia` REPL and type the following:
+
+      ```julia
+      using Pkg
+      Pkg.add("IJulia")
+      ```
+
+    - type `jupyter notebook` to start jupyter
+
+    - then click New -> Julia 1.6.3 to create a new julia notebook
+
+41. Add R kernel to Jupyter: run R, install package IRkernel, run
+    installspec().
+
+    ```r
+    install.packages("IRkernel")
+    installspec()
+    ```
