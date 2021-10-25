@@ -346,8 +346,36 @@ particular, I'm installing System76 Pop!_OS 21.04.
       sudo apt install docker-ce docker-ce-cli containerd.io
       ```
 
+38. Julia (see [this blog post](https://medium.com/coffee-in-a-klein-bottle/install-julia-1-5-on-ubuntu-bb8be4b2571d))
+
+   - [download](https://julialang.org/downloads/) 64-bit tar.gz file for "Generic Linux on x86", from
+     <https://julialang.org/downloads/>
+
+   - extract the tar.gz file
+
+     ```
+     tar xzvf julia*.tar.gz
+     ```
+
+   - move the created directory to `/opt/`
+
+     ```
+     sudo mv julia-1.6.3 /opt/
+     ```
+
+   - make link in `/usr/local/bin`
+
+     ```
+     sudo ln -s /opt/julia-1.6.3/bin/julia /usr/local/bin/julia
+     ```
+
+39. Install Anaconda
+
+    - download Anaconda 64-bit (x86) from
+      <https://www.anaconda.com/products/individual>
+
+    - make executable and run
+
 ---
 
-38. Julia
-
-39. conda?
+39. Add R and julia kernels to Jupyter
