@@ -39,6 +39,9 @@ There are 8 little lights on the front of the machine
   monitor to left or right (or maybe up/down arrow, depending on how
   the monitors are set up)
 
+- holding down either the `<super>` or `<alt>` key when hovering over
+  top frame of a window, you can then use the mouse to move it.
+
 - `<ctrl>-c/v` for copy-paste except in terminal where you must use `<ctrl>-<shift>-c/v`
 - clipboard indicator for clipboard with memory:
   - `<ctrl>-F9` toggle menu
