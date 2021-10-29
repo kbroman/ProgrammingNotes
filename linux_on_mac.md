@@ -299,7 +299,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - `sudo apt install network-manager-openvpn-gnome`
     - copy over configuration files from
-      `~/.tunnelbear_conofig/openvpn` on another computer
+      `~/.tunnelbear_config/openvpn` on another computer
     - Open Network settings; click plus sign by VPN and choose "Import
       from file"
     - needed to right-click and show hidden files, then navigated to
