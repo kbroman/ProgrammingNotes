@@ -78,6 +78,12 @@ particular, I'm installing System76 Pop!_OS 21.04.
     change background using Settings -> Desktop -> Background; then
     "Add Picture" and select it.
 
+11. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
+
+    - replace `popos` or whatever with what you want, single line in
+      `/etc/hostname` and on the line with `128.0.1.1` in `/etc/hosts`
+
+
 11. Test webcam by installing cheese (like photobooth on Mac)
 
     ```
