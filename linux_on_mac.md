@@ -126,6 +126,12 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - seemed like I had to do something else to get dropbox running in the background, but I'm not sure what I did
 
+16. Also installed dropbox on command line
+
+    ```shell
+    sudo apt install nautilus-dropbox
+    ```
+
 16. Keyboard shortcuts
 
     Launchers/launch calculator: super+c
