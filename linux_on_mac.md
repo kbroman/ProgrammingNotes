@@ -62,22 +62,32 @@ particular, I'm installing System76 Pop!_OS 21.04.
    - it started up automatically; use `uwmadison.vpn.wisc.edu` as the portal
      and `broman_1` as the user name
 
-8. Copy .bashrc from broster2 laptop
+8. Direct-connect computers via ethernet
 
-9. Copy wallpapers from broster2 laptop, in `~/Pictures/Wallpaper` and
-   change background using Settings -> Desktop -> Background; then
-   "Add Picture" and select it.
+    - My Mac Pro has a second ethernet port, which I'm using to directly connect to a laptop
+    - On Mac Pro in Network settings, there are separate lines for the two ethernet jacks; for the jack of interest:
+      - changed the name under "Identity"
+      - Under IPv4, selected "Manual" and entered address 10.0.0.1 and netmask 255.255.255.0 and de-selected DNS
+    - On my linux laptop in Network settings, I clicked "+" next to "Wired" to add another profile
+      - changed the name under "Identify"
+      - Under IPv4, selected "Manual" and entered address 10.0.0.2 and netmask 255.255.255.0 and de-selected DNS
 
-10. Test webcam by installing cheese (like photobooth on Mac)
+9. Copy .bashrc from broster2 laptop
+
+10. Copy wallpapers from broster2 laptop, in `~/Pictures/Wallpaper` and
+    change background using Settings -> Desktop -> Background; then
+    "Add Picture" and select it.
+
+11. Test webcam by installing cheese (like photobooth on Mac)
 
     ```
     sudo apt install cheese
     cheese
     ```
 
-11. Install zoom from within Pop!_Shop
+12. Install zoom from within Pop!_Shop
 
-12. Set up ssh + connect to github
+13. Set up ssh + connect to github
 
    - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
    - installed xclip with `sudo apt install xclip`
@@ -96,7 +106,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
      ```
 
 
-13. [Gnome extensions](https://extensions.gnome.org)
+14. [Gnome extensions](https://extensions.gnome.org)
 
     - install utility for system-monitor
 
@@ -112,11 +122,11 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - turn off Pop Shell (using GTile instead); seems like you need to do this from the application `gnome-extensions`
 
 
-14. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
+15. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
 
     - seemed like I had to do something else to get dropbox running in the background, but I'm not sure what I did
 
-15. Keyboard shortcuts
+16. Keyboard shortcuts
 
     Launchers/launch calculator: super+c
     Navigation: move window one monitor to left: shift+super+left
@@ -125,14 +135,14 @@ particular, I'm installing System76 Pop!_OS 21.04.
     Navigation: move window one workspace up: shift+super+up
     Screenshots: Save a screenshot of an area: shift+alt+P
 
-16. Install various utilities
+17. Install various utilities
 
     neofetch (command-line system info)
     gnome-tweak-tool
     gpick gv ubuntu-restricted-extras vlc calibre enscript
     handbrake gitg pdftk imagemagick trash-cli ccache openssh-server htop
 
-17. Install `libnotify-bin` (needed by espanso, plus it enables you to
+18. Install `libnotify-bin` (needed by espanso, plus it enables you to
     create desktop notifications with `notify-send`; so in R you
     could do like `system('notify-send "R is done!"')`)
 
@@ -141,7 +151,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
     ```
 
 
-17. Install [espanso](https://espanso.org) (*much* better than autokey) for text expansion;
+19. Install [espanso](https://espanso.org) (*much* better than autokey) for text expansion;
     customizations in `~/.config/espanso/default.yml`
 
     ```
@@ -150,7 +160,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
     espanso start
     ```
 
-18. Install R
+20. Install R
 
     - Install a bunch of linux stuff
 
@@ -181,19 +191,9 @@ particular, I'm installing System76 Pop!_OS 21.04.
       sudo apt install --no-install-recommends r-base
       ```
 
-19. Direct-connect computers via ethernet
+21. Copy ssh keys between desktop and laptop
 
-    - My Mac Pro has a second ethernet port, which I'm using to directly connect to a laptop
-    - On Mac Pro in Network settings, there are separate lines for the two ethernet jacks; for the jack of interest:
-      - changed the name under "Identity"
-      - Under IPv4, selected "Manual" and entered address 10.0.0.1 and netmask 255.255.255.0 and de-selected DNS
-    - On my linux laptop in Network settings, I clicked "+" next to "Wired" to add another profile
-      - changed the name under "Identify"
-      - Under IPv4, selected "Manual" and entered address 10.0.0.2 and netmask 255.255.255.0 and de-selected DNS
-
-20. Copy ssh keys between desktop and laptop
-
-21. Install npm and coffeescript
+22. Install npm and coffeescript
 
     - `sudo apt install npm`
     - `sudo npm install -g coffeescript`
@@ -203,16 +203,16 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - `sudo npm install -g gistup`
 
-22. Install ruby
+23. Install ruby
 
     - `sudo apt install ruby-dev`
 
-23. Install python-dev
+24. Install python-dev
 
     - `sudo apt install python3-dev`
 
 
-24. Install ESS and other emacs modes
+25. Install ESS and other emacs modes
 
     - ess downloaded from <https://ess.r-project.org> and placed in `~/.emacs.d/site-lisp`
     - install other packages using [Melpa](https://melpa.org):
@@ -233,12 +233,12 @@ particular, I'm installing System76 Pop!_OS 21.04.
         json-mode
         ```
 
-25. Install LaTeX (texlive)
+26. Install LaTeX (texlive)
 
     - I just did plain `sudo apt install texlive-full`
 
 
-26. create "start" script that acts like "open" on a mac; need `xdg-open`
+27. create "start" script that acts like "open" on a mac; need `xdg-open`
 
     ```
     sudo apt install xdg-utils
@@ -253,29 +253,29 @@ particular, I'm installing System76 Pop!_OS 21.04.
     done
     ```
 
-27. connect to printer (it happened automatically, somehow)
+28. connect to printer (it happened automatically, somehow)
 
-28. connect a usb stick (in just worked, in `/media/kbroman/[volume name]`)
+29. connect a usb stick (in just worked, in `/media/kbroman/[volume name]`)
 
-29. Install Google Chrome
+30. Install Google Chrome
 
     - Download from <https://www.google.com/chrome/browser/desktop/index.html>
     - Install libappindicator1 with `sudo apt install libappindicator1`
     - Install chrome with `sudo dpkg -i google-chrome-*.deb`
 
-30. Install RStudio
+31. Install RStudio
 
     - Download from <https://www.rstudio.com/products/rstudio/download/#download>
     - `sudo apt install libclang-dev libpq5`
     - Install with `sudo dpkg -i rstudio*.deb`
 
-31. Install Inconsolata font
+32. Install Inconsolata font
 
     ```
     sudo apt install fonts-inconsolata
     sudo fc-cache -fv
     ```
-32. deja dup + set up backups
+33. deja dup + set up backups
 
     - Install Deja Dup via "Pop Shop"
 
@@ -289,7 +289,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - Needed to enter decryption password for Deja Dup
 
-33. Tunnelbear
+34. Tunnelbear
 
     - `sudo apt install network-manager-openvpn-gnome`
     - copy over configuration files from
@@ -302,18 +302,18 @@ particular, I'm installing System76 Pop!_OS 21.04.
       under "identify" tab
 
 
-34. remap super key action to "applications" rather than "launcher"
+35. remap super key action to "applications" rather than "launcher"
 
     - go to settings -> general, and at the top is "Super Key Action"
 
 
-35. Link to pandoc that shipped with RStudio
+36. Link to pandoc that shipped with RStudio
 
     ```
     ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin/pandoc
     ```
 
-36. get terminal to open at startup
+37. get terminal to open at startup
 
     - Super key and type "Startup"
     - Click "Add"; for the command, use "`gnome-terminal`"
@@ -323,7 +323,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
       gnome-terminal --geometry 980x1000+0+0
       ```
 
-37. Install docker. See instructions at
+38. Install docker. See instructions at
     <https://docs.docker.com/engine/install/ubuntu>
 
     - add docker's official GPG key
@@ -346,7 +346,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
       sudo apt install docker-ce docker-ce-cli containerd.io
       ```
 
-38. Julia (see [this blog post](https://medium.com/coffee-in-a-klein-bottle/install-julia-1-5-on-ubuntu-bb8be4b2571d))
+39. Julia (see [this blog post](https://medium.com/coffee-in-a-klein-bottle/install-julia-1-5-on-ubuntu-bb8be4b2571d))
 
    - [download](https://julialang.org/downloads/) 64-bit tar.gz file for "Generic Linux on x86", from
      <https://julialang.org/downloads/>
@@ -369,14 +369,14 @@ particular, I'm installing System76 Pop!_OS 21.04.
      sudo ln -s /opt/julia-1.6.3/bin/julia /usr/local/bin/julia
      ```
 
-39. Install Anaconda
+40. Install Anaconda
 
     - download Anaconda 64-bit (x86) from
       <https://www.anaconda.com/products/individual>
 
     - make executable and run
 
-40. Add julia kernel to Jupyter
+41. Add julia kernel to Jupyter
 
     - start `julia` REPL and type the following:
 
@@ -389,7 +389,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
     - then click New -> Julia 1.6.3 to create a new julia notebook
 
-41. Add R kernel to Jupyter: run R, install package IRkernel, run
+42. Add R kernel to Jupyter: run R, install package IRkernel, run
     installspec().
 
     ```r
