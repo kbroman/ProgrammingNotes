@@ -355,6 +355,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - install docker
 
       ```
+      sudo apt update
       sudo apt install docker-ce docker-ce-cli containerd.io
       ```
 
