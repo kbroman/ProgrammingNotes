@@ -261,7 +261,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 
 28. connect to printer (it happened automatically, somehow)
 
-29. connect a usb stick (in just worked, in `/media/kbroman/[volume name]`)
+29. connect a usb stick (it just worked, in `/media/kbroman/[volume name]`)
 
 30. Install Google Chrome
 
