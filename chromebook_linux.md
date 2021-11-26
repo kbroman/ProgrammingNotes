@@ -247,3 +247,37 @@ namely to add the following to `/etc/rc.local`
   None of this worked, and then I realized that the only thing needing
   `https` was skype (in `/etc/apt/sources.list.d/skype-stable.list`),
   which I'd installed but then changed my mind about.
+
+---
+
+The latest chromebooks are a lot easier. Go to Settings -> Advanced ->
+Developer -> Activate linux
+
+It runs a version of debian ("buster").
+
+- Add key for R
+
+  ```shell
+  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
+  ```
+
+- Add R source for apt, by adding the following to
+  `/etc/apt/sources.list`
+
+  ```shell
+  deb http://cloud.r-project.org/bin/linux/debian buster-cran40/
+  ```
+
+- Install R
+
+  ```shell
+  sudo apt update
+  sudo apt install r-base
+  ```
+
+- Download RStudio (debian 10 version for AMD64)
+
+  ```shell
+  sudo apt install libnss3 libpq5 libclang-dev
+  sudo dpkg -i rstudio*.deb
+  ```
