@@ -275,7 +275,7 @@ It runs a version of debian ("buster").
   sudo apt install r-base
   ```
 
-- Download RStudio (debian 10 version for AMD64)
+- Download [RStudio](https://www.rstudio.com/products/rstudio/download/#download) (debian 10 version for AMD64)
 
   ```shell
   sudo apt install libnss3 libpq5 libclang-dev
