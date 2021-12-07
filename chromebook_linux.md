@@ -281,3 +281,16 @@ It runs a version of debian ("buster").
   sudo apt install libnss3 libpq5 libclang-dev
   sudo dpkg -i rstudio*.deb
   ```
+
+- To install [aRxiv](https://github.com/ropensci/aRxiv), I needed
+  these libraries:
+
+  ```shell
+  sudo apt install libcurl4-openssl-dev libxml2-dev libssl-dev
+  ```
+
+- To get DNS working for my local network at home, I needed:
+
+  ```shell
+  sudo apt install avahi-daemon
+  ```
