@@ -10,3 +10,15 @@
 - Use makemkv to rip DVD to a .mkv file
 
 - Use handbrake to compress the .mkv file to m4v format
+
+- To see title in the file:
+
+  ```
+  ffprobe -loglevel quiet -show_format input.m4v | grep title
+  ```
+
+- To change title in the file:
+
+  ```
+  ffmpeg -i input.m4v -codec copy -metadata title="New title" output.m4v
+  ```
