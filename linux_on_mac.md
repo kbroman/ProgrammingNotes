@@ -126,7 +126,12 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - OpenWeather by jens
     - system-monitor by Cerin
     - turn off Pop Shell (using GTile instead); seems like you need to do this from the application `gnome-extensions`
-
+    For audio switcher, said it was not compatible with latest version
+    of gnome, but was able to install via [its github
+    repository](https://github.com/AndresCidoncha/audio-switcher), and
+    it seems to work fine. Cloned the repository into
+    `~/.local/share/gnome-shell/extensions/` and then restarted
+    `gnome-shell` and it showed up.
 
 15. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
 

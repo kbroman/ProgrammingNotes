@@ -262,6 +262,13 @@ slow reinstall
     - OpenWeather by jens
     - system-monitor by Cerin
 
+    For audio switcher, said it was not compatible with latest version
+    of gnome, but was able to install via [its github
+    repository](https://github.com/AndresCidoncha/audio-switcher), and
+    it seems to work fine. Cloned the repository into
+    `~/.local/share/gnome-shell/extensions/` and then restarted
+    `gnome-shell` and it showed up.
+
 27. Gnome extensions: for system-monitor, needed:
 
     ```shell
