@@ -527,7 +527,7 @@ apps.
     - [Clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator)
       (gives clipboard history)
     - [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
-    - [Audio Switcher](https://extensions.gnome.org/extension/1092/audio-switcher/)
+    - [Audio Switcher 40](https://extensions.gnome.org/extension/4248/audio-switcher-40/)
     - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
       (also needed `sudo apt install gir1.2-gtop-2.0`, and to log out
       and back in again)
