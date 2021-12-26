@@ -255,7 +255,7 @@ slow reinstall
 
 26. [Gnome extensions](https://extensions.gnome.org)
 
-    - audio switcher by Gwynbleid94
+    - audio switcher 40 by albertomosconi
     - clipboard indicator by Tudmotu
     - emoji selector by Maestroschan
     - gTile by scherepanov
