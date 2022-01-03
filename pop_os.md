@@ -8,6 +8,9 @@ Notes regarding [System76](https://system76.com)'s
   - go to the desktop with the app of interest
   - click Super
   - drag the app to the miniturized desktops on the right
+  - alternatively, super-shift-up/down
+
+- To move an app between monitors, use super-shift-left/right
 
 - Alt-space to open a window's menu; includes an option to move the
   window to desktop above or below
