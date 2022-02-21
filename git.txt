@@ -128,3 +128,16 @@ A couple of things from Software Carpentry
 - to get out of detached HEAD state, use "git checkout master"
 
 - to see the files you're ignoring, use "git status --ignored"
+
+=======================
+
+Convert master branch to main
+
+- on github, settings -> branch, change default branch from master to
+  main
+
+- locally:
+
+      git branch -m main
+      git push -u origin main
+      git branch -d -r origin/master
