@@ -187,3 +187,10 @@ Hack allowing you to not add the quotes in R package descriptions.
 
 See the example in the RPostgres package:
 <https://github.com/cran/RPostgres/blob/master/.aspell/>
+
+
+---
+
+Convincing R on Windows to not use OneDrive for R packages
+
+https://medium.com/@ValidScience/how-to-fix-rstudios-package-installation-on-windows-10-c1e602bf3a1f
