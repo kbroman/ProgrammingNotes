@@ -141,3 +141,9 @@ Convert master branch to main
       git branch -m main
       git push -u origin main
       git branch -d -r origin/master
+
+=======================
+
+Updating git for windows, at command line:
+
+git update-git-for-windows
