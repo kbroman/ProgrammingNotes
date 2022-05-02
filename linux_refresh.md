@@ -276,11 +276,23 @@ slow reinstall
     sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0
     ```
 
+    As above for audio switcher 40, had to do a bit more work to
+    install this, since it's not been updated for Gnome 42.
+
+    - Downloaded [zip file from
+      GitHub](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet/releases).
+    - extracted, entered directory, and typed `make install`
+    - when to its directory in
+      `~/.local/share/gnome-shell/extensions/...` and edited the
+      `metadata.json` file to include `"42"` as one of the values for
+      `"shell-version"`.
+
     In the preferences, deselected "Display icon" and selected "show
     tooltip", "move the clock", and "disply in the middle".
 
     De-selected "Display" in the "Net" tab, and de-selected "Show
     text" in the "Cpu" and "Memory" tabs.
+
 
 
 28. Ability to connect to USB drive attached to a router
