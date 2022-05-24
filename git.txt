@@ -31,7 +31,7 @@ Also
   git diff
   git diff 1.16-6 R/est.map.R
   git diff 1.16-6 R/est.map.R | gitx
-  git diff --name-status master..[some branch]
+  git diff --name-status main..[some branch]
 
 Tagging
 
@@ -47,7 +47,7 @@ Branching and merging
   git branch                            [to see what branches there are]
   git branch blah                       [to create the 'blah' branch]
   git checkout blah                     [to switch to the 'blah' branch
-  git checkout master; git merge blah   [merge blah into master]
+  git checkout main; git merge blah   [merge blah into main]
 
 
 Going back
@@ -61,9 +61,9 @@ github stuff
 
   git checkout MQM
   git pull git@github.com:myfriend/rqtl-mqm.git
-  git pull git@github.com:myfriend/rqtl-mqm.git/master
+  git pull git@github.com:myfriend/rqtl-mqm.git/main
 
-  git pull myfriend master
+  git pull myfriend main
   git pull myfriend myfriend
 
   git push --set-upstream origin <branch>
@@ -125,7 +125,7 @@ bitbucket:  Had trouble with ssh; here's what seemed to work
 
 A couple of things from Software Carpentry
 
-- to get out of detached HEAD state, use "git checkout master"
+- to get out of detached HEAD state, use "git checkout main"
 
 - to see the files you're ignoring, use "git status --ignored"
 
