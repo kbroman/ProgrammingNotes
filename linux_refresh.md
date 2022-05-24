@@ -286,7 +286,7 @@ slow reinstall
     - Downloaded [zip file from
       GitHub](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet/releases).
     - extracted, entered directory, and typed `make install`
-    - when to its directory in
+    - went to its directory in
       `~/.local/share/gnome-shell/extensions/...` and edited the
       `metadata.json` file to include `"42"` as one of the values for
       `"shell-version"`.
