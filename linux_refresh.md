@@ -270,8 +270,11 @@ slow reinstall
     `gnome-shell` and it showed up. Actually, I needed to edit
     `metadata.json` to include `"42"` among the `"shell-version".
 
-    The same is true for system-monitor and emoji selector; can
-    manually install them by downloading/installing from github and
+    The same is true for
+    [system-monitor](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet/releases)
+    and
+    [emoji selector](https://github.com/maoschanz/emoji-selector-for-gnome);
+    can manually install them by downloading/installing from github and
     then editing the metadata.json file
 
 27. Gnome extensions: for system-monitor, needed:
