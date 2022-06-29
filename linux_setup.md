@@ -270,11 +270,10 @@ apps.
 
 
 23. Link to pandoc that shipped with RStudio
-    (see <https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md>)
+    (see <https://github.com/rstudio/rmarkdown/blob/main/PANDOC.md>)
 
     ```
-    sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin
-    sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc /usr/local/bin
+    sudo ln -s /usr/lib/rstudio/bin/quarto/bin/pandoc /usr/local/bin
     ```
 
 

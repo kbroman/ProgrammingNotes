@@ -321,7 +321,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 36. Link to pandoc that shipped with RStudio
 
     ```
-    ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin/pandoc
+    sudo ln -s /usr/lib/rstudio/bin/quarto/bin/pandoc /usr/local/bin/pandoc
     ```
 
 37. get terminal to open at startup
