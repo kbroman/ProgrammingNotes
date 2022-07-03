@@ -178,7 +178,7 @@ apps.
 
     - [ess](https://ess.r-project.org)
     - [magit](https://github.com/magit/magit) (and
-      dependencies [dash](http://github.com/magnars/dash.el),
+      dependencies [dash](https://github.com/magnars/dash.el),
       [with-editor](https://github.com/magit/with-editor),
       [magit-popup](https://github.com/magit/magit-popup),
       [ghub](https://github.com/magit/ghub),
@@ -561,7 +561,7 @@ apps.
 46. Install [Corebird](https://corebird.baedert.org/), twitter client
 
     - Just used _Pop shop_ (the software installer for
-      [Pop!_OS](http://pop.system76.com/docs)
+      [Pop!_OS](https://pop.system76.com)
 
 47. Installed [WINE](https://www.winehq.org/) and
     [PlayOnLinux](https://www.playonlinux.com/en/) in the same way as
@@ -631,7 +631,7 @@ apps.
       no product key, chose Windows 10 Home edition, and said something
       like fresh install
     - The thing was deathly slow. Searched for solutions and found
-      this: <http://blog.jdpfu.com/2012/09/14/solution-for-slow-ubuntu-in-virtualbox>
+      this: <https://blog.jdpfu.com/2012/09/14/solution-for-slow-ubuntu-in-virtualbox>
 
       - Followed these instructions, except for Network when I tried
         "Bridged" I didn't get a network connection so I switched back
@@ -673,8 +673,8 @@ apps.
     - See all keyboard shortcuts by going to Edit -> Preferences ->
       Shortcuts
 
-53. Install [gitg](http://gitx.frim.nl/), a git GUI similar to
-    [gitx](http://gitx.frim.nl/) (which is Mac only)
+53. Install [gitg](https://wiki.gnome.org/Apps/Gitg/), a git GUI similar to
+    [gitx](https://gitx.frim.nl/) (which is Mac only)
 
     ```
     sudo apt install gitg
@@ -750,7 +750,7 @@ apps.
 57. OpenRefine
 
     - Download `.tar.gz` file from
-      <http://openrefine.org/download.html>
+      <https://openrefine.org/download.html>
 
     - Extract and move to `~/.local/
 
@@ -899,7 +899,7 @@ apps.
 
 - Additional possible gnome extensions:
   - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
-  - [Pomodoro timer](http://gnomepomodoro.org/)
+  - [Pomodoro timer](https://gnomepomodoro.org/)
 
 
 
