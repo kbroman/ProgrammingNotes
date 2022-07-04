@@ -18,8 +18,8 @@ Downloads
 
  - gitbash
  - anaconda
- - curl (http://curl.haxx.se/download.html)
- - 7zip (http://sourceforge.net/projects/sevenzip/?source=typ_redirect)
+ - curl (https://curl.se/download.html)
+ - 7zip (https://sourceforge.net/projects/sevenzip/?source=typ_redirect)
  - swcarpentry installer
 
  To modify PATH
