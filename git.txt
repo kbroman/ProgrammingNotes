@@ -80,7 +80,7 @@ To remove a local copy of a remote branch (say it shows up in
   git branch -r -d origin/pptx
 
 
-github remotes; see http://help.github.com/remotes/
+github remotes; see https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories
 
  git remote add myfriend git://github.com/myfriend/qtlHD.git
 
