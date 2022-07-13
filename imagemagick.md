@@ -21,9 +21,9 @@
        convert input.png -colorspace Gray -gamma 2.2 output.png
 
 6. Create thumbnail, padding to make it square
-   (see <http://imagemagick.org/Usage/thumbnails/#pad>)
+   (see <https://imagemagick.org/Usage/thumbnails/#pad>)
 
-       wget http://www.r-project.org/Rlogo.png
+       wget https://www.r-project.org/Rlogo.png
        convert -flatten Rlogo.png Rlogo_new.png
        convert -define png:size=200x200 Rlogo_new.png -thumbnail \
                '64x64>' -background white -gravity center -extent 64x64 R-icon64.png
@@ -32,7 +32,7 @@
 
        convert fruitsnacks81.png -gravity center -background white -extent 150x100% fruitsnacks81_4x6.png
 
-8. Pixelate (see <http://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662>)
+8. Pixelate (see <https://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662>)
 
        convert -scale 10% -scale 1000% original.jpg pixelated.jpg
 
