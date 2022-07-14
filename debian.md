@@ -10,7 +10,7 @@
 - I'm using debian on an old laptop, on which I've installed
   a minecraft server (using [spigot](https://www.spigotmc.org)).
 
-  Basic instructions at [here](http://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/).
+  Basic instructions at [here](https://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/)
 
 - I'm using screen to switch between having the server in the
   foreground vs background.
