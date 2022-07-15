@@ -1,6 +1,6 @@
 Notes on Python
 
-Install anaconda from  http://continuum.io/downloads
+Install anaconda from  https://www.anaconda.com/products/distribution
   I installed it in the default location (/anaconda)
 
 Install python 3
@@ -133,7 +133,7 @@ plt.show()
 
 # Really useful to me:
 #   google course on python:     https://developers.google.com/edu/python/
-#   software carpentry bootcamp: http://software-carpentry.org/v4/python/index.html
+#   software carpentry workshop: https://swcarpentry.github.io/python-novice-inflammation/
 
 # loops
 for x in range(1, 10):
