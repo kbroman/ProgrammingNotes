@@ -1,7 +1,7 @@
 ## rsync
 
 "remote sync" for synchronizing local and remote files
-Looking at <http://do.co/2BpIpZe>
+Looking at <https://do.co/2BpIpZe>
 
 - `-r` = recursive
 
