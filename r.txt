@@ -71,7 +71,7 @@ rgl package:
    sudo ln -s /opt/X11 /usr/X11
 
  - still having a problem, with libpng.
-   StackOverflow (http://bit.ly/1R01mV7) says:
+   StackOverflow (https://bit.ly/1R01mV7) says:
 
       R CMD INSTALL --with-libpng-prefix=/usr/X11/lib/ rgl
 
