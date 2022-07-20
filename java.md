@@ -2,7 +2,7 @@
 
 For the R packages
 [ReporteRs](https://davidgohel.github.io/ReporteRs/) (also
-[rJava](http://www.rforge.net/rJava/) and
+[rJava](https://www.rforge.net/rJava/) and
 [xlsx](https://github.com/dragua/xlsx)), need to get java
 installed in the right way.
 
@@ -23,7 +23,7 @@ And then in my `~/.bashrc` file, I included
 export JAVA_HOME="/usr/lib/jvm/default-java"
 ```
 
-- <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+- <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
 I also needed to run
 
