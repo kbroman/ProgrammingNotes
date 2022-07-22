@@ -27,7 +27,7 @@ R $(R_OPTS) -e 'library(knitr);knit2html("report.Rmd")'
 
 ---
 
-`.PHONY` for indicating not-real targets; see <http://stackoverflow.com/a/7081747/897303>
+`.PHONY` for indicating not-real targets; see <https://stackoverflow.com/a/7081747/897303>
 
 example:
 
