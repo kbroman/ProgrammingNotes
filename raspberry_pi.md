@@ -32,15 +32,13 @@
 ### Minecraft
 
 
-- [Setting up a robust minecraft server](http://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/)
+- [Setting up a robust minecraft server](https://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/)
 
 - Minecraft server is [spigot](https://www.spigotmc.org)
 
 - You can install minecraft 1.9 rather than the latest version
   (currently 1.11.2). See
   [this tutorial](https://www.epiphanydigest.com/2016/03/07/learn-to-program-with-minecraft-on-ubuntu/)
-  or
-  [this one](http://simplyrisc.blogspot.co.uk/2016/03/learn-to-program-with-minecraft-on.html)
 
   ```
   git config --global --unset core.autocrlf
@@ -73,7 +71,7 @@
 - Ruby 2.1.5 installed on the pi, but I want 2.4.1
 
 - Install rvm (see
-  [this post](http://rayhightower.com/blog/2012/12/03/ruby-on-raspberry-pi/))
+  [this post](https://rayhightower.com/blog/2012/12/03/ruby-on-raspberry-pi/))
 
   ```
   curl -L https://get.rvm.io | bash -s stable --ruby
@@ -106,7 +104,7 @@
 ### MongoDB
 
 See
-<http://yannickloriot.com/2016/04/install-mongodb-and-node-js-on-a-raspberry-pi/>
+<https://yannickloriot.com/2016/04/install-mongodb-and-node-js-on-a-raspberry-pi/>
 
 ```
 sudo apt-get install mongodb-server
