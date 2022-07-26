@@ -28,7 +28,7 @@
 - TunnelBear
 - Caffeine
 - Duet
-- [Magical](http://www.charcoaldesign.co.uk/magical)
+- [Magical](https://www.charcoaldesign.co.uk/magical)
 - Dropbox
 - [GitX fork](https://rowanj.github.io/gitx/)
 - Divvy
