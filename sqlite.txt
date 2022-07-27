@@ -8,9 +8,10 @@ And apparently RSQLite and sqldb packages for R also include it
 ---
 
 In R:
-    library(sqldf)
+    library(RSQLite)
 
-Good tutorial at http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html
+Good tutorial at
+https://web.archive.org/web/20141006200249/https://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html
 
     con <- dbConnect(SQLite(), dbname="Test.sqlite")
     dbWriteTable(con, "mtcars", mtcars) # dump data frame into database
@@ -22,7 +23,7 @@ Good tutorial at http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.h
 
 Software Carpentry example
 
-    download.file("http://files.software-carpentry.org/survey.db", "survey.db")
+    download.file("https://files.software-carpentry.org/survey.db", "survey.db")
 
     con <- dbConnect(SQLite(), dbname="survey.db")
     dbListTables(con) # Person, Site, Survey, Visited
@@ -111,7 +112,7 @@ Software Carpentry example
     # list all fields in each table
     sapply(dbListTables(con), function(tab) dbListFields(con, tab))
 
-    # last challenge at http://swcarpentry.github.io/sql-novice-survey/07-join.html
+    # last challenge at https://swcarpentry.github.io/sql-novice-survey/07-join/
     dbGetQuery(con, paste("SELECT Visited.site, Site.lat, Site.long, Visited.dated, Person.personal, Person.family, Survey.quant, Survey.reading",
                           "FROM Site JOIN Visited ON Site.name = Visited.site",
                           "JOIN Survey ON Survey.taken = Visited.ident",
