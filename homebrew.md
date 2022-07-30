@@ -36,7 +36,7 @@ brew install libyaml
 
 ```
 
-- Install [MacTex](http://tug.org/mactex/)
+- Install [MacTex](https://tug.org/mactex/)
 
 ```
 sudo chown -R kbroman /usr/local/share/man/de
@@ -56,7 +56,7 @@ git config --global core.editor emacs
 ```
 
 - Xcode: command-line tools
-- [gfortran](http://cran.r-project.org/bin/macosx/tools/)
+- [gfortran](https://cran.r-project.org/bin/macosx/tools/)
 
 ```
 brew update
