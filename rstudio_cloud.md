@@ -1,7 +1,8 @@
 ## RStudio in the cloud
 
 Following [these notes from Matt
-Strimas-Mackey](https://strimas.com/r/rstudio-cloud-1/), I was able to
+Strimas-Mackey](https://web.archive.org/web/20200320072718/https://strimas.com/r/rstudio-cloud-1/),
+I was able to
 get RStudio in a web browser using Amazon Web Services. (And then I
 left it running for months. Oops.)
 
