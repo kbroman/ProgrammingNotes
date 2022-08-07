@@ -1,6 +1,6 @@
 html5 canvas
 
-See http://www.w3.org/TR/2dcontext/
+See <https://html.spec.whatwg.org/multipage/canvas.html>
 
 
 # current state
