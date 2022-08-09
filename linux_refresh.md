@@ -114,13 +114,13 @@ slow reinstall
     sudo fc-cache -fv
     ```
 
-14. autokey
-
-    previously needed `sudo add-apt-repository ppa:sporkwitch/autokey`
-    but doesn't seem like it anymore
+14. espanso (much better than autokey); customizations in `~/.config/espanso/default.yml`
 
     ```shell
-    sudo apt install autokey-gtk
+    sudo apt install libnotify-bin
+    sudo apt install snapd
+    sudo snap install espanso --classic
+    espanso start
     ```
 
 15. playback of DVDs
