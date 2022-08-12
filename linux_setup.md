@@ -391,21 +391,15 @@ apps.
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
     - `digikam` (organizing photos)
-    - `autokey-gtk` (desktop automation)
 
-    Autokey had some wrinkles on my new system, running Pop OS 18.10.
-    Added a ppa for autokey:
+34. Install espanso (much better than autokey); customizations in `~/.config/espanso/default.yml`
 
+    ```shell
+    sudo apt install libnotify-bin
+    sudo apt install snapd
+    sudo snap install espanso --classic
+    espanso start
     ```
-    sudo add-apt-repository ppa:sporkwitch/autokey
-    ```
-
-    This worked fine on Pop OS 18.04, but on Pop OS 18.10, you need to
-    go in and edit the record, replacing `cosmic` (nominally for 18.10) with
-    `bionic` (for 18.04). There was a file in
-    `/etc/apt/sources.list.d` named
-    `sporkwitch-ubuntu-autokey-cosmic.list`; changed the `cosmic` in
-    its name and contents to `bionic` and after that all was well.
 
 35. Install npm and coffeescript
 
@@ -613,6 +607,9 @@ apps.
     ```
     0 2 * * * /bin/bash [path_to_shell_script]
     ```
+
+    I'm no longer using autokey; instead I use espanso. But I'll leave
+    this here, as an example of a cron job.
 
 51. VirtualBox and Windows + Office365
     See <https://www.extremetech.com/computing/198427-how-to-install-windows-10-in-a-virtual-machine>
