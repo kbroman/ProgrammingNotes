@@ -49,13 +49,6 @@ There are 8 little lights on the front of the machine
   - `<ctrl>-F11` previous entry
   - `<ctrl>-F12` next entry
 
-- [autokey](https://github.com/autokey/autokey) (like
-  [atext](https://textexpander.com) and
-  [textexpander](https://textexpander.com)): `<ctrl>-F7`
-
-  - toggle monitoring: `<shift>-<super>-k`
-  - show configuration: `<super>-k`
-
 - `<Fn>-1` to change fan speed
 
 - File explorer `<super>-f`
