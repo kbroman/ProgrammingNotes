@@ -17,7 +17,7 @@ D25-A3G-K4A-A3L` and `YUNA D25-C3C-43I-A6F`.
 ### Some links
 
 - [lifehacker](https://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343)
-- [softpedia](http://news.softpedia.com/news/how-to-install-ubuntu-17-04-with-gnome-on-your-chromebook-alongside-chrome-os-516624.shtml)
+- [softpedia](https://news.softpedia.com/news/how-to-install-ubuntu-17-04-with-gnome-on-your-chromebook-alongside-chrome-os-516624.shtml)
 - [Jenny Bryan](https://github.com/jennybc/operation-chromebook)
 
 ### General procedure
