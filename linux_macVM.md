@@ -7,7 +7,7 @@ want to run Mac OS X within [VirtualBox](https://www.virtualbox.org).
 
 Initially I tried to install Mac Sierra
 following notes at
-[`suzywu2014.github.io`](http://suzywu2014.github.io/ubuntu/2017/02/23/macos-sierra-virtualbox-vm-on-ubuntu)
+[`suzywu2014.github.io`](https://suzywu2014.github.io/ubuntu/2017/02/23/macos-sierra-virtualbox-vm-on-ubuntu)
 
 But I was getting errors, so I switched to following the primary source,
 [`geerlingguy` at GitHub](https://github.com/geerlingguy/macos-virtualbox-vm).
@@ -16,7 +16,7 @@ But I was getting errors there, too. And I saw [this issue](https://github.com/g
 that the latest Sierra installer doesn't seem to work.
 
 So I then switched to trying to install High Sierra, using instructions from
-[`tobiwashere.de`](http://tobiwashere.de/2017/10/virtualbox-how-to-create-a-macos-high-sierra-vm-to-run-on-a-mac-host-system/)
+[`tobiwashere.de`](https://tobiwashere.de/2017/10/virtualbox-how-to-create-a-macos-high-sierra-vm-to-run-on-a-mac-host-system/)
 
 But I got further errors. Or at least it seemed so.
 
