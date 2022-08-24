@@ -37,4 +37,4 @@
   - Give name and details
 
 - Pubmed: ISO Latin 1
-  <http://www.ncbi.nlm.nih.gov/sites/entrez?db=pubmed&term=*>
+  <https://www.ncbi.nlm.nih.gov/sites/entrez?db=pubmed&term=*>
