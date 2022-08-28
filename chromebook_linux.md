@@ -265,7 +265,7 @@ It runs a version of debian ("buster").
   `/etc/apt/sources.list`
 
   ```shell
-  deb http://cloud.r-project.org/bin/linux/debian buster-cran40/
+  deb https://cloud.r-project.org/bin/linux/debian buster-cran40/
   ```
 
 - Install R
