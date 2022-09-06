@@ -16,6 +16,10 @@
 
        convert -flatten original.png new.png
 
+4b. The opposite of that is to replace white with transparency
+
+       convert -transparent white original.png new.png
+
 5. convert to grayscale; make lighter
 
        convert input.png -colorspace Gray -gamma 2.2 output.png
