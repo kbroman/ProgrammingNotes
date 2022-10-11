@@ -146,6 +146,10 @@ particular, I'm installing System76 Pop!_OS 21.04.
     Navigation: move window one workspace up: shift+super+up
     Screenshots: Save a screenshot of an area: shift+alt+P
 
+    I ended up installing [flameshot](https://flameshot.org/) as a
+    screenshot tool, and assigning it to shift+alt+P, with the command
+    being `flameshot gui`
+
 17. Install various utilities
 
     neofetch (command-line system info)
