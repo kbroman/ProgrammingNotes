@@ -12,6 +12,10 @@
   export OPENSSL_CONF=/etc/ssl
   ```
 
+- an alternative is
+  [CapserJS](https://www.npmjs.com/package/casperjs), but both
+  phantomjs and casperjs seem to have been abandoned
+
 ---
 
 ### Example for scraping an email
