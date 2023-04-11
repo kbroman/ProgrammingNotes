@@ -15,3 +15,13 @@ Install latest version:
 ```
 npm install npm@latest -g
 ```
+
+---
+
+To install node on ubuntu, instructions at
+<https://github.com/nodesource/distributions#debinstall>
+
+```
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
