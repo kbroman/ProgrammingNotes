@@ -43,7 +43,7 @@ slow reinstall
    sudo apt install libgit2-dev
    sudo apt install devscripts
    sudo apt-key [blah blah blah]
-   sudo apt r-base r-recommended
+   sudo apt install r-base r-recommended
    ```
 
 5. LaTeX
