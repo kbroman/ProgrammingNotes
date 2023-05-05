@@ -161,32 +161,11 @@ apps.
 
     - I just did plain `sudo apt install texlive-full`
 
-12. Install DropBox [SKIPPED]
+12. Install DropBox via Pop_Shop
 
-    - Download `.deb` file from <https://www.dropbox.com/install-linux>
-    - Use `sudo dpkg -i dropbox_2020.03.04_amd64.deb`
+13. Install SimpleNote via Pop_Shop
 
-13. Install SimpleNote [SKIPPED] couldn't yet get it to open
-
-    - Download `.deb` file from <https://simplenote.com>
-    - Need dependency: `sudo apt install pango1.0-0 gconf2`
-    - `sudo dpkg -i Simplenote-*.deb`
-
-14. Install Skype [SKIPPED]
-
-    - Download `.deb` file from <https://www.skype.com/en/get-skype/>
-    - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
-    - Install with `sudo dpkg -i skypeforlinux-64.deb`
-    - Skype was starting automatically on restarting the computer; had
-      to de-select an option in the settings
-    - **FIX ME**: shows up _really_ small when screen is in high-def mode
-    - Camera was not working initially, but when studying it, learned
-      about `cheese` (like Mac photobooth; see more below) and it
-      worked fine. So opened skype again and found the camera was
-      working. Not sure what changed.
-    - Fn-F10 toggles the camera on and off; so maybe it was off and
-      got toggled back on?
-
+14. Install Zoom via Pop_Shop
 
 15. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
@@ -212,7 +191,11 @@ apps.
 
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
+    - Create a shortcut
 
+      ```
+      ln -s /media/kbroman/BROMAN ~/Key
+      ```
 
 19. Install RStudio
 
@@ -275,20 +258,22 @@ apps.
 
 22. Additional packages
 
-    - `libgnome2-bin` (for `gnome-open` which acts like `open` on a Mac)
-    - `gnome-tweaks`
+    ```
+    sudo apt install gnome-tweaks
+    ```
 
 
 23. Create a `start` script that acts like `open` on a Mac, as a
-    little shell script that just calls `gnome-open` repeatedly for
+    little shell script that just calls `xdg-open` repeatedly for
     each command-line argument. Placed this in `~/.local/bin`
 
     ```
     #!/bin/bash
+    # loop over command-line arguments and open each with xdg-open
 
     for file in "$@"
     do
-        gnome-open "$file"
+        xdg-open "$file" >& /dev/null  # ">& /dev/null" to suppress all warnings
     done
     ```
 
@@ -399,7 +384,6 @@ apps.
 37. Install 1Password (needed `gnupg2`); download from
     <https://1password.com/downloads/linux/>
 
-
     ```
     sudo dpkg -i 1password-latest
     sudo apt install --fix-broken
@@ -461,9 +445,7 @@ apps.
     `~/.local/share/gnome-shell/extensions/` and then restarted
     `gnome-shell` and it showed up.
 
-40. Install [Slack](https://slack.com/downloads/linux) [SKIPPED]
-
-    - Downloaded `.deb` file; opened it from Chrome to install.
+40. Install [Slack](https://slack.com/downloads/linux) from Pop_Shop
 
 41. Set up backups [SKIPPED]
 
