@@ -575,6 +575,16 @@ apps.
         - [check your IP](https://bearsmyip.com/)
         - check for DNS leaks with "Extended test" at [dnsleaktest.com](https://www.dnsleaktest.com/)
 
+    - **The above didn't work**, but was able to create by hand
+
+      - getting errors when trying to load from file, or from command
+        line
+      - by hand, e.g. TunnelBear Canada: select
+        OpenVPN, give Gateway as `ca.lazerpenguin.com:443` and
+        Authentication `Password` with email and tunnelbear password,
+        and then `CACertificate.crt` from `~/.tunnelbear_config/openvpn`
+
+
 47. To try to avoid continual (but irregular) login problems, we
     switched from gdm3 to lightdm as the "display manager". See the
     [lightDM wiki](https://wiki.archlinux.org/index.php/LightDM).
