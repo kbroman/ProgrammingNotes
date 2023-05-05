@@ -53,7 +53,8 @@ apps.
    Now using GlobalProtect, instructions at
    <https://kb.wisc.edu/helpdesk/page.php?id=105971>
 
-   - Download and extract `PanGPLinux-[version].tgz` from <https://www.net.wisc.edu/vpn/clients/>
+   - Download and extract `PanGPLinux-[version].tgz` from
+     <https://www.net.wisc.edu/vpn/clients/>
    - This gives a `GlobalProtext_UI_deb-[version].deb` file, to install via
      `sudo dpkg -i GlobalProtect_UI_deb-*.deb`.
    - Use `globalprotect launch-ui`
@@ -187,7 +188,7 @@ apps.
     - Used `sudo apt --fix-broken install`
 
 
-18. Connect a USB stick [SKIPPED]
+18. Connect a USB stick
 
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
@@ -447,7 +448,7 @@ apps.
 
 40. Install [Slack](https://slack.com/downloads/linux) from Pop_Shop
 
-41. Set up backups [SKIPPED]
+41. Set up backups
 
     - Install Deja Dup via "Pop Shop"
 
@@ -460,6 +461,9 @@ apps.
 
     - Ignore the folders `~/Dropbox` and `~/VirtualBox VMs`
 
+    - selected to backup to local folder, and to the backup drive and
+      a folder I created there
+
 42. Copy over music
 
     - Used `rsync`; issue of having spaces in paths, but can do like
@@ -469,53 +473,6 @@ apps.
       rsync -a "fig.local:Music/iTunes/iTunes\ Music/They\ Might\ Be\ Giants" .
       ```
 
-43. VirtualBox and Windows + Office365
-    See <https://www.extremetech.com/computing/198427-how-to-install-windows-10-in-a-virtual-machine>
-
-    - Download Windows 10 from
-      <https://www.microsoft.com/en-us/software-download/windows10ISO>
-    - Download VirtualBox from
-      <https://www.virtualbox.org/wiki/Downloads>
-      - Add to `/etc/apt/sources.list`
-      - Register Oracle public keys
-      - `sudo apt install virtualbox-6.1`
-      - `sudo apt install dkms`
-    - Start `virtualbox`, create new Windows10 machine, adjust memory,
-      disk size, connect to the windows ISO, and adjust display stuff
-    - Then start the virtual machine to install windows10. I said I had
-      no product key, chose Windows 10 Home edition, and said something
-      like fresh install
-    - The thing was deathly slow. Searched for solutions and found
-      this: <https://blog.jdpfu.com/2012/09/14/solution-for-slow-ubuntu-in-virtualbox>
-
-      - Followed these instructions, except for Network when I tried
-        "Bridged" I didn't get a network connection so I switched back
-        to the default "NAT" and that worked
-
-      - Gave the machine 150 GB harddrive (dynamically sized) and 8192
-        MB RAM. And went for 2 CPUs
-
-      - Once windows was up and running, and changed the VM display to
-        "scaled" and then within windows I changed the screen
-        resolution to 1600x1200. Seems to work better.
-
-    - Within Windows, installed Office365 (by going to office365.com
-      and then logging in with my NetID from UW-Madison), R, Rtools,
-      RStudio, and a bunch of R packages (devtools + tidyverse
-      first)
-
-    - Need to install "Guest additions". While the virtual box is
-      running, you need the VirtualBox tool bar to be showing (it
-      won't if you're using a "scaled" window, it seems). In the
-      "Devices" menu there's an option to "insert guest additions
-      CD". Then within windows, click on the CD and install the
-      software.
-
-    - Having installed the guest additions, you can share a linux
-      folder with windows. First create a folder in your home
-      directory that you will share. Then in VirtualBox settings, go
-      to "Shared Folders" and right-click on "Machine Folders" and
-      select "Add shared folder" and enter the path to the folder.
 
 44. Was looking at finding a better linux terminal, but I think the
     standard gnome terminal will be fine for me.
@@ -535,7 +492,7 @@ apps.
     sudo apt install gitg
     ```
 
-46. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
+46. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/) [NOT_WORKING]
 
     - `sudo apt install network-manager-openvpn-gnome`
 
@@ -556,68 +513,6 @@ apps.
     - To test:
         - [check your IP](https://bearsmyip.com/)
         - check for DNS leaks with "Extended test" at [dnsleaktest.com](https://www.dnsleaktest.com/)
-
-47. To try to avoid continual (but irregular) login problems, we
-    switched from gdm3 to lightdm as the "display manager". See the
-    [lightDM wiki](https://wiki.archlinux.org/index.php/LightDM).
-
-    ```shell
-    sudo apt install lightdm
-    sudo dpkg-reconfigure lightdm
-    ```
-
-    It asks you to choose between gdm3 and lightdm; choose lightdm.
-
-    At login, there's a startup sound that I don't like. Mute the
-    speaker on that screen; that setting seems to persist between
-    logins.
-
-    I also don't like the background; especially the grid of dots.
-
-    I edited
-    `/usr/share/glib-2.0/schemas/com.canonical.unity-greeter.gschema.xml`
-    to change `"draw-grid"` to `false` and to change `background` to
-    `/usr/share/backgrounds/yosemite....jpg` (a file I'd copied there
-    from `~/Pictures/Wallpapers`. Then ran
-    `sudo glib-compile-schemas /usr/share/glib-2.0/schemas/`
-
-48. OpenRefine
-
-    - Download `.tar.gz` file from
-      <https://openrefine.org/download.html>
-
-    - Extract and move to `~/.local/
-
-    - Create a shell script, as ~/.local/bin/refine`, containing:
-
-      ```shell
-      #!/bin/bash
-
-      cd /home/kbroman/.local/openrefine-2.8
-      ./refine
-      ```
-
-49. DB Browser for SQLite
-
-    - Download `.tar.gz` file from <https://sqlitebrowser.org/>
-
-    - Extract and change into directory
-
-    - Need to install a bunch of stuff:
-
-      ```shell
-      sudo apt install cmake
-      sudo apt install qt5-default qttools5-dev qttools5-dev-tools
-      sudo apt install libsqlite3-dev libantlr-dev libqscintilla2-qt5-dev
-      ```
-
-    - build and install
-
-      ```shell
-      cmake .
-      make
-      sudo make install
-      ```
 
 50. [kmag](https://stackoverflow.com/a/26418432) useful for simulating
     color blindness: `sudo apt install kmag`
@@ -645,6 +540,13 @@ apps.
     - Scroll to the bottom of the Keyboard Shortcuts and click the +
     - Create a new shortcut (I used ctrl-alt-T) with the command
       `firefox https://toodledo.com/tasks/index.php`
+
+    - Additional shortcuts:
+
+      - flameshot
+      - navigation: move window one monitor to left/right, move window
+        one workspace up/down, using shift+super+arrow
+
 
 53. I installed Anaconda by downloading the `.sh` script from
     [its web
@@ -724,7 +626,7 @@ apps.
 
 59. [neofetch](https://github.com/dylanaraps/neofetch) provides system info at the command-line
 
----
+--
 
 - Install ccache and use for compiling R
 
