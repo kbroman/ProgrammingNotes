@@ -48,7 +48,7 @@ apps.
    - Followed the instructions at <https://kb.wisc.edu/page.php?id=22075>
    - Maybe see <https://kb.wisc.edu/helpdesk/page.php?id=25020>
 
-7. Get UW-Madison VPN working [SKIPPED]
+7. Get UW-Madison VPN working
 
    Now using GlobalProtect, instructions at
    <https://kb.wisc.edu/helpdesk/page.php?id=105971>
