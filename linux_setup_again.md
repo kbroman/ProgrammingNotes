@@ -164,7 +164,9 @@ apps.
 
     - I just did plain `sudo apt install texlive-full`
 
-12. Install DropBox via Pop_Shop
+12. Install DropBox via Pop_Shop, but there are two choices and you
+    want the one that says "Sync your files..." rather than "Access
+    your files..."
 
 13. Install SimpleNote via Pop_Shop
 
