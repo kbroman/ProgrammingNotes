@@ -59,6 +59,8 @@ apps.
    - Use `globalprotect launch-ui`
    - Use NetID and password; use `[username]_1` for static IP.
    - type `1` to have it push a DUO verification to your phone
+   - the download page wasn't working, so copied over from other
+     computer; it asked for VPN address, which is `uwmadison.vpn.wisc.edu`
 
 8. ssh keys + connect to github
 
