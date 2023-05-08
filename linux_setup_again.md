@@ -45,8 +45,7 @@ apps.
 
 6. Connect to the internet (wifi), using eduroam [SKIPPED]
 
-   - Followed the instructions at <https://kb.wisc.edu/page.php?id=22075>
-   - Maybe see <https://kb.wisc.edu/helpdesk/page.php?id=25020>
+   - See <https://kb.wisc.edu/helpdesk/page.php?id=25020>
 
 7. Get UW-Madison VPN working
 
