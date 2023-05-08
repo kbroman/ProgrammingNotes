@@ -43,9 +43,11 @@ apps.
    sudo apt install emacs
    ```
 
-6. Connect to the internet (wifi), using eduroam [SKIPPED]
+6. Connect to the internet (wifi), using eduroam
 
    - See <https://kb.wisc.edu/helpdesk/page.php?id=25020>
+   - Eduroam Configuration Assistance Tool, which gives a python
+     script to download
 
 7. Get UW-Madison VPN working
 
