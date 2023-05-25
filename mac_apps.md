@@ -20,7 +20,6 @@
 - Living Earth
 - Pushbullet
 - Logitech camera settings
-- Skype
 - ToDo
 - Sip
 - Frank DeLoupe
