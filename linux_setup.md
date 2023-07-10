@@ -214,22 +214,6 @@ apps.
     - Need dependency: `sudo apt install pango1.0-0`
     - `sudo dpkg -i Simplenote-*.deb`
 
-17. Install Skype
-
-    - Download `.deb` file from <https://www.skype.com/en/get-skype/>
-    - Need some dependencies: `sudo apt install gconf-service libgconf-2-4`
-    - Install with `sudo dpkg -i skypeforlinux-64.deb`
-    - Skype was starting automatically on restarting the computer; had
-      to de-select an option in the settings
-    - **FIX ME**: shows up _really_ small when screen is in high-def mode
-    - Camera was not working initially, but when studying it, learned
-      about `cheese` (like Mac photobooth; see more below) and it
-      worked fine. So opened skype again and found the camera was
-      working. Not sure what changed.
-    - Fn-F10 toggles the camera on and off; so maybe it was off and
-      got toggled back on?
-
-
 18. Changed hostname by editing the files `/etc/hostname` and `/etc/hosts`
 
     - replace `popos` or whatever with what you want, single line in
