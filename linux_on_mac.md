@@ -127,7 +127,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - system-monitor by Cerin
     - turn off Pop Shell (using GTile instead); seems like you need to do this from the application `gnome-extensions`
 
-15. Install slack, discord, skype, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
+15. Install slack, discord, dropbox, simplenote, okular, clementine, libreoffice from Pop!_Shop
 
     - seemed like I had to do something else to get dropbox running in the background, but I'm not sure what I did
 
