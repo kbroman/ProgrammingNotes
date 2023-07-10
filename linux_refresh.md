@@ -215,11 +215,6 @@ slow reinstall
    - type `1` to have it push a DUO verification to your phone
 
 
-23. Skype
-
-    - Download `.deb` file from <https://www.skype.com/en/get-skype/>
-    - Install with `sudo dpkg -i skypeforlinux-64.deb`
-
 24. Zoom
 
     - Download `.deb` file from <https://zoom.us/download>
