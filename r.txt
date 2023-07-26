@@ -203,3 +203,9 @@ On ubuntu, rolling back to a previous version
     sudo apt remove r-base-core
     sudo apt-cache showpkg r-base | grep 4.2.1
     sudo apt install r-base-core=4.2.1-3.2204.0
+
+---
+
+Update github-based R packages
+
+dtupdate::github_update()
