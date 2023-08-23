@@ -4,7 +4,8 @@
 
        convert meiosis_orig.png -fill 'rgb(0,0,80)' -opaque 'rgb(0,0,132)' temp.png
 
-2. If the color is not exactly on, use "fuzz", as follows
+2. If the color is not exactly on, use "fuzz", as follows (again,
+   replacing 0,0,123 with 0,0,80)
 
        convert meiosis_orig.png -fill 'rgb(0,0,80)' -fuzz 10% -opaque 'rgb(0,0,132)' temp.png
 
