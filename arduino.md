@@ -23,3 +23,15 @@ showed up from `sudo dmesg`, namely
 ```
 ch341-uart ttyUSB0: ch341-uart converter now disconnected from ttyUSB0
 ```
+
+### ESP32
+
+My instructions for using an ESP32 with the Arduino software are in
+[these
+instructions](https://karlduino.org/CO2monitorWifi/docs/instructions.html#load-the-software)
+for my CO2 monitor with wifi.
+
+Main issue was in dealing with "not in download mode". When uploading
+software to the chip, need to long-press the reset button with it gets
+to "Connecting....". But that didn't work consistently, and it didn't
+seem to be needed consistently.
