@@ -209,3 +209,8 @@ On ubuntu, rolling back to a previous version
 Update github-based R packages
 
 dtupdate::github_update()
+
+---
+
+MacBuilder (similar to WinBuilder) for checking R packages:
+https://mac.r-project.org/macbuilder/submit.html
