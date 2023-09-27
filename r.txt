@@ -49,10 +49,19 @@ F77=gfortran-4.8
 FC=$F77
 OBJC=clang
 
+
 Also, in ~/.R/Makevars
 
 CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
+
+
+In ~/.R/Makevars on linux:
+
+CC=ccache gcc
+CXX=ccache g++
+CFLAGS=-DNDEBUG -fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
+CXXFLAGS=-fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
 
 ---
 
