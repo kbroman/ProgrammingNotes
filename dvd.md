@@ -22,3 +22,9 @@
   ```
   ffmpeg -i input.m4v -codec copy -metadata title="New title" output.m4v
   ```
+
+- To convert a .mov file to .mp4
+
+  ```
+  ffmpeg -i input.mov -vcodec h264 -acodec mp2 output.mp4
+  ```
