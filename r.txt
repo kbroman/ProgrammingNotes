@@ -223,3 +223,7 @@ dtupdate::github_update()
 
 MacBuilder (similar to WinBuilder) for checking R packages:
 https://mac.r-project.org/macbuilder/submit.html
+
+---
+
+To update renv.lock: renv::snapshot()
