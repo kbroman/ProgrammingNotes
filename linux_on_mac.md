@@ -322,10 +322,11 @@ particular, I'm installing System76 Pop!_OS 21.04.
     - go to settings -> general, and at the top is "Super Key Action"
 
 
-36. Link to pandoc that shipped with RStudio
+36. Link to pandoc and quarto that shipped with RStudio
 
     ```
     sudo ln -s /usr/lib/rstudio/bin/quarto/bin/pandoc /usr/local/bin/pandoc
+    sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/quarto /usr/local/bin/
     ```
 
 37. get terminal to open at startup

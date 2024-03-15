@@ -216,11 +216,12 @@ apps.
       warning at startup
 
 
-20. Link to pandoc that shipped with RStudio
+20. Link to pandoc and quarto that shipped with RStudio
     (see <https://github.com/rstudio/rmarkdown/blob/main/PANDOC.md>)
 
     ```
     sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/pandoc /usr/local/bin/
+    sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/quarto /usr/local/bin/
     ```
 
 
