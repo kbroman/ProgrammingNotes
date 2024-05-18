@@ -21,3 +21,11 @@
   val list = 1..10
   for(i in list) { }
   ```
+
+- functions
+
+  ```{kotlin}
+  fun getSum(a: Int, b: Int): Int { 
+    return a + b 
+  }
+  ```
