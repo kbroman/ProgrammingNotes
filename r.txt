@@ -227,3 +227,9 @@ https://mac.r-project.org/macbuilder/submit.html
 ---
 
 To update renv.lock: renv::snapshot()
+
+---
+
+github actions:
+
+`usethis::use_github_action("check-standard")`
