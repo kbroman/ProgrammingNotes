@@ -28,4 +28,6 @@
   fun getSum(a: Int, b: Int): Int { 
     return a + b 
   }
+
+  fun getSum(a: Int, b: Int) = a + b
   ```
