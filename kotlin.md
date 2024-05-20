@@ -40,3 +40,38 @@
 
   findViewById<Button>(R.id.buttonHide)?.setOnClickListener(this)
   ```
+
+- Using JetPack view bindings: to use object IDs in
+  `activity_main.xml` directly within code, need some extra steps:
+
+
+  - [In `build.gradle`](https://developer.android.com/topic/libraries/view-binding/migration):
+
+    ```{kotlin}
+    android {
+        ...
+        buildFeatures {
+            viewBinding = true
+        }
+    }
+    ```
+
+  - [For elements in `activity_main.xml`, use `ActivityMainBinding` and "inflate" in `onCreate()`](https://developer.android.com/topic/libraries/view-binding#usage):
+
+    ```{kotlin}
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+    }
+    ```
+
+  - Then do stuff like this:
+
+    ```{kotlin}
+    binding.textview1.text = "hello"
+    binding.button.setOnClickListener { viewModel.userClicked() }
+    ```
