@@ -25,9 +25,18 @@
 - functions
 
   ```{kotlin}
-  fun getSum(a: Int, b: Int): Int { 
-    return a + b 
+  fun getSum(a: Int, b: Int): Int {
+    return a + b
   }
 
   fun getSum(a: Int, b: Int) = a + b
+  ```
+
+- access a view element by id
+
+  ```{kotlin}
+  val textValue_view = findViewById<TextView>(R.id.textValue)
+  textValue_view?.text = "hello"
+
+  findViewById<Button>(R.id.buttonHide)?.setOnClickListener(this)
   ```
