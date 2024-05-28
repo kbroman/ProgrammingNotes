@@ -1,4 +1,4 @@
-## Kotlin
+## Kotlin and Android
 
 - `val` (immutable) vs `var` (variable)
 
@@ -75,3 +75,9 @@
     binding.textview1.text = "hello"
     binding.button.setOnClickListener { viewModel.userClicked() }
     ```
+
+- App screen rotation controlled by `android:screenrotation` in
+  `AndroidManifest.xml`.
+
+  Value `fullUser` seems best to allow rotation but pay attention to
+  user's rotation lock selection
