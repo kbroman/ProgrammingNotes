@@ -10,8 +10,17 @@ To install rvm and ruby:
 
 To install another version of ruby:
 
-  rvm install 2.0.0-p247
-  rvm use 2.0.0-p247 --default
+  rvm install 3.3.1
+  rvm use 3.3.1 --default
+
+---
+I got an error like "rvm is not a function"
+The solution was
+
+  source ~/.rvm/scripts/rvm
+  rvm use 3.3.1 --default
+---
+
 
 To generate documentation
   rvm docs generate
