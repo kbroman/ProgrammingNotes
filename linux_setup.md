@@ -257,7 +257,7 @@ apps.
     (see <https://github.com/rstudio/rmarkdown/blob/main/PANDOC.md>)
 
     ```
-    sudo ln -s /usr/lib/rstudio/bin/quarto/bin/pandoc /usr/local/bin
+    sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/x86_64/pandoc /usr/local/bin/
     sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/quarto /usr/local/bin/
     ```
 

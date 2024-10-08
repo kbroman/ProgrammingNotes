@@ -325,7 +325,7 @@ particular, I'm installing System76 Pop!_OS 21.04.
 36. Link to pandoc and quarto that shipped with RStudio
 
     ```
-    sudo ln -s /usr/lib/rstudio/bin/quarto/bin/pandoc /usr/local/bin/pandoc
+    sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/x86_64/pandoc /usr/local/bin/
     sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/quarto /usr/local/bin/
     ```
 
