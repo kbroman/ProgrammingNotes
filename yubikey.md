@@ -33,3 +33,18 @@
 - set up tty
 
   Edit `/etc/pam.d/login` as above
+
+
+
+### Duo MFA at UW-Madison
+
+- Go to <https://mfa.wisc.edu>
+
+- Click "Manage MFA Preferences and Devices" (*not* Registern USB
+  Security Key)
+
+- Click "Add a device" and then "Security key"
+
+- Seems to work with [Security Key C
+  NFC](https://www.yubico.com/product/security-key-series/security-key-c-nfc-by-yubico-black/)
+  (that is, you **don't** need the [YubiKey 5C NFC](https://www.yubico.com/product/yubikey-5c-nfc/))
