@@ -35,6 +35,22 @@
   Edit `/etc/pam.d/login` as above
 
 
+- manager/authenticator tools
+
+  Yubico distributes two tools for use on Linux: Authenticator and
+  Manager. Each give information about an inserted YubiKey, but it
+  seems like Manager is more useful, as it allows you to change the
+  PIN on a YubiKey.
+
+  _Authenticator_: install via
+  [tar.gz](https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz)
+  or find it in Pop!_Shop.
+
+  _Manager_: Download [`.AppImage`](https://appimage.org/) file from
+  [here](https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage).
+  Just need to make it executable. I changed the name to
+  `yubikey-manager` and put it in `~/.local/bin`.
+
 
 ### Duo MFA at UW-Madison
 
