@@ -19,5 +19,6 @@
 - To download multiple files in `smbclient`, use the following:
 
   ```
+  prompt OFF
   mget *.txt
   ```
