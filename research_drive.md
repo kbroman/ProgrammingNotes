@@ -22,3 +22,7 @@
   prompt OFF
   mget *.txt
   ```
+
+- Can use `lcd` to change local directory.
+
+- `exit` to exit
