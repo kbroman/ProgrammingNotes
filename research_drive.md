@@ -26,3 +26,6 @@
 - Can use `lcd` to change local directory.
 
 - `exit` to exit
+
+- My personal drive is at `//restricted.drive.wisc.edu/broman`
+  (It's also accessible only via adhara and not just using the VPN.)
