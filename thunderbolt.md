@@ -30,6 +30,14 @@
 
 ### Darter Pro (darp8)
 
-- Still haven't gotten this to work. Rather than BIOS, it uses the
-  newer System76 Open Firmware, but I don't see how to access firmware
-  settings.
+- Rather than BIOS, this laptop uses the newer System76 Open Firmware,
+  but I don't see how to access firmware settings.
+
+- Initially, the displays weren't recognized. But after restarting and
+  plugging and unplugging the displays (chained together), the first
+  one suddenly was recognized. I then plugged the second display in
+  directly, and it was recognized. Then I chained them back together,
+  and now they both work fine.
+
+- This is using Thunderbolt4, and I can chain both displays together
+  and get full 4k resolution at 120 Hz on both.
