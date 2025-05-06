@@ -444,6 +444,9 @@ apps.
       (adds a refresh button to the wifi connection dialog)
     - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
     - [log out button](https://extensions.gnome.org/extension/1143/logout-button/)
+    - [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/)
+      used by dropbox, and seems to help ensure that all apps
+      (including globalprotect) are shown in the menubar)
 
     For audio switcher, said it was not compatible with latest version
     of gnome, but was able to install via [its github
