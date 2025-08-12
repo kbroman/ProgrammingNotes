@@ -67,17 +67,19 @@ Computing platform for UW-Madison SMPH.
 
 ---
 
-packages found: r-qtl, r-here
+- packages found: r-qtl, r-here
 
-packages needed to be installed:
-broman
-lineup
-lineup2
-mbmixture
-mmconvert
-qtl2
-qtl2convert
-qtl2fst
-regress
-simcross
+- packages needed to be installed:
+broman,
+lineup,
+lineup2,
+mbmixture,
+mmconvert,
+qtl2,
+qtl2convert,
+qtl2fst,
+regress,
+simcross,
 xoi
+
+- seems like I just install them directly with `install.packages()`
