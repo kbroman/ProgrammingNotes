@@ -52,6 +52,8 @@
   "connect to server". Still having a DNS problem on my laptop, but
   can connected directly to `10.134.63.116`
 
+  Got it to work from my laptop by adding `144.92.20.19` as DNS
+  server. Found that here: <https://kb.wisc.edu/8958>.
 
 - To recursively move things including subdirectories:
 
