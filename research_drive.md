@@ -44,6 +44,10 @@
   But instead I get `NT_STATUS_IO_TIMEOUT`. Tried also using `-U
   broman@ad.wisc.edu` but same error.
 
+  Added `144.92.73.10` and `144.92.73.92` to DNS and I no longer have
+  to specify the IP, but I still get the `NT_STATUS_IO_TIMEOUT` error.
+
+
 - To recursively move things including subdirectories:
 
   ```
