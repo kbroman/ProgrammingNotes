@@ -39,6 +39,11 @@
   Supposedly I can use `smph.vpn.wisc.edu` as the VPN address, but
   that didn't work for me either.
 
+  It seems like the `NT_STATUS_UNSUCCESSFUL` is maybe a DNS problem.
+  If I use the IP directly, `10.134.63.116`, I don't get that error.
+  But instead I get `NT_STATUS_IO_TIMEOUT`. Tried also using `-U
+  broman@ad.wisc.edu` but same error.
+
 - To recursively move things including subdirectories:
 
   ```
