@@ -46,3 +46,18 @@
   recurse ON
   mput *
   ```
+
+- Can also mount drive on linus using `gio`:
+
+  ```
+  gio mount smb://restricted.drive.wisc.edu/broman
+  gio mount --list
+  ```
+
+  It'll mount to `/var/run/user/$UID/gvfs/smb-share:server\=reserarch.drive.wisc.edu,share=broman`
+
+  Unmount with
+
+  ```
+  gio mount -u smb://restricted.drive.wisc.edu/broman
+  ```
