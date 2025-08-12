@@ -47,6 +47,11 @@
   Added `144.92.73.10` and `144.92.73.92` to DNS and I no longer have
   to specify the IP, but I still get the `NT_STATUS_IO_TIMEOUT` error.
 
+  If I connected to the SMPH vpn (`smph.vpn.wisc.edu` using
+  GlobalProtect), I can connect to restricted drive from my mac using
+  "connect to server". Still having a DNS problem on my laptop, but
+  can connected directly to `10.134.63.116`
+
 
 - To recursively move things including subdirectories:
 
