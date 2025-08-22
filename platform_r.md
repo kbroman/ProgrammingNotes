@@ -87,4 +87,6 @@ regress,
 simcross,
 xoi
 
-- seems like I just install them directly with `install.packages()`
+- seems like I just install them directly with `install.packages()`.
+
+  add note that `update.packages()` also works.
