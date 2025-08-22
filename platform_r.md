@@ -40,6 +40,11 @@ Computing platform for UW-Madison SMPH.
   spack install
   ```
 
+  But note that this install R/qtl version 1.66 (from 2023-11-27), not
+  the latest version 1.70 (from 2024-08-21). Also note that it's
+  running R 4.4.0 (from 2024-04); the latest version is 4.5.1.
+
+
 - access data on restricted drive
 
   ```
