@@ -686,14 +686,14 @@ apps.
     work calendar is at <https://outlook.office365.com/calendar/>.)
 
 
-55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/linux_support/)
+55. [Tunnelbear VPN](https://www.tunnelbear.com/blog/setting-up-tunnelbear-on-linux/)
 
     - `sudo apt install network-manager-openvpn-gnome`
 
     - `mkdir ~/.tunnelbear_config`
 
     - Grab [config
-      files](https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip)
+      files](https://tunnelbear.s3.amazonaws.com/support/linux/openvpn.zip)
       and unzip to the above `.tunnelbear_config` directory
 
     - Open Network settings; click plus sign by VPN and choose "Import
