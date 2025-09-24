@@ -170,7 +170,8 @@ apps.
     want the one that says "Sync your files..." rather than "Access
     your files..."
 
-13. Install SimpleNote via Pop_Shop
+13. Install SimpleNote (Pop_Shop has old version so get amd64 deb file
+    from [github](https://github.com/Automattic/simplenote-electron/releases/))
 
 14. Install Zoom via Pop_Shop
 
