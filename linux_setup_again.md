@@ -484,6 +484,8 @@ apps.
         /dev/nvme1n1p1  /media/kbroman/Broster3Backup  auto  nosuid,nodev,nofail,x-gvfs-show  0  0
         ```
 
+    - also setup backup with duplicati using two external drives
+
 42. Copy over music
 
     - Used `rsync`; issue of having spaces in paths, but can do like
