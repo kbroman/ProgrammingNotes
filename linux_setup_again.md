@@ -485,6 +485,7 @@ apps.
         ```
 
     - also setup backup with duplicati using two external drives
+      ([transfer settings to the new machine](https://docs.duplicati.com/detailed-descriptions/migrating-duplicati-to-a-new-machine))
 
 42. Copy over music
 
