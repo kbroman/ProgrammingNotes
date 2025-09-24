@@ -63,6 +63,7 @@ apps.
    - type `1` to have it push a DUO verification to your phone
    - the download page wasn't working, so copied over from other
      computer; it asked for VPN address, which is `uwmadison.vpn.wisc.edu`
+     (now using `smph.vpn.wisc.edu`)
 
 8. ssh keys + connect to github
 
