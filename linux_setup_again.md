@@ -567,7 +567,14 @@ apps.
 
     - Just going to use the built-in `python3`
 
-54. Installed Julia with `sudo apt install julia` though it's a bit old.
+54. Installed Julia with `sudo apt install julia` but it had a lot of
+    problems. So installed followed the [official instructions]():
+
+    ```
+    curl -fsSL https://install.julialang.org | sh
+    ```
+
+    This put julia in `~/.juliaup/bin/julia`.
 
 *55. Installed Jupyter
 
@@ -589,10 +596,8 @@ apps.
       Pkg.add("IJulia")
       ```
 
-      But it's giving a lot of errors.
-
-      The goal is that when running `jupyter notebook`, can click "New" and the
-      options should include "Python 3", "R", and "Julia1.1.1"
+      then when running `jupyter notebook`, can click "New" and the
+      options should include "Python 3", "R", and "Julia1.11.7"
 
 56. Mouse acceleration (also want touchpad acceleration, but there
     doesn't seem to be a setting for it):
