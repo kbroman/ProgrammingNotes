@@ -418,8 +418,8 @@ apps.
         - click one corner position and then the other on the grid
         - esc to exit
         - also use Super-Alt-[keypad numbers]
-        - In Pop_OS! 20.04, disabled the pop shell extension
-          (with Tile Windows), disabled in the extensions app
+        - In Pop_OS! 22.04, disabled the "pop shell" extension
+          (with Tile Windows); disabled it in the extensions app
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
     - [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/)
