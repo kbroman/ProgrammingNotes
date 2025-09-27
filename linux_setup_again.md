@@ -24,6 +24,8 @@ apps.
    - That also had an option for Microsoft Exchange, so I briefly
      tried to connect to the UW-Madison Office 365, but it didn't work
      immediately so I moved on.
+   - Settings: Natural scrolling for mouse and trackpad; move dock to
+     left side and hide it
 
 2. Connect to the internet (wired)
 
@@ -65,7 +67,8 @@ apps.
    - type `1` to have it push a DUO verification to your phone
    - the download page wasn't working, so copied over from other
      computer; it asked for VPN address, which is `uwmadison.vpn.wisc.edu`
-     (now using `smph.vpn.wisc.edu`)
+     (now using `smph.vpn.wisc.edu`, but won't take `[username]_1`
+     just `[username]`)
 
 8. ssh keys + connect to github
 
@@ -139,7 +142,6 @@ apps.
     sudo apt install devscripts
     ```
 
-
 10. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
@@ -169,6 +171,8 @@ apps.
 11. Install LaTeX (texlive)
 
     - I just did plain `sudo apt install texlive-full`
+    - It hung up part-way through; got it to continue by pressing
+      return multiple times
 
 12. Install DropBox via Pop_Shop, but there are two choices and you
     want the one that says "Sync your files..." rather than "Access
@@ -198,7 +202,7 @@ apps.
     - Needed libappindicator1
     - Used `sudo apt --fix-broken install`
 
-*18. Connect a USB stick
+18. Connect a USB stick
 
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
@@ -220,7 +224,6 @@ apps.
       packages) away from rstudio to something with https to avoid the
       warning at startup
 
-
 20. Link to pandoc and quarto that shipped with RStudio
     (see <https://github.com/rstudio/rmarkdown/blob/main/PANDOC.md>)
 
@@ -228,7 +231,6 @@ apps.
     sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/tools/x86_64/pandoc /usr/local/bin/
     sudo ln -s /usr/lib/rstudio/resources/app/bin/quarto/bin/quarto /usr/local/bin/
     ```
-
 
 21. Okular pdf reader
 
@@ -238,42 +240,19 @@ apps.
       - Open folder and right click on a PDF
       - Select Properties and then the "Open With" tab
       - Choose okular and click "Set default"
-    - Was getting a bunch of warnings. Got some of them to go away with:
+    - Previously got a bunch of warnings, so used this:
 
       ```
       sudo apt install breeze-icon-theme elementary-icon-theme
       ```
 
-      But some remaining warnings:
-
-      ```
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/16/"
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/22/"
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/24/"
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/32/"
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/48/"
-      Invalid Type= "Scaleable" line for icon theme:  "/usr/share/icons/pop-os-branding/round-logos/64/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/16/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/22/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/24/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/32/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/48/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/64/"
-      Invalid Context= "stock" line for icon theme:  "/usr/share/icons/ubuntu-mono-dark/stock/128/"
-      Icon theme "Mint-X" not found.
-      ```
-
-    - Tried also `sudo apt install oxygen-icon-theme`
-
-    - Tried installing [mint themes](https://www.gnome-look.org/p/1175954/)
-
+    - Also tried `sudo apt install oxygen-icon-theme`
 
 22. Additional packages
 
     ```
     sudo apt install gnome-tweaks
     ```
-
 
 23. Create a `start` script that acts like `open` on a Mac, as a
     little shell script that just calls `xdg-open` repeatedly for
@@ -288,7 +267,6 @@ apps.
         xdg-open "$file" >& /dev/null  # ">& /dev/null" to suppress all warnings
     done
     ```
-
 
 24. Get terminal to open at startup
 
@@ -320,10 +298,10 @@ apps.
       [Eddy](https://github.com/donadigo/eddy), a debian package
       installer.
 
-27. Color picker, [gpick](http://www.gpick.org/)
+27. Color picker [gpick](http://www.gpick.org/), and image viewer [gthumb](https://gitlab.gnome.org/GNOME/gthumb)
 
     ```
-    sudo apt install gpick
+    sudo apt install gpick gthumb
     ```
 
 28. Copy stuff into `.bashrc`
@@ -356,7 +334,6 @@ apps.
     ```
 
     copy over stuff from `~/.config/espanso`
-
 
 33. Install npm and coffeescript
 
@@ -426,7 +403,6 @@ apps.
     - `inkscape` (like illustrator)
     - `k3b` (for burning CDs)
 
-
 39. [Gnome extensions](https://extensions.gnome.org)
 
     - (Can install, uninstall, and configure extensions within browser)
@@ -455,6 +431,7 @@ apps.
       and back in again)
 
 40. Install [Slack](https://slack.com/downloads/linux) from Pop_Shop
+    Also Discord.
 
 41. Set up backups
 
@@ -486,9 +463,6 @@ apps.
       machine](https://docs.duplicati.com/detailed-descriptions/migrating-duplicati-to-a-new-machine));
       copied over configuration from `~/.config/Duplicati/` (**2.5 GB**)
 
-
----
-
 42. Copy over music
 
     - Used `rsync`; issue of having spaces in paths, but can do like
@@ -497,7 +471,6 @@ apps.
       ```
       rsync -a "fig.local:Music/iTunes/iTunes\ Music/They\ Might\ Be\ Giants" .
       ```
-
 
 44. Was looking at finding a better linux terminal, but I think the
     standard gnome terminal will be fine for me.
@@ -539,36 +512,43 @@ apps.
         - [check your IP](https://bearsmyip.com/)
         - check for DNS leaks with "Extended test" at [dnsleaktest.com](https://www.dnsleaktest.com/)
 
-    - **The above didn't work**, but was able to create by hand
-
-      - getting errors when trying to load from file, or from command
-        line
-      - by hand, e.g. TunnelBear Canada: select
-        OpenVPN, give Gateway as `ca.lazerpenguin.com:443` and
-        Authentication `Password` with email and tunnelbear password,
-        and then `CACertificate.crt` from `~/.tunnelbear_config/openvpn`
-
 50. [kmag](https://stackoverflow.com/a/26418432) useful for simulating
     color blindness: `sudo apt install kmag`
 
+    - It's a screen magnification tool; in menubar View → Color, you
+      can choose different versions of colorblindness.
 
 51. Regarding battery life, see [this system76
     article](https://support.system76.com/articles/battery/) which
     recommends:
 
     ```
-    sudo apt install tlp tlp-rdw --no-install-recommends
-    sudo tlp-stat
-
     sudo apt install powertop
     sudo powertop -c
     sudo powertop --help=report
     sudo powertop --auto-tune
+    sudo powertop --html=report.html
     ```
 
-    Configure `tlp` by editing `/etc/default/tlp`.
+    - Previously there was discussion of `tlp` but now they say it's not
+      compatible with `system76-power`.
 
-52. Made a keyboard shortcut to open toodledo.com in a web browser:
+    - The article also points to the tool `intel_gpu_top` for
+      monitoring the integrated intel graphics. Install with
+
+      ```
+      sudo apt install intel-gpu-tools
+      ```
+
+    - Can check battery health with `upower -d`.
+
+    - Control charging thresholds with `system76-power`.
+
+      ```
+      system76-power charge-thresholds 20 52
+      ```
+
+80. Made a keyboard shortcut to open toodledo.com in a web browser:
 
     - open Settings -> Keyboard
     - Scroll to the bottom of the Keyboard Shortcuts and click the +
@@ -577,28 +557,29 @@ apps.
 
     - Additional shortcuts:
 
-      - flameshot
       - navigation: move window one monitor to left/right, move window
         one workspace up/down, using shift+super+arrow
 
+      - ctrl-alt-p for interactive screenshot.
 
-53. I installed Anaconda by downloading the `.sh` script from
-    [its web
-    site](https://www.anaconda.com/distribution/#download-section)
-    and running `bash Anaconda-*.sh`. I chose to install it in
-    `~/.anaconda3` and had it modify my `.bashrc` file.
+53. No longer installing Anaconda because they [changed their
+    license](https://licenseware.io/retrospective-on-anacondas-2024-licensing-changes-what-they-mean-and-smarter-alternatives/).
 
-54. Installed Julia with `sudo apt install julia` but this gave
-    version 1.0.1 which seems really old (current is 1.1 and long-term
-    support release is 1.0.3). So I instead
+    - Just going to use the built-in `python3`
 
-    - downloaded the `.tar.gz` file with "generic linux
-    binaries", from <https://julialang.org/downloads/>
+54. Installed Julia with `sudo apt install julia` though it's a bit old.
 
-    - extracted into `/usr/local/src`
+*55. Installed Jupyter
 
-    - created symbolic link to `/usr/local/src/julia-1.1.0/bin/julia`
-      in `/usr/local/bin`
+      ```
+      sudo apt install jupyter
+      ```
+
+    - ran R and installed `IRkernel` package and then
+      `IRkernel::installspec()`
+
+      then when running `jupyter notebook`, can click "New" and the
+      options are both "Python 3" and "R"
 
     - ran `julia` and installed IJulia to enable use in jupyter
       notebooks
@@ -608,10 +589,12 @@ apps.
       Pkg.add("IJulia")
       ```
 
-      then when running `jupyter notebook`, can click "New" and the
-      options are both "Python3" and "Julia1.1.1"
+      But it's giving a lot of errors.
 
-55. Mouse acceleration (also want touchpad acceleration, but there
+      The goal is that when running `jupyter notebook`, can click "New" and the
+      options should include "Python 3", "R", and "Julia1.1.1"
+
+56. Mouse acceleration (also want touchpad acceleration, but there
     doesn't seem to be a setting for it):
 
     ```
@@ -623,16 +606,6 @@ apps.
 
     Can also change these settings with the gnome tweaks gui.
 
-56. Installed the mini-emacs application, `mg` via
-
-    ```
-    sudo apt install mg
-    ```
-
-    Made it the default for git commit messages by editing
-    `~/.gitconfig`. More than sufficient for that, and way faster to
-    start up.
-
 57. Setup playback of dvds
 
     ```
@@ -640,84 +613,18 @@ apps.
     sudo dpkg-reconfigure libdvd-pkg
     ```
 
-58. Oryx Pro fan can be really loud. To lower it, use
-    [clevo-indicator](https://github.com/davidrohr/clevo-indicator)
+58. [neofetch](https://github.com/dylanaraps/neofetch) provides system info at the command-line
 
-    ```
-    sudo apt install libappindicator3-dev
-    git clone https://github.com/davidrohr/clevo-indicator
-    cd clevo-indicator
-    make
-    ```
+59. Install ccache and use for compiling R
 
-    To use: put `bin/clevo-indicator` in `~/.local/bin/`
-
-    ```
-    sudo clevo-indicator
-    sudo clevo-indicator set 50
-    sudo clevo-indicator setg 50
-    ```
-
-59. [neofetch](https://github.com/dylanaraps/neofetch) provides system info at the command-line
-
---
-
-- Install ccache and use for compiling R
-
-  - `sudo apt install ccache`
-  - In `~/.R`:
-
-- Additional possible gnome extensions:
-  - [Places status indicator](https://extensions.gnome.org/extension/8/places-status-indicator/)
-  - [Pomodoro timer](https://gnomepomodoro.org/)
-
-
-
----
-
-### Stuff that didn't work:
-
-
-1. Set up Apple magic mouse via bluetooth settings
-
-   - It came up with a weird name; I had to go back to Mac and pair it
-     and then rename it and then back to pair again with the linux
-     laptop
-   - Scrolling speed was deathly slow. Followed instructions
-     at <https://askubuntu.com/a/262730>. In particular, I used:
-
-     ```
-     options hid_magicmouse scroll-speed=60 scroll-acceleration=2
-     ```
-   - **FIX ME**: want scrolling to go in the opposite direction
-   - **FIX ME**: after restarting and messing with the trackpad (not
-     sure what I did), the mouse stopped working.
-
-
-2. Try to get Apple Magic Trackpad working
-
-    - Looking at [Touchégg](https://github.com/JoseExposito/touchegg/wiki/How-to-compile-Touch%C3%A9gg-source-code)
+    - `sudo apt install ccache`
+    - In `~/.R/Makevars`:
 
       ```
-      git clone git://github.com/JoseExposito/touchegg.git
-      sudo apt-get build-dep touchegg
-      qmake
-      make
-      sudo make install
+      CC=ccache gcc
+      CXX=ccache g++
+      CFLAGS=-DNDEBUG -fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
+      CXXFLAGS=-fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
       ```
 
-    - **FIX ME**: At present, it's not working
-    - Removed Touchégg with `sudo make uninstall`
-
-----
-
-### Problems
-
-1. I had some gnome extensions that
-weren't working but that I couldn't delete. Followed [these
-instructions](https://unix.stackexchange.com/a/403674):
-
-  - Look in `~/.local/share/gnome-shell/extensions`
-    and also `/usr/share/gnome-shell/extensions`
-  - Delete the directories for extensions you want to get rid of
-  - Reload gnome-shell by pressing ALT+F2, typing `r`, and pressing ENTER.
+*60. Set up yubikeys
