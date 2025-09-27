@@ -10,9 +10,9 @@ Pro](https://system76.com/laptops/galago); I made some changes to the
 instructions below, the second time around.)
 
 (I later purchased a System76 [Darter
-Pro](https://tech-docs.system76.com/models/darp8/README.html); I made further changes.)
+Pro (darp8)](https://tech-docs.system76.com/models/darp8/README.html); I made further changes.)
 
-(I later purchased a newer System76 [Darter Pro](https://tech-docs.system76.com/models/darp11/README.html).)
+(I later purchased a newer System76 [Darter Pro (darp11)](https://tech-docs.system76.com/models/darp11/README.html).)
 
 I had them install their [Pop!_OS](https://system76.com/pop) which is basically Ubuntu but
 with some re-configured sessions and different choices of included
