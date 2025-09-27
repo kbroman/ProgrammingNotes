@@ -560,7 +560,7 @@ apps.
       - navigation: move window one monitor to left/right, move window
         one workspace up/down, using shift+super+arrow
 
-      - ctrl-alt-p for interactive screenshot.
+      - ctrl-alt-p for interactive screenshot. (screenshots saved to `~/Pictures/Screenshots`)
 
 53. No longer installing Anaconda because they [changed their
     license](https://licenseware.io/retrospective-on-anacondas-2024-licensing-changes-what-they-mean-and-smarter-alternatives/).
