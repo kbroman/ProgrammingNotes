@@ -632,4 +632,6 @@ apps.
       CXXFLAGS=-fpic -g -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
       ```
 
-*60. Set up yubikeys
+60. Set up yubikeys as in [yubikeys.md](https://github.com/kbroman/ProgrammingNotes/blob/main/yubikey.md)
+
+61. Install speedtest with `sudo apt install speedtest-cli`
