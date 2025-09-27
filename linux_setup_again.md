@@ -10,7 +10,9 @@ Pro](https://system76.com/laptops/galago); I made some changes to the
 instructions below, the second time around.)
 
 (I later purchased a System76 [Darter
-Pro](https://system76.com/laptops/darter); I made further changes.)
+Pro](https://tech-docs.system76.com/models/darp8/README.html); I made further changes.)
+
+(I later purchased a newer System76 [Darter Pro](https://tech-docs.system76.com/models/darp11/README.html).)
 
 I had them install their [Pop!_OS](https://system76.com/pop) which is basically Ubuntu but
 with some re-configured sessions and different choices of included
@@ -37,13 +39,13 @@ apps.
    sudo apt upgrade
    ```
 
-5. Install emacs
+5. Install emacs and mg
 
    ```
-   sudo apt install emacs
+   sudo apt install emacs mg
    ```
 
-6. Connect to the internet (wifi), using eduroam
+*6. Connect to the internet (wifi), using eduroam
 
    - See <https://kb.wisc.edu/helpdesk/page.php?id=25020>
    - Eduroam Configuration Assistance Tool, which gives a python
@@ -67,7 +69,9 @@ apps.
 
 8. ssh keys + connect to github
 
-   - [created new ssh key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+   - [created new ssh
+     key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+   - used `ssh-keygen -t ed25519`
    - installed xclip with `sudo apt install xclip`
    - pasted to clipboard with `xclip -sel clip < ~/.ssh/id_rsa.pub`
    - At github, settings -> ssh and gpg keys -> New SSH key
@@ -78,7 +82,7 @@ apps.
      ```
      git config --global user.email "kbroman@gmail.com"
      git config --global user.name "Karl Broman"
-     git config --global core.editor "emacs"
+     git config --global core.editor "mg"
      git config --global core.excludesfile "/home/kbroman/.gitignore_global"
      ```
 
@@ -194,8 +198,7 @@ apps.
     - Needed libappindicator1
     - Used `sudo apt --fix-broken install`
 
-
-18. Connect a USB stick
+*18. Connect a USB stick
 
     - Plug into USB port and it shows up in `/media/kbroman`
     - Before removing, use `umount /media/kbroman/[drive name]`
@@ -342,7 +345,6 @@ apps.
 
     - `vlc` (video player)
     - `calibre` (organizes ebooks)
-    - `digikam` (organizing photos)
 
 32. Install espanso (much better than autokey); customizations in `~/.config/espanso/match/base.yml`
 
@@ -352,6 +354,9 @@ apps.
     sudo snap install espanso --classic
     espanso start
     ```
+
+    copy over stuff from `~/.config/espanso`
+
 
 33. Install npm and coffeescript
 
@@ -404,20 +409,22 @@ apps.
     - tried installing `pdfnup` but it seems it's included with
       texlive; actually no longer included in texlive. got it from
       <https://github.com/rrthomas/pdfjam-extras>
-    - `pinta` (like MS paint)
     - `handbrake` (for ripping DVDs)
-    - `gimp` (like photoshop)
-    - `inkscape` (like illustrator)
-    - `shutter` (image capture) [no longer available]
-    - `k3b` (for burning CDs)
     - `clementine` (music app)
-    - `rclone` (like rsync for cloud storage)
-    - `filezilla` (ftp client)
     - `libnotify-bin` (enables you to create desktop notifications
       with `notify-send`; so in R you could do like
       `system('notify-send "R is done!"')`)
     - `trash-cli` (move files to "trash" via the command line (`trash`
       in place of `rm`)
+
+    Stuff I left for future:
+
+    - `rclone` (like rsync for cloud storage)
+    - `filezilla` (ftp client)
+    - `pinta` (like MS paint)
+    - `gimp` (like photoshop)
+    - `inkscape` (like illustrator)
+    - `k3b` (for burning CDs)
 
 
 39. [Gnome extensions](https://extensions.gnome.org)
@@ -426,10 +433,6 @@ apps.
     - [Clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator)
       (gives clipboard history)
     - [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
-    - [Audio Switcher 40](https://extensions.gnome.org/extension/4248/audio-switcher-40/)
-    - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
-      (also needed `sudo apt install gir1.2-gtop-2.0`, and to log out
-      and back in again)
     - [emoji selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
       (also did `sudo apt install fonts-emojione`)
     - [gtile](https://extensions.gnome.org/extension/28/gtile/) (tile
@@ -441,21 +444,15 @@ apps.
         - also use Super-Alt-[keypad numbers]
         - In Pop_OS! 20.04, disabled the pop shell extension
           (with Tile Windows), disabled in the extensions app
-    - [hide activities button](https://extensions.gnome.org/extension/744/hide-activities-button/)
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
-    - [Media player indicator](https://extensions.gnome.org/extension/55/media-player-indicator/)
-    - [log out button](https://extensions.gnome.org/extension/1143/logout-button/)
     - [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/)
       used by dropbox, and seems to help ensure that all apps
       (including globalprotect) are shown in the menubar)
-
-    For audio switcher, said it was not compatible with latest version
-    of gnome, but was able to install via [its github
-    repository](https://github.com/AndresCidoncha/audio-switcher), and
-    it seems to work fine. Cloned the repository into
-    `~/.local/share/gnome-shell/extensions/` and then restarted
-    `gnome-shell` and it showed up.
+    - [Audio Output Switcher](https://extensions.gnome.org/extension/751/audio-output-switcher)/
+    - [system-monitor](https://extensions.gnome.org/extension/3010/system-monitor-next/)
+      (also needed `sudo apt install gir1.2-gtop-2.0`, and to log out
+      and back in again)
 
 40. Install [Slack](https://slack.com/downloads/linux) from Pop_Shop
 
@@ -470,7 +467,7 @@ apps.
     - Set up Deja Dup for a daily backup of my home folder, ignoring
       the Downloads folder.
 
-    - Ignore the folders `~/Dropbox` and `~/VirtualBox VMs`
+    - Ignore the folders `~/Dropbox` and `~/VirtualBox VMs` and `~/ISOs`
 
     - selected to backup to local folder, and to the backup drive and
       a folder I created there
@@ -483,6 +480,8 @@ apps.
         ```
         /dev/nvme1n1p1  /media/kbroman/Broster3Backup  auto  nosuid,nodev,nofail,x-gvfs-show  0  0
         ```
+
+---
 
     - also setup backup with duplicati using two external drives
       ([transfer settings to the new machine](https://docs.duplicati.com/detailed-descriptions/migrating-duplicati-to-a-new-machine))
