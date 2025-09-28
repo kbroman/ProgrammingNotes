@@ -418,8 +418,10 @@ apps.
         - click one corner position and then the other on the grid
         - esc to exit
         - also use Super-Alt-[keypad numbers]
-        - In Pop_OS! 22.04, disabled the "pop shell" extension
-          (with Tile Windows); disabled it in the extensions app
+        - Disabled the "pop shell" extension
+          (with Tile Windows); disabled it in the extensions app.
+          Actually had to re-enable it, as when disabled, the super
+          key stopped working
     - [Refresh wifi connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
       (adds a refresh button to the wifi connection dialog)
     - [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/)
