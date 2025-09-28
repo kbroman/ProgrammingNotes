@@ -564,6 +564,8 @@ apps.
 
       - ctrl-alt-p for interactive screenshot. (screenshots saved to `~/Pictures/Screenshots`)
 
+      - super-c for calculator
+
 53. No longer installing Anaconda because they [changed their
     license](https://licenseware.io/retrospective-on-anacondas-2024-licensing-changes-what-they-mean-and-smarter-alternatives/).
 
