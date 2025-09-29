@@ -46,3 +46,16 @@
   Now it's giving me a different set of options; going to try
   stereo output + mono input. In zoom, the headset has been really
   quiet.
+
+- Regarding disk encryption passwords on system76: See
+  [disk encryption passwords](https://support.system76.com/articles/advanced-luks/
+  and
+  [Change LUKS passphrase](https://support.system76.com/articles/password/#changing-luks-passphrase)
+
+  ```
+  lsblk -f
+
+  sudo cryptsetup luksDump /dev/sda3
+  sudo cryptsetup luksAddKey /dev/sda3
+  sudo cryptsetup luksChangeKey /dev/sda3 -S 0
+  ```
