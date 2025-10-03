@@ -639,3 +639,9 @@ apps.
 60. Set up yubikeys as in [yubikeys.md](https://github.com/kbroman/ProgrammingNotes/blob/main/yubikey.md)
 
 61. Install speedtest with `sudo apt install speedtest-cli`
+
+62. Install some packages for Libre Office
+
+    ```
+     sudo apt-get install default-jre libreoffice-java-common
+    ```
