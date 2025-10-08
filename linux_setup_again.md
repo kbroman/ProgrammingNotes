@@ -142,6 +142,22 @@ apps.
     sudo apt install devscripts
     ```
 
+  - `R CMD check` also needed [tidy](https://www.html-tidy.org),
+    installation instructions at
+    <https://www.html-tidy.org/documentation/#building-tidy>
+
+    This also required `cmake`:
+
+    ```
+    sudo apt install cmake
+
+    git clone git@github.com:htacg/tidy.html5.git
+    cd tidy-html5/build/cmake
+    cmake ../..
+    make
+    sudo make install
+    ```
+
 10. Install ess and other emacs modes (mostly cloned from GitHub; all
     placed in `~/.emacs.d`) and edit `~/.emacs` file.
 
