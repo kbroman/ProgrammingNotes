@@ -1,0 +1,7 @@
+## sha256sum
+
+- compare file hash to expected code
+
+  ```
+  echo "[hash code] [filename]" | sha256sum --check
+  ```
