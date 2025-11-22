@@ -30,3 +30,11 @@ I also needed to run
 ```shell
 sudo R CMD javareconf
 ```
+
+---
+
+Alternatively, to install the latest version
+
+```shell
+sudo apt install openjdk-25-jdk openjdk-25-jre
+```
