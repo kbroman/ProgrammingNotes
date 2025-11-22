@@ -28,7 +28,7 @@ export JAVA_HOME="/usr/lib/jvm/default-java"
 I also needed to run
 
 ```shell
-sudo R CMD javareconf
+R CMD javareconf
 ```
 
 ---
