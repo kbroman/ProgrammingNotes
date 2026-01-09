@@ -11,6 +11,8 @@
   for(pkg in pkgs) install.packages(pkg)
   ```
 
+- install gfortran; see <https://mac.r-project.org/tools/>
+
 - new links for pandoc and quarto
 
   ```
