@@ -20,4 +20,5 @@
   sudo ln -s /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto /usr/local/bin
   ```
 
+- install node from macOS package installer at <https://nodejs.org/en/download>
 
