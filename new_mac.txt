@@ -4,6 +4,13 @@
 
 - had to remove /usr/local/bin/git
 
+- had to reinstall R and basically all R packages; it wasn't clear how to do this automatically so I used
+
+  ```r
+  pkgs <- list.files("~/Rlibs")
+  for(pkg in pkgs) install.packages(pkg)
+  ```
+
 - new links for pandoc and quarto
 
   ```
