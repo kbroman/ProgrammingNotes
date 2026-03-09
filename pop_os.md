@@ -111,6 +111,12 @@ Notes regarding [System76](https://system76.com)'s
   add `auth [tab] required [tab] pam_u2f.so`
   just after the line with `@include common-auth`
 
+- Settings: desktop -> panel
+
+  - remove "Activities" and "Workspaces" buttons
+  - move minimon to center
+  - move date/time to far right
+
 ---
 
 - maybe need to re-install eduroam?
