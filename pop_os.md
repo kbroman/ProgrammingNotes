@@ -105,6 +105,12 @@ Notes regarding [System76](https://system76.com)'s
   - dictionary
   - clipboard-manager: need to install directly from [github](https://github.com/cosmic-utils/clipboard-manager)
 
+- needed to set up yubikey in cosmic
+
+  In the file `/etc/pam.d/cosmic-greeter`,
+  add `auth [tab] required [tab] pam_u2f.so`
+  just after the line with `@include common-auth`
+
 ---
 
 - maybe need to re-install eduroam?
