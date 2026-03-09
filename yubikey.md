@@ -30,7 +30,7 @@
   edit `/etc/pam.d/gdm-password` (or `/etc/pam.d/lightdm` if using
   `lightdm` rather than `gdm`) similar to sudo case above
 
-  for pop_os 24.04, need to edit `\etc/pam.d/cosmic-greeter` instead
+  for pop_os 24.04, need to edit `/etc/pam.d/cosmic-greeter` instead
 
 - set up tty
 
