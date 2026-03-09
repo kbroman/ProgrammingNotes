@@ -53,7 +53,7 @@ Notes regarding [System76](https://system76.com)'s
   X Globalprotect VPN
   X Moneydance
   - Tunnelbear
-  - duplicati
+  X duplicati
 
 - start-up apps:
 
@@ -66,27 +66,29 @@ Notes regarding [System76](https://system76.com)'s
     (because it saved just my "direct connection" profile with static
     IP 10.0.0.1 that I use to directly connect two laptops)
 
-- re-install R
+- install R
 
   ```shell
   sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
   sudo apt install --no-install-recommends r-base
   ```
 
-- re-install simplenote from [here](https://github.com/Automattic/simplenote-electron/releases/tag/v2.24.0)
+- install simplenote from [here](https://github.com/Automattic/simplenote-electron/releases/tag/v2.24.0)
 
   - `Simplenote-linux-2.24.0-amd64.deb`
 
-- re-install 1password from [here](https://1password.com/downloads/linux)
+- install 1password from [here](https://1password.com/downloads/linux)
 
-- re-install rstudio from [here](https://posit.co/download/rstudio-desktop/)
+- install rstudio from [here](https://posit.co/download/rstudio-desktop/)
 
   - Needed `sudo apt install --fix-broken`
 
-- re-install GlobalProtect from file I'd saved
+- install GlobalProtect from file I'd saved
 
-- re-install moneydance from file I'd saved
+- install moneydance from file I'd saved
   (or from [here](https://infinitekind.com/download-moneydance-personal-finance-software))
+
+- install duplicati from [here](https://duplicati.com/download)
 
 - install cosmic applets
 
