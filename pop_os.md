@@ -32,3 +32,53 @@ Notes regarding [System76](https://system76.com)'s
 - Super-P cycle display modes (doesn't seem to work)
 
 - In terminal, ctrl-shift-left click on an URL to open in browser
+
+### Upgrading to Pop!_OS 24.04
+
+- change settings for desktop
+  - appearance: accent color, square style, active window hint size 1,
+    gaps around tiled windows 1
+  - dock: left side, auto-hide, smaller size
+
+- display settings: scale 125%
+
+- re-install apps
+
+  R
+  RStudio
+  Moneydance
+  Simplenote
+  Globalprotect VPN
+  Tunnelbear
+  1Password
+  duplicati
+
+- start-up apps:
+
+  - remove gnome terminal and use cosmic terminal
+  - duplicati, simplenote, ping
+
+- Network connection
+
+  - needed to re-add "normal" wired connection profile
+    (because it saved just my "direct connection" profile with static
+    IP 10.0.0.1 that I use to directly connect two laptops)
+
+- re-install R
+
+  ```shell
+  sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+  sudo apt install --no-install-recommends r-base
+  ```
+
+- re-install simplenote from [here](https://github.com/Automattic/simplenote-electron/releases/tag/v2.24.0)
+
+  - `Simplenote-linux-2.24.0-amd64.deb`
+
+- install cosmic applets
+
+---
+
+- emacs problems
+
+  -getting warnings from polymode
