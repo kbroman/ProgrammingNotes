@@ -33,6 +33,10 @@ Notes regarding [System76](https://system76.com)'s
 
 - In terminal, ctrl-shift-left click on an URL to open in browser
 
+
+
+
+
 ### Upgrading to Pop!_OS 24.04
 
 - change settings for desktop
@@ -52,17 +56,14 @@ Notes regarding [System76](https://system76.com)'s
   X 1Password
   X Globalprotect VPN
   X Moneydance
-  - Tunnelbear
   X duplicati
+  X Tunnelbear
 
-- start-up apps:
-
-  - remove gnome terminal and use cosmic terminal
-  - duplicati, simplenote, ping
+- start-up apps: removed deja-dup
 
 - Network connection
 
-  - needed to re-add "normal" wired connection profile
+  - needed to add "normal" wired connection profile
     (because it saved just my "direct connection" profile with static
     IP 10.0.0.1 that I use to directly connect two laptops)
 
@@ -90,12 +91,19 @@ Notes regarding [System76](https://system76.com)'s
 
 - install duplicati from [here](https://duplicati.com/download)
 
+- create a bootable thumb drive for Pop!_OS 24.04
+
+  - see <https://support.system76.com/articles/live-disk/>
+
+- Tunnelbear VPN settings were still there, but seem to need to enter
+  password every time
+
 - install cosmic applets
 
   - minimon
   - weather
-  - numbered workspaces
-  - clipboard-manager
+  - dictionary
+  - clipboard-manager: need to install directly from [github](https://github.com/cosmic-utils/clipboard-manager)
 
 ---
 
