@@ -48,12 +48,12 @@ Notes regarding [System76](https://system76.com)'s
 
   x R
   X Simplenote
-  - RStudio
-  - Moneydance
-  Globalprotect VPN
-  Tunnelbear
-  1Password
-  duplicati
+  X RStudio
+  X 1Password
+  X Globalprotect VPN
+  X Moneydance
+  - Tunnelbear
+  - duplicati
 
 - start-up apps:
 
@@ -77,12 +77,27 @@ Notes regarding [System76](https://system76.com)'s
 
   - `Simplenote-linux-2.24.0-amd64.deb`
 
+- re-install 1password from [here](https://1password.com/downloads/linux)
+
+- re-install rstudio from [here](https://posit.co/download/rstudio-desktop/)
+
+  - Needed `sudo apt install --fix-broken`
+
+- re-install GlobalProtect from file I'd saved
+
+- re-install moneydance from file I'd saved
+  (or from [here](https://infinitekind.com/download-moneydance-personal-finance-software))
+
 - install cosmic applets
 
   - minimon
   - weather
   - numbered workspaces
   - clipboard-manager
+
+---
+
+- maybe need to re-install eduroam?
 
 ---
 
@@ -94,3 +109,5 @@ Notes regarding [System76](https://system76.com)'s
 
   - keyboard shortcuts for switching between tabs messes with those
     for emacs (specifically ctrl-shift-2)
+
+  - also ctrl-shift-_ for undo isn't working
