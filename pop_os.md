@@ -42,12 +42,14 @@ Notes regarding [System76](https://system76.com)'s
 
 - display settings: scale 125%
 
+- input devices settings: "natural scrolling" for both mouse and touchpad
+
 - re-install apps
 
-  R
-  RStudio
-  Moneydance
-  Simplenote
+  x R
+  X Simplenote
+  - RStudio
+  - Moneydance
   Globalprotect VPN
   Tunnelbear
   1Password
@@ -77,8 +79,18 @@ Notes regarding [System76](https://system76.com)'s
 
 - install cosmic applets
 
+  - minimon
+  - weather
+  - numbered workspaces
+  - clipboard-manager
+
 ---
 
 - emacs problems
 
-  -getting warnings from polymode
+  - getting warnings from polymode
+
+- cosmic terminal problems
+
+  - keyboard shortcuts for switching between tabs messes with those
+    for emacs (specifically ctrl-shift-2)
