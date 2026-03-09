@@ -111,3 +111,8 @@ Notes regarding [System76](https://system76.com)'s
     for emacs (specifically ctrl-shift-2)
 
   - also ctrl-shift-_ for undo isn't working
+
+  - changed ctrl-shift-[0-9] to alt-[0-9] but still couldn't use my
+    emacs bindings
+
+  - switching back to gnome-terminal, which is still available and works
