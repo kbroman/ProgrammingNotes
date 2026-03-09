@@ -104,6 +104,10 @@ Notes regarding [System76](https://system76.com)'s
   - weather
   - dictionary
   - clipboard-manager: need to install directly from [github](https://github.com/cosmic-utils/clipboard-manager)
+    - install rust (see [here](https://rust-lang.org/tools/install/))
+      and just (`apt install just`)
+    - close the [github repo](https://github.com/cosmic-utils/clipboard-manager)
+    - `just build-release && sudo just install`
 
 - needed to set up yubikey in cosmic
 
