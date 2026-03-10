@@ -129,6 +129,10 @@ Notes regarding [System76](https://system76.com)'s
   - move minimon to center
   - make the panel a little bigger
 
+- Settings: desktop -> workspaces
+
+  - check "workspaces span displays" under multi-monitor behavior
+
 ---
 
 - maybe need to re-install eduroam?
