@@ -125,8 +125,9 @@ Notes regarding [System76](https://system76.com)'s
 - Settings: desktop -> panel
 
   - remove "Activities" and "Workspaces" buttons
+  - move date/time to far left
   - move minimon to center
-  - move date/time to far right
+  - make the panel a little bigger
 
 ---
 
