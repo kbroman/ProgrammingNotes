@@ -101,7 +101,7 @@ Notes regarding [System76](https://system76.com)'s
 - install cosmic applets
 
   - minimon
-  - weather
+  - tempest (for weather)
   - dictionary
   - clipboard-manager: need to install directly from [github](https://github.com/cosmic-utils/clipboard-manager)
     - install rust (see [here](https://rust-lang.org/tools/install/))
