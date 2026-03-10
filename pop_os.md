@@ -142,7 +142,7 @@ Notes regarding [System76](https://system76.com)'s
 - emacs problems
 
   - getting warnings from polymode
-    (removed polymode from `~/.emacs.d/elpa/`
+    (removed polymode from `~/.emacs.d/elpa/`)
 
 - cosmic terminal problems
 
