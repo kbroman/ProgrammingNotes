@@ -114,6 +114,7 @@ Notes regarding [System76](https://system76.com)'s
       ```shell
       echo 'export COSMIC_DATA_CONTROL_ENABLED=1' | sudo tee > /etc/profile.d/cosmic_data_control.sh > /dev/null
       ```
+    - run `pkill cosmic-panel` to refresh Cosmic
 
 - needed to set up yubikey in cosmic
 
