@@ -134,6 +134,14 @@ Notes regarding [System76](https://system76.com)'s
 
   - check "workspaces span displays" under multi-monitor behavior
 
+- Settings: keyboard -> custom shortcuts
+
+  - remove super-t as shortcut for (cosmic) terminal
+
+  - custom shortcut: super-t for gnome-terminal
+
+  - custom shortcut: super-c for gnome-calculator
+
 ---
 
 - maybe need to re-install eduroam?
