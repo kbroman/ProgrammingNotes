@@ -142,11 +142,35 @@ Notes regarding [System76](https://system76.com)'s
 
   - custom shortcut: super-c for gnome-calculator
 
+- Eduroam: just needed to add login and password
+
+- Install "smile" emoji picker
+
+- Set up r2u using instructions [here](https://github.com/eddelbuettel/r2u?tab=readme-ov-file)
+
+- Install espanso (for Wayland) using instructions [here](https://espanso.org/docs/install/linux/#deb-wayland)
+
+  - matches in `~/.config/espanso/match/base.yml`
+
+- Install npm and coffeescript
+
+  - `sudo apt install npm`
+  - `sudo npm install -g coffeescript`
+  - `sudo npm install -g yarn`
+
+  Also [`gistup`](https://github.com/mbostock/gistup):
+
+  - `sudo npm install -g gistup`
+
+  Also some others
+
+  - `sudo npm install -g babel-core uglify-js uglifycss`
+
+
 ---
 
-- maybe need to re-install eduroam?
 
----
+### Problems
 
 - emacs problems
 
