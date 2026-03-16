@@ -233,3 +233,14 @@ To update renv.lock: renv::snapshot()
 github actions:
 
 `usethis::use_github_action("check-standard")`
+
+---
+
+Using r2u to install packages; see instructions at
+https://github.com/eddelbuettel/r2u
+
+Packages get installed into /usr/lib/R/site-library/
+
+- remove stuff from Rlibs that is in /usr/lib/R/site-library
+- tool to get list of packages at site-library and packages at Rlibs
+- Store installed packages in ~/Play/installed_packages.R
