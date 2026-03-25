@@ -103,19 +103,7 @@ Notes regarding [System76](https://system76.com)'s
   - minimon
   - tempest (for weather)
   - dictionary
-  - clipboard-manager: need to install directly from [github](https://github.com/cosmic-utils/clipboard-manager)
-    - install rust (see [here](https://rust-lang.org/tools/install/))
-      and just (`apt install just`)
-    - close the [github repo](https://github.com/cosmic-utils/clipboard-manager)
-    - `just build-release && sudo just install`
-    - go to panel settings and add the applet
-    - need also to run
-
-      ```shell
-      echo 'export COSMIC_DATA_CONTROL_ENABLED=1' | sudo tee > /etc/profile.d/cosmic_data_control.sh > /dev/null
-      ```
-    - run `pkill cosmic-panel` to refresh Cosmic
-    - still can't get it to work, though
+  - clipboard-manager
 
 - needed to set up yubikey in cosmic
 
