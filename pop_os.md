@@ -33,7 +33,11 @@ Notes regarding [System76](https://system76.com)'s
 
 - In terminal, ctrl-shift-left click on an URL to open in browser
 
+- To restart Cosmic (equivalent to restarting gnome-shell)
 
+  ```bash
+  killall -3 cosmic-panel
+  ```
 
 
 
