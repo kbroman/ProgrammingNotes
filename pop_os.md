@@ -157,6 +157,13 @@ Notes regarding [System76](https://system76.com)'s
   - `sudo npm install -g babel-core uglify-js uglifycss`
 
 
+- Change pbcopy/pbpaste
+
+  - I have pbcopy (pbpaste) as aliases for `xsel --clipboard --input`
+    (and `--output`), but these don't work with Wayland.
+
+  - change to `wl-copy` and `wl-paste` in the wl-clipboard package
+
 ---
 
 
@@ -182,7 +189,10 @@ Notes regarding [System76](https://system76.com)'s
   - to change default terminal: set default terminal in
     cosmic settings -> applications -> default applications
 
-- gnome-terminal problems
+  - also having trouble with set-mark (ctrl-shift-@)
+    (but can use ctrl-space)
+
+- Gnome-terminal problems
 
   - had switched to use gnome-terminal rather than cosmic-term because
     of the undo issue, and the issue of tabs
