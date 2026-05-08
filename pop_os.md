@@ -128,15 +128,13 @@ Notes regarding [System76](https://system76.com)'s
 
 - Settings: keyboard -> custom shortcuts
 
-  - remove super-t as shortcut for (cosmic) terminal
-
-  - custom shortcut: super-t for gnome-terminal
-
   - custom shortcut: super-c for gnome-calculator
+
+  - custom shortcut: super-e for emote (emoji picker)
 
 - Eduroam: just needed to add login and password
 
-- Install "smile" emoji picker
+- Install "emote" emoji picker
 
 - Set up r2u using instructions [here](https://github.com/eddelbuettel/r2u?tab=readme-ov-file)
 
@@ -174,9 +172,23 @@ Notes regarding [System76](https://system76.com)'s
   - keyboard shortcuts for switching between tabs messes with those
     for emacs (specifically ctrl-shift-2)
 
-  - also ctrl-shift-_ for undo isn't working
+  - also ctrl-shift-_ for undo isn't working (but can use c-x u)
 
   - changed ctrl-shift-[0-9] to alt-[0-9] but still couldn't use my
     emacs bindings
 
   - switching back to gnome-terminal, which is still available and works
+
+  - to change default terminal: set default terminal in
+    cosmic settings -> applications -> default applications
+
+- gnome-terminal problems
+
+  - had switched to use gnome-terminal rather than cosmic-term because
+    of the undo issue, and the issue of tabs
+
+  - but I've been having problems with copy/paste from other
+    applications to gnome-terminal, so switching back to cosmic-term
+
+  - rather than using terminal tabs, I'm opening separate terminals
+    and using window stacking (super-s to create a window stack)
