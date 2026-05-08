@@ -9,3 +9,9 @@
       kill $i
   done
   ```
+
+- sort subdirectories by size
+
+  ```
+  du -hd1 . | sort -h
+  ```
