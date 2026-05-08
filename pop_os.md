@@ -136,6 +136,8 @@ Notes regarding [System76](https://system76.com)'s
 
 - Install "emote" emoji picker
 
+- In cosmic terminal, set default font to "Liberation Mono"
+
 - Set up r2u using instructions [here](https://github.com/eddelbuettel/r2u?tab=readme-ov-file)
 
 - Install espanso (for Wayland) using instructions [here](https://espanso.org/docs/install/linux/#deb-wayland)
