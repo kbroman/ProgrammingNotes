@@ -12,13 +12,17 @@
   sudo apt-get install docker-ce docker-ce-cli containerd.io
   ```
 
+  I had a lot of problems getting the docker daemon to run, so added
+  [`docker-desktop`](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64)
+  from a `.deb` package. But that didn't help.
+
 - To install docker for minecraft, I changed to the directory
   containing the `Dockerfile` in the miner package installation, and then
   followed the instructions in the [miner
   book](https://ropenscilabs.github.io/miner_book/installation-and-configuration.html#docker).
 
   ```
-  cd ~/Rlibs/miner/Dockerfile .
+  cd ~/Rlibs/miner/
   sudo docker build -t minecraft .
   ```
 
