@@ -30,6 +30,14 @@ set -g prefix C-\\
 ### remote sessions
 
 - `ssh <remote host> -t tmux attach-session`
+  (not sure I'd use this, though)
+
+### choosing session, windows, and panes
+
+- `C-\ s` and `C-\ w` enter "tree mode"
+
+- `q` to exit tree mode
+
 
 ### running a command
 
