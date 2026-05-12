@@ -24,6 +24,10 @@
 - f - swap item with off hand
 
 ### movement if flying
+- double-space - start or stop flying
 - space - go up
 - left shift - go down
-- double-space - drop down
+
+### camera view
+
+- F5 - toggle different perspectives
