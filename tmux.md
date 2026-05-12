@@ -25,6 +25,7 @@ set -g prefix C-\\
 - `tmux a -t 0` - attach to 0th session
 - `tmux new -s minecraft` - create new session named "`minecraft`"
 - `tmux rename-session -t 0 minecraft - rename session as "`minecraft`"
+- `tmux a -t minecraft` - attach to session named "`minecraft`"
 
 ### remote sessions
 
