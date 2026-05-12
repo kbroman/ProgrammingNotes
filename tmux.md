@@ -29,3 +29,31 @@ set -g prefix C-\\
 ### remote sessions
 
 - `ssh <remote host> -t tmux attach-session`
+
+### running a command
+
+To start minecraft server within tmux session:
+
+```
+cd /home/pi/minecraft
+tmux new-session -d -s "minecraft" ./start.sh
+```
+
+To get it to start at boot, I created a script to run every minute
+that checks if there's a tmux minecraft session and if not start one:
+
+```
+#!/bin/bash
+
+if tmux has-session -t minecraft > /dev/null 2>&1; then
+    :
+else
+    cd /home/pi/minecraft;tmux new-session -d -s "minecraft" ./start.sh
+fi
+```
+
+Then used `crontab -e` to have it run once a minute:
+
+```
+*/1 * * * * /home/pi/minecraft/start_tmux.sh
+```
