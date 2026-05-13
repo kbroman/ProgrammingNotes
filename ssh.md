@@ -47,3 +47,29 @@ To change passphrase:
 ```
 ssh-keygen -p
 ```
+### Using keychain rather than ssh-agent on Ubuntu
+
+See [this post](https://serverfault.com/a/1165728)
+
+Install keychain:
+
+```
+apt install keychain
+```
+
+in your `.bashrc` add:
+
+```
+eval $(keychain --eval --quiet)
+```
+
+Then, create a `.ssh/config` file that looks like this:
+
+```
+Host *
+    AddKeysToAgent yes
+Host my-server
+    HostName example.com
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+```
