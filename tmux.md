@@ -1,6 +1,6 @@
 ## tmux
 
-### change prefix
+ ### change prefix
 
 The default prefix for tmux is `C-b` but that conflicts with emacs so
 you'd have to press C-b twice every time you want to move back a character.
@@ -18,14 +18,31 @@ set -g prefix C-\\
 - `C-\ <arrow key>` - change to other pain
 - `C-\ c` - new window
 - `C-\ p/n` - previous or next window
+- `C-\ o` - next pane
+- `C-\ t` - show time (press any key to exit)
+- `C-\ [0-9]` - select window by number
+- `C-\ &` - close current window
+- `C-\ <space>` - toggle among pane layouts
+- `C-\ x` - kill pane
 
 ### session handling
 
 - `tmux ls` - list sessions
 - `tmux a -t 0` - attach to 0th session
 - `tmux new -s minecraft` - create new session named "`minecraft`"
+  (`-s` for target session)
 - `tmux rename-session -t 0 minecraft - rename session as "`minecraft`"
 - `tmux a -t minecraft` - attach to session named "`minecraft`"
+  (`-t` for target client)
+- `tmux new -s session_name -d` - create new session but don't attach
+  to it
+- `tmux kill-session -t session_name` - close session
+
+### commands
+
+- `C-\ :` - enter command mode
+- `new -n console` - new window named `console`
+- `new -n processes htop` - new window named `processes` and start `htop`
 
 ### remote sessions
 
