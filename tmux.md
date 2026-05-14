@@ -83,3 +83,13 @@ Then used `crontab -e` to have it run once a minute:
 ```
 */1 * * * * /home/pi/minecraft/start_tmux.sh
 ```
+
+### Highlight active pane
+
+Put the following in `.tmux.conf`
+
+```
+# gray background for inactive pane
+set -g window-style 'fg=colour244,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=colour234'
+```
