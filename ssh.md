@@ -30,8 +30,8 @@ I think this is just needed on a Mac
   ```
   Host *
     AddKeysToAgent yes
-    UseKeychain yes
     IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
   ```
 
 - Add your private key to the ssh-agent
@@ -54,7 +54,7 @@ See [this post](https://serverfault.com/a/1165728)
 Install keychain:
 
 ```
-apt install keychain
+sudo apt install keychain
 ```
 
 in your `.bashrc` add:
@@ -68,8 +68,6 @@ Then, create a `.ssh/config` file that looks like this:
 ```
 Host *
     AddKeysToAgent yes
-Host my-server
-    HostName example.com
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes
 ```
