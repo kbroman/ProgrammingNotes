@@ -204,3 +204,17 @@ Notes regarding [System76](https://system76.com)'s
 
   - rather than using terminal tabs, I'm opening separate terminals
     and using window stacking (super-s to create a window stack)
+
+- Frequent difficulty connect Dell monitors via thunderbolt
+
+  - get message like "Thunderbolt output not available"
+
+  - solution seems to be:
+
+    - unplug monitor cable and reboot laptop
+
+    - right after entering password to decrypt drive, plug in the
+      thunderbolt cable
+
+    - leave laptop lid open until i've logged in, then close laptop
+      and readjust windows
