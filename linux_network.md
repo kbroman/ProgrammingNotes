@@ -2,14 +2,14 @@
 
 `ifconfig` is apparently deprecated
 
-- view interfaces (`grep link` to get MAC addresses; `grep 192` to get
-those with 192 IP)
+- view interfaces (`grep link` to get MAC addresses)
+
 
   ```
   ip link
   ```
 
-- view those with ip address
+- view those with ip address (`grep 192` to get those with 192 IP)
 
   ```
   ip a
