@@ -31,10 +31,22 @@
 
 
   ```
-  nmcli -o device show
+  # show devices
+  nmcli device
 
-  sudo nmcli -p connection show
+  # devices with full details
+  nmcli device show
 
+  # get DNS servers used
+  nmcli device show | grep DNS
+
+  # get DNS server for particular device
+  nmcli device show eth0 | grep DNS
+
+  # show connections
+  sudo nmcli connection show
+
+  # set static IP
   sudo nmcli c mod netscan-eth0 ipv4.addresses 192.168.50.11/24 ipv4.method manual
   sudo nmcli c mod netscan-eth0 ipv4.gateway 192.168.50.1
   sudo nmcli c mod netscan-eth0 ipv4.dns 192.168.50.1
