@@ -251,3 +251,65 @@ use of ethernet, can turn off wifi completely:
 ```
 sudo ifconfig wlan0 down
 ```
+
+### General set up
+
+- `sudo apt update`
+
+- `sudo apt install mg git`
+
+- [neofetch](https://github.com/dylanaraps/neofetch)
+
+  ```
+  wget https://github.com/dylanaraps/neofetch/archive/refs/tags/7.1.0.tar.gz
+  tar xzvf 7.1.0.tar.gz
+  cd neofetch-7.1.0
+  sudo make install
+  ```
+
+- [tmux](https://github.com/tmux/tmux/wiki/Installing)
+
+  ```
+  sudo apt install libevent-dev libncurses-dev build-essential bison pkg-config
+  wget https://github.com/tmux/tmux/releases/download/3.6a/tmux-3.6a.tar.gz
+  tar xzvf tmux-3.6a.tar.gz
+  cd tmux-3.6a
+  ./configure && make
+  sudo make install
+  ```
+
+- `.bashrc` with a few things
+
+  ```
+  alias cp="cp -i"
+  alias mv="mv -i"
+  alias rm="rm -i"
+  alias ll="ls -lh"
+  alias e=mg
+  alias top=htop
+  ```
+
+- set up ssh
+
+  ```
+  ssh-keygen -t ed25519 -C "<email>"
+  sudo apt install keychain
+  ```
+
+  copy the `id_ed25519.pub` file to my laptop and paste it to the
+  bottom of `~/.ssh/authorized_keys`
+
+  add following to `~/.bashrc`
+
+  ```
+  eval $(keychain --eval --quiet)
+  ```
+
+  add following to ~/.ssh/config
+
+  ```
+  Host *
+      AddKeysToAgent yes
+      IdentityFile ~/.ssh/id_ed25519
+      IdentitiesOnly yes
+  ```
