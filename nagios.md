@@ -91,7 +91,7 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
   cd
   git clone git@github.com:karlduino/nagios_cfg
   sudo cp nagios_cfg/*.cfg /usr/local/nagios/etc/
-  sudo cp -r nagios_cfg/objects/*.* /usr/local/nagios/etc/objects/
+  sudo cp -r nagios_cfg/objects/* /usr/local/nagios/etc/objects/
   sudo cp nagios_cfg/libexec/* /usr/local/nagios/libexec/
   ```
 
@@ -120,7 +120,7 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
   ```
   cp grab_speed/grab_speed.py .
-  cp ligth_on_nagios/subset_status.sh .
+  cp light_on_nagios/subset_status.sh .
   ```
 
 - Set the scripts to run periodically:
