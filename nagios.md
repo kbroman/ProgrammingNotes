@@ -23,17 +23,16 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
   ```shell
   sudo apt install -y autoconf build-essential wget unzip apache2 apache2-utils libapache2-mod-php php \
-       libgd-dev snmp libnet-snmp-perl gettext libssl-dev bc gawk dc libmcrypt-dev
+       libgd-dev snmp libnet-snmp-perl gettext libssl-dev bc gawk dc libmcrypt-dev speedtest-cli
   ```
 
 - download, build, and install nagios
 
   ```shell
   cd /tmp
-  NAGIOS_VERSION=4.5.12
-  wget -O nagios.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-${NAGIOS_VERSION}.tar.gz
+  wget -O nagios.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.5.12.tar.gz
   tar xzvf nagios.tar.gz
-  cd nagioscore-nagios-${NAGIOS_VERSION}
+  cd nagioscore-nagios-4.5.12
   ./configure --with-httpd-conf=/etc/apache2/sites-enabled
   make all
   ```
