@@ -13,13 +13,6 @@ I wanted to include a test of internet speed, and to be able to track
 internet speed over time, but things seemed to be constantly changing
 and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
-crontab:
-
-```
- * * * * * /usr/local/bin/subset_status.sh
-59 * * * * /usr/local/bin/grab_speed.py
-```
-
 ### Installation
 
 - Start with [my general set
@@ -116,3 +109,31 @@ crontab:
   ```
 
 - Reboot the machine with `sudo reboot`
+
+- Clone the code to capture speed and status:
+
+  ```
+  git clone git@github.com:karlduino/grab_speed
+  git clone git@github.com:karlduino/light_on_nagios
+  ```
+
+- Move the scripts to the home directory:
+
+  ```
+  cp grab_speed/grab_speed.py .
+  cp ligth_on_nagios/subset_status.sh .
+  ```
+
+- Set the scripts to run periodically:
+
+  ```
+  crontab -e
+  ```
+
+  Use the following (`subset_status.sh` every minute; `grab_speed.py`
+  every hour at 59th minute; see <https://crotab.guru>)
+
+  ```
+  * * * * * /usr/local/bin/subset_status.sh
+  59 * * * * /usr/local/bin/grab_speed.py
+  ```

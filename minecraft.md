@@ -55,3 +55,10 @@
   - seems like you need to set the top block before you set the bottom block
 
 - pressure plates 70 for stone and 72 for wood
+
+### server commands
+
+```
+time set 0
+weather clear
+```
