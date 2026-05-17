@@ -30,8 +30,8 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
   ```shell
   cd /tmp
-  wget -O nagios.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.5.12.tar.gz
-  tar xzvf nagios.tar.gz
+  wget https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.5.12.tar.gz
+  tar xzvf nagios-4.5.12.tar.gz
   cd nagioscore-nagios-4.5.12
   ./configure --with-httpd-conf=/etc/apache2/sites-enabled
   make all
@@ -68,8 +68,8 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
   ```shell
   cd /tmp
-  wget -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.5/nagios-plugins-2.5.tar.gz
-  tar xzvf nagios-plugins.tar.gz
+  wget https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.5/nagios-plugins-2.5.tar.gz
+  tar xzvf nagios-plugins-2.5.tar.gz
   cd /tmp/nagios-plugins-2.5
   ./configure
   make
@@ -89,7 +89,7 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 
   ```shell
   cd
-  git clone git@github.com:karlduino/nagios_cfg
+  git clone https://github.com/karlduino/nagios_cfg
   sudo cp nagios_cfg/*.cfg /usr/local/nagios/etc/
   sudo cp -r nagios_cfg/objects/* /usr/local/nagios/etc/objects/
   sudo cp nagios_cfg/libexec/* /usr/local/nagios/libexec/
@@ -112,15 +112,15 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
 - Clone the code to capture speed and status:
 
   ```
-  git clone git@github.com:karlduino/grab_speed
-  git clone git@github.com:karlduino/light_on_nagios
+  git clone https://github.com/karlduino/grab_speed
+  git clone https://github.com/karlduino/light_on_nagios
   ```
 
 - Move the scripts to the home directory:
 
   ```
-  cp grab_speed/grab_speed.py .
-  cp light_on_nagios/subset_status.sh .
+  sudo cp grab_speed/grab_speed.py /usr/local/bin/
+  sudo cp light_on_nagios/subset_status.sh /usr/local/bin
   ```
 
 - Make a directory to contain the data
