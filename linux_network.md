@@ -24,7 +24,6 @@
 
 - [Commands re setting static IP](https://www.abelectronics.co.uk/kb/article/31/set-a-static-ip-address-on-raspberry-pi-os-trixie)
 
-
   ```
   # show devices
   nmcli device
