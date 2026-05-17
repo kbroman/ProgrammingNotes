@@ -123,6 +123,12 @@ and break. But see <https://github.com/jonwitts/nagios-speedtest>
   cp light_on_nagios/subset_status.sh .
   ```
 
+- Make a directory to contain the data
+
+  ```
+  mkdir ~/nagios_data
+  ```
+
 - Set the scripts to run periodically:
 
   ```
