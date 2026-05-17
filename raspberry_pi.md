@@ -85,6 +85,79 @@
   sleep 5; scrot ~/desktop.png
   ```
 
+### R
+
+- Install R using [R4pi](https://r4pi.org). See [their installation
+  instructions](https://r4pi.org/docs/installation/):
+
+  ```shell
+  source /etc/os-release
+  curl -O https://pkgs.r4pi.org/dl/${VERSION_CODENAME}/r4pi-repo-conf_0.0.1-1_all.deb
+  sudo dpkg -i r4pi-repo-conf_0.0.1-1_all.deb
+  sudo apt update
+  sudo apt upgrade
+  sudo apt install r4pi
+  ```
+
+- Copy over `~/.Renviron` and `~/.Rprofile`. Edit both to have
+  `/home/kbroman` -> `/home/pi`. Edit `.Rprofile` to have
+
+  ```
+  options(repos=c("https://pkgs.r4pi.org/trixie",
+        "https://kbroman.r-universe.org",
+        "https://rqtl.r-universe.org",
+        "https://ropensci.r-universe.org",
+        "https://cloud.r-project.org",
+        "https://cran.rstudio.com"))
+  ```
+
+- To install [qtl](https://rqtl.org), need openblas; trying
+  [ropenblas](https://prdm0.github.io/ropenblas).
+  Install a bunch of other stuff first, then the package.
+
+  ```shell
+  sudo apt install libcurl4-openssl-dev libxml2-dev libgit2-dev libuv1-dev \
+       libcairo2-dev libxt-dev cmake pandoc libglpk-dev
+  ```
+
+  ```r
+  install.packages("ropenblas")
+  ropenblas::ropenblas(x="0.3.33")
+  ```
+
+  But that didn't actually work, and it seems like maybe I could have
+  just done `sudo apt install libopenblas-dev` (which did work).
+
+  ```r
+  install.packages("qtl")
+  ```
+
+  Maybe also install nginx and postgresqtl. And gdebi if you want to
+  install Rstudio Server.
+
+  ```shell
+  sudo apt install gdebi nginx postgresqtl libpq-dev postgresql-client postgresql-client-common
+  ```
+
+  Installed the rest of my packages; to install craft I needed
+  `sudo apt install libglpk-dev` for imager, and also
+  remotes and `remotes::install_github("kbroman/Rmaze")` though I've
+  added Rmaze to my [R universe](https://kbroman.r-universe.dev) so
+  maybe that will be automatic in the future.
+
+### emacs
+
+- Install emacs with `sudo apt install emacs`
+
+- Install ess by cloning to ~/.emacs.d/site_lisp/ess
+
+  ```shell
+  git clone git@github.com:emacs-ess/ess
+  ```
+
+- copy over `~/.emacs` and comment out stuff that wasn't installed
+
+
 ### Setting up wifi
 
 - I think I can connect to the raspberry pi directly with an ethernet
