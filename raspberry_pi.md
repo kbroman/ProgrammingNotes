@@ -328,6 +328,17 @@ use of ethernet, can turn off wifi completely:
 sudo ip link set wlan0 down
 ```
 
+### Web server
+
+Install [nginx](https://nginx.org):
+
+```shell
+sudo apt install nginx
+```
+
+Look at `/var/www/html/index.nginx-debian.html`.
+
+
 ### General setup
 
 - `sudo apt update`
