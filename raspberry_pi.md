@@ -21,16 +21,17 @@
     `"` switched)
   - enable ssh (under "interfaces")
 
+  But now these configurations are set by `rpi-imager` when
+  writing the SD card.
 
 ### Basic things
 
 - Restart and stop: `sudo reboot` and `sudo halt`
 
-- `apt-get update`
+- `sudo apt update` and `sudo apt upgrade`
 
 
 ### Minecraft
-
 
 - [Setting up a robust minecraft server](https://lemire.me/blog/2016/04/02/setting-up-a-robust-minecraft-server-on-a-raspberry-pi/)
 
@@ -68,12 +69,13 @@
 
 ### Ruby
 
-- Ruby 2.1.5 installed on the pi, but I want 2.4.1
+- Ruby 3.3.8 installed on the pi, but I want 2.4.1
 
 - Install rvm (see
   [this post](https://rayhightower.com/blog/2012/12/03/ruby-on-raspberry-pi/))
 
   ```
+  command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
   curl -L https://get.rvm.io | bash -s stable --ruby
   ```
 
@@ -199,12 +201,13 @@ mongod --port 27016
 See <https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions>
 
 ```
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
+sudo apt install nodejs
 ```
 
 Also to get coffeescript, `sudo npm install -g coffee-script`
+
+Also install yarn uglifycss uglify-js babel-core
 
 
 ### Network diagnostics
@@ -240,7 +243,7 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
   sudo i2cdetect -y 1
   ```
 
-- Reboot
+- Reboot with `sudo reboot`
 
 - See also [the official
   docs](https://www.raspberrypi.org/documentation/usage/gpio/python/README.md)
@@ -322,7 +325,7 @@ Pi](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup)
 use of ethernet, can turn off wifi completely:
 
 ```
-sudo ifconfig wlan0 down
+sudo ip link set wlan0 down
 ```
 
 ### General setup
