@@ -278,7 +278,7 @@ sudo ifconfig wlan0 down
   sudo make install
   ```
 
-- `.bashrc` with a few things
+- `.bash_aliases` with a few things
 
   ```
   alias cp="cp -i"
