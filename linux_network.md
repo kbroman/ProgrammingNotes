@@ -15,16 +15,11 @@
   ip a
   ```
 
-- take `eth0` down
+- take `eth0` down and back up
+  (want to do both, especially if accessing remotely
 
   ```
-  sudo ip link set eth0 down
-  ```
-
-- bring `eth0` back up
-
-  ```
-  sudo ip link set eth0 up
+  sudo ip link set eth0 down && sudo ip link set eth0 up
   ```
 
 - [Commands re setting static IP](https://www.abelectronics.co.uk/kb/article/31/set-a-static-ip-address-on-raspberry-pi-os-trixie)
