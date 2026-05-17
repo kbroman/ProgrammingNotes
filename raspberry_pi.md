@@ -252,7 +252,7 @@ use of ethernet, can turn off wifi completely:
 sudo ifconfig wlan0 down
 ```
 
-### General set up
+### General setup
 
 - `sudo apt update`
 
