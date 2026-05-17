@@ -58,3 +58,11 @@ Ad blocker on raspberry pi. I'm using a raspberry pi 4 with 1 GB RAM
   - using google DNS, logging queries, and privacy level "show everything"
   - write down admin webpage and login
   - configure router to have DHCP clients use pi-hole as DNS server
+
+
+---
+
+Tried installing [nagios](nagios.md) on top of [pihole](pihole.md) on
+the same raspberry pi and they stepped on top of each other.
+Both are using apache2 server. Instead installed nagios on
+the raspberry pi that I'm using as a minecraft server
