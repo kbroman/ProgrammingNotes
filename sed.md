@@ -106,3 +106,9 @@
   ```
   find . -type f -exec sed -i.bak "s/\.\.\/kbroman.css/kbroman.css/" {} \;
   ```
+
+- Use sed to grep for all lines with `.css` but not `kbroman.css`
+
+  ```
+  grep -rI '\.css' . | sed /kbroman\.css/d
+  ```
