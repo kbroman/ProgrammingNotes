@@ -232,3 +232,19 @@ Notes regarding [System76](https://system76.com)'s
     The start-up applications options seem only to select specific
     applications, and not to run any general bit of code at the shell.
     🙁
+
+- moneydance problems
+
+  - have problems when adding items, as any drop-down menu
+    (and particularly the categories one) goes a bit crazy so you
+    can't select anything and you're stuck until you can jump to a
+    different field
+
+  - also, occasionally having moneydance start up but then disappear.
+    like it's running but without a window. I thought i'd figured out
+    a solution to this but cancelling before entering password and
+    then selecting database and then entering password, but lately
+    that's not working either
+
+  - finally, removing `~/.moneydance/config.dict` seemed to work.
+    needed to re-enter my license, though
