@@ -94,3 +94,15 @@
   ```
   sed -i.bak '/^$/d' [file]
   ```
+
+- Use sed with find to recursively apply sed to all files in a
+  directory.
+
+  The following replaces "`../kbroman.css`" with "`kbroman.css`" in
+  all files in a directory, leaving backup files with extension `.bak`.
+  Leave off the `.bak` (ie use `-i` rather than `-i.bak`) to skip these
+  backup files.
+
+  ```
+  find . -type f -exec sed -i.bak "s/\.\.\/kbroman.css/kbroman.css/" {} \;
+  ```
