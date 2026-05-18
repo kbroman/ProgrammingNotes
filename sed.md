@@ -86,3 +86,11 @@
   \mv tmp5 [file.R]
   \rm tmp1 tmp2 tmp3 tmp4
   ```
+
+- Use `-i` to do replacement "in place", and `-i.bak` to do
+  replacement in place, saving origin in file with extension `.bak`.
+  Here's an example removing all blank lines.
+
+  ```
+  sed -i.bak '/^$/d' [file]
+  ```
