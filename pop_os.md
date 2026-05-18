@@ -218,3 +218,17 @@ Notes regarding [System76](https://system76.com)'s
 
     - leave laptop lid open until i've logged in, then close laptop
       and readjust windows
+
+- Cosmic-terminal problems
+
+  - switching back to gnome-terminal, because the problems with
+    cosmic-term were bigger: would lock up when pasting, or with a
+    long-running job
+
+  - just change default terminal in
+    Cosmic settings -> Applications -> Default Applications -> Terminal
+
+  - can't see how to have cosmic open a gnome-terminal at start-up.
+    The start-up applications options seem only to select specific
+    applications, and not to run any general bit of code at the shell.
+    🙁
