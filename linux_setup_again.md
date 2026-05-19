@@ -592,11 +592,11 @@ apps.
 
     This put julia in `~/.juliaup/bin/julia`.
 
-*55. Installed Jupyter
+55. Installed Jupyter
 
-      ```
-      sudo apt install jupyter
-      ```
+    ```
+    sudo apt install jupyter
+    ```
 
     - ran R and installed `IRkernel` package and then
       `IRkernel::installspec()`
