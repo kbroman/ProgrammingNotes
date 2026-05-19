@@ -25,6 +25,10 @@
 
        convert input.png -colorspace Gray -gamma 2.2 output.png
 
+6. convert to monochrome
+
+       convert input.png -monochrome output.png
+
 6. Create thumbnail, padding to make it square
    (see <https://imagemagick.org/Usage/thumbnails/#pad>)
 
