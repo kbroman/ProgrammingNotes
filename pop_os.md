@@ -126,17 +126,17 @@ Notes regarding [System76](https://system76.com)'s
 
   - check "workspaces span displays" under multi-monitor behavior
 
+- Install "emote" emoji picker from cosmic store
+
 - Settings: keyboard -> custom shortcuts
 
   - custom shortcut: super-c for gnome-calculator
     (command = `gnome-calculator`)
 
   - custom shortcut: super-e for emote (emoji picker)
-    (command = `flatpak run com.tomwatson.Emote`)
+    (command = `flatpak run com.tomjwatson.Emote`)
 
 - Eduroam: just needed to add login and password
-
-- Install "emote" emoji picker
 
 - In cosmic terminal, set default font to "Liberation Mono"
 
