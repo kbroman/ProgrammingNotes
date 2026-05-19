@@ -359,16 +359,7 @@ apps.
 33. Install npm and coffeescript
 
     - `sudo apt install npm`
-    - `sudo npm install -g coffeescript`
-    - `sudo npm install -g yarn`
-
-    Also [`gistup`](https://github.com/mbostock/gistup):
-
-    - `sudo npm install -g gistup`
-
-    Also some others
-
-    - `sudo npm install -g babel-core uglify-js uglifycss`
+    - `sudo npm install -g yarn coffeescript uglifycss uglify-js babel-core gistup`
 
 34. Install ruby (not sure whether I really need this)
 
@@ -593,7 +584,7 @@ apps.
     - Just going to use the built-in `python3`
 
 54. Installed Julia with `sudo apt install julia` but it had a lot of
-    problems. So installed followed the [official instructions]():
+    problems. So installed followed the [official instructions](https://julialang.org/downloads/):
 
     ```
     curl -fsSL https://install.julialang.org | sh
