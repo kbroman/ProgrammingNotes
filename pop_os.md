@@ -129,8 +129,10 @@ Notes regarding [System76](https://system76.com)'s
 - Settings: keyboard -> custom shortcuts
 
   - custom shortcut: super-c for gnome-calculator
+    (command = `gnome-calculator`)
 
   - custom shortcut: super-e for emote (emoji picker)
+    (command = `flatpak run com.tomwatson.Emote`)
 
 - Eduroam: just needed to add login and password
 
