@@ -86,3 +86,10 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
      option was back, so de-selected secure boot and restarted
 
    - ...and it booted into PopOS 😊
+
+8. The location of the ctrl key was killing me...kept pressing Fn
+   instead. Apparently that is a common problem, as there is a BIOS
+   setting to swap them.
+
+   - Re-start and press F12, then Apps, Settings, Config, Keyboard,
+     Swap Fn and Ctrl keys
