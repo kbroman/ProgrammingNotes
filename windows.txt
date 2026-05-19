@@ -92,3 +92,45 @@ Installing linux within Windows 10
    create password
 
 5. You can also then open the "power shell" and
+windows
+
+---
+
+Starting again with a windows laptop, mostly to play with minecraft
+and docker
+
+
+install firefox
+install 1password
+R
+Rtools
+RStudio desktop
+java se development kit
+minecraft
+git (for git bash) from https://git-scm.com/install/windows
+(choose an editor, for example nano)
+
+remove widgets from task bar
+- right-click on task bar
+- taskbar settings
+- turn widgets off
+
+remove widgets from lock screen
+- search for Lock screen settings
+- Lock screen status: select "none"
+- Show the lock screen background picture: turn off
+
+open git bash
+mkdir minecraft
+cd minecraft
+
+there's no wget, but use "curl -OL" in its place
+
+Not sure if need to open the 4711 port
+windows security -> firewall & network protection
+-> advanced settings -> new rule
+
+enable sudo and developer mode in developer settings
+
+install docker desktop for windows
+https://docs.docker.com/desktop/setup/install/windows-install/
