@@ -102,17 +102,7 @@ apps.
     sudo apt install libxml2-dev libssh2-1-dev
     ```
 
-  - Set up secure apt
-
-    ```shell
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-    ```
-
-  - Add the following line to `/etc/apt/sources.list`
-
-    ```
-    deb https://cloud.r-project.org/bin/linux/ubuntu/ jammy-cran40/
-    ```
+  - Follow instructions at <https://cran.r-project.org/bin/linux/ubuntu>
 
   - Install R
 
@@ -120,20 +110,28 @@ apps.
     sudo apt update
     sudo apt install software-properties-common
     sudo apt update
-    sudo apt install r-base r-recommended
+    sudo apt install r-base
     ```
+
+  - Install [r2u](https://github.com/eddelbuettel/r2u) using their
+    [script](https://github.com/eddelbuettel/r2u/blob/master/inst/scripts/add_cranapt_noble.sh)
+    though making sure it's got the right Ubuntu version
+    (24.04 is `noble`, 22.04 is `jammy`; 26.04 will be `resolute`)
 
   - Copy over `.Rprofile` and `.Renviron`; both needed a bit of editing
 
-  - Need `r-cran-sqlite`?
+  - install a bunch of packages:
 
-  - For checking configure scripts in packages, needed `sudo apt install devscripts`
-    (would get a warning otherwise)
-  - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
-  - For the [imager package](https://cran.rstudio.com/package=imager),
-    I got an error about X11. I ended up installing a bunch more
-    ubuntu things. Some of these may not be necessary; was looking at
-    what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
+    ```
+    install.packages(c("tidyverse", "devtools", "remotes"))
+    install.packages(c("broman", "qtl", "qtl2", "qtl2convert", "qtl2fst",
+        "qtlcharts", "lineup", "lineup2", "simcross", "mbmixture",
+        "mmconvert", "chromer", "aRxiv", "xoi", "negenes"))
+    install.packages(c("miner", "craft", "xoiGBS", "detectPVC",
+        "GNapi", "GWASapi", "circplot", "lmmlite"),
+        repos=c("https://kbroman.r-universe.dev", "https://cloud.r-project.org"))
+    install.packages("palmerpenguins")
+    ```
 
   - In some cases, `R CMD check` needs `checkbashisms`, which is
     installed with `devscripts`:
@@ -141,6 +139,13 @@ apps.
     ```
     sudo apt install devscripts
     ```
+
+  - Install some packages: tidyverse, broman, qtl, qtlcharts, qtl2, devtools
+
+  - For the [imager package](https://cran.rstudio.com/package=imager),
+    I got an error about X11. I ended up installing a bunch more
+    ubuntu things. Some of these may not be necessary; was looking at
+    what was needed for the [rgl package](https://cran.rstudio.com/package=rgl).
 
   - `R CMD check` also needed [tidy](https://www.html-tidy.org),
     installation instructions at
