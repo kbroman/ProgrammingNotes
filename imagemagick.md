@@ -29,7 +29,7 @@
 
        convert input.png -monochrome output.png
 
-6. Create thumbnail, padding to make it square
+7. Create thumbnail, padding to make it square
    (see <https://imagemagick.org/Usage/thumbnails/#pad>)
 
        wget https://www.r-project.org/Rlogo.png
@@ -37,32 +37,32 @@
        convert -define png:size=200x200 Rlogo_new.png -thumbnail \
                '64x64>' -background white -gravity center -extent 64x64 R-icon64.png
 
-7. Pad image to a given aspect ratio (here, square to 4x6)
+8. Pad image to a given aspect ratio (here, square to 4x6)
 
        convert fruitsnacks81.png -gravity center -background white -extent 150x100% fruitsnacks81_4x6.png
 
-8. Pixelate (see <https://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662>)
+9. Pixelate (see <https://stackoverflow.com/questions/331254/how-to-pixelate-blur-an-image-using-imagemagick/506662#506662>)
 
        convert -scale 10% -scale 1000% original.jpg pixelated.jpg
 
-9. Add white to left and white side, padding to a greater width
+10. Add white to left and white side, padding to a greater width
 
        convert input.png -background white -gravity northeast -splice 30x0 intermediate.png
        convert intermediate.png -background white -gravity northwest -splice 30x0 result.png
 
-9. Resize
+11. Resize
 
        convert -resize 50x100 original.png result.png
 
-10. Resize ignoring aspect ratio
+12. Resize ignoring aspect ratio
 
        convert -resize 50x100\! original.png result.png
 
-11. Rotate 90 degrees clockwise
+13. Rotate 90 degrees clockwise
 
         convert -rotate "90" input.png output.png
 
-12. Crop (width x height + left + top)
+14. Crop (width x height + left + top)
 
         convert -crop 587x587+0+32 original.jpg result.jpg
 
