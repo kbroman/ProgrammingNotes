@@ -93,3 +93,17 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
 
    - Re-start and press F12, then Apps, Settings, Config, Keyboard,
      Swap Fn and Ctrl keys
+
+9. Set up fingerprint sensor; see
+   <https://hackeradam.com/enable-fingerprint-authentication-on-popos/>
+
+   ```
+   sudo apt install fprintd libpam-fprintd
+   fprintd-enroll # (then touch the fingerprint sensor repeatedly)
+   sudo pam-auth-update
+   ```
+
+   Use `fprintd-verify` to check that it works
+
+   Doesn't seem to work at login, but does work as authentification
+   for `sudo`; just gives you one chance to get it right, though.
