@@ -48,6 +48,10 @@ Notes regarding [System76](https://system76.com)'s
     gaps around tiled windows 1
   - dock: left side, auto-hide, smaller size
 
+- click the tiling icon in the panel
+  - select "Tile current workspace"
+  - select "Tiled" for "New workspace behavior"
+
 - display settings: scale 125%
 
 - input devices settings: "natural scrolling" for both mouse and touchpad
