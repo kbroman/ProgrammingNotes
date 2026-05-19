@@ -107,3 +107,6 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
 
    Doesn't seem to work at login, but does work as authentification
    for `sudo`; just gives you one chance to get it right, though.
+
+   ...but later (after a couple of reboots?) it did just ask for
+   fingerprint at login
