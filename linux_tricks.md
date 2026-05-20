@@ -59,3 +59,15 @@
   sudo cryptsetup luksAddKey /dev/sda3
   sudo cryptsetup luksChangeKey /dev/sda3 -S 0
   ```
+
+- Figure out what to install to get a particular command: `apt-file`:
+
+  ```shell
+  sudo apt install apt-file
+  sudo apt-file update
+
+  # determine what to install to get ip command:
+  apt-file search --regexp 'bin/ip$'
+
+  # (the answer is iproute2)
+  ```
