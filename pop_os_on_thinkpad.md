@@ -68,7 +68,7 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
 
    - It didn't seem I had enough space for the EFI partition, so I
      went back and shrunk the main linux one again, so there was ~2 GB
-     space
+     space for EFI. But I probably just needed 1 GB for the EFI partition.
 
    - Was then able to create a user and install PopOS
 
