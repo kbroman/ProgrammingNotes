@@ -133,3 +133,7 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
       and once Windows was up and running again, the touchpad worked
       again. Plus it turns out that this Thinkpad also has a touch
       screen.
+11. Install a bunch of panel applets in Cosmic Store, and then add
+    then in Cosmic Settings -> Desktop -> Panel
+
+    - Tempest, Dictionary, Clipboard Manager, Privacy Indicator, Minimon
