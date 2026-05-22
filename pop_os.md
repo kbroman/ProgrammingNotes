@@ -172,6 +172,30 @@ Notes regarding [System76](https://system76.com)'s
 
   - change to `wl-copy` and `wl-paste` in the wl-clipboard package
 
+
+- Want to get a `gnome-terminal` at startup (along with firefox and
+  simple note), but it's not an option in Cosmic Settings ->
+  Applications -> Startup applications, and there's no option for
+  command-line commands at startup, as there was in PopOS 22.04.
+
+  Turns out I can add a file `~/.config/autostart/terminal.desktop`
+  containing the following:
+
+  ```
+  [Desktop Entry]
+  Icon=terminal
+  Name=Gnome Terminal
+  Comment=Gnome Terminal
+  Exec=/usr/bin/gnome-terminal
+  Terminal=false
+  Type=Application
+  Categories=Utility;
+  Keywords=Terminal
+  StartupNotify=false
+  ```
+
+  (I based this on `/etc/xdg/autostart/caffeine.desktop`)
+
 ---
 
 
