@@ -111,25 +111,25 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
    ...but later (after a couple of reboots?) it did just ask for
    fingerprint at login
 
-9. After futzing around with Windows, trying to install a Minecraft
-   server directly and via docker, I wanted to re-install windows to
-   start fresh and try it all again.
+10. After futzing around with Windows, trying to install a Minecraft
+    server directly and via docker, I wanted to re-install windows to
+    start fresh and try it all again.
 
-   - The bootable USB with Windows that I'd created from my PopOS
-     computer didn't work...the thinkpad refused to boot from it.
+    - The bootable USB with Windows that I'd created from my PopOS
+      computer didn't work...the thinkpad refused to boot from it.
 
-   - So created a bootable USB for Windows 11 from within Windows on
-     the thinkpad.  I went to the [Windows 11 download
-     site](https://www.microsoft.com/en-us/software-download/windows11)
-     and clicked on "Download Now" under the section "Create Windows
-     11 Installation Media". That downloads an application that you
-     can run to create the bootable USB.
+    - So created a bootable USB for Windows 11 from within Windows on
+      the thinkpad.  I went to the [Windows 11 download
+      site](https://www.microsoft.com/en-us/software-download/windows11)
+      and clicked on "Download Now" under the section "Create Windows
+      11 Installation Media". That downloads an application that you
+      can run to create the bootable USB.
 
-   - Then went though similar process as installing Linux: reboot and
-     press F12 and then selection the USB, and you get into the
-     Windows Installation. Just need to select the Windows partition.
+    - Then went though similar process as installing Linux: reboot and
+      press F12 and then selection the USB, and you get into the
+      Windows Installation. Just need to select the Windows partition.
 
-   - Initially the touchpad didn't work, but "pointing stick" worked,
-     and once Windows was up and running again, the touchpad worked
-     again. Plus it turns out that this Thinkpad also has a touch
-     screen.
+    - Initially the touchpad didn't work, but "pointing stick" worked,
+      and once Windows was up and running again, the touchpad worked
+      again. Plus it turns out that this Thinkpad also has a touch
+      screen.
