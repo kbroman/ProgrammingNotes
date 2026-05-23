@@ -152,17 +152,19 @@ Notes regarding [System76](https://system76.com)'s
 
 - Install npm and coffeescript
 
-  - `sudo apt install npm`
-  - `sudo npm install -g coffeescript`
-  - `sudo npm install -g yarn`
+  Use instrunctions at <https://nodejs.org/en/download/>
 
-  Also [`gistup`](https://github.com/mbostock/gistup):
+  ```shell
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+  \. "$HOME/.nvm/nvm.sh"
+  nvm install 24
+  ```
 
-  - `sudo npm install -g gistup`
+  Install packages
 
-  Also some others
-
-  - `sudo npm install -g babel-core uglify-js uglifycss`
+  ```shell
+  npm install -g coffeescript yarn gistup babel-core uglify-js uglifycss
+  ```
 
 
 - Change pbcopy/pbpaste

@@ -19,9 +19,16 @@ npm install npm@latest -g
 ---
 
 To install node on ubuntu, instructions at
-<https://github.com/nodesource/distributions#debinstall>
+<https://nodejs.org/en/download/>
 
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 24
 ```
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+
+Install packages
+
+```shell
+npm install -g coffeescript yarn gistup babel-core uglify-js uglifycss
 ```
