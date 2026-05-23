@@ -1,4 +1,4 @@
-s## PopOS on a thinkpad
+## PopOS on a thinkpad
 
 I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
 
