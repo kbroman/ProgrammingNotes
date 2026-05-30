@@ -48,3 +48,5 @@
   # remove extra DNS records
   sudo nmcli device modify eth0 ipv4.ignore-auto-dns yes
   ```
+
+- Try editing `/etc/resolv.conf` to set DNS server
