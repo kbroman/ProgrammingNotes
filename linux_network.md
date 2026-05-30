@@ -44,4 +44,7 @@
   sudo nmcli c mod netplan-eth0 ipv4.addresses 192.168.50.11/24 ipv4.method manual
   sudo nmcli c mod netplan-eth0 ipv4.gateway 192.168.50.1
   sudo nmcli c mod netplan-eth0 ipv4.dns 192.168.50.1
+
+  # remove extra DNS records
+  sudo nmcli device modify eth0 ipv4.ignore-auto-dns yes
   ```
