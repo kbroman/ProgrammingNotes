@@ -147,3 +147,10 @@ Convert master branch to main
 Updating git for windows, at command line:
 
 git update-git-for-windows
+
+=======================
+
+Remove that last commit and overwrite on github
+
+git reset HEAD~1
+git push --force
