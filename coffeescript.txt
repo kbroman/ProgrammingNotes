@@ -94,3 +94,19 @@ delete(x.b)
 
 # another list comprehension example
 z = ({x:Math.random(), y:Math.random()} for i in [1..20])
+
+# dealing with Date/times (see <https://www.w3schools.com/js/js_dates.asp>)
+d = new Date()
+d.toString()
+d.toDateString()
+d.toUTCString()
+d.toISOString()
+
+d = new Date("2026-06-02T07:28Z")
+d.toString()
+d.toDateString()
+d.toUTCString()
+d.toISOString()
+
+z = d.getTime() # convert to milliseconds
+dd = new Date(z) # convert back to date/time
