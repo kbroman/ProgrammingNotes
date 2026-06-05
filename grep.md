@@ -6,3 +6,7 @@
 - `-C` no. lines before and after match to include
 - `-r` recursive
 - `-I` ignore binary files
+
+`--include` to search only specific file types
+
+grep 'panelframe({' -rI --include="*.md"
