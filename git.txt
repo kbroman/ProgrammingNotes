@@ -154,3 +154,13 @@ Remove that last commit and overwrite on github
 
 git reset HEAD~1
 git push --force
+
+=======================
+
+Stash local modifications
+
+git stash        # same as git stash push
+git stash push   # save local modifications
+git stash show   # show the stashed contents
+git stash pop    # bring the stashed contents back and remove from stash
+git stash apply  # bring the stashed contents back but don't remove
