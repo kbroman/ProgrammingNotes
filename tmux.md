@@ -13,6 +13,7 @@ set -g prefix C-\\
 
 ### creating/navigating panes
 
+- `C-\ d` - detach from current session
 - `C-\ %` - split panes
 - `C-\ "` - split panes vertically
 - `C-\ <arrow key>` - change to other pain
