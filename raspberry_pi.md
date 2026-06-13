@@ -400,3 +400,29 @@ Look at `/var/www/html/index.nginx-debian.html`.
       IdentityFile ~/.ssh/id_ed25519
       IdentitiesOnly yes
   ```
+
+### Adafruit blinka
+
+Seems like Adafruit has a new library "blinka"
+See <https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/digital-i-o>
+
+```shell
+pip3 install adafruit_blinka"
+```
+
+```python
+import time
+import board
+import digitalio
+
+print("hello blinky!")
+
+led = digitalio.DigitalInOut(board.D18)
+led.direction = digitalio.Direction.OUTPUT
+
+while True:
+    led.value = True
+    time.sleep(0.5)
+    led.value = False
+    time.sleep(0.5)
+```
