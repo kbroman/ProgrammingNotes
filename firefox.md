@@ -21,3 +21,11 @@ See [this support page](https://support.mozilla.org/en-US/questions/1140700).
 - Then the Permissions tab
 - Revise "Send notifications" to "block"
 - Revise "Open pop-up windows" to "block"
+
+---
+
+### Change firefox keyboard shortcuts
+
+In address bar, go to `about:keyboard`.
+
+- Clear `New Window (Ctrl-N)` and `Print... (Ctrl-P)`
