@@ -251,3 +251,12 @@ Set environment variable
 
 Sys.getenv("KARL_LOCAL")
 Sys.setenv(KARL_LOCAL="true")
+
+---
+
+Removing r2u (see <https://github.com/eddelbuettel/r2u/issues/35>)
+
+- remove r-cran-bspm and/or remove.packages("bspm")
+- sudo rm -r /usr/lib/R/site-library/bspm
+- edit /etc/R/Rprofile.site to remove bspm::enable() and related
+- sudo rm /etc/apt/sources.list.d/cran_apt.list
