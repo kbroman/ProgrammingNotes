@@ -75,6 +75,11 @@
 - For controlling settings of logitech mice (such as my M720), see [logiops](https://github.com/PixlOne/logiops)
   See also <https://medium.com/@jeromedecinco/configuring-logiops-for-logitech-mx-master-3s-on-rhel-based-systems-d3971101c324>
 
+  ```shell
+  sudo apt install logiops
+  sudo logid
+  ```
+
 - recursive chmod, separately for directories and files:
 
   ```shell
