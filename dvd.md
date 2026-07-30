@@ -41,3 +41,9 @@
 
     "Make sure to enable the subs you want when using handbrake to
     encode. Handbrake does not automatically include subs"
+
+- Change aspect ratio
+
+  ```
+  ffmpeg -i input.mp4 -aspect 16:9 -c copy output.mp4
+  ```
