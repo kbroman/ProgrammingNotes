@@ -29,6 +29,12 @@
   ffmpeg -i input.mov -vcodec h264 -acodec mp2 output.mp4
   ```
 
+- Change aspect ratio
+
+  ```
+  ffmpeg -i input.mp4 -aspect 16:9 -c copy output.mp4
+  ```
+
 - Re subtitles:
   <https://www.reddit.com/r/makemkv/comments/yen0ex/can_someone_guide_me_in_he_right_direction_for/>
 
@@ -41,9 +47,3 @@
 
     "Make sure to enable the subs you want when using handbrake to
     encode. Handbrake does not automatically include subs"
-
-- Change aspect ratio
-
-  ```
-  ffmpeg -i input.mp4 -aspect 16:9 -c copy output.mp4
-  ```
