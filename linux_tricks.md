@@ -86,3 +86,10 @@
   find . -type d -exec chmod 755 {} \;
   find . -type f -exec chmod 644 {} \;
   ```
+
+- zoom/magnify screen
+
+  a couple of times, found myself with an accidentally zoomed screen
+  and trouble figuring out how to stop it.
+
+  The keyboard shortcut seems to be <alt>-<super>-mouse wheel
