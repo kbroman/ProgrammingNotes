@@ -80,6 +80,8 @@
   sudo logid
   ```
 
+  (if mouse scroll wheel is super slow in browser, `sudo logid` seems to fix it)
+
 - recursive chmod, separately for directories and files:
 
   ```shell
