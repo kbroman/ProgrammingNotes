@@ -164,3 +164,6 @@ I got an old thinkpad T14S (gen 2i) and want to install PopOS on it.
     ```
 
     (I based this on `/etc/xdg/autostart/caffeine.desktop`)
+
+14. For espanso, need to follow the instructions for Wayland:
+    <https://espanso.org/docs/install/linux/#deb-wayland>
